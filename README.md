@@ -1,17 +1,20 @@
-#### ***文中链接各位根据自己项目对应修改***
---------------------------------------------------------------------------------
-#### **项目管理**：
-#### *PMO*:(http://pmo.corp.qunar.com)<br />
---------------------------------------------------------------------------------
-#### **CI/CD**:
-#### *QDR*:(http://qdr.corp.qunar.com/)<br />
-#### *QCI*:(http://qci.corp.qunar.com/)<br />
-#### *CABLE*:(http://wanshiwu.corp.qunar.com/qualitycheck/index/)<br />
+## Youth Design
 
---------------------------------------------------------------------------------
-#### **质量管理**:
-#### *bugfree*:(http://svn.corp.qunar.com/bugfree)<br />
-#### *case*:(http://bugfree.corp.qunar.com/bugfree/index.php/case)<br />
---------------------------------------------------------------------------------
-#### **项目信息**:
-#### *wiki*:(http://wiki.corp.qunar.com/)<br />
+移动端组件库模板，秉承 Youth Design 青春、未来、科学的设计理念，服务于 QRN、Hy、YIS 等移动端框架。
+
+## react-sketchapp
+
+使用 React 输出设计规范的一个工具，用于制作设计规范。
+
+[react-sketchapp 文档](http://airbnb.io/react-sketchapp/)
+
+
+## Usage
+
+```
+git clone git@gitlab.corp.qunar.com:mfe/youth-design.git
+cd youth-design
+npm install
+# [important] 新建一个空白的 sketch 文件
+npm run render
+```
