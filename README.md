@@ -1,6 +1,6 @@
 ## Youth Design
 
-移动端组件库模板，秉承 Youth Design 青春、未来、科学的设计理念，服务于 QRN、Hy、YIS 等移动端框架。
+移动端设计语言，秉承 Youth Design 青春、未来、科学的设计理念，服务于 QRN、Hy、YIS 等移动端框架。
 
 ## react-sketchapp
 

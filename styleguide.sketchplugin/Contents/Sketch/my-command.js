@@ -75,7 +75,7 @@ var exports =
 "use strict";
 
 
-module.exports = __webpack_require__(23);
+module.exports = __webpack_require__(24);
 
 
 /***/ }),
@@ -238,7 +238,7 @@ if (true) {
 }
 
 module.exports = warning;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
 
 /***/ }),
 /* 4 */
@@ -1024,6 +1024,216 @@ var makeSymbolMaster = exports.makeSymbolMaster = function makeSymbolMaster(fram
 /* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
+/* WEBPACK VAR INJECTION */(function(console, global) {/* globals log */
+if (!console._skpmEnabled) {
+  if (true) {
+    var sketchDebugger = __webpack_require__(77)
+    var actions = __webpack_require__(79)
+
+    function getStack() {
+      return sketchDebugger.prepareStackTrace(new Error().stack)
+    }
+  }
+
+  console._skpmPrefix = 'console> '
+
+  function logEverywhere(type, args) {
+    var values = Array.prototype.slice.call(args)
+
+    // log to the System logs
+    values.forEach(function(v) {
+      try {
+        log(console._skpmPrefix + indentString() + v)
+      } catch (e) {
+        log(v)
+      }
+    })
+
+    if (true) {
+      if (!sketchDebugger.isDebuggerPresent()) {
+        return
+      }
+
+      var payload = {
+        ts: Date.now(),
+        type: type,
+        plugin: String(context.scriptPath),
+        values: values.map(sketchDebugger.prepareValue),
+        stack: getStack(),
+      }
+
+      sketchDebugger.sendToDebugger(actions.ADD_LOG, payload)
+    }
+  }
+
+  var indentLevel = 0
+  function indentString() {
+    var indent = ''
+    for (var i = 0; i < indentLevel; i++) {
+      indent += '  '
+    }
+    if (indentLevel > 0) {
+      indent += '| '
+    }
+    return indent
+  }
+
+  var oldGroup = console.group
+
+  console.group = function() {
+    // log to the JS context
+    oldGroup && oldGroup.apply(this, arguments)
+    indentLevel += 1
+    if (true) {
+      sketchDebugger.sendToDebugger(actions.GROUP, {
+        plugin: String(context.scriptPath),
+        collapsed: false,
+      })
+    }
+  }
+
+  var oldGroupCollapsed = console.groupCollapsed
+
+  console.groupCollapsed = function() {
+    // log to the JS context
+    oldGroupCollapsed && oldGroupCollapsed.apply(this, arguments)
+    indentLevel += 1
+    if (true) {
+      sketchDebugger.sendToDebugger(actions.GROUP, {
+        plugin: String(context.scriptPath),
+        collapsed: true
+      })
+    }
+  }
+
+  var oldGroupEnd = console.groupEnd
+
+  console.groupEnd = function() {
+    // log to the JS context
+    oldGroupEnd && oldGroupEnd.apply(this, arguments)
+    indentLevel -= 1
+    if (indentLevel < 0) {
+      indentLevel = 0
+    }
+    if (true) {
+      sketchDebugger.sendToDebugger(actions.GROUP_END, {
+        plugin: context.scriptPath,
+      })
+    }
+  }
+
+  var counts = {}
+  var oldCount = console.count
+
+  console.count = function(label) {
+    label = typeof label !== 'undefined' ? label : 'Global'
+    counts[label] = (counts[label] || 0) + 1
+
+    // log to the JS context
+    oldCount && oldCount.apply(this, arguments)
+    return logEverywhere('log', [label + ': ' + counts[label]])
+  }
+
+  var timers = {}
+  var oldTime = console.time
+
+  console.time = function(label) {
+    // log to the JS context
+    oldTime && oldTime.apply(this, arguments)
+
+    label = typeof label !== 'undefined' ? label : 'default'
+    if (timers[label]) {
+      return logEverywhere('warn', ['Timer "' + label + '" already exists'])
+    }
+
+    timers[label] = Date.now()
+    return
+  }
+
+  var oldTimeEnd = console.timeEnd
+
+  console.timeEnd = function(label) {
+    // log to the JS context
+    oldTimeEnd && oldTimeEnd.apply(this, arguments)
+
+    label = typeof label !== 'undefined' ? label : 'default'
+    if (!timers[label]) {
+      return logEverywhere('warn', ['Timer "' + label + '" does not exist'])
+    }
+
+    var duration = Date.now() - timers[label]
+    delete timers[label]
+    return logEverywhere('log', [label + ': ' + (duration / 1000) + 'ms'])
+  }
+
+  var oldLog = console.log
+
+  console.log = function() {
+    // log to the JS context
+    oldLog && oldLog.apply(this, arguments)
+    return logEverywhere('log', arguments)
+  }
+
+  var oldWarn = console.warn
+
+  console.warn = function() {
+    // log to the JS context
+    oldWarn && oldWarn.apply(this, arguments)
+    return logEverywhere('warn', arguments)
+  }
+
+  var oldError = console.error
+
+  console.error = function() {
+    // log to the JS context
+    oldError && oldError.apply(this, arguments)
+    return logEverywhere('error', arguments)
+  }
+
+  var oldAssert = console.assert
+
+  console.assert = function(condition, text) {
+    // log to the JS context
+    oldAssert && oldAssert.apply(this, arguments)
+    if (!condition) {
+      return logEverywhere('assert', [text])
+    }
+    return undefined
+  }
+
+  var oldInfo = console.info
+
+  console.info = function() {
+    // log to the JS context
+    oldInfo && oldInfo.apply(this, arguments)
+    return logEverywhere('info', arguments)
+  }
+
+  var oldClear = console.clear
+
+  console.clear = function() {
+    oldClear && oldClear()
+    if (true) {
+      return sketchDebugger.sendToDebugger(actions.CLEAR_LOGS)
+    }
+  }
+
+  console._skpmEnabled = true
+
+  // polyfill the global object
+  var commonjsGlobal = typeof global !== 'undefined' ? global : this
+
+  commonjsGlobal.console = console
+}
+
+module.exports = console
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8), __webpack_require__(23)))
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
 "use strict";
 /* WEBPACK VAR INJECTION */(function(console) {/**
  * Copyright (c) 2016-present, Facebook, Inc.
@@ -1401,217 +1611,7 @@ var ReactComponentTreeHook = {
 };
 
 module.exports = ReactComponentTreeHook;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
-
-/***/ }),
-/* 9 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(console, global) {/* globals log */
-if (!console._skpmEnabled) {
-  if (true) {
-    var sketchDebugger = __webpack_require__(77)
-    var actions = __webpack_require__(79)
-
-    function getStack() {
-      return sketchDebugger.prepareStackTrace(new Error().stack)
-    }
-  }
-
-  console._skpmPrefix = 'console> '
-
-  function logEverywhere(type, args) {
-    var values = Array.prototype.slice.call(args)
-
-    // log to the System logs
-    values.forEach(function(v) {
-      try {
-        log(console._skpmPrefix + indentString() + v)
-      } catch (e) {
-        log(v)
-      }
-    })
-
-    if (true) {
-      if (!sketchDebugger.isDebuggerPresent()) {
-        return
-      }
-
-      var payload = {
-        ts: Date.now(),
-        type: type,
-        plugin: String(context.scriptPath),
-        values: values.map(sketchDebugger.prepareValue),
-        stack: getStack(),
-      }
-
-      sketchDebugger.sendToDebugger(actions.ADD_LOG, payload)
-    }
-  }
-
-  var indentLevel = 0
-  function indentString() {
-    var indent = ''
-    for (var i = 0; i < indentLevel; i++) {
-      indent += '  '
-    }
-    if (indentLevel > 0) {
-      indent += '| '
-    }
-    return indent
-  }
-
-  var oldGroup = console.group
-
-  console.group = function() {
-    // log to the JS context
-    oldGroup && oldGroup.apply(this, arguments)
-    indentLevel += 1
-    if (true) {
-      sketchDebugger.sendToDebugger(actions.GROUP, {
-        plugin: String(context.scriptPath),
-        collapsed: false,
-      })
-    }
-  }
-
-  var oldGroupCollapsed = console.groupCollapsed
-
-  console.groupCollapsed = function() {
-    // log to the JS context
-    oldGroupCollapsed && oldGroupCollapsed.apply(this, arguments)
-    indentLevel += 1
-    if (true) {
-      sketchDebugger.sendToDebugger(actions.GROUP, {
-        plugin: String(context.scriptPath),
-        collapsed: true
-      })
-    }
-  }
-
-  var oldGroupEnd = console.groupEnd
-
-  console.groupEnd = function() {
-    // log to the JS context
-    oldGroupEnd && oldGroupEnd.apply(this, arguments)
-    indentLevel -= 1
-    if (indentLevel < 0) {
-      indentLevel = 0
-    }
-    if (true) {
-      sketchDebugger.sendToDebugger(actions.GROUP_END, {
-        plugin: context.scriptPath,
-      })
-    }
-  }
-
-  var counts = {}
-  var oldCount = console.count
-
-  console.count = function(label) {
-    label = typeof label !== 'undefined' ? label : 'Global'
-    counts[label] = (counts[label] || 0) + 1
-
-    // log to the JS context
-    oldCount && oldCount.apply(this, arguments)
-    return logEverywhere('log', [label + ': ' + counts[label]])
-  }
-
-  var timers = {}
-  var oldTime = console.time
-
-  console.time = function(label) {
-    // log to the JS context
-    oldTime && oldTime.apply(this, arguments)
-
-    label = typeof label !== 'undefined' ? label : 'default'
-    if (timers[label]) {
-      return logEverywhere('warn', ['Timer "' + label + '" already exists'])
-    }
-
-    timers[label] = Date.now()
-    return
-  }
-
-  var oldTimeEnd = console.timeEnd
-
-  console.timeEnd = function(label) {
-    // log to the JS context
-    oldTimeEnd && oldTimeEnd.apply(this, arguments)
-
-    label = typeof label !== 'undefined' ? label : 'default'
-    if (!timers[label]) {
-      return logEverywhere('warn', ['Timer "' + label + '" does not exist'])
-    }
-
-    var duration = Date.now() - timers[label]
-    delete timers[label]
-    return logEverywhere('log', [label + ': ' + (duration / 1000) + 'ms'])
-  }
-
-  var oldLog = console.log
-
-  console.log = function() {
-    // log to the JS context
-    oldLog && oldLog.apply(this, arguments)
-    return logEverywhere('log', arguments)
-  }
-
-  var oldWarn = console.warn
-
-  console.warn = function() {
-    // log to the JS context
-    oldWarn && oldWarn.apply(this, arguments)
-    return logEverywhere('warn', arguments)
-  }
-
-  var oldError = console.error
-
-  console.error = function() {
-    // log to the JS context
-    oldError && oldError.apply(this, arguments)
-    return logEverywhere('error', arguments)
-  }
-
-  var oldAssert = console.assert
-
-  console.assert = function(condition, text) {
-    // log to the JS context
-    oldAssert && oldAssert.apply(this, arguments)
-    if (!condition) {
-      return logEverywhere('assert', [text])
-    }
-    return undefined
-  }
-
-  var oldInfo = console.info
-
-  console.info = function() {
-    // log to the JS context
-    oldInfo && oldInfo.apply(this, arguments)
-    return logEverywhere('info', arguments)
-  }
-
-  var oldClear = console.clear
-
-  console.clear = function() {
-    oldClear && oldClear()
-    if (true) {
-      return sketchDebugger.sendToDebugger(actions.CLEAR_LOGS)
-    }
-  }
-
-  console._skpmEnabled = true
-
-  // polyfill the global object
-  var commonjsGlobal = typeof global !== 'undefined' ? global : this
-
-  commonjsGlobal.console = console
-}
-
-module.exports = console
-
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9), __webpack_require__(24)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
 
 /***/ }),
 /* 10 */
@@ -3203,6 +3203,33 @@ module.exports = {};
 
 /***/ }),
 /* 23 */
+/***/ (function(module, exports) {
+
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || Function("return this")() || (1,eval)("this");
+} catch(e) {
+	// This works if the window reference is available
+	if(typeof window === "object")
+		g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
+
+/***/ }),
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3335,33 +3362,6 @@ if (true) {
 }
 
 module.exports = React;
-
-/***/ }),
-/* 24 */
-/***/ (function(module, exports) {
-
-var g;
-
-// This works in non-strict mode
-g = (function() {
-	return this;
-})();
-
-try {
-	// This works if eval is allowed (see CSP)
-	g = g || Function("return this")() || (1,eval)("this");
-} catch(e) {
-	// This works if the window reference is available
-	if(typeof window === "object")
-		g = window;
-}
-
-// g can still be undefined, but nothing to do about it...
-// We return undefined, instead of nothing here, so it's
-// easier to handle this case. if(!global) { ...}
-
-module.exports = g;
-
 
 /***/ }),
 /* 25 */
@@ -3668,7 +3668,7 @@ var ReactUpdates = {
 };
 
 module.exports = ReactUpdates;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
 
 /***/ }),
 /* 28 */
@@ -4010,7 +4010,7 @@ if (true) {
 }
 
 module.exports = lowPriorityWarning;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
 
 /***/ }),
 /* 32 */
@@ -4056,7 +4056,7 @@ module.exports = {
   clearTimeout: clearTimeout
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(24)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(23)))
 
 /***/ }),
 /* 33 */
@@ -5375,7 +5375,7 @@ module.exports = getIteratorFn;
 
 
 var ReactCurrentOwner = __webpack_require__(11);
-var ReactComponentTreeHook = __webpack_require__(8);
+var ReactComponentTreeHook = __webpack_require__(9);
 var ReactElement = __webpack_require__(12);
 
 var checkReactTypeSpec = __webpack_require__(85);
@@ -6158,7 +6158,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
   return ReactPropTypes;
 };
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
 
 /***/ }),
 /* 51 */
@@ -6801,7 +6801,7 @@ module.exports = instantiateReactComponent;
 
 var _prodInvariant = __webpack_require__(5);
 
-var React = __webpack_require__(23);
+var React = __webpack_require__(24);
 
 var invariant = __webpack_require__(1);
 
@@ -7168,7 +7168,7 @@ module.exports = {
   clearInterval: clearInterval
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(24)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(23)))
 
 /***/ }),
 /* 63 */
@@ -8341,7 +8341,14 @@ var styles = _reactSketchapp.StyleSheet.create({
   bodyTextOnLightBG: { fontSize: 16, color: 'rgba(0, 0, 0, .65)', lineHeight: 24 },
   paletteContainer: { width: '100%', display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between', paddingTop: '80px' },
   palette: { flexBasis: '23%', marginBottom: 64, borderRadius: 4 },
-  paletteTitleTextOnLightBG: _defineProperty({ fontSize: 24, color: 'rgba(0, 0, 0, .87)', lineHeight: 32, marginBottom: 32, textAlign: 'center' }, 'marginBottom', 24)
+  paletteTitleTextOnLightBG: _defineProperty({ fontSize: 24, color: 'rgba(0, 0, 0, .87)', lineHeight: 32, marginBottom: 32, textAlign: 'center' }, 'marginBottom', 24),
+  fontBoxContainerRow: { flexDirection: 'row', marginBottom: 24 },
+  fontBoxContainer: { flexBasis: 140, marginRight: 32 },
+  fontBox: { marginTop: 8, borderWidth: 1, height: 140, borderColor: '#ddd', borderRadius: 4, paddingHorizontal: 20, paddingBottom: 12, justifyContent: 'flex-end' },
+  fontDemoName: { textAlign: 'center', fontSize: 46, color: 'rgba(0, 0, 0, .87)', lineHeight: 55, marginBottom: 12 },
+  fontDemoFamily: { textAlign: 'center', fontSize: 16, color: 'rgba(0, 0, 0, .65)', borderWidth: 1, borderColor: '#f33' },
+  fontLine: { width: '100%', height: 1, backgroundColor: '#ddd', marginBottom: 8 },
+  composeRow: { flex: 1, flexBasis: 200 }
 });
 var styleFunc = {
   paletteItem: function () {
@@ -8405,6 +8412,55 @@ var colorValue = [{
   value: '#eb2f96'
 }];
 
+// font style
+var typeBaseStyles = {
+  color: 'rgba(0, 0, 0, .87)',
+  fontFamily: 'Pingfang SC'
+};
+var fonts = [{
+  name: 'Headline',
+  scene: '导航标题、重要标题',
+  fontSize: 20,
+  lineHeight: 26
+}, {
+  name: 'Title',
+  scene: '标题、列表名称',
+  fontSize: 18,
+  lineHeight: 24
+}, {
+  name: 'Subtitle',
+  scene: '次级标题',
+  fontSize: 16,
+  lineHeight: 22
+}, {
+  name: 'Body',
+  scene: '正文、',
+  fontSize: 14,
+  lineHeight: 20
+}, {
+  name: 'Caption1',
+  scene: '描述信息',
+  fontSize: 12,
+  lineHeight: 16
+}, {
+  name: 'Caption2',
+  scene: '更小的描述信息',
+  fontSize: 10,
+  lineHeight: 14
+}];
+var typeStyles = {};
+fonts.forEach(function (item) {
+  typeStyles[item.name] = Object.assign({}, typeBaseStyles, {
+    fontSize: item.fontSize,
+    lineHeight: item.lineHeight
+  });
+});
+
+_reactSketchapp.TextStyles.create({
+  context: context,
+  clearExistingStyles: true
+}, typeStyles);
+
 var Color = function Color(props) {
   return _react2['default'].createElement(
     _reactSketchapp.Document,
@@ -8467,7 +8523,7 @@ var Color = function Color(props) {
             colorValue.map(function (item, index) {
               return _react2['default'].createElement(
                 _reactSketchapp.View,
-                { style: styles.palette },
+                { style: styles.palette, key: index },
                 _react2['default'].createElement(
                   _reactSketchapp.Text,
                   { style: styles.paletteTitleTextOnLightBG },
@@ -8477,7 +8533,7 @@ var Color = function Color(props) {
                   var bgColor = (0, _util.colorPalette)(item.value, i + 1);
                   return _react2['default'].createElement(
                     _reactSketchapp.View,
-                    { style: styleFunc.paletteItem(bgColor) },
+                    { style: styleFunc.paletteItem(bgColor), key: i },
                     _react2['default'].createElement(
                       _reactSketchapp.Text,
                       { style: styleFunc.paletteItemName(i) },
@@ -8526,6 +8582,131 @@ var Color = function Color(props) {
             { style: styles.bodyTextOnDarkBG },
             '\u8BBE\u8BA1\u8BED\u8A00\u7F51\u5740\uFF1Ahttp://ued.qunar.com/style-guide/'
           )
+        ),
+        _react2['default'].createElement(
+          _reactSketchapp.View,
+          { name: 'body',
+            style: styles.body },
+          _react2['default'].createElement(
+            _reactSketchapp.Text,
+            { style: styles.titleTextOnLightBG },
+            '\u5B57\u4F53'
+          ),
+          _react2['default'].createElement(
+            _reactSketchapp.View,
+            { style: styles.fontBoxContainerRow },
+            _react2['default'].createElement(
+              _reactSketchapp.View,
+              { style: styles.fontBoxContainer },
+              _react2['default'].createElement(
+                _reactSketchapp.Text,
+                { style: styles.bodyTextOnLightBG },
+                '\u4E2D\u6587'
+              ),
+              _react2['default'].createElement(
+                _reactSketchapp.View,
+                { style: styles.fontBox },
+                _react2['default'].createElement(
+                  _reactSketchapp.Text,
+                  { style: _reactSketchapp.StyleSheet.flatten([styles.fontDemoName, { fontFamily: 'Pingfang SC' }]) },
+                  '\u79FB'
+                ),
+                _react2['default'].createElement(_reactSketchapp.View, { style: styles.fontLine }),
+                _react2['default'].createElement(
+                  _reactSketchapp.Text,
+                  { style: _reactSketchapp.StyleSheet.flatten([styles.fontDemoFamily, { fontFamily: 'Pingfang SC' }]) },
+                  'Pingfang SC'
+                )
+              )
+            ),
+            _react2['default'].createElement(
+              _reactSketchapp.View,
+              { style: styles.fontBoxContainer },
+              _react2['default'].createElement(
+                _reactSketchapp.Text,
+                { style: styles.bodyTextOnLightBG },
+                '\u82F1\u6587'
+              ),
+              _react2['default'].createElement(
+                _reactSketchapp.View,
+                { style: styles.fontBox },
+                _react2['default'].createElement(
+                  _reactSketchapp.Text,
+                  { style: _reactSketchapp.StyleSheet.flatten([styles.fontDemoName, { fontFamily: 'Helvetica' }]) },
+                  'Aa'
+                ),
+                _react2['default'].createElement(_reactSketchapp.View, { style: styles.fontLine }),
+                _react2['default'].createElement(
+                  _reactSketchapp.Text,
+                  { style: _reactSketchapp.StyleSheet.flatten([styles.fontDemoFamily, { fontFamily: 'Helvetica' }]) },
+                  'Helvetica'
+                )
+              )
+            ),
+            _react2['default'].createElement(
+              _reactSketchapp.View,
+              { style: styles.fontBoxContainer },
+              _react2['default'].createElement(
+                _reactSketchapp.Text,
+                { style: styles.bodyTextOnLightBG },
+                '\u6570\u5B57'
+              ),
+              _react2['default'].createElement(
+                _reactSketchapp.View,
+                { style: styles.fontBox },
+                _react2['default'].createElement(
+                  _reactSketchapp.Text,
+                  { style: _reactSketchapp.StyleSheet.flatten([styles.fontDemoName, { fontFamily: 'Helvetica' }]) },
+                  '123'
+                ),
+                _react2['default'].createElement(_reactSketchapp.View, { style: styles.fontLine }),
+                _react2['default'].createElement(
+                  _reactSketchapp.Text,
+                  { style: _reactSketchapp.StyleSheet.flatten([styles.fontDemoFamily, { fontFamily: 'Helvetica' }]) },
+                  'Helvetica'
+                )
+              )
+            )
+          ),
+          _react2['default'].createElement(
+            _reactSketchapp.Text,
+            { style: styles.bodyTextOnLightBG },
+            'font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,"Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",SimSun, sans-serif;'
+          ),
+          _react2['default'].createElement(
+            _reactSketchapp.Text,
+            { style: _reactSketchapp.StyleSheet.flatten([styles.titleTextOnLightBG, { marginTop: 100 }]) },
+            '\u6587\u5B57\u6392\u7248'
+          ),
+          _react2['default'].createElement(
+            _reactSketchapp.View,
+            { style: { flexDirection: 'row', flexWrap: 'wrap' } },
+            fonts.map(function (item, index) {
+              return _react2['default'].createElement(
+                _reactSketchapp.View,
+                { style: { width: '100%', flexDirection: 'row', marginBottom: 16 }, key: index },
+                _react2['default'].createElement(
+                  _reactSketchapp.Text,
+                  { style: { width: 160, lineHeight: item.lineHeight } },
+                  item.name
+                ),
+                _react2['default'].createElement(
+                  _reactSketchapp.Text,
+                  { style: _reactSketchapp.StyleSheet.flatten([_reactSketchapp.TextStyles.get(item.name), { width: 300 }]) },
+                  'Regular ',
+                  new Number(item.fontSize).toString(),
+                  'px/',
+                  new Number(item.lineHeight).toString(),
+                  'px'
+                ),
+                _react2['default'].createElement(
+                  _reactSketchapp.Text,
+                  { style: _reactSketchapp.StyleSheet.flatten([_reactSketchapp.TextStyles.get(item.name), { flex: 1 }]) },
+                  '\u6211\u662F\u5B57\u4F53 ABCDEFGH 0123456789'
+                )
+              );
+            })
+          )
         )
       )
     )
@@ -8533,6 +8714,7 @@ var Color = function Color(props) {
 };
 
 exports['default'] = function (context) {
+
   (0, _reactSketchapp.render)(_react2['default'].createElement(Color, null), context.document.currentPage());
 };
 
@@ -9560,7 +9742,7 @@ if (typeof process !== 'undefined' && process.env && "development" === 'test') {
   // https://github.com/facebook/react/issues/7240
   // Remove the inline requires when we don't need them anymore:
   // https://github.com/facebook/react/pull/7178
-  ReactComponentTreeHook = __webpack_require__(8);
+  ReactComponentTreeHook = __webpack_require__(9);
 }
 
 var loggedTypeFailures = {};
@@ -9602,7 +9784,7 @@ function checkReactTypeSpec(typeSpecs, values, location, componentName, element,
 
         if (true) {
           if (!ReactComponentTreeHook) {
-            ReactComponentTreeHook = __webpack_require__(8);
+            ReactComponentTreeHook = __webpack_require__(9);
           }
           if (debugID !== null) {
             componentStackInfo = ReactComponentTreeHook.getStackAddendumByID(debugID);
@@ -11331,7 +11513,7 @@ module.exports = ReactOwner;
 
 var ReactInvalidSetStateWarningHook = __webpack_require__(103);
 var ReactHostOperationHistoryHook = __webpack_require__(104);
-var ReactComponentTreeHook = __webpack_require__(8);
+var ReactComponentTreeHook = __webpack_require__(9);
 var ExecutionEnvironment = __webpack_require__(55);
 
 var performanceNow = __webpack_require__(105);
@@ -12297,7 +12479,7 @@ if (typeof process !== 'undefined' && process.env && "development" === 'test') {
   // https://github.com/facebook/react/issues/7240
   // Remove the inline requires when we don't need them anymore:
   // https://github.com/facebook/react/pull/7178
-  ReactComponentTreeHook = __webpack_require__(8);
+  ReactComponentTreeHook = __webpack_require__(9);
 }
 
 function instantiateChild(childInstances, child, name, selfDebugID) {
@@ -12305,7 +12487,7 @@ function instantiateChild(childInstances, child, name, selfDebugID) {
   var keyUnique = childInstances[name] === undefined;
   if (true) {
     if (!ReactComponentTreeHook) {
-      ReactComponentTreeHook = __webpack_require__(8);
+      ReactComponentTreeHook = __webpack_require__(9);
     }
     if (!keyUnique) {
        true ? warning(false, 'flattenChildren(...): Encountered two children with the same key, ' + '`%s`. Child keys must be unique; when two children share a key, only ' + 'the first child will be used.%s', KeyEscapeUtils.unescape(name), ReactComponentTreeHook.getStackAddendumByID(selfDebugID)) : void 0;
@@ -12441,7 +12623,7 @@ module.exports = ReactChildReconciler;
 var _prodInvariant = __webpack_require__(5),
     _assign = __webpack_require__(6);
 
-var React = __webpack_require__(23);
+var React = __webpack_require__(24);
 var ReactComponentEnvironment = __webpack_require__(34);
 var ReactCurrentOwner = __webpack_require__(11);
 var ReactErrorUtils = __webpack_require__(110);
@@ -13438,7 +13620,7 @@ if (typeof process !== 'undefined' && process.env && "development" === 'test') {
   // https://github.com/facebook/react/issues/7240
   // Remove the inline requires when we don't need them anymore:
   // https://github.com/facebook/react/pull/7178
-  ReactComponentTreeHook = __webpack_require__(8);
+  ReactComponentTreeHook = __webpack_require__(9);
 }
 
 var loggedTypeFailures = {};
@@ -13480,7 +13662,7 @@ function checkReactTypeSpec(typeSpecs, values, location, componentName, element,
 
         if (true) {
           if (!ReactComponentTreeHook) {
-            ReactComponentTreeHook = __webpack_require__(8);
+            ReactComponentTreeHook = __webpack_require__(9);
           }
           if (debugID !== null) {
             componentStackInfo = ReactComponentTreeHook.getStackAddendumByID(debugID);
@@ -13736,7 +13918,7 @@ if (typeof process !== 'undefined' && process.env && "development" === 'test') {
   // https://github.com/facebook/react/issues/7240
   // Remove the inline requires when we don't need them anymore:
   // https://github.com/facebook/react/pull/7178
-  ReactComponentTreeHook = __webpack_require__(8);
+  ReactComponentTreeHook = __webpack_require__(9);
 }
 
 /**
@@ -13752,7 +13934,7 @@ function flattenSingleChildIntoContext(traverseContext, child, name, selfDebugID
     var keyUnique = result[name] === undefined;
     if (true) {
       if (!ReactComponentTreeHook) {
-        ReactComponentTreeHook = __webpack_require__(8);
+        ReactComponentTreeHook = __webpack_require__(9);
       }
       if (!keyUnique) {
          true ? warning(false, 'flattenChildren(...): Encountered two children with the same key, ' + '`%s`. Child keys must be unique; when two children share a key, only ' + 'the first child will be used.%s', KeyEscapeUtils.unescape(name), ReactComponentTreeHook.getStackAddendumByID(selfDebugID)) : void 0;
@@ -13806,7 +13988,7 @@ module.exports = flattenChildren;
 var _prodInvariant = __webpack_require__(5),
     _assign = __webpack_require__(6);
 
-var React = __webpack_require__(23);
+var React = __webpack_require__(24);
 var ReactReconciler = __webpack_require__(20);
 var ReactUpdates = __webpack_require__(27);
 
@@ -24994,7 +25176,7 @@ module.exports = ReactTestEmptyComponent;
   }run();
 });
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(18), "/", __webpack_require__(9), __webpack_require__(62)["clearInterval"], __webpack_require__(32)["setTimeout"], __webpack_require__(62)["setInterval"], __webpack_require__(126).Buffer))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(18), "/", __webpack_require__(8), __webpack_require__(62)["clearInterval"], __webpack_require__(32)["setTimeout"], __webpack_require__(62)["setInterval"], __webpack_require__(126).Buffer))
 
 /***/ }),
 /* 126 */
@@ -26791,7 +26973,7 @@ function isnan (val) {
   return val !== val // eslint-disable-line no-self-compare
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(24)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(23)))
 
 /***/ }),
 /* 127 */
@@ -31348,7 +31530,7 @@ module.exports = (_temp = _class = function (_React$Component) {
 
   return TextPath;
 }(_react2.default.Component), _class.propTypes = _props2.textPathProps, _temp);
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
 
 /***/ }),
 /* 178 */
@@ -31496,7 +31678,7 @@ module.exports = (_temp = _class = function (_React$Component) {
   href: _propTypes2.default.string.isRequired,
   width: _props2.numberProp, // Just for reusing `Symbol`
   height: _props2.numberProp }, _props2.pathProps), _temp);
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
 
 /***/ }),
 /* 180 */
