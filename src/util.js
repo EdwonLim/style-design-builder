@@ -2,26 +2,26 @@ const tinycolor = require('tinycolor2');
 
 // 根据输入的颜色 获取一条渐变色板
 const colorPalette = (color, index) => {
-  // letiables
-  const hueStep = 2;
-  const saturationStep = 16;
-  const saturationStep2 = 5;
-  const brightnessStep1 = 5;
-  const brightnessStep2 = 15;
-  const lightColorCount = 5;
-  const darkColorCount = 4;
+    // letiables
+    const hueStep = 2;
+    const saturationStep = 16;
+    const saturationStep2 = 5;
+    const brightnessStep1 = 5;
+    const brightnessStep2 = 15;
+    const lightColorCount = 5;
+    const darkColorCount = 4;
 
-  const getHue = (hsv, i, isLight) => {
+    const getHue = (hsv, i, isLight) => {
     let hue;
     if (hsv.h >= 60 && hsv.h <= 240) {
-      hue = isLight ? hsv.h - hueStep * i : hsv.h + hueStep * i;
+        hue = isLight ? hsv.h - hueStep * i : hsv.h + hueStep * i;
     } else {
-      hue = isLight ? hsv.h + hueStep * i : hsv.h - hueStep * i;
+        hue = isLight ? hsv.h + hueStep * i : hsv.h - hueStep * i;
     }
     if (hue < 0) {
-      hue += 360;
+        hue += 360;
     } else if (hue >= 360) {
-      hue -= 360;
+        hue -= 360;
     }
     return Math.round(hue);
   };
