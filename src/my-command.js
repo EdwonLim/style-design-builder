@@ -5,15 +5,17 @@ import Header from './component/Header';
 import { styles , styleFunc, colorValue, fonts, typeStyles } from './style/commonStyle';
 import ArtboardColor from './artboard/Color';
 import ArtboardText from './artboard/Text';
+import DevelopColor from './artboard/developColor';
 
 const Doc = props => {
-  return (
-    <Document>
-      <Page name="Style">
-        <ArtboardColor></ArtboardColor>
-        <ArtboardText></ArtboardText>
-      </Page>
-    </Document>);
+    return (
+        <Document>
+            <Page name="Style">
+                <DevelopColor></DevelopColor>
+                <ArtboardColor></ArtboardColor>
+                <ArtboardText></ArtboardText>
+            </Page>
+        </Document>);
 }
 
 export default (context) => {

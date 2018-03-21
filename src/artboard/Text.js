@@ -9,7 +9,7 @@ const ArtboardText = () => (
         name="Text"
         style={{ position: 'absolute', width: 1440, left: 1600}}
     >
-        <Header>文字</Header>
+        <Header>Youth Design - 文字</Header>
         <View name="body"
             style={styles.body}>
             <Text style={styles.titleTextOnLightBG}>字体</Text>

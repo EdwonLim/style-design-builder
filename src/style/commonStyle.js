@@ -2,102 +2,107 @@ import { TextStyles } from 'react-sketchapp';
 
 const styles = {
     headerTitle: {
-    width: '100%',
-    height: 400,
-    backgroundColor: '#000',
-    padding: '120px 100px'
-  },
-  body: {
-    width: '100%',
-    backgroundColor: '#fff',
-    padding: '100px'
-  },
-  titleTextOnDarkBG: { 
-    fontSize: 64, 
-    color: '#fff', 
-    marginBottom: 16, 
-    lineHeight: 96 
-},
-  bodyTextOnDarkBG: { 
-      fontSize: 20, 
-      color: 'rgba(255, 255, 255, .7)', 
-      lineHeight: 30 
-      },
-  titleTextOnLightBG: { 
-      fontSize: 24, 
-      fontWeight: 'bold', 
-      color: 'rgba(0, 0, 0, .87)', 
-      lineHeight: 32, 
-      marginBottom: 32 
-      },
-  bodyTextOnLightBG: { 
-      fontSize: 16, 
-      color: 'rgba(0, 0, 0, .65)', 
-      lineHeight: 24 
-      },
-  paletteContainer: { 
-      width: '100%', 
-      display: 'flex', 
-      flexDirection: 'row', 
-      flexWrap: 'wrap', 
-      justifyContent: 'space-between', 
-      paddingTop: '80px' 
-      },
-  palette: { 
-      flexBasis: '23%',
-       marginBottom: 64, 
-       borderRadius: 4 
-       },
-  paletteTitleTextOnLightBG: { 
-      fontSize: 24, 
-      color: 'rgba(0, 0, 0, .87)', 
-      lineHeight: 32, 
-      marginBottom: 32, 
-      textAlign: 'center', 
-      marginBottom: 24 
-      },
-  fontBoxContainerRow: { 
-      flexDirection: 'row',
-       marginBottom: 24 
-       },
-  fontBoxContainer: { 
-      flexBasis: 140, 
-      marginRight: 32 
-      },
-  fontBox: { 
-      marginTop: 8, 
-      borderWidth: 1, 
-      height: 140, 
-      borderColor: '#ddd', 
-      borderRadius: 4, 
-      paddingHorizontal: 20, 
-      paddingBottom: 12, 
-      justifyContent: 'flex-end'
-       },
-  fontDemoName: { 
-      textAlign: 'center', 
-      fontSize: 46, 
-      color: 'rgba(0, 0, 0, .87)',
-       lineHeight: 55, 
-       marginBottom: 12
-       },
-  fontDemoFamily: { 
-      textAlign: 'center', 
-      fontSize: 16, 
-      color: 'rgba(0, 0, 0, .65)', 
-      borderWidth: 1, 
-      borderColor: '#f33'
-      },
-  fontLine: { 
-      width: '100%', 
-      height: 1, 
-      backgroundColor: '#ddd', 
-      marginBottom: 8 
-      },
-  composeRow: { 
-      flex: 1, 
-      flexBasis: 200 
-      },
+        width: '100%',
+        height: 400,
+        backgroundColor: '#000',
+        padding: '120px 100px'
+    },
+    body: {
+        width: '100%',
+        backgroundColor: '#fff',
+        padding: '100px'
+    },
+    titleTextOnDarkBG: { 
+        fontSize: 64, 
+        color: '#fff', 
+        marginBottom: 16, 
+        lineHeight: 96 
+    },
+    bodyTextOnDarkBG: { 
+        fontSize: 20, 
+        color: 'rgba(255, 255, 255, .7)', 
+        lineHeight: 30 
+    },
+    titleTextOnLightBG: { 
+        fontSize: 24, 
+        fontWeight: 'bold', 
+        color: 'rgba(0, 0, 0, .87)', 
+        lineHeight: 32, 
+        marginBottom: 32 
+    },
+    bodyTextOnDeepBG: { 
+        fontSize: 16, 
+        color: 'rgba(255, 255, 255, .7)', 
+        lineHeight: 24 
+    },
+    bodyTextOnLightBG: { 
+        fontSize: 16, 
+        color: 'rgba(0, 0, 0, .65)', 
+        lineHeight: 24 
+    },
+    paletteContainer: { 
+        width: '100%', 
+        display: 'flex', 
+        flexDirection: 'row', 
+        flexWrap: 'wrap', 
+        justifyContent: 'space-between', 
+        paddingTop: '80px' 
+    },
+    palette: { 
+        flexBasis: '23%',
+        marginBottom: 64, 
+        borderRadius: 4 
+    },
+    paletteTitleTextOnLightBG: { 
+        fontSize: 24, 
+        color: 'rgba(0, 0, 0, .87)', 
+        lineHeight: 32, 
+        marginBottom: 32, 
+        textAlign: 'center', 
+        marginBottom: 24 
+    },
+    fontBoxContainerRow: { 
+        flexDirection: 'row',
+        marginBottom: 24 
+    },
+    fontBoxContainer: { 
+        flexBasis: 140, 
+        marginRight: 32 
+    },
+    fontBox: { 
+        marginTop: 8, 
+        borderWidth: 1, 
+        height: 140, 
+        borderColor: '#ddd', 
+        borderRadius: 4, 
+        paddingHorizontal: 20, 
+        paddingBottom: 12, 
+        justifyContent: 'flex-end'
+    },
+    fontDemoName: { 
+        textAlign: 'center', 
+        fontSize: 46, 
+        color: 'rgba(0, 0, 0, .87)',
+        lineHeight: 55, 
+        marginBottom: 12
+    },
+    fontDemoFamily: { 
+        textAlign: 'center', 
+        fontSize: 16, 
+        color: 'rgba(0, 0, 0, .65)', 
+        borderWidth: 1, 
+        borderColor: '#f33'
+    },
+    fontLine: { 
+        width: '100%', 
+        height: 1, 
+        backgroundColor: '#ddd', 
+        marginBottom: 8 
+    },
+    composeRow: { 
+        flex: 1, 
+        flexBasis: 200 
+    },
 };
 const styleFunc = {
   paletteItem(bgColor) {

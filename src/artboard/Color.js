@@ -11,7 +11,7 @@ const ArtboardColor = () => (
         width: 1440
         }}
     >
-        <Header>调色板</Header>
+        <Header>Youth Design - 调色板</Header>
         <View name="body"
             style={ styles.body }>
             <Text style={styles.titleTextOnLightBG}>调色板概述</Text>

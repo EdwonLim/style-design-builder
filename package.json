@@ -15,6 +15,7 @@
   "author": "Jon Gold <jon.gold@airbnb.com>",
   "license": "MIT",
   "dependencies": {
+    "@qnpm/micrapp": "^1.0.0-alpha1",
     "chroma-js": "^1.2.2",
     "react": "^15.4.2",
     "react-sketchapp": "^1.0.0",

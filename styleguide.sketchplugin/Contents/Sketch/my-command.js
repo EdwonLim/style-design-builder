@@ -75,7 +75,7 @@ var exports =
 "use strict";
 
 
-module.exports = __webpack_require__(24);
+module.exports = __webpack_require__(25);
 
 
 /***/ }),
@@ -186,7 +186,7 @@ if (true) {
 
 
 
-var emptyFunction = __webpack_require__(17);
+var emptyFunction = __webpack_require__(18);
 
 /**
  * Similar to invariant but only logs a warning if the condition is not met.
@@ -1611,7 +1611,7 @@ if (!console._skpmEnabled) {
 
 module.exports = console
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9), __webpack_require__(25)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9), __webpack_require__(26)))
 
 /***/ }),
 /* 10 */
@@ -1983,7 +1983,7 @@ var _assign = __webpack_require__(6);
 var ReactCurrentOwner = __webpack_require__(11);
 
 var warning = __webpack_require__(3);
-var canDefineProperty = __webpack_require__(26);
+var canDefineProperty = __webpack_require__(27);
 var hasOwnProperty = Object.prototype.hasOwnProperty;
 
 var REACT_ELEMENT_TYPE = __webpack_require__(51);
@@ -2356,6 +2356,82 @@ module.exports = reactProdInvariant;
 "use strict";
 
 
+var _render = __webpack_require__(56);
+
+var _Platform = __webpack_require__(158);
+
+var _Platform2 = _interopRequireDefault(_Platform);
+
+var _stylesheet = __webpack_require__(16);
+
+var _stylesheet2 = _interopRequireDefault(_stylesheet);
+
+var _Document = __webpack_require__(159);
+
+var _Document2 = _interopRequireDefault(_Document);
+
+var _Page = __webpack_require__(160);
+
+var _Page2 = _interopRequireDefault(_Page);
+
+var _Artboard = __webpack_require__(161);
+
+var _Artboard2 = _interopRequireDefault(_Artboard);
+
+var _Image = __webpack_require__(78);
+
+var _Image2 = _interopRequireDefault(_Image);
+
+var _RedBox = __webpack_require__(76);
+
+var _RedBox2 = _interopRequireDefault(_RedBox);
+
+var _Svg = __webpack_require__(162);
+
+var _Svg2 = _interopRequireDefault(_Svg);
+
+var _View = __webpack_require__(48);
+
+var _View2 = _interopRequireDefault(_View);
+
+var _Text = __webpack_require__(77);
+
+var _Text2 = _interopRequireDefault(_Text);
+
+var _TextStyles = __webpack_require__(73);
+
+var _TextStyles2 = _interopRequireDefault(_TextStyles);
+
+var _symbol = __webpack_require__(32);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+module.exports = {
+  render: _render.render,
+  renderToJSON: _render.renderToJSON,
+  StyleSheet: _stylesheet2.default,
+  Document: _Document2.default,
+  Page: _Page2.default,
+  Artboard: _Artboard2.default,
+  Image: _Image2.default,
+  RedBox: _RedBox2.default,
+  Svg: _Svg2.default,
+  Text: _Text2.default,
+  TextStyles: _TextStyles2.default,
+  View: _View2.default,
+  Platform: _Platform2.default,
+  makeSymbol: _symbol.makeSymbol,
+  injectSymbols: _symbol.injectSymbols,
+  makeSymbolByName: _symbol.makeSymbolByName
+};
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -2379,7 +2455,7 @@ var VALID_TEXT_CHILDREN_TYPES = exports.VALID_TEXT_CHILDREN_TYPES = ['text'];
 var APPLE_BROKEN_SYSTEM_FONT = exports.APPLE_BROKEN_SYSTEM_FONT = '.AppleSystemUIFont';
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2518,7 +2594,7 @@ var StyleSheet = {
 module.exports = StyleSheet;
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2583,7 +2659,7 @@ var SketchRenderer = function () {
 module.exports = SketchRenderer;
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2625,7 +2701,7 @@ emptyFunction.thatReturnsArgument = function (arg) {
 module.exports = emptyFunction;
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(setTimeout, clearTimeout) {// shim for using process in browser
@@ -2813,83 +2889,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(34)["setTimeout"], __webpack_require__(34)["clearTimeout"]))
-
-/***/ }),
-/* 19 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _render = __webpack_require__(56);
-
-var _Platform = __webpack_require__(158);
-
-var _Platform2 = _interopRequireDefault(_Platform);
-
-var _stylesheet = __webpack_require__(15);
-
-var _stylesheet2 = _interopRequireDefault(_stylesheet);
-
-var _Document = __webpack_require__(159);
-
-var _Document2 = _interopRequireDefault(_Document);
-
-var _Page = __webpack_require__(160);
-
-var _Page2 = _interopRequireDefault(_Page);
-
-var _Artboard = __webpack_require__(161);
-
-var _Artboard2 = _interopRequireDefault(_Artboard);
-
-var _Image = __webpack_require__(78);
-
-var _Image2 = _interopRequireDefault(_Image);
-
-var _RedBox = __webpack_require__(76);
-
-var _RedBox2 = _interopRequireDefault(_RedBox);
-
-var _Svg = __webpack_require__(162);
-
-var _Svg2 = _interopRequireDefault(_Svg);
-
-var _View = __webpack_require__(46);
-
-var _View2 = _interopRequireDefault(_View);
-
-var _Text = __webpack_require__(77);
-
-var _Text2 = _interopRequireDefault(_Text);
-
-var _TextStyles = __webpack_require__(73);
-
-var _TextStyles2 = _interopRequireDefault(_TextStyles);
-
-var _symbol = __webpack_require__(31);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-module.exports = {
-  render: _render.render,
-  renderToJSON: _render.renderToJSON,
-  StyleSheet: _stylesheet2.default,
-  Document: _Document2.default,
-  Page: _Page2.default,
-  Artboard: _Artboard2.default,
-  Image: _Image2.default,
-  RedBox: _RedBox2.default,
-  Svg: _Svg2.default,
-  Text: _Text2.default,
-  TextStyles: _TextStyles2.default,
-  View: _View2.default,
-  Platform: _Platform2.default,
-  makeSymbol: _symbol.makeSymbol,
-  injectSymbols: _symbol.injectSymbols,
-  makeSymbolByName: _symbol.makeSymbolByName
-};
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(36)["setTimeout"], __webpack_require__(36)["clearTimeout"]))
 
 /***/ }),
 /* 20 */
@@ -2906,7 +2906,7 @@ exports.toSJSON = toSJSON;
 exports.fromSJSON = fromSJSON;
 exports.fromSJSONDictionary = fromSJSONDictionary;
 
-var _invariant = __webpack_require__(35);
+var _invariant = __webpack_require__(37);
 
 var _invariant2 = _interopRequireDefault(_invariant);
 
@@ -2986,7 +2986,7 @@ function fromSJSONDictionary(jsonTree) {
 
 
 var ReactRef = __webpack_require__(103);
-var ReactInstrumentation = __webpack_require__(29);
+var ReactInstrumentation = __webpack_require__(30);
 
 var warning = __webpack_require__(3);
 
@@ -3281,6 +3281,241 @@ module.exports = {};
 /* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.typeStyles = exports.fonts = exports.colorValue = exports.styleFunc = exports.styles = undefined;
+
+var _reactSketchapp = __webpack_require__(14);
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var styles = {
+  headerTitle: {
+    width: '100%',
+    height: 400,
+    backgroundColor: '#000',
+    padding: '120px 100px'
+  },
+  body: {
+    width: '100%',
+    backgroundColor: '#fff',
+    padding: '100px'
+  },
+  titleTextOnDarkBG: {
+    fontSize: 64,
+    color: '#fff',
+    marginBottom: 16,
+    lineHeight: 96
+  },
+  bodyTextOnDarkBG: {
+    fontSize: 20,
+    color: 'rgba(255, 255, 255, .7)',
+    lineHeight: 30
+  },
+  titleTextOnLightBG: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: 'rgba(0, 0, 0, .87)',
+    lineHeight: 32,
+    marginBottom: 32
+  },
+  bodyTextOnDeepBG: {
+    fontSize: 16,
+    color: 'rgba(255, 255, 255, .7)',
+    lineHeight: 24
+  },
+  bodyTextOnLightBG: {
+    fontSize: 16,
+    color: 'rgba(0, 0, 0, .65)',
+    lineHeight: 24
+  },
+  paletteContainer: {
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+    paddingTop: '80px'
+  },
+  palette: {
+    flexBasis: '23%',
+    marginBottom: 64,
+    borderRadius: 4
+  },
+  paletteTitleTextOnLightBG: _defineProperty({
+    fontSize: 24,
+    color: 'rgba(0, 0, 0, .87)',
+    lineHeight: 32,
+    marginBottom: 32,
+    textAlign: 'center'
+  }, 'marginBottom', 24),
+  fontBoxContainerRow: {
+    flexDirection: 'row',
+    marginBottom: 24
+  },
+  fontBoxContainer: {
+    flexBasis: 140,
+    marginRight: 32
+  },
+  fontBox: {
+    marginTop: 8,
+    borderWidth: 1,
+    height: 140,
+    borderColor: '#ddd',
+    borderRadius: 4,
+    paddingHorizontal: 20,
+    paddingBottom: 12,
+    justifyContent: 'flex-end'
+  },
+  fontDemoName: {
+    textAlign: 'center',
+    fontSize: 46,
+    color: 'rgba(0, 0, 0, .87)',
+    lineHeight: 55,
+    marginBottom: 12
+  },
+  fontDemoFamily: {
+    textAlign: 'center',
+    fontSize: 16,
+    color: 'rgba(0, 0, 0, .65)',
+    borderWidth: 1,
+    borderColor: '#f33'
+  },
+  fontLine: {
+    width: '100%',
+    height: 1,
+    backgroundColor: '#ddd',
+    marginBottom: 8
+  },
+  composeRow: {
+    flex: 1,
+    flexBasis: 200
+  }
+};
+var styleFunc = {
+  paletteItem: function () {
+    function paletteItem(bgColor) {
+      return { backgroundColor: bgColor, display: 'flex', flexDirection: 'row', padding: 16 };
+    }
+
+    return paletteItem;
+  }(),
+  paletteItemName: function () {
+    function paletteItemName(index) {
+      return { flex: 1, color: index > 4 ? '#fff' : 'rgba(0, 0, 0, .87)', fontFamily: 'Ayuthaya' };
+    }
+
+    return paletteItemName;
+  }(),
+  paletteItemValue: function () {
+    function paletteItemValue(index) {
+      return { flex: 1, textAlign: 'right', color: index > 4 ? 'rgba(255, 255, 255, .7)' : 'rgba(0, 0, 0, .65)', fontFamily: 'Ayuthaya' };
+    }
+
+    return paletteItemValue;
+  }()
+};
+
+var colorValue = [{
+  name: 'Red',
+  value: '#f5222d'
+}, {
+  name: 'Valcano',
+  value: '#fa541c'
+}, {
+  name: 'Orange',
+  value: '#fa8c16'
+}, {
+  name: 'Gold',
+  value: '#faad14'
+}, {
+  name: 'Yellow',
+  value: '#fadb14'
+}, {
+  name: 'Lime',
+  value: '#a0d911'
+}, {
+  name: 'Green',
+  value: '#52c41a'
+}, {
+  name: 'Cyan',
+  value: '#13c2c2'
+}, {
+  name: 'Blue',
+  value: '#1890ff'
+}, {
+  name: 'GeekBlue',
+  value: '#2f54eb'
+}, {
+  name: 'Purple',
+  value: '#722ed1'
+}, {
+  name: 'Pink',
+  value: '#eb2f96'
+}];
+
+var fonts = [{
+  name: 'Headline',
+  scene: '导航标题、重要标题',
+  fontSize: 20,
+  lineHeight: 26
+}, {
+  name: 'Title',
+  scene: '标题、列表名称',
+  fontSize: 18,
+  lineHeight: 24
+}, {
+  name: 'Subtitle',
+  scene: '次级标题',
+  fontSize: 16,
+  lineHeight: 22
+}, {
+  name: 'Body',
+  scene: '正文、',
+  fontSize: 14,
+  lineHeight: 20
+}, {
+  name: 'Caption1',
+  scene: '描述信息',
+  fontSize: 12,
+  lineHeight: 16
+}, {
+  name: 'Caption2',
+  scene: '更小的描述信息',
+  fontSize: 10,
+  lineHeight: 14
+}];
+
+// font style
+var typeBaseStyles = {
+  color: 'rgba(0, 0, 0, .87)',
+  fontFamily: 'Pingfang SC'
+};
+
+var typeStyles = {};
+fonts.forEach(function (item) {
+  typeStyles[item.name] = Object.assign({}, typeBaseStyles, {
+    fontSize: item.fontSize,
+    lineHeight: item.lineHeight
+  });
+});
+
+_reactSketchapp.TextStyles.create({
+  context: context,
+  clearExistingStyles: true
+}, typeStyles);
+
+exports.styles = styles;
+exports.styleFunc = styleFunc;
+exports.colorValue = colorValue;
+exports.fonts = fonts;
+exports.typeStyles = typeStyles;
+
+/***/ }),
+/* 25 */
+/***/ (function(module, exports, __webpack_require__) {
+
 "use strict";
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -3309,8 +3544,8 @@ var createFactory = ReactElement.createFactory;
 var cloneElement = ReactElement.cloneElement;
 
 if (true) {
-  var lowPriorityWarning = __webpack_require__(33);
-  var canDefineProperty = __webpack_require__(26);
+  var lowPriorityWarning = __webpack_require__(35);
+  var canDefineProperty = __webpack_require__(27);
   var ReactElementValidator = __webpack_require__(53);
   var didWarnPropTypesDeprecated = false;
   createElement = ReactElementValidator.createElement;
@@ -3413,7 +3648,7 @@ if (true) {
 module.exports = React;
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports) {
 
 var g;
@@ -3440,7 +3675,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3469,7 +3704,7 @@ if (true) {
 module.exports = canDefineProperty;
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3492,7 +3727,7 @@ if (true) {
 module.exports = emptyObject;
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3510,10 +3745,10 @@ var _prodInvariant = __webpack_require__(5),
     _assign = __webpack_require__(6);
 
 var CallbackQueue = __webpack_require__(58);
-var PooledClass = __webpack_require__(37);
+var PooledClass = __webpack_require__(39);
 var ReactFeatureFlags = __webpack_require__(102);
 var ReactReconciler = __webpack_require__(21);
-var Transaction = __webpack_require__(38);
+var Transaction = __webpack_require__(40);
 
 var invariant = __webpack_require__(1);
 
@@ -3747,7 +3982,7 @@ module.exports = ReactUpdates;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3774,7 +4009,7 @@ if (true) {
 module.exports = { debugTool: debugTool };
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3792,7 +4027,7 @@ var hasAnyDefined = function hasAnyDefined(obj, names) {
 exports.default = hasAnyDefined;
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3815,7 +4050,7 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 
 var _sketchappJsonPlugin = __webpack_require__(20);
 
-var _stylesheet = __webpack_require__(15);
+var _stylesheet = __webpack_require__(16);
 
 var _stylesheet2 = _interopRequireDefault(_stylesheet);
 
@@ -4020,237 +4255,162 @@ var getSymbolMasterById = exports.getSymbolMasterById = function getSymbolMaster
 };
 
 /***/ }),
-/* 32 */
+/* 33 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var tinycolor = __webpack_require__(183);
+
+// 根据输入的颜色 获取一条渐变色板
+var colorPalette = function colorPalette(color, index) {
+  // letiables
+  var hueStep = 2;
+  var saturationStep = 16;
+  var saturationStep2 = 5;
+  var brightnessStep1 = 5;
+  var brightnessStep2 = 15;
+  var lightColorCount = 5;
+  var darkColorCount = 4;
+
+  var getHue = function getHue(hsv, i, isLight) {
+    var hue = void 0;
+    if (hsv.h >= 60 && hsv.h <= 240) {
+      hue = isLight ? hsv.h - hueStep * i : hsv.h + hueStep * i;
+    } else {
+      hue = isLight ? hsv.h + hueStep * i : hsv.h - hueStep * i;
+    }
+    if (hue < 0) {
+      hue += 360;
+    } else if (hue >= 360) {
+      hue -= 360;
+    }
+    return Math.round(hue);
+  };
+  var getSaturation = function getSaturation(hsv, i, isLight) {
+    var saturation = void 0;
+    if (isLight) {
+      saturation = Math.round(hsv.s * 100) - saturationStep * i;
+    } else if (i == darkColorCount) {
+      saturation = Math.round(hsv.s * 100) + saturationStep;
+    } else {
+      saturation = Math.round(hsv.s * 100) + saturationStep2 * i;
+    }
+    if (saturation > 100) {
+      saturation = 100;
+    }
+    if (isLight && i === lightColorCount && saturation > 10) {
+      saturation = 10;
+    }
+    if (saturation < 6) {
+      saturation = 6;
+    }
+    return Math.round(saturation);
+  };
+  var getValue = function getValue(hsv, i, isLight) {
+    if (isLight) {
+      return Math.round(hsv.v * 100) + brightnessStep1 * i;
+    }
+    return Math.round(hsv.v * 100) - brightnessStep2 * i;
+  };
+
+  var isLight = index <= 6;
+  var hsv = tinycolor(color).toHsv();
+  var i = isLight ? lightColorCount + 1 - index : index - lightColorCount - 1;
+  return tinycolor({
+    h: getHue(hsv, i, isLight),
+    s: getSaturation(hsv, i, isLight),
+    v: getValue(hsv, i, isLight)
+  }).toHexString();
+};
+
+// 根据某一种色彩获取浅色背景上文本的颜色
+// 由于自然界中不存在纯黑/灰色，因此使用黑灰色的文本不够美观，此函数使用其他颜色经过调和得到文本色更舒适
+// @color HexString eg: #00f
+// @type String eg: 'body'/'caption'/'disable'/'line'
+var getTextColorOnLightBackground = function getTextColorOnLightBackground(color, type) {
+  var hsl = tinycolor(color).toHsl();
+  var alpha = 1;
+
+  switch (type) {
+    case 'body':
+      alpha = 1;
+      break;
+    case 'caption':
+      alpha = .65;
+      break;
+    case 'disable':
+      alpha = .43;
+      break;
+    case 'line':
+      alpha = .14;
+      break;
+    default:
+      alpha = 1;
+  }
+
+  return tinycolor({
+    h: hsl.h,
+    s: hsl.s,
+    l: .09,
+    a: alpha
+  }).toRgbString();
+};
+
+module.exports = {
+  colorPalette: colorPalette,
+  getTextColorOnLightBackground: getTextColorOnLightBackground
+};
+
+/***/ }),
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.typeStyles = exports.fonts = exports.colorValue = exports.styleFunc = exports.styles = undefined;
-
-var _reactSketchapp = __webpack_require__(19);
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-var styles = {
-  headerTitle: {
-    width: '100%',
-    height: 400,
-    backgroundColor: '#000',
-    padding: '120px 100px'
-  },
-  body: {
-    width: '100%',
-    backgroundColor: '#fff',
-    padding: '100px'
-  },
-  titleTextOnDarkBG: {
-    fontSize: 64,
-    color: '#fff',
-    marginBottom: 16,
-    lineHeight: 96
-  },
-  bodyTextOnDarkBG: {
-    fontSize: 20,
-    color: 'rgba(255, 255, 255, .7)',
-    lineHeight: 30
-  },
-  titleTextOnLightBG: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: 'rgba(0, 0, 0, .87)',
-    lineHeight: 32,
-    marginBottom: 32
-  },
-  bodyTextOnLightBG: {
-    fontSize: 16,
-    color: 'rgba(0, 0, 0, .65)',
-    lineHeight: 24
-  },
-  paletteContainer: {
-    width: '100%',
-    display: 'flex',
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'space-between',
-    paddingTop: '80px'
-  },
-  palette: {
-    flexBasis: '23%',
-    marginBottom: 64,
-    borderRadius: 4
-  },
-  paletteTitleTextOnLightBG: _defineProperty({
-    fontSize: 24,
-    color: 'rgba(0, 0, 0, .87)',
-    lineHeight: 32,
-    marginBottom: 32,
-    textAlign: 'center'
-  }, 'marginBottom', 24),
-  fontBoxContainerRow: {
-    flexDirection: 'row',
-    marginBottom: 24
-  },
-  fontBoxContainer: {
-    flexBasis: 140,
-    marginRight: 32
-  },
-  fontBox: {
-    marginTop: 8,
-    borderWidth: 1,
-    height: 140,
-    borderColor: '#ddd',
-    borderRadius: 4,
-    paddingHorizontal: 20,
-    paddingBottom: 12,
-    justifyContent: 'flex-end'
-  },
-  fontDemoName: {
-    textAlign: 'center',
-    fontSize: 46,
-    color: 'rgba(0, 0, 0, .87)',
-    lineHeight: 55,
-    marginBottom: 12
-  },
-  fontDemoFamily: {
-    textAlign: 'center',
-    fontSize: 16,
-    color: 'rgba(0, 0, 0, .65)',
-    borderWidth: 1,
-    borderColor: '#f33'
-  },
-  fontLine: {
-    width: '100%',
-    height: 1,
-    backgroundColor: '#ddd',
-    marginBottom: 8
-  },
-  composeRow: {
-    flex: 1,
-    flexBasis: 200
-  }
-};
-var styleFunc = {
-  paletteItem: function () {
-    function paletteItem(bgColor) {
-      return { backgroundColor: bgColor, display: 'flex', flexDirection: 'row', padding: 16 };
-    }
-
-    return paletteItem;
-  }(),
-  paletteItemName: function () {
-    function paletteItemName(index) {
-      return { flex: 1, color: index > 4 ? '#fff' : 'rgba(0, 0, 0, .87)', fontFamily: 'Ayuthaya' };
-    }
-
-    return paletteItemName;
-  }(),
-  paletteItemValue: function () {
-    function paletteItemValue(index) {
-      return { flex: 1, textAlign: 'right', color: index > 4 ? 'rgba(255, 255, 255, .7)' : 'rgba(0, 0, 0, .65)', fontFamily: 'Ayuthaya' };
-    }
-
-    return paletteItemValue;
-  }()
-};
-
-var colorValue = [{
-  name: 'Red',
-  value: '#f5222d'
-}, {
-  name: 'Valcano',
-  value: '#fa541c'
-}, {
-  name: 'Orange',
-  value: '#fa8c16'
-}, {
-  name: 'Gold',
-  value: '#faad14'
-}, {
-  name: 'Yellow',
-  value: '#fadb14'
-}, {
-  name: 'Lime',
-  value: '#a0d911'
-}, {
-  name: 'Green',
-  value: '#52c41a'
-}, {
-  name: 'Cyan',
-  value: '#13c2c2'
-}, {
-  name: 'Blue',
-  value: '#1890ff'
-}, {
-  name: 'GeekBlue',
-  value: '#2f54eb'
-}, {
-  name: 'Purple',
-  value: '#722ed1'
-}, {
-  name: 'Pink',
-  value: '#eb2f96'
-}];
-
-var fonts = [{
-  name: 'Headline',
-  scene: '导航标题、重要标题',
-  fontSize: 20,
-  lineHeight: 26
-}, {
-  name: 'Title',
-  scene: '标题、列表名称',
-  fontSize: 18,
-  lineHeight: 24
-}, {
-  name: 'Subtitle',
-  scene: '次级标题',
-  fontSize: 16,
-  lineHeight: 22
-}, {
-  name: 'Body',
-  scene: '正文、',
-  fontSize: 14,
-  lineHeight: 20
-}, {
-  name: 'Caption1',
-  scene: '描述信息',
-  fontSize: 12,
-  lineHeight: 16
-}, {
-  name: 'Caption2',
-  scene: '更小的描述信息',
-  fontSize: 10,
-  lineHeight: 14
-}];
-
-// font style
-var typeBaseStyles = {
-  color: 'rgba(0, 0, 0, .87)',
-  fontFamily: 'Pingfang SC'
-};
-
-var typeStyles = {};
-fonts.forEach(function (item) {
-  typeStyles[item.name] = Object.assign({}, typeBaseStyles, {
-    fontSize: item.fontSize,
-    lineHeight: item.lineHeight
-  });
+    value: true
 });
 
-_reactSketchapp.TextStyles.create({
-  context: context,
-  clearExistingStyles: true
-}, typeStyles);
+var _react = __webpack_require__(0);
 
-exports.styles = styles;
-exports.styleFunc = styleFunc;
-exports.colorValue = colorValue;
-exports.fonts = fonts;
-exports.typeStyles = typeStyles;
+var _react2 = _interopRequireDefault(_react);
+
+var _reactSketchapp = __webpack_require__(14);
+
+var _commonStyle = __webpack_require__(24);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+var Header = function Header(_ref) {
+    var title = _ref.title,
+        children = _ref.children;
+    return _react2['default'].createElement(
+        _reactSketchapp.View,
+        { name: 'header', style: _commonStyle.styles.headerTitle },
+        _react2['default'].createElement(
+            _reactSketchapp.Text,
+            { style: _commonStyle.styles.titleTextOnDarkBG },
+            children,
+            ' ',
+            _react2['default'].createElement(
+                _reactSketchapp.Text,
+                { style: _commonStyle.styles.bodyTextOnDarkBG },
+                'v0.1.0 2018-03-05'
+            )
+        ),
+        _react2['default'].createElement(
+            _reactSketchapp.Text,
+            { style: _commonStyle.styles.bodyTextOnDarkBG },
+            '\u79FB\u52A8\u7AEF\u7EC4\u4EF6\u5E93\u6A21\u677F\uFF0C\u79C9\u627F Youth Design \u9752\u6625\u3001\u672A\u6765\u3001\u79D1\u5B66\u7684\u8BBE\u8BA1\u7406\u5FF5\uFF0C\u670D\u52A1\u4E8E QRN\u3001Hy\u3001YIS \u7B49\u79FB\u52A8\u7AEF\u6846\u67B6'
+        ),
+        _react2['default'].createElement(
+            _reactSketchapp.Text,
+            { style: _commonStyle.styles.bodyTextOnDarkBG },
+            '\u8BBE\u8BA1\u8BED\u8A00\u7F51\u5740\uFF1Ahttp://ued.qunar.com/style-guide/'
+        )
+    );
+};
+exports['default'] = Header;
 
 /***/ }),
-/* 33 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4319,7 +4479,7 @@ module.exports = lowPriorityWarning;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
 
 /***/ }),
-/* 34 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {/* globals coscript */
@@ -4362,10 +4522,10 @@ module.exports = {
   clearTimeout: clearTimeout
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(25)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(26)))
 
 /***/ }),
-/* 35 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4421,7 +4581,7 @@ module.exports = invariant;
 
 
 /***/ }),
-/* 36 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4468,7 +4628,7 @@ var ReactComponentEnvironment = {
 module.exports = ReactComponentEnvironment;
 
 /***/ }),
-/* 37 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4583,7 +4743,7 @@ var PooledClass = {
 module.exports = PooledClass;
 
 /***/ }),
-/* 38 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4814,7 +4974,7 @@ var TransactionImpl = {
 module.exports = TransactionImpl;
 
 /***/ }),
-/* 39 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4863,7 +5023,7 @@ var ReactInstanceMap = {
 module.exports = ReactInstanceMap;
 
 /***/ }),
-/* 40 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4925,7 +5085,7 @@ var KeyEscapeUtils = {
 module.exports = KeyEscapeUtils;
 
 /***/ }),
-/* 41 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -4963,7 +5123,7 @@ module.exports = __webpack_require__(133)(ret.bind, ret.lib);
 
 
 /***/ }),
-/* 42 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5016,7 +5176,7 @@ var Context = function () {
 exports.default = Context;
 
 /***/ }),
-/* 43 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5040,7 +5200,7 @@ var pick = function pick(obj, keys) {
 exports.default = pick;
 
 /***/ }),
-/* 44 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5243,7 +5403,7 @@ var makeShapeGroup = exports.makeShapeGroup = function makeShapeGroup(frame) {
 };
 
 /***/ }),
-/* 45 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5265,7 +5425,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 46 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5283,7 +5443,7 @@ var _propTypes = __webpack_require__(2);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _stylesheet = __webpack_require__(15);
+var _stylesheet = __webpack_require__(16);
 
 var _stylesheet2 = _interopRequireDefault(_stylesheet);
 
@@ -5291,7 +5451,7 @@ var _ViewStylePropTypes = __webpack_require__(23);
 
 var _ViewStylePropTypes2 = _interopRequireDefault(_ViewStylePropTypes);
 
-var _ResizingConstraintPropTypes = __webpack_require__(45);
+var _ResizingConstraintPropTypes = __webpack_require__(47);
 
 var _ResizingConstraintPropTypes2 = _interopRequireDefault(_ResizingConstraintPropTypes);
 
@@ -5348,162 +5508,6 @@ View.propTypes = propTypes;
 module.exports = View;
 
 /***/ }),
-/* 47 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var tinycolor = __webpack_require__(183);
-
-// 根据输入的颜色 获取一条渐变色板
-var colorPalette = function colorPalette(color, index) {
-  // letiables
-  var hueStep = 2;
-  var saturationStep = 16;
-  var saturationStep2 = 5;
-  var brightnessStep1 = 5;
-  var brightnessStep2 = 15;
-  var lightColorCount = 5;
-  var darkColorCount = 4;
-
-  var getHue = function getHue(hsv, i, isLight) {
-    var hue = void 0;
-    if (hsv.h >= 60 && hsv.h <= 240) {
-      hue = isLight ? hsv.h - hueStep * i : hsv.h + hueStep * i;
-    } else {
-      hue = isLight ? hsv.h + hueStep * i : hsv.h - hueStep * i;
-    }
-    if (hue < 0) {
-      hue += 360;
-    } else if (hue >= 360) {
-      hue -= 360;
-    }
-    return Math.round(hue);
-  };
-  var getSaturation = function getSaturation(hsv, i, isLight) {
-    var saturation = void 0;
-    if (isLight) {
-      saturation = Math.round(hsv.s * 100) - saturationStep * i;
-    } else if (i == darkColorCount) {
-      saturation = Math.round(hsv.s * 100) + saturationStep;
-    } else {
-      saturation = Math.round(hsv.s * 100) + saturationStep2 * i;
-    }
-    if (saturation > 100) {
-      saturation = 100;
-    }
-    if (isLight && i === lightColorCount && saturation > 10) {
-      saturation = 10;
-    }
-    if (saturation < 6) {
-      saturation = 6;
-    }
-    return Math.round(saturation);
-  };
-  var getValue = function getValue(hsv, i, isLight) {
-    if (isLight) {
-      return Math.round(hsv.v * 100) + brightnessStep1 * i;
-    }
-    return Math.round(hsv.v * 100) - brightnessStep2 * i;
-  };
-
-  var isLight = index <= 6;
-  var hsv = tinycolor(color).toHsv();
-  var i = isLight ? lightColorCount + 1 - index : index - lightColorCount - 1;
-  return tinycolor({
-    h: getHue(hsv, i, isLight),
-    s: getSaturation(hsv, i, isLight),
-    v: getValue(hsv, i, isLight)
-  }).toHexString();
-};
-
-// 根据某一种色彩获取浅色背景上文本的颜色
-// 由于自然界中不存在纯黑/灰色，因此使用黑灰色的文本不够美观，此函数使用其他颜色经过调和得到文本色更舒适
-// @color HexString eg: #00f
-// @type String eg: 'body'/'caption'/'disable'/'line'
-var getTextColorOnLightBackground = function getTextColorOnLightBackground(color, type) {
-  var hsl = tinycolor(color).toHsl();
-  var alpha = 1;
-
-  switch (type) {
-    case 'body':
-      alpha = 1;
-      break;
-    case 'caption':
-      alpha = .65;
-      break;
-    case 'disable':
-      alpha = .43;
-      break;
-    case 'line':
-      alpha = .14;
-      break;
-    default:
-      alpha = 1;
-  }
-
-  return tinycolor({
-    h: hsl.h,
-    s: hsl.s,
-    l: .09,
-    a: alpha
-  }).toRgbString();
-};
-
-module.exports = {
-  colorPalette: colorPalette,
-  getTextColorOnLightBackground: getTextColorOnLightBackground
-};
-
-/***/ }),
-/* 48 */
-/***/ (function(module, exports, __webpack_require__) {
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactSketchapp = __webpack_require__(19);
-
-var _commonStyle = __webpack_require__(32);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-var Header = function Header(_ref) {
-    var title = _ref.title,
-        children = _ref.children;
-    return _react2['default'].createElement(
-        _reactSketchapp.View,
-        { name: 'header', style: _commonStyle.styles.headerTitle },
-        _react2['default'].createElement(
-            _reactSketchapp.Text,
-            { style: _commonStyle.styles.titleTextOnDarkBG },
-            'Youth Design - ',
-            children,
-            ' ',
-            _react2['default'].createElement(
-                _reactSketchapp.Text,
-                { style: _commonStyle.styles.bodyTextOnDarkBG },
-                'v0.1.0 2018-03-05'
-            )
-        ),
-        _react2['default'].createElement(
-            _reactSketchapp.Text,
-            { style: _commonStyle.styles.bodyTextOnDarkBG },
-            '\u79FB\u52A8\u7AEF\u7EC4\u4EF6\u5E93\u6A21\u677F\uFF0C\u79C9\u627F Youth Design \u9752\u6625\u3001\u672A\u6765\u3001\u79D1\u5B66\u7684\u8BBE\u8BA1\u7406\u5FF5\uFF0C\u670D\u52A1\u4E8E QRN\u3001Hy\u3001YIS \u7B49\u79FB\u52A8\u7AEF\u6846\u67B6'
-        ),
-        _react2['default'].createElement(
-            _reactSketchapp.Text,
-            { style: _commonStyle.styles.bodyTextOnDarkBG },
-            '\u8BBE\u8BA1\u8BED\u8A00\u7F51\u5740\uFF1Ahttp://ued.qunar.com/style-guide/'
-        )
-    );
-};
-exports['default'] = Header;
-
-/***/ }),
 /* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5523,10 +5527,10 @@ var _prodInvariant = __webpack_require__(13),
 
 var ReactNoopUpdateQueue = __webpack_require__(50);
 
-var canDefineProperty = __webpack_require__(26);
-var emptyObject = __webpack_require__(27);
+var canDefineProperty = __webpack_require__(27);
+var emptyObject = __webpack_require__(28);
 var invariant = __webpack_require__(1);
-var lowPriorityWarning = __webpack_require__(33);
+var lowPriorityWarning = __webpack_require__(35);
 
 /**
  * Base class helpers for the updating state of a component.
@@ -5842,10 +5846,10 @@ var ReactElement = __webpack_require__(12);
 
 var checkReactTypeSpec = __webpack_require__(89);
 
-var canDefineProperty = __webpack_require__(26);
+var canDefineProperty = __webpack_require__(27);
 var getIteratorFn = __webpack_require__(52);
 var warning = __webpack_require__(3);
-var lowPriorityWarning = __webpack_require__(33);
+var lowPriorityWarning = __webpack_require__(35);
 
 function getDeclarationErrorAddendum() {
   if (ReactCurrentOwner.current) {
@@ -6086,7 +6090,7 @@ module.exports = ReactElementValidator;
 
 
 
-var emptyFunction = __webpack_require__(17);
+var emptyFunction = __webpack_require__(18);
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(3);
 var assign = __webpack_require__(6);
@@ -6669,7 +6673,7 @@ var _flexToSketchJSON2 = _interopRequireDefault(_flexToSketchJSON);
 
 var _resets = __webpack_require__(74);
 
-var _symbol = __webpack_require__(31);
+var _symbol = __webpack_require__(32);
 
 var _RedBox = __webpack_require__(76);
 
@@ -6807,19 +6811,19 @@ var _reactTestRenderer = __webpack_require__(99);
 
 var _reactTestRenderer2 = _interopRequireDefault(_reactTestRenderer);
 
-var _yogaLayout = __webpack_require__(41);
+var _yogaLayout = __webpack_require__(43);
 
 var yoga = _interopRequireWildcard(_yogaLayout);
 
-var _Context = __webpack_require__(42);
+var _Context = __webpack_require__(44);
 
 var _Context2 = _interopRequireDefault(_Context);
 
-var _hasAnyDefined = __webpack_require__(30);
+var _hasAnyDefined = __webpack_require__(31);
 
 var _hasAnyDefined2 = _interopRequireDefault(_hasAnyDefined);
 
-var _pick = __webpack_require__(43);
+var _pick = __webpack_require__(45);
 
 var _pick2 = _interopRequireDefault(_pick);
 
@@ -6831,7 +6835,7 @@ var _computeTextTree = __webpack_require__(68);
 
 var _computeTextTree2 = _interopRequireDefault(_computeTextTree);
 
-var _constants = __webpack_require__(14);
+var _constants = __webpack_require__(15);
 
 var _zIndex = __webpack_require__(75);
 
@@ -6939,7 +6943,7 @@ var _prodInvariant = __webpack_require__(5);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var PooledClass = __webpack_require__(37);
+var PooledClass = __webpack_require__(39);
 
 var invariant = __webpack_require__(1);
 
@@ -7263,7 +7267,7 @@ module.exports = instantiateReactComponent;
 
 var _prodInvariant = __webpack_require__(5);
 
-var React = __webpack_require__(24);
+var React = __webpack_require__(25);
 
 var invariant = __webpack_require__(1);
 
@@ -7426,7 +7430,7 @@ var REACT_ELEMENT_TYPE = __webpack_require__(119);
 
 var getIteratorFn = __webpack_require__(120);
 var invariant = __webpack_require__(1);
-var KeyEscapeUtils = __webpack_require__(40);
+var KeyEscapeUtils = __webpack_require__(42);
 var warning = __webpack_require__(3);
 
 var SEPARATOR = '.';
@@ -7630,7 +7634,7 @@ module.exports = {
   clearInterval: clearInterval
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(25)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(26)))
 
 /***/ }),
 /* 67 */
@@ -7670,7 +7674,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _constants = __webpack_require__(14);
+var _constants = __webpack_require__(15);
 
 var walkTextTree = function walkTextTree(textTree, context, textNodes) {
   if (typeof textTree !== 'string' && !_constants.VALID_TEXT_CHILDREN_TYPES.includes(textTree.type)) {
@@ -7797,7 +7801,7 @@ var _sketchConstants = __webpack_require__(22);
 
 var _models = __webpack_require__(7);
 
-var _shapeLayers = __webpack_require__(44);
+var _shapeLayers = __webpack_require__(46);
 
 var DEFAULT_SHADOW_COLOR = '#000';
 
@@ -7913,17 +7917,17 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _sketchConstants = __webpack_require__(22);
 
-var _SketchRenderer2 = __webpack_require__(16);
+var _SketchRenderer2 = __webpack_require__(17);
 
 var _SketchRenderer3 = _interopRequireDefault(_SketchRenderer2);
 
 var _models = __webpack_require__(7);
 
-var _shapeLayers = __webpack_require__(44);
+var _shapeLayers = __webpack_require__(46);
 
 var _style = __webpack_require__(70);
 
-var _hasAnyDefined = __webpack_require__(30);
+var _hasAnyDefined = __webpack_require__(31);
 
 var _hasAnyDefined2 = _interopRequireDefault(_hasAnyDefined);
 
@@ -8128,7 +8132,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _invariant = __webpack_require__(35);
+var _invariant = __webpack_require__(37);
 
 var _invariant2 = _interopRequireDefault(_invariant);
 
@@ -8144,11 +8148,11 @@ var _sharedTextStyles2 = _interopRequireDefault(_sharedTextStyles);
 
 var _hacksForJSONImpl = __webpack_require__(10);
 
-var _pick = __webpack_require__(43);
+var _pick = __webpack_require__(45);
 
 var _pick2 = _interopRequireDefault(_pick);
 
-var _constants = __webpack_require__(14);
+var _constants = __webpack_require__(15);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -8325,7 +8329,7 @@ var _Text = __webpack_require__(77);
 
 var _Text2 = _interopRequireDefault(_Text);
 
-var _View = __webpack_require__(46);
+var _View = __webpack_require__(48);
 
 var _View2 = _interopRequireDefault(_View);
 
@@ -8479,7 +8483,7 @@ var _propTypes = __webpack_require__(2);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _stylesheet = __webpack_require__(15);
+var _stylesheet = __webpack_require__(16);
 
 var _stylesheet2 = _interopRequireDefault(_stylesheet);
 
@@ -8491,7 +8495,7 @@ var _ViewStylePropTypes = __webpack_require__(23);
 
 var _ViewStylePropTypes2 = _interopRequireDefault(_ViewStylePropTypes);
 
-var _ResizingConstraintPropTypes = __webpack_require__(45);
+var _ResizingConstraintPropTypes = __webpack_require__(47);
 
 var _ResizingConstraintPropTypes2 = _interopRequireDefault(_ResizingConstraintPropTypes);
 
@@ -8578,7 +8582,7 @@ var _propTypes = __webpack_require__(2);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _stylesheet = __webpack_require__(15);
+var _stylesheet = __webpack_require__(16);
 
 var _stylesheet2 = _interopRequireDefault(_stylesheet);
 
@@ -8586,7 +8590,7 @@ var _ViewStylePropTypes = __webpack_require__(23);
 
 var _ViewStylePropTypes2 = _interopRequireDefault(_ViewStylePropTypes);
 
-var _ResizingConstraintPropTypes = __webpack_require__(45);
+var _ResizingConstraintPropTypes = __webpack_require__(47);
 
 var _ResizingConstraintPropTypes2 = _interopRequireDefault(_ResizingConstraintPropTypes);
 
@@ -8715,7 +8719,7 @@ var _propTypes = __webpack_require__(2);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _View = __webpack_require__(46);
+var _View = __webpack_require__(48);
 
 var _View2 = _interopRequireDefault(_View);
 
@@ -8770,22 +8774,22 @@ module.exports = (_temp = _class = function (_React$Component) {
 /***/ (function(module, exports, __webpack_require__) {
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactSketchapp = __webpack_require__(19);
+var _reactSketchapp = __webpack_require__(14);
 
-var _util = __webpack_require__(47);
+var _util = __webpack_require__(33);
 
-var _Header = __webpack_require__(48);
+var _Header = __webpack_require__(34);
 
 var _Header2 = _interopRequireDefault(_Header);
 
-var _commonStyle = __webpack_require__(32);
+var _commonStyle = __webpack_require__(24);
 
 var _Color = __webpack_require__(184);
 
@@ -8795,23 +8799,28 @@ var _Text = __webpack_require__(185);
 
 var _Text2 = _interopRequireDefault(_Text);
 
+var _developColor = __webpack_require__(186);
+
+var _developColor2 = _interopRequireDefault(_developColor);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
 var Doc = function Doc(props) {
-  return _react2['default'].createElement(
-    _reactSketchapp.Document,
-    null,
-    _react2['default'].createElement(
-      _reactSketchapp.Page,
-      { name: 'Style' },
-      _react2['default'].createElement(_Color2['default'], null),
-      _react2['default'].createElement(_Text2['default'], null)
-    )
-  );
+    return _react2['default'].createElement(
+        _reactSketchapp.Document,
+        null,
+        _react2['default'].createElement(
+            _reactSketchapp.Page,
+            { name: 'Style' },
+            _react2['default'].createElement(_developColor2['default'], null),
+            _react2['default'].createElement(_Color2['default'], null),
+            _react2['default'].createElement(_Text2['default'], null)
+        )
+    );
 };
 
 exports['default'] = function (context) {
-  (0, _reactSketchapp.render)(_react2['default'].createElement(Doc, null), context.document.currentPage());
+    (0, _reactSketchapp.render)(_react2['default'].createElement(Doc, null), context.document.currentPage());
 };
 
 /***/ }),
@@ -9103,7 +9112,7 @@ module.exports.SET_SCRIPT_RESULT = 'playground/SET_SCRIPT_RESULT'
 var PooledClass = __webpack_require__(85);
 var ReactElement = __webpack_require__(12);
 
-var emptyFunction = __webpack_require__(17);
+var emptyFunction = __webpack_require__(18);
 var traverseAllChildren = __webpack_require__(86);
 
 var twoArgumentPooler = PooledClass.twoArgumentPooler;
@@ -9896,7 +9905,7 @@ function checkReactTypeSpec(typeSpecs, values, location, componentName, element,
 }
 
 module.exports = checkReactTypeSpec;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(18)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(19)))
 
 /***/ }),
 /* 90 */
@@ -10120,7 +10129,7 @@ module.exports = factory(Component, isValidElement, ReactNoopUpdateQueue);
 
 var _assign = __webpack_require__(6);
 
-var emptyObject = __webpack_require__(27);
+var emptyObject = __webpack_require__(28);
 var _invariant = __webpack_require__(1);
 
 if (true) {
@@ -11110,14 +11119,14 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var ReactComponentEnvironment = __webpack_require__(36);
+var ReactComponentEnvironment = __webpack_require__(38);
 var ReactDefaultBatchingStrategy = __webpack_require__(101);
 var ReactEmptyComponent = __webpack_require__(60);
 var ReactMultiChild = __webpack_require__(110);
 var ReactHostComponent = __webpack_require__(64);
 var ReactTestMount = __webpack_require__(122);
 var ReactTestReconcileTransaction = __webpack_require__(124);
-var ReactUpdates = __webpack_require__(28);
+var ReactUpdates = __webpack_require__(29);
 var ReactTestTextComponent = __webpack_require__(126);
 var ReactTestEmptyComponent = __webpack_require__(127);
 var invariant = __webpack_require__(1);
@@ -11248,10 +11257,10 @@ module.exports = ReactTestRenderer;
 
 var _assign = __webpack_require__(6);
 
-var ReactUpdates = __webpack_require__(28);
-var Transaction = __webpack_require__(38);
+var ReactUpdates = __webpack_require__(29);
+var Transaction = __webpack_require__(40);
 
-var emptyFunction = __webpack_require__(17);
+var emptyFunction = __webpack_require__(18);
 
 var RESET_BATCHED_UPDATES = {
   initialize: emptyFunction,
@@ -12036,15 +12045,15 @@ module.exports = performance || {};
 
 var _prodInvariant = __webpack_require__(5);
 
-var ReactComponentEnvironment = __webpack_require__(36);
-var ReactInstanceMap = __webpack_require__(39);
-var ReactInstrumentation = __webpack_require__(29);
+var ReactComponentEnvironment = __webpack_require__(38);
+var ReactInstanceMap = __webpack_require__(41);
+var ReactInstrumentation = __webpack_require__(30);
 
 var ReactCurrentOwner = __webpack_require__(11);
 var ReactReconciler = __webpack_require__(21);
 var ReactChildReconciler = __webpack_require__(111);
 
-var emptyFunction = __webpack_require__(17);
+var emptyFunction = __webpack_require__(18);
 var flattenChildren = __webpack_require__(121);
 var invariant = __webpack_require__(1);
 
@@ -12486,7 +12495,7 @@ module.exports = ReactMultiChild;
 var ReactReconciler = __webpack_require__(21);
 
 var instantiateReactComponent = __webpack_require__(61);
-var KeyEscapeUtils = __webpack_require__(40);
+var KeyEscapeUtils = __webpack_require__(42);
 var shouldUpdateReactComponent = __webpack_require__(63);
 var traverseAllChildren = __webpack_require__(65);
 var warning = __webpack_require__(3);
@@ -12623,7 +12632,7 @@ var ReactChildReconciler = {
 };
 
 module.exports = ReactChildReconciler;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(18)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(19)))
 
 /***/ }),
 /* 112 */
@@ -12643,12 +12652,12 @@ module.exports = ReactChildReconciler;
 var _prodInvariant = __webpack_require__(5),
     _assign = __webpack_require__(6);
 
-var React = __webpack_require__(24);
-var ReactComponentEnvironment = __webpack_require__(36);
+var React = __webpack_require__(25);
+var ReactComponentEnvironment = __webpack_require__(38);
 var ReactCurrentOwner = __webpack_require__(11);
 var ReactErrorUtils = __webpack_require__(113);
-var ReactInstanceMap = __webpack_require__(39);
-var ReactInstrumentation = __webpack_require__(29);
+var ReactInstanceMap = __webpack_require__(41);
+var ReactInstrumentation = __webpack_require__(30);
 var ReactNodeTypes = __webpack_require__(62);
 var ReactReconciler = __webpack_require__(21);
 
@@ -12656,7 +12665,7 @@ if (true) {
   var checkReactTypeSpec = __webpack_require__(114);
 }
 
-var emptyObject = __webpack_require__(27);
+var emptyObject = __webpack_require__(28);
 var invariant = __webpack_require__(1);
 var shallowEqual = __webpack_require__(117);
 var shouldUpdateReactComponent = __webpack_require__(63);
@@ -13698,7 +13707,7 @@ function checkReactTypeSpec(typeSpecs, values, location, componentName, element,
 }
 
 module.exports = checkReactTypeSpec;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(18)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(19)))
 
 /***/ }),
 /* 115 */
@@ -13926,7 +13935,7 @@ module.exports = getIteratorFn;
 
 
 
-var KeyEscapeUtils = __webpack_require__(40);
+var KeyEscapeUtils = __webpack_require__(42);
 var traverseAllChildren = __webpack_require__(65);
 var warning = __webpack_require__(3);
 
@@ -13988,7 +13997,7 @@ function flattenChildren(children, selfDebugID) {
 }
 
 module.exports = flattenChildren;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(18)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(19)))
 
 /***/ }),
 /* 122 */
@@ -14008,11 +14017,11 @@ module.exports = flattenChildren;
 var _prodInvariant = __webpack_require__(5),
     _assign = __webpack_require__(6);
 
-var React = __webpack_require__(24);
+var React = __webpack_require__(25);
 var ReactReconciler = __webpack_require__(21);
-var ReactUpdates = __webpack_require__(28);
+var ReactUpdates = __webpack_require__(29);
 
-var emptyObject = __webpack_require__(27);
+var emptyObject = __webpack_require__(28);
 var getHostComponentFromComposite = __webpack_require__(123);
 var instantiateReactComponent = __webpack_require__(61);
 var invariant = __webpack_require__(1);
@@ -14178,8 +14187,8 @@ module.exports = getHostComponentFromComposite;
 var _assign = __webpack_require__(6);
 
 var CallbackQueue = __webpack_require__(58);
-var PooledClass = __webpack_require__(37);
-var Transaction = __webpack_require__(38);
+var PooledClass = __webpack_require__(39);
+var Transaction = __webpack_require__(40);
 var ReactUpdateQueue = __webpack_require__(125);
 
 /**
@@ -14310,9 +14319,9 @@ module.exports = ReactTestReconcileTransaction;
 var _prodInvariant = __webpack_require__(5);
 
 var ReactCurrentOwner = __webpack_require__(11);
-var ReactInstanceMap = __webpack_require__(39);
-var ReactInstrumentation = __webpack_require__(29);
-var ReactUpdates = __webpack_require__(28);
+var ReactInstanceMap = __webpack_require__(41);
+var ReactInstrumentation = __webpack_require__(30);
+var ReactUpdates = __webpack_require__(29);
 
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(3);
@@ -25196,7 +25205,7 @@ module.exports = ReactTestEmptyComponent;
   }run();
 });
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(18), "/", __webpack_require__(9), __webpack_require__(66)["clearInterval"], __webpack_require__(34)["setTimeout"], __webpack_require__(66)["setInterval"], __webpack_require__(129).Buffer))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(19), "/", __webpack_require__(9), __webpack_require__(66)["clearInterval"], __webpack_require__(36)["setTimeout"], __webpack_require__(66)["setInterval"], __webpack_require__(129).Buffer))
 
 /***/ }),
 /* 129 */
@@ -26993,7 +27002,7 @@ function isnan (val) {
   return val !== val // eslint-disable-line no-self-compare
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(25)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(26)))
 
 /***/ }),
 /* 130 */
@@ -27595,7 +27604,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _yogaLayout = __webpack_require__(41);
+var _yogaLayout = __webpack_require__(43);
 
 var yoga = _interopRequireWildcard(_yogaLayout);
 
@@ -27603,7 +27612,7 @@ var _computeYogaNode2 = __webpack_require__(136);
 
 var _computeYogaNode3 = _interopRequireDefault(_computeYogaNode2);
 
-var _Context = __webpack_require__(42);
+var _Context = __webpack_require__(44);
 
 var _Context2 = _interopRequireDefault(_Context);
 
@@ -27659,11 +27668,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.getStyles = undefined;
 
-var _yogaLayout = __webpack_require__(41);
+var _yogaLayout = __webpack_require__(43);
 
 var yoga = _interopRequireWildcard(_yogaLayout);
 
-var _Context = __webpack_require__(42);
+var _Context = __webpack_require__(44);
 
 var _Context2 = _interopRequireDefault(_Context);
 
@@ -27671,11 +27680,11 @@ var _createStringMeasurer = __webpack_require__(137);
 
 var _createStringMeasurer2 = _interopRequireDefault(_createStringMeasurer);
 
-var _hasAnyDefined = __webpack_require__(30);
+var _hasAnyDefined = __webpack_require__(31);
 
 var _hasAnyDefined2 = _interopRequireDefault(_hasAnyDefined);
 
-var _pick = __webpack_require__(43);
+var _pick = __webpack_require__(45);
 
 var _pick2 = _interopRequireDefault(_pick);
 
@@ -27683,13 +27692,13 @@ var _computeTextTree = __webpack_require__(68);
 
 var _computeTextTree2 = _interopRequireDefault(_computeTextTree);
 
-var _constants = __webpack_require__(14);
+var _constants = __webpack_require__(15);
 
 var _isNullOrUndefined = __webpack_require__(143);
 
 var _isNullOrUndefined2 = _interopRequireDefault(_isNullOrUndefined);
 
-var _symbol = __webpack_require__(31);
+var _symbol = __webpack_require__(32);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28095,7 +28104,7 @@ var _hashStyle = __webpack_require__(67);
 
 var _hashStyle2 = _interopRequireDefault(_hashStyle);
 
-var _constants = __webpack_require__(14);
+var _constants = __webpack_require__(15);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28920,7 +28929,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _models = __webpack_require__(7);
 
-var _SketchRenderer2 = __webpack_require__(16);
+var _SketchRenderer2 = __webpack_require__(17);
 
 var _SketchRenderer3 = _interopRequireDefault(_SketchRenderer2);
 
@@ -29036,9 +29045,9 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _sketchConstants = __webpack_require__(22);
 
-var _constants = __webpack_require__(14);
+var _constants = __webpack_require__(15);
 
-var _SketchRenderer2 = __webpack_require__(16);
+var _SketchRenderer2 = __webpack_require__(17);
 
 var _SketchRenderer3 = _interopRequireDefault(_SketchRenderer2);
 
@@ -29046,11 +29055,11 @@ var _hacksForJSONImpl = __webpack_require__(10);
 
 var _models = __webpack_require__(7);
 
-var _shapeLayers = __webpack_require__(44);
+var _shapeLayers = __webpack_require__(46);
 
 var _style = __webpack_require__(70);
 
-var _hasAnyDefined = __webpack_require__(30);
+var _hasAnyDefined = __webpack_require__(31);
 
 var _hasAnyDefined2 = _interopRequireDefault(_hasAnyDefined);
 
@@ -29362,7 +29371,7 @@ module.exports = SvgRenderer;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _SketchRenderer2 = __webpack_require__(16);
+var _SketchRenderer2 = __webpack_require__(17);
 
 var _SketchRenderer3 = _interopRequireDefault(_SketchRenderer2);
 
@@ -29484,7 +29493,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _invariant = __webpack_require__(35);
+var _invariant = __webpack_require__(37);
 
 var _invariant2 = _interopRequireDefault(_invariant);
 
@@ -29553,13 +29562,13 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _SketchRenderer2 = __webpack_require__(16);
+var _SketchRenderer2 = __webpack_require__(17);
 
 var _SketchRenderer3 = _interopRequireDefault(_SketchRenderer2);
 
 var _models = __webpack_require__(7);
 
-var _symbol = __webpack_require__(31);
+var _symbol = __webpack_require__(32);
 
 var _hacksForJSONImpl = __webpack_require__(10);
 
@@ -29761,7 +29770,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _models = __webpack_require__(7);
 
-var _SketchRenderer2 = __webpack_require__(16);
+var _SketchRenderer2 = __webpack_require__(17);
 
 var _SketchRenderer3 = _interopRequireDefault(_SketchRenderer2);
 
@@ -30286,7 +30295,7 @@ var _propTypes = __webpack_require__(2);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _stylesheet = __webpack_require__(15);
+var _stylesheet = __webpack_require__(16);
 
 var _stylesheet2 = _interopRequireDefault(_stylesheet);
 
@@ -32914,15 +32923,15 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactSketchapp = __webpack_require__(19);
+var _reactSketchapp = __webpack_require__(14);
 
-var _Header = __webpack_require__(48);
+var _Header = __webpack_require__(34);
 
 var _Header2 = _interopRequireDefault(_Header);
 
-var _util = __webpack_require__(47);
+var _util = __webpack_require__(33);
 
-var _commonStyle = __webpack_require__(32);
+var _commonStyle = __webpack_require__(24);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
@@ -32938,7 +32947,7 @@ var ArtboardColor = function ArtboardColor() {
         _react2['default'].createElement(
             _Header2['default'],
             null,
-            '\u8C03\u8272\u677F'
+            'Youth Design - \u8C03\u8272\u677F'
         ),
         _react2['default'].createElement(
             _reactSketchapp.View,
@@ -33004,15 +33013,15 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactSketchapp = __webpack_require__(19);
+var _reactSketchapp = __webpack_require__(14);
 
-var _Header = __webpack_require__(48);
+var _Header = __webpack_require__(34);
 
 var _Header2 = _interopRequireDefault(_Header);
 
-var _util = __webpack_require__(47);
+var _util = __webpack_require__(33);
 
-var _commonStyle = __webpack_require__(32);
+var _commonStyle = __webpack_require__(24);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
@@ -33026,7 +33035,7 @@ var ArtboardText = function ArtboardText() {
         _react2['default'].createElement(
             _Header2['default'],
             null,
-            '\u6587\u5B57'
+            'Youth Design - \u6587\u5B57'
         ),
         _react2['default'].createElement(
             _reactSketchapp.View,
@@ -33156,6 +33165,497 @@ var ArtboardText = function ArtboardText() {
     );
 };
 exports['default'] = ArtboardText;
+
+/***/ }),
+/* 186 */
+/***/ (function(module, exports, __webpack_require__) {
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactSketchapp = __webpack_require__(14);
+
+var _commonStyle = __webpack_require__(24);
+
+var _Header = __webpack_require__(34);
+
+var _Header2 = _interopRequireDefault(_Header);
+
+var _util = __webpack_require__(33);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+var ownerStyles = {
+    listWarp: {
+        padding: '32px'
+    },
+    card: {
+        width: '360px',
+        marginRight: '64px',
+        marginBottom: '64px'
+    },
+    cardWarp: {
+        width: '100%',
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'flex-start',
+        padding: '8px'
+    },
+    innerCardWarp: {
+        width: '100%',
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        padding: '8px'
+    },
+    abilityCardWarp: {
+        width: '120px',
+        height: '120px',
+        marginRight: '16px'
+    },
+    abilityCardContainer: {
+        display: 'flex',
+        flexDirection: 'row'
+    },
+    textCenter: {
+        position: 'relative',
+        top: '40%',
+        textAlign: 'center'
+    },
+    subTitle: {
+        fontSize: 20,
+        color: 'rgba(0, 0, 0, .7)',
+        lineHeight: 30,
+        marginBottom: '8px'
+    }
+};
+
+var colorList = {
+    primaryColor: '#1E2634',
+    lightPrimaryColor: 4,
+    deepPrimaryColor: 8,
+    secondaryColor: '#ff3b71',
+    lightSecondaryColor: 4,
+    deepSecondaryColor: 8,
+    htmlBackGroundColor: 'rgba(0, 0, 0, .06)',
+    baseDeepTextColor: 'rgba(255, 255, 255, 1)',
+    captionDeepTextColor: 'rgba(255, 255, 255, .7)',
+    disableDeepTextColor: 'rgba(255, 255, 255, .5)',
+    lineDeepTextColor: 'rgba(255, 255, 255, .18)',
+    baseLightTextColor: 'rgba(0, 0, 0, .87)',
+    captionLightTextColor: 'rgba(0, 0, 0, .54)',
+    disableLightTextColor: 'rgba(0, 0, 0, .3)',
+    lineLightTextColor: 'rgba(0, 0, 0, .12)',
+    // 功能色 错误成功链接 警告
+    errorColor: '#ff4f5f',
+    successColor: '#73d13d',
+    linkColor: '#40a9ff',
+    warnColor: '#fac200'
+};
+
+var DevelopColor = function DevelopColor() {
+    return _react2['default'].createElement(
+        _reactSketchapp.Artboard,
+        { name: 'developColor',
+            style: { position: 'absolute', width: 1440, left: 3200 }
+        },
+        _react2['default'].createElement(
+            _Header2['default'],
+            null,
+            '\u9879\u76EE\u8272\u5F69\u89C4\u8303'
+        ),
+        _react2['default'].createElement(
+            'view',
+            { name: 'body',
+                style: _commonStyle.styles.body
+            },
+            _react2['default'].createElement(
+                _reactSketchapp.Text,
+                { style: _commonStyle.styles.titleTextOnLightBG },
+                '\u5B9A\u4E49'
+            ),
+            _react2['default'].createElement(
+                _reactSketchapp.Text,
+                { style: _commonStyle.styles.bodyTextOnLightBG },
+                'YMFE Design\u7684\u901A\u7528\u8272\u5F69\u89C4\u8303\u89C4\u5B9A\u4E86\u8272\u5F69\u98CE\u683C\u4E0E\u4F7F\u7528\u6CE8\u610F\u4E8B\u9879\u3002'
+            ),
+            _react2['default'].createElement(
+                _reactSketchapp.Text,
+                { style: _commonStyle.styles.bodyTextOnLightBG },
+                '\u5404\u9879\u76EE\u5728UI\u8BBE\u8BA1\u9636\u6BB5\u5E94\u786E\u5B9A\u5404\u81EA\u7684\u8272\u5F69\u89C4\u8303\uFF0C\u9879\u76EE\u8272\u5F69\u7EE7\u627F\u81EA\u901A\u7528\u8272\u5F69\u89C4\u8303\uFF0C\u4E3B\u8981\u5305\u542B\u4EE5\u4E0B\u5185\u5BB9:'
+            ),
+            _react2['default'].createElement(
+                _reactSketchapp.View,
+                { style: ownerStyles.listWarp },
+                _react2['default'].createElement(
+                    _reactSketchapp.Text,
+                    { style: _commonStyle.styles.bodyTextOnLightBG },
+                    '1. \u4E3B\u8272: \u5E94\u7528\u4E8E\u7EDD\u5927\u90E8\u5206\u5143\u7D20\uFF0C\u4F8B\u5982header\u3001icon\u3001\u8FB9\u6846\u3001\u6309\u94AE\u3001\u80CC\u666F\u7B49\uFF0C\u786E\u5B9A\u4E3B\u8272\u4E4B\u540E\u5C3D\u53EF\u80FD\u591A\u7684\u5143\u7D20\u90FD\u662F\u7528\u8FD9\u4E2A\u989C\u8272\u503C\uFF0C\u4F53\u73B0\u8BBE\u8BA1\u7684\u5916\u89C2\u4E00\u81F4\u6027\u3002'
+                ),
+                _react2['default'].createElement(
+                    _reactSketchapp.Text,
+                    { style: _commonStyle.styles.bodyTextOnLightBG },
+                    '2. \u5F3A\u8C03\u8272(\u53EF\u9009): \u56E0\u7528\u4E8E\u9700\u8981\u548C\u4E3B\u8272\u4EA7\u751F\u4E00\u5B9A\u7684\u5BF9\u6BD4\u7684\u5143\u7D20\uFF0C\u4EE5\u4FBF\u8BA9\u7528\u6237\u660E\u663E\u611F\u5230\u5143\u7D20\u7684\u5B58\u5728\uFF0C\u4F8B\u5982\u60AC\u6D6E\u6309\u94AE\u3001\u6587\u5B57\u6309\u94AE\u3001\u9009\u4E2D\u6587\u672C\u3001\u8FDB\u5EA6\u6761\u3001\u5F00\u5173\u3001\u6ED1\u5757\u3001\u94FE\u63A5\u3001\u6807\u9898\u7B49\u3002'
+                ),
+                _react2['default'].createElement(
+                    _reactSketchapp.Text,
+                    { style: _commonStyle.styles.bodyTextOnLightBG },
+                    '3. \u529F\u80FD\u8272: \u6709\u4E9B\u5143\u7D20\u7684\u989C\u8272\u4E0D\u9002\u5408\u7528\u4E3B\u8272\u548C\u5F3A\u8C03\u8272\u6765\u8868\u793A\uFF0C\u5728\u8272\u5F69\u89C4\u8303\u4E2D\u4E5F\u5E94\u6709\u6240\u89C4\u5B9A\uFF0C\u4F8B\u5982\u9519\u8BEF\u8B66\u544A\u4E00\u822C\u4F7F\u7528\u7EA2\u8272\uFF0C\u901A\u5E38\u72B6\u6001\u4E00\u822C\u7528\u7EFF\u8272\u3002'
+                ),
+                _react2['default'].createElement(
+                    _reactSketchapp.Text,
+                    { style: _commonStyle.styles.bodyTextOnLightBG },
+                    '4. \u6587\u672C\u8272: \u6697\u8272\u80CC\u666F\u4E2D\u4E3B\u6587\u672C\u8272\u3001\u8F85\u52A9\u6587\u672C\u8272\u3002 \u4EAE\u8272\u80CC\u666F\u7684\u4E3B\u6587\u672C\u8272\u3001\u8F85\u52A9\u6587\u672C\u8272\u3002'
+                )
+            ),
+            _react2['default'].createElement(
+                _reactSketchapp.Text,
+                { style: _commonStyle.styles.titleTextOnLightBG },
+                '\u5F00\u53D1\u8005\u5E73\u53F0-\u9879\u76EE\u8272\u5F69\u89C4\u8303'
+            ),
+            _react2['default'].createElement(
+                _reactSketchapp.View,
+                { style: ownerStyles.cardWarp },
+                _react2['default'].createElement(
+                    _reactSketchapp.View,
+                    { name: 'primary',
+                        style: ownerStyles.card
+                    },
+                    _react2['default'].createElement(
+                        _reactSketchapp.Text,
+                        { style: ownerStyles.subTitle },
+                        '\u4E3B\u8272'
+                    ),
+                    _react2['default'].createElement(
+                        _reactSketchapp.View,
+                        null,
+                        _react2['default'].createElement(
+                            _reactSketchapp.View,
+                            {
+                                style: Object.assign({}, ownerStyles.innerCardWarp, { backgroundColor: colorList.primaryColor })
+                            },
+                            _react2['default'].createElement(
+                                _reactSketchapp.Text,
+                                { style: _commonStyle.styles.bodyTextOnDeepBG },
+                                '6(\u4E3B\u8272)'
+                            ),
+                            _react2['default'].createElement(
+                                _reactSketchapp.Text,
+                                { style: _commonStyle.styles.bodyTextOnDeepBG },
+                                colorList.primaryColor
+                            )
+                        ),
+                        _react2['default'].createElement(
+                            _reactSketchapp.View,
+                            {
+                                style: Object.assign({}, ownerStyles.innerCardWarp, { backgroundColor: (0, _util.colorPalette)(colorList.primaryColor, colorList.lightSecondaryColor) })
+                            },
+                            _react2['default'].createElement(
+                                _reactSketchapp.Text,
+                                { style: _commonStyle.styles.bodyTextOnDeepBG },
+                                '4'
+                            ),
+                            _react2['default'].createElement(
+                                _reactSketchapp.Text,
+                                { style: _commonStyle.styles.bodyTextOnDeepBG },
+                                (0, _util.colorPalette)(colorList.primaryColor, colorList.lightPrimaryColor)
+                            )
+                        ),
+                        _react2['default'].createElement(
+                            _reactSketchapp.View,
+                            {
+                                style: Object.assign({}, ownerStyles.innerCardWarp, { backgroundColor: (0, _util.colorPalette)(colorList.primaryColor, colorList.deepPrimaryColor) })
+                            },
+                            _react2['default'].createElement(
+                                _reactSketchapp.Text,
+                                { style: _commonStyle.styles.bodyTextOnDeepBG },
+                                '8'
+                            ),
+                            _react2['default'].createElement(
+                                _reactSketchapp.Text,
+                                { style: _commonStyle.styles.bodyTextOnDeepBG },
+                                (0, _util.colorPalette)(colorList.primaryColor, colorList.deepPrimaryColor)
+                            )
+                        )
+                    )
+                ),
+                _react2['default'].createElement(
+                    _reactSketchapp.View,
+                    { name: 'secondaryColor', style: ownerStyles.card },
+                    _react2['default'].createElement(
+                        _reactSketchapp.Text,
+                        { style: ownerStyles.subTitle },
+                        '\u5F3A\u8C03\u8272'
+                    ),
+                    _react2['default'].createElement(
+                        _reactSketchapp.View,
+                        null,
+                        _react2['default'].createElement(
+                            _reactSketchapp.View,
+                            {
+                                style: Object.assign({}, ownerStyles.innerCardWarp, { backgroundColor: colorList.secondaryColor })
+                            },
+                            _react2['default'].createElement(
+                                _reactSketchapp.Text,
+                                { style: _commonStyle.styles.bodyTextOnDeepBG },
+                                '6(\u5F3A\u8C03\u8272)'
+                            ),
+                            _react2['default'].createElement(
+                                _reactSketchapp.Text,
+                                { style: _commonStyle.styles.bodyTextOnDeepBG },
+                                colorList.secondaryColor
+                            )
+                        ),
+                        _react2['default'].createElement(
+                            _reactSketchapp.View,
+                            {
+                                style: Object.assign({}, ownerStyles.innerCardWarp, { backgroundColor: (0, _util.colorPalette)(colorList.secondaryColor, colorList.lightSecondaryColor) })
+                            },
+                            _react2['default'].createElement(
+                                _reactSketchapp.Text,
+                                { style: _commonStyle.styles.bodyTextOnDeepBG },
+                                '4'
+                            ),
+                            _react2['default'].createElement(
+                                _reactSketchapp.Text,
+                                { style: _commonStyle.styles.bodyTextOnDeepBG },
+                                (0, _util.colorPalette)(colorList.secondaryColor, colorList.lightSecondaryColor)
+                            )
+                        ),
+                        _react2['default'].createElement(
+                            _reactSketchapp.View,
+                            {
+                                style: Object.assign({}, ownerStyles.innerCardWarp, { backgroundColor: (0, _util.colorPalette)(colorList.secondaryColor, colorList.deepSecondaryColor) })
+                            },
+                            _react2['default'].createElement(
+                                _reactSketchapp.Text,
+                                { style: _commonStyle.styles.bodyTextOnDeepBG },
+                                '8'
+                            ),
+                            _react2['default'].createElement(
+                                _reactSketchapp.Text,
+                                { style: _commonStyle.styles.bodyTextOnDeepBG },
+                                (0, _util.colorPalette)(colorList.secondaryColor, colorList.deepSecondaryColor)
+                            )
+                        )
+                    )
+                ),
+                _react2['default'].createElement(
+                    _reactSketchapp.View,
+                    { name: 'background', style: ownerStyles.card },
+                    _react2['default'].createElement(
+                        _reactSketchapp.Text,
+                        { style: ownerStyles.subTitle },
+                        '\u80CC\u666F\u8272'
+                    ),
+                    _react2['default'].createElement(
+                        _reactSketchapp.View,
+                        { style: Object.assign({}, ownerStyles.innerCardWarp, { backgroundColor: colorList.htmlBackGroundColor }) },
+                        _react2['default'].createElement(
+                            _reactSketchapp.Text,
+                            { style: _commonStyle.styles.bodyTextOnLightBG },
+                            '\u6D45\u7070\u8272\u80CC\u666F\u8272'
+                        ),
+                        _react2['default'].createElement(
+                            _reactSketchapp.Text,
+                            { style: _commonStyle.styles.bodyTextOnLightBG },
+                            colorList.htmlBackGroundColor
+                        )
+                    )
+                )
+            ),
+            _react2['default'].createElement(
+                _reactSketchapp.View,
+                { style: ownerStyles.cardWarp },
+                _react2['default'].createElement(
+                    _reactSketchapp.View,
+                    { name: 'deep-text', style: ownerStyles.card },
+                    _react2['default'].createElement(
+                        _reactSketchapp.Text,
+                        { style: ownerStyles.subTitle },
+                        '\u6587\u672C\u8272-\u6DF1\u8272\u80CC\u666F\u4E0A\u7684\u6587\u672C'
+                    ),
+                    _react2['default'].createElement(
+                        _reactSketchapp.View,
+                        { style: Object.assign({}, ownerStyles.innerCardWarp, { backgroundColor: '#000' }) },
+                        _react2['default'].createElement(
+                            _reactSketchapp.Text,
+                            { style: Object.assign({}, _commonStyle.styles.bodyTextOnDeepBG, { color: colorList.baseDeepTextColor }) },
+                            '\u6B63\u6587'
+                        ),
+                        _react2['default'].createElement(
+                            _reactSketchapp.Text,
+                            { style: Object.assign({}, _commonStyle.styles.bodyTextOnDeepBG, { color: colorList.baseDeepTextColor }) },
+                            colorList.baseDeepTextColor
+                        )
+                    ),
+                    _react2['default'].createElement(
+                        _reactSketchapp.View,
+                        { style: Object.assign({}, ownerStyles.innerCardWarp, { backgroundColor: '#000' }) },
+                        _react2['default'].createElement(
+                            _reactSketchapp.Text,
+                            { style: Object.assign({}, _commonStyle.styles.bodyTextOnDeepBG, { color: colorList.captionDeepTextColor }) },
+                            '\u63CF\u8FF0\u6587\u672C'
+                        ),
+                        _react2['default'].createElement(
+                            _reactSketchapp.Text,
+                            { style: Object.assign({}, _commonStyle.styles.bodyTextOnDeepBG, { color: colorList.captionDeepTextColor }) },
+                            colorList.captionDeepTextColor
+                        )
+                    ),
+                    _react2['default'].createElement(
+                        _reactSketchapp.View,
+                        { style: Object.assign({}, ownerStyles.innerCardWarp, { backgroundColor: '#000' }) },
+                        _react2['default'].createElement(
+                            _reactSketchapp.Text,
+                            { style: Object.assign({}, _commonStyle.styles.bodyTextOnDeepBG, { color: colorList.disableDeepTextColor }) },
+                            '\u7981\u7528/\u8865\u5145'
+                        ),
+                        _react2['default'].createElement(
+                            _reactSketchapp.Text,
+                            { style: Object.assign({}, _commonStyle.styles.bodyTextOnDeepBG, { color: colorList.disableDeepTextColor }) },
+                            colorList.disableDeepTextColor
+                        )
+                    ),
+                    _react2['default'].createElement(
+                        _reactSketchapp.View,
+                        { style: Object.assign({}, ownerStyles.innerCardWarp, { backgroundColor: '#000' }) },
+                        _react2['default'].createElement(
+                            _reactSketchapp.Text,
+                            { style: Object.assign({}, _commonStyle.styles.bodyTextOnDeepBG, { color: colorList.lineDeepTextColor }) },
+                            '\u5206\u5272\u7EBF/\u8FB9\u6846'
+                        ),
+                        _react2['default'].createElement(
+                            _reactSketchapp.Text,
+                            { style: Object.assign({}, _commonStyle.styles.bodyTextOnDeepBG, { color: colorList.lineDeepTextColor }) },
+                            colorList.lineDeepTextColor
+                        )
+                    )
+                ),
+                _react2['default'].createElement(
+                    _reactSketchapp.View,
+                    { name: 'light-text', style: ownerStyles.card },
+                    _react2['default'].createElement(
+                        _reactSketchapp.Text,
+                        { style: ownerStyles.subTitle },
+                        '\u6587\u672C\u8272-\u6D45\u8272\u8272\u80CC\u666F\u4E0A\u7684\u6587\u672C'
+                    ),
+                    _react2['default'].createElement(
+                        _reactSketchapp.View,
+                        { style: Object.assign({}, ownerStyles.innerCardWarp, { backgroundColor: '#fff' }) },
+                        _react2['default'].createElement(
+                            _reactSketchapp.Text,
+                            { style: Object.assign({}, _commonStyle.styles.bodyTextOnDeepBG, { color: colorList.baseLightTextColor }) },
+                            '\u6B63\u6587'
+                        ),
+                        _react2['default'].createElement(
+                            _reactSketchapp.Text,
+                            { style: Object.assign({}, _commonStyle.styles.bodyTextOnDeepBG, { color: colorList.baseLightTextColor }) },
+                            colorList.baseLightTextColor
+                        )
+                    ),
+                    _react2['default'].createElement(
+                        _reactSketchapp.View,
+                        { style: Object.assign({}, ownerStyles.innerCardWarp, { backgroundColor: '#fff' }) },
+                        _react2['default'].createElement(
+                            _reactSketchapp.Text,
+                            { style: Object.assign({}, _commonStyle.styles.bodyTextOnDeepBG, { color: colorList.captionLightTextColor }) },
+                            '\u63CF\u8FF0\u6587\u672C'
+                        ),
+                        _react2['default'].createElement(
+                            _reactSketchapp.Text,
+                            { style: Object.assign({}, _commonStyle.styles.bodyTextOnDeepBG, { color: colorList.captionLightTextColor }) },
+                            colorList.captionLightTextColor
+                        )
+                    ),
+                    _react2['default'].createElement(
+                        _reactSketchapp.View,
+                        { style: Object.assign({}, ownerStyles.innerCardWarp, { backgroundColor: '#fff' }) },
+                        _react2['default'].createElement(
+                            _reactSketchapp.Text,
+                            { style: Object.assign({}, _commonStyle.styles.bodyTextOnDeepBG, { color: colorList.disableLightTextColor }) },
+                            '\u7981\u7528/\u8865\u5145'
+                        ),
+                        _react2['default'].createElement(
+                            _reactSketchapp.Text,
+                            { style: Object.assign({}, _commonStyle.styles.bodyTextOnDeepBG, { color: colorList.disableLightTextColor }) },
+                            colorList.disableLightTextColor
+                        )
+                    ),
+                    _react2['default'].createElement(
+                        _reactSketchapp.View,
+                        { style: Object.assign({}, ownerStyles.innerCardWarp, { backgroundColor: '#fff' }) },
+                        _react2['default'].createElement(
+                            _reactSketchapp.Text,
+                            { style: Object.assign({}, _commonStyle.styles.bodyTextOnDeepBG, { color: colorList.lineLightTextColor }) },
+                            '\u5206\u5272\u7EBF/\u8FB9\u6846'
+                        ),
+                        _react2['default'].createElement(
+                            _reactSketchapp.Text,
+                            { style: Object.assign({}, _commonStyle.styles.bodyTextOnDeepBG, { color: colorList.lineLightTextColor }) },
+                            colorList.lineLightTextColor
+                        )
+                    )
+                )
+            ),
+            _react2['default'].createElement(
+                _reactSketchapp.View,
+                { name: 'ability' },
+                _react2['default'].createElement(
+                    _reactSketchapp.Text,
+                    { style: ownerStyles.subTitle },
+                    '\u529F\u80FD\u8272-\u9519\u8BEF/\u6210\u529F/\u94FE\u63A5/\u8B66\u544A'
+                ),
+                _react2['default'].createElement(
+                    _reactSketchapp.View,
+                    { style: ownerStyles.abilityCardContainer },
+                    _react2['default'].createElement(
+                        _reactSketchapp.View,
+                        { style: Object.assign({}, ownerStyles.abilityCardWarp, { backgroundColor: colorList.errorColor }) },
+                        _react2['default'].createElement(
+                            _reactSketchapp.Text,
+                            { style: Object.assign({}, _commonStyle.styles.bodyTextOnDeepBG, ownerStyles.textCenter) },
+                            colorList.errorColor
+                        )
+                    ),
+                    _react2['default'].createElement(
+                        _reactSketchapp.View,
+                        { style: Object.assign({}, ownerStyles.abilityCardWarp, { backgroundColor: colorList.successColor }) },
+                        _react2['default'].createElement(
+                            _reactSketchapp.Text,
+                            { style: Object.assign({}, _commonStyle.styles.bodyTextOnDeepBG, ownerStyles.textCenter) },
+                            colorList.successColor
+                        )
+                    ),
+                    _react2['default'].createElement(
+                        _reactSketchapp.View,
+                        { style: Object.assign({}, ownerStyles.abilityCardWarp, { backgroundColor: colorList.linkColor }) },
+                        _react2['default'].createElement(
+                            _reactSketchapp.Text,
+                            { style: Object.assign({}, _commonStyle.styles.bodyTextOnDeepBG, ownerStyles.textCenter) },
+                            colorList.linkColor
+                        )
+                    ),
+                    _react2['default'].createElement(
+                        _reactSketchapp.View,
+                        { style: Object.assign({}, ownerStyles.abilityCardWarp, { backgroundColor: colorList.warnColor }) },
+                        _react2['default'].createElement(
+                            _reactSketchapp.Text,
+                            { style: Object.assign({}, _commonStyle.styles.bodyTextOnDeepBG, ownerStyles.textCenter) },
+                            colorList.warnColor
+                        )
+                    )
+                )
+            )
+        )
+    );
+};
+exports['default'] = DevelopColor;
 
 /***/ })
 /******/ ]);
