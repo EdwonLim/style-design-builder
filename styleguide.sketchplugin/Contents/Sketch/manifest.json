@@ -14,7 +14,7 @@
       "main"
     ]
   },
-  "name": "styleguide",
+  "name": "youth-design",
   "disableCocoaScriptPreprocessor": true,
   "appcast": "https://raw.githubusercontent.com//master/.appcast.xml",
   "author": "Jon Gold",
