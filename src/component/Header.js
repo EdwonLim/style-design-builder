@@ -1,7 +1,7 @@
 /* @flow */
 import React from 'react';
 import { Text, View, StyleSheet } from 'react-sketchapp';
-import { styles } from '../style/commonStyle';
+import { styles } from '../common/style';
 
 type Props = {
     title?: string,

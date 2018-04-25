@@ -2,7 +2,7 @@ import React from 'react';
 import { render, Artboard, Text, View, Page, Document, StyleSheet, TextStyles } from 'react-sketchapp';
 import Header from '../component/Header';
 import { colorPalette } from '../util';
-import { styles, fonts, colorValue, styleFunc } from '../style/commonStyle';
+import { styles, fonts, colorValue, styleFunc } from '../common/style';
 
 const ArtboardText = () => (
     <Artboard
