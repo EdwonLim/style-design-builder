@@ -1,6 +1,7 @@
 import React from 'react';
 import { render, Artboard, Text, View, Page, Document, StyleSheet, TextStyles } from 'react-sketchapp';
 import Header from '../component/Header';
+import Body from '../component/Body';
 import { colorPalette } from '../util';
 import { styles, fonts, colorValue, styleFunc } from '../common/style';
 
@@ -10,8 +11,7 @@ const ArtboardText = () => (
         style={{ position: 'absolute', width: 1440, left: 1600}}
     >
         <Header>Youth Design - 文字</Header>
-        <View name="body"
-            style={styles.body}>
+        <Body name="body">
             <Text style={styles.titleTextOnLightBG}>字体</Text>
             <View style={styles.fontBoxContainerRow}>
                 <View style={styles.fontBoxContainer}>
@@ -55,7 +55,7 @@ const ArtboardText = () => (
                 }
                 
             </View>
-        </View>
+        </Body>
     </Artboard>
 );
 export default ArtboardText;

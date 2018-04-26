@@ -1,13 +1,35 @@
 import { TextStyles } from 'react-sketchapp';
+import styled from 'styled-components/primitives';
+import chroma from 'chroma-js';
+
+// get textColor by background-color && textType
+// bgColor: default #fff
+const textColor = (bgColor = '#fff', textType) => {
+	const vsWhite = chroma.contrast(bgColor, 'white');
+	let opacity = 1;
+	if (textType == 'desc') opacity = .54;
+	if (textType == 'disabled') opacity = .38;
+	if (textType == 'segment') opacity = .14;
+
+	if (vsWhite > 4) {
+		if (textType == 'desc') opacity = .7;
+		if (textType == 'disabled') opacity = .5;
+		if (textType == 'segment') opacity = .24;
+		return chroma('#fff')
+		.alpha(opacity).css();
+	}
+	return chroma(bgColor)
+		.darken(3)
+		.alpha(opacity).css();
+};
 
 const styles = {
-    headerTitle: {
-        width: '100%',
-        height: 400,
-        backgroundColor: '#04182B',
-        padding: '120px 100px'
-    },
-    body: {
+	font: {},
+	Body: styled.View`
+		width: 100%;
+		backgroundColor: #fff;
+		padding: 100px
+	`,a:{
         width: '100%',
         backgroundColor: '#fff',
         padding: '100px'
@@ -102,7 +124,7 @@ const styles = {
     composeRow: { 
         flex: 1, 
         flexBasis: 200 
-    },
+    }
 };
 const styleFunc = {
   paletteItem(bgColor) {
@@ -195,12 +217,17 @@ const typeBaseStyles = {
 };
 
 const typeStyles = {};
-fonts.forEach(item => {
+VARIABLE.font.forEach(item => {
+	styles.font[item.name] = styled.Text`
+		fontSize: ${item.fontSize};
+		lineHeight: ${item.lineHeight};
+		color: ${props => textColor(props.bgColor, props.textType)};
+	`;
   typeStyles[item.name] = {
     ...typeBaseStyles,
     fontSize: item.fontSize,
     lineHeight: item.lineHeight
-  }
+  };
 });
 
 TextStyles.create({

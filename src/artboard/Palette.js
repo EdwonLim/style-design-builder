@@ -1,6 +1,7 @@
 import React from 'react';
 import { render, Artboard, Text, View, Page, Document, StyleSheet, TextStyles } from 'react-sketchapp';
 import Header from '../component/Header';
+import Body from '../component/Body';
 import { colorPalette } from '../util';
 import { styles, fonts, colorValue, styleFunc } from '../common/style';
 
@@ -12,8 +13,7 @@ const ArtboardColor = () => (
         }}
     >
         <Header>Youth Design - 调色板</Header>
-        <View name="body"
-            style={ styles.body }>
+        <Body name="body">
             <Text style={styles.titleTextOnLightBG}>调色板概述</Text>
             <Text style={styles.bodyTextOnLightBG}>调色板本来是混合各种颜色颜料使用的板，在 Ant Design 中，调色板指的是一份颜色表（如下图），颜色表由一系列具有一定代表性的基本色彩及它们的渐变色组成，我们可以在调色板中寻找需要的颜色并获取颜色值。</Text>
             <View style={styles.paletteContainer}>
@@ -34,7 +34,7 @@ const ArtboardColor = () => (
                     })
                 }
             </View>
-        </View>
+        </Body>
     </Artboard>
 );
 export default ArtboardColor;

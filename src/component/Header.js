@@ -1,20 +1,28 @@
-/* @flow */
 import React from 'react';
 import { Text, View, StyleSheet } from 'react-sketchapp';
 import { styles } from '../common/style';
+import styled from 'styled-components/primitives';
 
-type Props = {
-    title?: string,
-    children?: any
-};
+	// color: ${props => textColor(props.hex)};
 
-const Header = ({ title, children }: Props) => (
-    <View name="header" style={styles.headerTitle}>
-        <Text style={styles.titleTextOnDarkBG}>{children} <Text style={styles.bodyTextOnDarkBG}>v0.1.0 2018-03-05</Text>
-        </Text>
-        <Text style={styles.bodyTextOnDarkBG}>移动端组件库模板，秉承 Youth Design 青春、未来、科学的设计理念，服务于 QRN、Hy、YIS 等移动端框架</Text>
-        <Text style={styles.bodyTextOnDarkBG}>设计语言网址：http://ued.qunar.com/style-guide/</Text>
-    </View>
+const BG_COLOR = '#04182B';
+const Container = styled.View`
+	width: 100%;
+	height: 400;
+	backgroundColor: ${props => props.bgColor};
+	padding: 120px 100px;
+`;
+const Title = styles.font.display1.extend`
+	marginBottom: 16;
+`;
+const Subtitle = styles.font.headline3.extend``;
+
+const Header = ({ title, children }) => (
+	<Container name="header" bgColor={BG_COLOR}>
+		<Title bgColor={BG_COLOR}>{children} <Subtitle bgColor={BG_COLOR} textType="desc">v0.1.0 2018-03-05</Subtitle></Title>
+		<Subtitle bgColor={BG_COLOR} textType="desc">移动端组件库模板，秉承 Youth Design 青春、未来、科学的设计理念，服务于 QRN、Hy、YIS 等移动端框架</Subtitle>
+		<Subtitle bgColor={BG_COLOR} textType="desc">设计语言网址：http://ued.qunar.com/style-guide/</Subtitle>
+	</Container>
 )
 
 export default Header;

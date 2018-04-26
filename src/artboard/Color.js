@@ -2,6 +2,7 @@ import React from 'react';
 import { makeSymbol, render, Artboard, Text, View, Page, Document, StyleSheet, TextStyles } from 'react-sketchapp';
 import { styles } from '../common/style';
 import Header from '../component/Header';
+import Body from '../component/Body';
 import { colorPalette } from '../util';
 
 const ownerStyles = {
@@ -77,9 +78,7 @@ const DevelopColor = () => (
         style={{ position: 'absolute', width: 1440, left: 3200}}
     >
         <Header>项目色彩规范</Header>
-        <view name='body'
-            style={ styles.body }
-        >
+        <Body name='body'>
             <Text style={styles.titleTextOnLightBG}>定义</Text>
             <Text style={styles.bodyTextOnLightBG}>YMFE Design的通用色彩规范规定了色彩风格与使用注意事项。</Text>
             <Text style={styles.bodyTextOnLightBG}>各项目在UI设计阶段应确定各自的色彩规范，项目色彩继承自通用色彩规范，主要包含以下内容:</Text>
@@ -204,7 +203,7 @@ const DevelopColor = () => (
                     </View>
                 </View>
             </View>
-        </view>
+        </Body>
     </Artboard>
 );
 export default DevelopColor;
