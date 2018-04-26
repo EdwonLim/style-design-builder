@@ -15,7 +15,7 @@ const Item = styled.View`
   display: flex;
   flexDirection: row;
   justifyContent: space-between;
-  padding: 16px;
+  padding: 12px 16px;
   backgroundColor: ${props => props.bgColor};
 `;
 const FuncItem = styled.View`
@@ -32,7 +32,8 @@ const Panel = styled.View`
   paddingVertical: 8px;
 `;
 const ListWrap = styled.View`
-  padding: 32px;
+  paddingTop: 32px;
+  paddingLeft: 32px;
 `;
 const FuncView = styled.View`
   display: flex;
@@ -87,16 +88,16 @@ const DevelopColor = () => (
           <SubTitle textType="desc">强调色</SubTitle>
           <View>
             <Item bgColor={colorList.secondaryColor}>
-              <BodyText bgColor={colorList.primaryColor}>6(强调色)</BodyText>
-              <BodyText bgColor={colorList.primaryColor}>{colorList.secondaryColor}</BodyText>
+              <BodyText bgColor="#000">6(强调色)</BodyText>
+              <BodyText bgColor="#000">{colorList.secondaryColor}</BodyText>
             </Item>
             <Item bgColor={colorPalette(colorList.secondaryColor, colorList.lightSecondaryColorNumber)}>
-              <BodyText bgColor={colorPalette(colorList.secondaryColor, colorList.lightSecondaryColorNumber)}>4</BodyText>
-              <BodyText bgColor={colorPalette(colorList.secondaryColor, colorList.lightSecondaryColorNumber)}>{colorPalette(colorList.secondaryColor, colorList.lightSecondaryColorNumber)}</BodyText>
+              <BodyText bgColor="#000">4</BodyText>
+              <BodyText bgColor="#000">{colorPalette(colorList.secondaryColor, colorList.lightSecondaryColorNumber)}</BodyText>
             </Item>
             <Item bgColor={colorPalette(colorList.secondaryColor, colorList.deepSecondaryColorNumber)}>
-              <BodyText bgColor={colorPalette(colorList.secondaryColor, colorList.deepSecondaryColorNumber)}>8</BodyText>
-              <BodyText bgColor={colorPalette(colorList.secondaryColor, colorList.deepSecondaryColorNumber)}>{colorPalette(colorList.secondaryColor, colorList.deepSecondaryColorNumber)}</BodyText>
+              <BodyText bgColor="#000">8</BodyText>
+              <BodyText bgColor="#000">{colorPalette(colorList.secondaryColor, colorList.deepSecondaryColorNumber)}</BodyText>
             </Item>
           </View>
         </Card>

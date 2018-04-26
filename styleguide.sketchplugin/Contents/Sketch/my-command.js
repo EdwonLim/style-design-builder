@@ -45837,10 +45837,10 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 var _templateObject = _taggedTemplateLiteral(['\n  width: 360px;\n  marginRight: 64px;\n  marginBottom: 64px;\n'], ['\n  width: 360px;\n  marginRight: 64px;\n  marginBottom: 64px;\n']),
-    _templateObject2 = _taggedTemplateLiteral(['\n  width: 100%;\n  display: flex;\n  flexDirection: row;\n  justifyContent: space-between;\n  padding: 16px;\n  backgroundColor: ', ';\n'], ['\n  width: 100%;\n  display: flex;\n  flexDirection: row;\n  justifyContent: space-between;\n  padding: 16px;\n  backgroundColor: ', ';\n']),
+    _templateObject2 = _taggedTemplateLiteral(['\n  width: 100%;\n  display: flex;\n  flexDirection: row;\n  justifyContent: space-between;\n  padding: 12px 16px;\n  backgroundColor: ', ';\n'], ['\n  width: 100%;\n  display: flex;\n  flexDirection: row;\n  justifyContent: space-between;\n  padding: 12px 16px;\n  backgroundColor: ', ';\n']),
     _templateObject3 = _taggedTemplateLiteral(['\n  width: 120px;\n  height: 120px;\n  marginRight: 16px;\n  backgroundColor: ', ';\n'], ['\n  width: 120px;\n  height: 120px;\n  marginRight: 16px;\n  backgroundColor: ', ';\n']),
     _templateObject4 = _taggedTemplateLiteral(['\n  width: 100%;\n  display: flex;\n  flexDirection: row;\n  justifyContent: flex-start;\n  paddingVertical: 8px;\n'], ['\n  width: 100%;\n  display: flex;\n  flexDirection: row;\n  justifyContent: flex-start;\n  paddingVertical: 8px;\n']),
-    _templateObject5 = _taggedTemplateLiteral(['\n  padding: 32px;\n'], ['\n  padding: 32px;\n']),
+    _templateObject5 = _taggedTemplateLiteral(['\n  paddingTop: 32px;\n  paddingLeft: 32px;\n'], ['\n  paddingTop: 32px;\n  paddingLeft: 32px;\n']),
     _templateObject6 = _taggedTemplateLiteral(['\n  display: flex;\n  flexDirection: row;\n'], ['\n  display: flex;\n  flexDirection: row;\n']),
     _templateObject7 = _taggedTemplateLiteral(['\n  position: relative;\n  top: 40%;\n  textAlign: center;\n'], ['\n  position: relative;\n  top: 40%;\n  textAlign: center;\n']),
     _templateObject8 = _taggedTemplateLiteral(['\n  marginBottom: 8px;\n'], ['\n  marginBottom: 8px;\n']),
@@ -46015,12 +46015,12 @@ var DevelopColor = function DevelopColor() {
               { bgColor: colorList.secondaryColor },
               _react2['default'].createElement(
                 BodyText,
-                { bgColor: colorList.primaryColor },
+                { bgColor: '#000' },
                 '6(\u5F3A\u8C03\u8272)'
               ),
               _react2['default'].createElement(
                 BodyText,
-                { bgColor: colorList.primaryColor },
+                { bgColor: '#000' },
                 colorList.secondaryColor
               )
             ),
@@ -46029,12 +46029,12 @@ var DevelopColor = function DevelopColor() {
               { bgColor: (0, _util.colorPalette)(colorList.secondaryColor, colorList.lightSecondaryColorNumber) },
               _react2['default'].createElement(
                 BodyText,
-                { bgColor: (0, _util.colorPalette)(colorList.secondaryColor, colorList.lightSecondaryColorNumber) },
+                { bgColor: '#000' },
                 '4'
               ),
               _react2['default'].createElement(
                 BodyText,
-                { bgColor: (0, _util.colorPalette)(colorList.secondaryColor, colorList.lightSecondaryColorNumber) },
+                { bgColor: '#000' },
                 (0, _util.colorPalette)(colorList.secondaryColor, colorList.lightSecondaryColorNumber)
               )
             ),
@@ -46043,12 +46043,12 @@ var DevelopColor = function DevelopColor() {
               { bgColor: (0, _util.colorPalette)(colorList.secondaryColor, colorList.deepSecondaryColorNumber) },
               _react2['default'].createElement(
                 BodyText,
-                { bgColor: (0, _util.colorPalette)(colorList.secondaryColor, colorList.deepSecondaryColorNumber) },
+                { bgColor: '#000' },
                 '8'
               ),
               _react2['default'].createElement(
                 BodyText,
-                { bgColor: (0, _util.colorPalette)(colorList.secondaryColor, colorList.deepSecondaryColorNumber) },
+                { bgColor: '#000' },
                 (0, _util.colorPalette)(colorList.secondaryColor, colorList.deepSecondaryColorNumber)
               )
             )
