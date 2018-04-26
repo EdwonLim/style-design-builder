@@ -1,5 +1,63 @@
 export default VARIABLE = {
-  color: 'red',
+  colorList: {
+    primaryColor: '#1E2634',
+    lightPrimaryColorNumber: 4,
+    deepPrimaryColorNumber: 8,
+    secondaryColor: '#ff3b71',
+    lightSecondaryColorNumber: 4,
+    deepSecondaryColorNumber: 8,
+    htmlBackGroundColor: 'rgba(0, 0, 0, .06)',
+    baseDeepTextColor: 'rgba(255, 255, 255, 1)',
+    descDeepTextColor: 'rgba(255, 255, 255, .7)',
+    disableDeepTextColor: 'rgba(255, 255, 255, .5)',
+    segmentDeepTextColor: 'rgba(255, 255, 255, .18)',
+    baseLightTextColor: 'rgba(0, 0, 0, .87)',
+    descLightTextColor: 'rgba(0, 0, 0, .54)',
+    disableLightTextColor: 'rgba(0, 0, 0, .38)',
+    segmentLightTextColor: 'rgba(0, 0, 0, .12)',
+    // 功能色 错误成功链接 警告
+    errorColor: '#ff4f5f',
+    successColor: '#73d13d',
+    linkColor: '#40a9ff',
+    warnColor: '#fac200'
+  },
+  colorValue: [{
+    name: 'Red',
+    value: '#f5222d'
+  }, {
+    name: 'Valcano',
+    value: '#fa541c'
+  }, {
+    name: 'Orange',
+    value: '#fa8c16'
+  }, {
+    name: 'Gold',
+    value: '#faad14'
+  }, {
+    name: 'Yellow',
+    value: '#fadb14'
+  }, {
+    name: 'Lime',
+    value: '#a0d911'
+  }, {
+    name: 'Green',
+    value: '#52c41a'
+  }, {
+    name: 'Cyan',
+    value: '#13c2c2'
+  }, {
+    name: 'Blue',
+    value: '#1890ff'
+  }, {
+    name: 'GeekBlue',
+    value: '#2f54eb'
+  }, {
+    name: 'Purple',
+    value: '#722ed1'
+  }, {
+    name: 'Pink',
+    value: '#eb2f96'
+  }],
   font: [
     {
       name: 'display1',

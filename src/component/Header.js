@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, View, StyleSheet } from 'react-sketchapp';
-import { styles } from '../common/style';
+import { styles, fonts } from '../common/style';
 import styled from 'styled-components/primitives';
 
 	// color: ${props => textColor(props.hex)};
@@ -12,10 +12,10 @@ const Container = styled.View`
 	backgroundColor: ${props => props.bgColor};
 	padding: 120px 100px;
 `;
-const Title = styles.font.display1.extend`
+const Title = fonts.display1.extend`
 	marginBottom: 16;
 `;
-const Subtitle = styles.font.headline3.extend``;
+const Subtitle = fonts.headline3.extend``;
 
 const Header = ({ title, children }) => (
 	<Container name="header" bgColor={BG_COLOR}>
