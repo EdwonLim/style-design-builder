@@ -5909,9 +5909,9 @@ module.exports = View;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.typeStyles = exports.styleFunc = exports.styles = exports.fonts = undefined;
+exports.typeStyles = exports.styles = exports.fonts = undefined;
 
-var _templateObject = _taggedTemplateLiteral(['\n\t\tfontSize: ', ';\n\t\tlineHeight: ', ';\n\t\tcolor: ', ';\n\t'], ['\n\t\tfontSize: ', ';\n\t\tlineHeight: ', ';\n\t\tcolor: ', ';\n\t']),
+var _templateObject = _taggedTemplateLiteral(['\n\t\tfontSize: ', ';\n\t\tlineHeight: ', ';\n\t\tcolor: ', ';\n  '], ['\n\t\tfontSize: ', ';\n\t\tlineHeight: ', ';\n\t\tcolor: ', ';\n  ']),
     _templateObject2 = _taggedTemplateLiteral(['\n\t\twidth: 100%;\n\t\tbackgroundColor: #fff;\n    padding: 100px;\n    paddingTop: 0;\n  '], ['\n\t\twidth: 100%;\n\t\tbackgroundColor: #fff;\n    padding: 100px;\n    paddingTop: 0;\n  ']),
     _templateObject3 = _taggedTemplateLiteral(['\n    marginTop: 100;\n    marginBottom: 32;\n    fontWeight: bold;\n  '], ['\n    marginTop: 100;\n    marginBottom: 32;\n    fontWeight: bold;\n  ']);
 
@@ -5953,7 +5953,7 @@ var textColor = function textColor() {
 
 var fonts = {};
 
-// font style
+// 通用字体样式
 var typeBaseStyles = {
   color: 'rgba(0, 0, 0, .87)',
   fontFamily: 'Pingfang SC'
@@ -5961,15 +5961,18 @@ var typeBaseStyles = {
 
 var typeStyles = {};
 VARIABLE.font.forEach(function (item) {
+  // 设置 styled-component 中的字体，便于代码中继承使用
   fonts[item.name] = _primitives2['default'].Text(_templateObject, item.fontSize, item.lineHeight, function (props) {
     return textColor(props.bgColor, props.textType);
   });
+  // 将字体配置整理到 typeStyles 对象中，用于下面创建共享文本样式
   typeStyles[item.name] = Object.assign({}, typeBaseStyles, {
     fontSize: item.fontSize,
     lineHeight: item.lineHeight
   });
 });
 
+// 创建共享文本样式, sketch 里可以下拉选择字体
 _reactSketchapp.TextStyles.create({
   context: context,
   clearExistingStyles: true
@@ -5977,77 +5980,11 @@ _reactSketchapp.TextStyles.create({
 
 var styles = {
   Body: _primitives2['default'].View(_templateObject2),
-  Title: fonts.headline2.extend(_templateObject3),
-  fontBoxContainerRow: {
-    flexDirection: 'row',
-    marginBottom: 24
-  },
-  fontBoxContainer: {
-    flexBasis: 140,
-    marginRight: 32
-  },
-  fontBox: {
-    marginTop: 8,
-    borderWidth: 1,
-    height: 140,
-    borderColor: '#ddd',
-    borderRadius: 4,
-    paddingHorizontal: 20,
-    paddingBottom: 12,
-    justifyContent: 'flex-end'
-  },
-  fontDemoName: {
-    textAlign: 'center',
-    fontSize: 46,
-    color: 'rgba(0, 0, 0, .87)',
-    lineHeight: 55,
-    marginBottom: 12
-  },
-  fontDemoFamily: {
-    textAlign: 'center',
-    fontSize: 16,
-    color: 'rgba(0, 0, 0, .65)',
-    borderWidth: 1,
-    borderColor: '#f33'
-  },
-  fontLine: {
-    width: '100%',
-    height: 1,
-    backgroundColor: '#ddd',
-    marginBottom: 8
-  },
-  composeRow: {
-    flex: 1,
-    flexBasis: 200
-  }
-};
-var styleFunc = {
-  paletteItem: function () {
-    function paletteItem(bgColor) {
-      return { backgroundColor: bgColor, display: 'flex', flexDirection: 'row', padding: 16 };
-    }
-
-    return paletteItem;
-  }(),
-  paletteItemName: function () {
-    function paletteItemName(index) {
-      return { flex: 1, color: index > 4 ? '#fff' : 'rgba(0, 0, 0, .87)', fontFamily: 'Ayuthaya' };
-    }
-
-    return paletteItemName;
-  }(),
-  paletteItemValue: function () {
-    function paletteItemValue(index) {
-      return { flex: 1, textAlign: 'right', color: index > 4 ? 'rgba(255, 255, 255, .7)' : 'rgba(0, 0, 0, .65)', fontFamily: 'Ayuthaya' };
-    }
-
-    return paletteItemValue;
-  }()
+  Title: fonts.headline2.extend(_templateObject3)
 };
 
 exports.fonts = fonts;
 exports.styles = styles;
-exports.styleFunc = styleFunc;
 exports.typeStyles = typeStyles;
 
 /***/ }),
@@ -45562,10 +45499,16 @@ else {
 /***/ (function(module, exports, __webpack_require__) {
 
 Object.defineProperty(exports, "__esModule", {
-	value: true
+  value: true
 });
 
-var _templateObject = _taggedTemplateLiteral([''], ['']);
+var _templateObject = _taggedTemplateLiteral([''], ['']),
+    _templateObject2 = _taggedTemplateLiteral(['\n  flexDirection: row;\n  marginBottom: 24px;\n'], ['\n  flexDirection: row;\n  marginBottom: 24px;\n']),
+    _templateObject3 = _taggedTemplateLiteral(['\n  flexBasis: 140px;\n  marginRight: 32px;\n'], ['\n  flexBasis: 140px;\n  marginRight: 32px;\n']),
+    _templateObject4 = _taggedTemplateLiteral(['\n  marginTop: 8px;\n  borderWidth: 1px;\n  height: 140px;\n  borderColor: #ddd;\n  borderRadius: 4px;\n  paddingHorizontal: 20px;\n  paddingBottom: 12px;\n  justifyContent: flex-end;\n'], ['\n  marginTop: 8px;\n  borderWidth: 1px;\n  height: 140px;\n  borderColor: #ddd;\n  borderRadius: 4px;\n  paddingHorizontal: 20px;\n  paddingBottom: 12px;\n  justifyContent: flex-end;\n']),
+    _templateObject5 = _taggedTemplateLiteral(['\n  textAlign: center;\n  fontSize: 46;\n  color: \'rgba(0, 0, 0, .87)\';\n  lineHeight: 55;\n  marginBottom: 12;\n  fontFamily: ', '\n'], ['\n  textAlign: center;\n  fontSize: 46;\n  color: \'rgba(0, 0, 0, .87)\';\n  lineHeight: 55;\n  marginBottom: 12;\n  fontFamily: ', '\n']),
+    _templateObject6 = _taggedTemplateLiteral(['\n  textAlign: center;\n  fontSize: 16px;\n  color: rgba(0, 0, 0, .65);\n'], ['\n  textAlign: center;\n  fontSize: 16px;\n  color: rgba(0, 0, 0, .65);\n']),
+    _templateObject7 = _taggedTemplateLiteral(['\n  width: 100%;\n  height: 1px;\n  backgroundColor: #ddd;\n  marginBottom: 8px;\n'], ['\n  width: 100%;\n  height: 1px;\n  backgroundColor: #ddd;\n  marginBottom: 8px;\n']);
 
 var _react = __webpack_require__(0);
 
@@ -45581,149 +45524,159 @@ var _util = __webpack_require__(251);
 
 var _style = __webpack_require__(54);
 
+var _primitives = __webpack_require__(93);
+
+var _primitives2 = _interopRequireDefault(_primitives);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var BodyText = _style.fonts.title.extend(_templateObject);
+var Row = _primitives2['default'].View(_templateObject2);
+var Container = _primitives2['default'].View(_templateObject3);
+var Box = _primitives2['default'].View(_templateObject4);
+var DemoName = _style.fonts.display2.extend(_templateObject5, function (props) {
+  return props.type === 'Helvetica' ? 'Helvetica' : 'Pingfang SC';
+});
+var DemoNameFamily = _style.fonts.title.extend(_templateObject6);
+var FontLine = _primitives2['default'].View(_templateObject7);
 
 var ArtboardText = function ArtboardText() {
-	return _react2['default'].createElement(
-		_reactSketchapp.Artboard,
-		{
-			name: 'Text',
-			style: { position: 'absolute', width: 1440, left: 1600 }
-		},
-		_react2['default'].createElement(
-			_Header2['default'],
-			null,
-			'Youth Design - \u6587\u5B57'
-		),
-		_react2['default'].createElement(
-			_style.styles.Body,
-			{ name: 'body' },
-			_react2['default'].createElement(
-				_style.styles.Title,
-				null,
-				'\u5B57\u4F53'
-			),
-			_react2['default'].createElement(
-				_reactSketchapp.View,
-				{ style: _style.styles.fontBoxContainerRow },
-				_react2['default'].createElement(
-					_reactSketchapp.View,
-					{ style: _style.styles.fontBoxContainer },
-					_react2['default'].createElement(
-						BodyText,
-						null,
-						'\u4E2D\u6587'
-					),
-					_react2['default'].createElement(
-						_reactSketchapp.View,
-						{ style: _style.styles.fontBox },
-						_react2['default'].createElement(
-							_reactSketchapp.Text,
-							{ style: _reactSketchapp.StyleSheet.flatten([_style.styles.fontDemoName, { fontFamily: 'Pingfang SC' }]) },
-							'\u79FB'
-						),
-						_react2['default'].createElement(_reactSketchapp.View, { style: _style.styles.fontLine }),
-						_react2['default'].createElement(
-							_reactSketchapp.Text,
-							{ style: _reactSketchapp.StyleSheet.flatten([_style.styles.fontDemoFamily, { fontFamily: 'Pingfang SC' }]) },
-							'Pingfang SC'
-						)
-					)
-				),
-				_react2['default'].createElement(
-					_reactSketchapp.View,
-					{ style: _style.styles.fontBoxContainer },
-					_react2['default'].createElement(
-						BodyText,
-						null,
-						'\u82F1\u6587'
-					),
-					_react2['default'].createElement(
-						_reactSketchapp.View,
-						{ style: _style.styles.fontBox },
-						_react2['default'].createElement(
-							_reactSketchapp.Text,
-							{ style: _reactSketchapp.StyleSheet.flatten([_style.styles.fontDemoName, { fontFamily: 'Helvetica' }]) },
-							'Aa'
-						),
-						_react2['default'].createElement(_reactSketchapp.View, { style: _style.styles.fontLine }),
-						_react2['default'].createElement(
-							_reactSketchapp.Text,
-							{ style: _reactSketchapp.StyleSheet.flatten([_style.styles.fontDemoFamily, { fontFamily: 'Helvetica' }]) },
-							'Helvetica'
-						)
-					)
-				),
-				_react2['default'].createElement(
-					_reactSketchapp.View,
-					{ style: _style.styles.fontBoxContainer },
-					_react2['default'].createElement(
-						BodyText,
-						null,
-						'\u6570\u5B57'
-					),
-					_react2['default'].createElement(
-						_reactSketchapp.View,
-						{ style: _style.styles.fontBox },
-						_react2['default'].createElement(
-							_reactSketchapp.Text,
-							{ style: _reactSketchapp.StyleSheet.flatten([_style.styles.fontDemoName, { fontFamily: 'Helvetica' }]) },
-							'123'
-						),
-						_react2['default'].createElement(_reactSketchapp.View, { style: _style.styles.fontLine }),
-						_react2['default'].createElement(
-							_reactSketchapp.Text,
-							{ style: _reactSketchapp.StyleSheet.flatten([_style.styles.fontDemoFamily, { fontFamily: 'Helvetica' }]) },
-							'Helvetica'
-						)
-					)
-				)
-			),
-			_react2['default'].createElement(
-				BodyText,
-				null,
-				'font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,"Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",SimSun, sans-serif;'
-			),
-			_react2['default'].createElement(
-				_style.styles.Title,
-				null,
-				'\u6587\u5B57\u6392\u7248'
-			),
-			_react2['default'].createElement(
-				_reactSketchapp.View,
-				{ style: { flexDirection: 'row', flexWrap: 'wrap' } },
-				VARIABLE.font.map(function (item, index) {
-					return _react2['default'].createElement(
-						_reactSketchapp.View,
-						{ style: { width: '100%', flexDirection: 'row', marginBottom: 16 }, key: index },
-						_react2['default'].createElement(
-							_reactSketchapp.Text,
-							{ style: { width: 160, lineHeight: item.lineHeight } },
-							item.name
-						),
-						_react2['default'].createElement(
-							_reactSketchapp.Text,
-							{ style: _reactSketchapp.StyleSheet.flatten([_reactSketchapp.TextStyles.get(item.name), { width: 300 }]) },
-							'Regular ',
-							new Number(item.fontSize).toString(),
-							'px/',
-							new Number(item.lineHeight).toString(),
-							'px'
-						),
-						_react2['default'].createElement(
-							_reactSketchapp.Text,
-							{ style: _reactSketchapp.StyleSheet.flatten([_reactSketchapp.TextStyles.get(item.name), { flex: 1 }]) },
-							'\u6211\u662F\u5B57\u4F53 ABCDEFGH 0123456789'
-						)
-					);
-				})
-			)
-		)
-	);
+  return _react2['default'].createElement(
+    _reactSketchapp.Artboard,
+    { name: 'Text', style: { position: 'absolute', width: 1440, left: 1600 } },
+    _react2['default'].createElement(
+      _Header2['default'],
+      null,
+      'Youth Design - \u6587\u5B57'
+    ),
+    _react2['default'].createElement(
+      _style.styles.Body,
+      { name: 'body' },
+      _react2['default'].createElement(
+        _style.styles.Title,
+        null,
+        '\u5B57\u4F53'
+      ),
+      _react2['default'].createElement(
+        Row,
+        null,
+        _react2['default'].createElement(
+          Container,
+          null,
+          _react2['default'].createElement(
+            BodyText,
+            null,
+            '\u4E2D\u6587'
+          ),
+          _react2['default'].createElement(
+            Box,
+            null,
+            _react2['default'].createElement(
+              DemoName,
+              null,
+              '\u79FB'
+            ),
+            _react2['default'].createElement(FontLine, null),
+            _react2['default'].createElement(
+              DemoNameFamily,
+              null,
+              'Pingfang SC'
+            )
+          )
+        ),
+        _react2['default'].createElement(
+          Container,
+          null,
+          _react2['default'].createElement(
+            BodyText,
+            null,
+            '\u82F1\u6587'
+          ),
+          _react2['default'].createElement(
+            Box,
+            null,
+            _react2['default'].createElement(
+              DemoName,
+              { type: 'Helvetica' },
+              'Aa'
+            ),
+            _react2['default'].createElement(FontLine, null),
+            _react2['default'].createElement(
+              DemoNameFamily,
+              null,
+              'Helvetica'
+            )
+          )
+        ),
+        ' type="Helvetica"',
+        _react2['default'].createElement(
+          Container,
+          null,
+          _react2['default'].createElement(
+            BodyText,
+            null,
+            '\u6570\u5B57'
+          ),
+          _react2['default'].createElement(
+            Box,
+            null,
+            _react2['default'].createElement(
+              DemoName,
+              { type: 'Helvetica' },
+              '123'
+            ),
+            _react2['default'].createElement(FontLine, null),
+            _react2['default'].createElement(
+              DemoNameFamily,
+              null,
+              'Helvetica'
+            )
+          )
+        )
+      ),
+      _react2['default'].createElement(
+        BodyText,
+        null,
+        'font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,"Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",SimSun, sans-serif;'
+      ),
+      _react2['default'].createElement(
+        _style.styles.Title,
+        null,
+        '\u6587\u5B57\u6392\u7248'
+      ),
+      _react2['default'].createElement(
+        _reactSketchapp.View,
+        { style: { flexDirection: 'row', flexWrap: 'wrap' } },
+        VARIABLE.font.map(function (item, index) {
+          return _react2['default'].createElement(
+            _reactSketchapp.View,
+            { style: { width: '100%', flexDirection: 'row', marginBottom: 16 }, key: index },
+            _react2['default'].createElement(
+              _reactSketchapp.Text,
+              { style: { width: 160, lineHeight: item.lineHeight } },
+              item.name
+            ),
+            _react2['default'].createElement(
+              _reactSketchapp.Text,
+              { style: _reactSketchapp.StyleSheet.flatten([_reactSketchapp.TextStyles.get(item.name), { width: 300 }]) },
+              'Regular ',
+              new Number(item.fontSize).toString(),
+              'px/',
+              new Number(item.lineHeight).toString(),
+              'px'
+            ),
+            _react2['default'].createElement(
+              _reactSketchapp.Text,
+              { style: _reactSketchapp.StyleSheet.flatten([_reactSketchapp.TextStyles.get(item.name), { flex: 1 }]) },
+              '\u6211\u662F\u5B57\u4F53 ABCDEFGH 0123456789'
+            )
+          );
+        })
+      )
+    )
+  );
 };
 exports['default'] = ArtboardText;
 

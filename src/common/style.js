@@ -24,7 +24,7 @@ const textColor = (bgColor = '#fff', textType) => {
 
 const fonts = {};
 
-// font style
+// 通用字体样式
 const typeBaseStyles = {
   color: 'rgba(0, 0, 0, .87)',
   fontFamily: 'Pingfang SC'
@@ -32,11 +32,13 @@ const typeBaseStyles = {
 
 const typeStyles = {};
 VARIABLE.font.forEach(item => {
+  // 设置 styled-component 中的字体，便于代码中继承使用
   fonts[item.name] = styled.Text`
 		fontSize: ${item.fontSize};
 		lineHeight: ${item.lineHeight};
 		color: ${props => textColor(props.bgColor, props.textType)};
-	`;
+  `;
+  // 将字体配置整理到 typeStyles 对象中，用于下面创建共享文本样式
   typeStyles[item.name] = {
     ...typeBaseStyles,
     fontSize: item.fontSize,
@@ -44,6 +46,7 @@ VARIABLE.font.forEach(item => {
   };
 });
 
+// 创建共享文本样式, sketch 里可以下拉选择字体
 TextStyles.create({
   context: context,
   clearExistingStyles: true,
@@ -60,60 +63,7 @@ const styles = {
     marginTop: 100;
     marginBottom: 32;
     fontWeight: bold;
-  `,
-  fontBoxContainerRow: {
-    flexDirection: 'row',
-    marginBottom: 24
-  },
-  fontBoxContainer: {
-    flexBasis: 140,
-    marginRight: 32
-  },
-  fontBox: {
-    marginTop: 8,
-    borderWidth: 1,
-    height: 140,
-    borderColor: '#ddd',
-    borderRadius: 4,
-    paddingHorizontal: 20,
-    paddingBottom: 12,
-    justifyContent: 'flex-end'
-  },
-  fontDemoName: {
-    textAlign: 'center',
-    fontSize: 46,
-    color: 'rgba(0, 0, 0, .87)',
-    lineHeight: 55,
-    marginBottom: 12
-  },
-  fontDemoFamily: {
-    textAlign: 'center',
-    fontSize: 16,
-    color: 'rgba(0, 0, 0, .65)',
-    borderWidth: 1,
-    borderColor: '#f33'
-  },
-  fontLine: {
-    width: '100%',
-    height: 1,
-    backgroundColor: '#ddd',
-    marginBottom: 8
-  },
-  composeRow: {
-    flex: 1,
-    flexBasis: 200
-  }
-};
-const styleFunc = {
-  paletteItem(bgColor) {
-    return { backgroundColor: bgColor, display: 'flex', flexDirection: 'row', padding: 16 };
-  },
-  paletteItemName(index) {
-    return { flex: 1, color: index > 4 ? '#fff' : 'rgba(0, 0, 0, .87)', fontFamily: 'Ayuthaya' };
-  },
-  paletteItemValue(index) {
-    return { flex: 1, textAlign: 'right', color: index > 4 ? 'rgba(255, 255, 255, .7)' : 'rgba(0, 0, 0, .65)', fontFamily: 'Ayuthaya' };
-  }
+  `
 };
 
-export { fonts, styles, styleFunc, typeStyles };
+export { fonts, styles, typeStyles };
