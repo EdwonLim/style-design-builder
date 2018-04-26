@@ -10,9 +10,9 @@ const Doc = () => {
 	return (
 		<Document>
 			<Page name="Style">
-				<ArtboardPalette />
+        <ArtboardPalette />
+        <ArtboardColor />
 				<ArtboardText />
-				<ArtboardColor />
 			</Page>
 		</Document>);
 };

@@ -51,9 +51,7 @@ const BodyText = fonts.title.extend``;
 const colorList = VARIABLE.colorList;
 
 const DevelopColor = () => (
-  <Artboard name='developColor'
-    style={{ position: 'absolute', width: 1440, left: 3200 }}
-  >
+  <Artboard name='developColor' style={{ position: 'absolute', width: 1440, left: 1600 }} >
     <Header>项目色彩规范</Header>
     <styles.Body name='body'>
       <styles.Title>定义</styles.Title>

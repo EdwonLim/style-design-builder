@@ -46,7 +46,7 @@ const FontLine = styled.View`
 
 
 const ArtboardText = () => (
-	<Artboard name="Text" style={{ position: 'absolute', width: 1440, left: 1600}} >
+  <Artboard name="Text" style={{ position: 'absolute', width: 1440, left: 3200 }}>
 		<Header>Youth Design - 文字</Header>
 		<styles.Body name="body">
 			<styles.Title>字体</styles.Title>
@@ -82,9 +82,10 @@ const ArtboardText = () => (
 				{
 					VARIABLE.font.map((item, index) => {
 						return <View style={{ width: '100%', flexDirection: 'row', marginBottom: 16 }} key={index}>
-						<Text style={{ width: 160, lineHeight: item.lineHeight}}>{item.name}</Text>
-						<Text style={StyleSheet.flatten([TextStyles.get(item.name), { width: 300 }])}>Regular {new Number(item.fontSize).toString()}px/{new Number(item.lineHeight).toString()}px</Text>
-						<Text style={StyleSheet.flatten([TextStyles.get(item.name), { flex: 1 }])}>我是字体 ABCDEFGH 0123456789</Text>
+              <Text style={{ width: 140, lineHeight: item.lineHeight }}>{item.name}</Text>
+              <Text style={{ width: 180, lineHeight: item.lineHeight }}>{item.desc}</Text>
+              <Text style={StyleSheet.flatten([TextStyles.get(item.name), { width: 300, marginRight: 32 }])}>Regular {new Number(item.fontSize).toString()}px/{new Number(item.lineHeight).toString()}px</Text>
+              <Text style={StyleSheet.flatten([TextStyles.get(item.name), { flex: 1 }])}>我是字体 ABCDEFGH 0123456789</Text>
 						</View>
 					})
 				}
