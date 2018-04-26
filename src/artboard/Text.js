@@ -1,8 +1,9 @@
 import React from 'react';
 import { render, Artboard, Text, View, Page, Document, StyleSheet, TextStyles } from 'react-sketchapp';
 import Header from '../component/Header';
-import { colorPalette } from '../util';
-import { styles, styleFunc } from '../common/style';
+import { colorPalette } from '../common/util';
+import { styles, fonts } from '../common/style';
+const BodyText = fonts.title.extend``;
 
 const ArtboardText = () => (
 	<Artboard
@@ -14,7 +15,7 @@ const ArtboardText = () => (
 			<styles.Title>字体</styles.Title>
 			<View style={styles.fontBoxContainerRow}>
 				<View style={styles.fontBoxContainer}>
-					<Text style={styles.bodyTextOnLightBG}>中文</Text>
+          <BodyText>中文</BodyText>
 					<View style={styles.fontBox}>
 						<Text style={StyleSheet.flatten([styles.fontDemoName, { fontFamily: 'Pingfang SC' }])}>移</Text>
 						<View style={styles.fontLine}></View>
@@ -22,7 +23,7 @@ const ArtboardText = () => (
 					</View>
 				</View>
 				<View style={styles.fontBoxContainer}>
-					<Text style={styles.bodyTextOnLightBG}>英文</Text>
+          <BodyText>英文</BodyText>
 					<View style={styles.fontBox}>
 						<Text style={StyleSheet.flatten([styles.fontDemoName, { fontFamily: 'Helvetica' }])}>Aa</Text>
 						<View style={styles.fontLine}></View>
@@ -30,7 +31,7 @@ const ArtboardText = () => (
 					</View>
 				</View>
 				<View style={styles.fontBoxContainer}>
-					<Text style={styles.bodyTextOnLightBG}>数字</Text>
+          <BodyText>数字</BodyText>
 					<View style={styles.fontBox}>
 						<Text style={StyleSheet.flatten([styles.fontDemoName, { fontFamily: 'Helvetica' }])}>123</Text>
 						<View style={styles.fontLine}></View>
@@ -38,7 +39,7 @@ const ArtboardText = () => (
 					</View>
 				</View>
 			</View>
-			<Text style={styles.bodyTextOnLightBG}>font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,"Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",SimSun, sans-serif;</Text>
+      <BodyText>font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,"Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",SimSun, sans-serif;</BodyText>
 
 			<styles.Title>文字排版</styles.Title>
 			<View style={{ flexDirection: 'row', flexWrap: 'wrap' }}>

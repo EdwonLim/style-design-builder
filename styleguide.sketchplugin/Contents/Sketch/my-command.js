@@ -5927,8 +5927,6 @@ var _chromaJs2 = _interopRequireDefault(_chromaJs);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 // get textColor by background-color && textType
@@ -5980,36 +5978,6 @@ _reactSketchapp.TextStyles.create({
 var styles = {
   Body: _primitives2['default'].View(_templateObject2),
   Title: fonts.headline2.extend(_templateObject3),
-  bodyTextOnDeepBG: {
-    fontSize: 16,
-    color: 'rgba(255, 255, 255, .7)',
-    lineHeight: 24
-  },
-  bodyTextOnLightBG: {
-    fontSize: 16,
-    color: 'rgba(0, 0, 0, .65)',
-    lineHeight: 24
-  },
-  paletteContainer: {
-    width: '100%',
-    display: 'flex',
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'space-between',
-    paddingTop: '80px'
-  },
-  palette: {
-    flexBasis: '23%',
-    marginBottom: 64,
-    borderRadius: 4
-  },
-  paletteTitleTextOnLightBG: _defineProperty({
-    fontSize: 24,
-    color: 'rgba(0, 0, 0, .87)',
-    lineHeight: 32,
-    marginBottom: 32,
-    textAlign: 'center'
-  }, 'marginBottom', 24),
   fontBoxContainerRow: {
     flexDirection: 'row',
     marginBottom: 24
@@ -16596,112 +16564,7 @@ ApplyAnimatedValues.current=apply;}};
 module.exports=ApplyAnimatedValues;
 
 /***/ }),
-/* 99 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var tinycolor = __webpack_require__(248);
-
-// 根据输入的颜色 获取一条渐变色板
-var colorPalette = function colorPalette(color, index) {
-  // letiables
-  var hueStep = 2;
-  var saturationStep = 16;
-  var saturationStep2 = 5;
-  var brightnessStep1 = 5;
-  var brightnessStep2 = 15;
-  var lightColorCount = 5;
-  var darkColorCount = 4;
-
-  var getHue = function getHue(hsv, i, isLight) {
-    var hue = void 0;
-    if (hsv.h >= 60 && hsv.h <= 240) {
-      hue = isLight ? hsv.h - hueStep * i : hsv.h + hueStep * i;
-    } else {
-      hue = isLight ? hsv.h + hueStep * i : hsv.h - hueStep * i;
-    }
-    if (hue < 0) {
-      hue += 360;
-    } else if (hue >= 360) {
-      hue -= 360;
-    }
-    return Math.round(hue);
-  };
-  var getSaturation = function getSaturation(hsv, i, isLight) {
-    var saturation = void 0;
-    if (isLight) {
-      saturation = Math.round(hsv.s * 100) - saturationStep * i;
-    } else if (i == darkColorCount) {
-      saturation = Math.round(hsv.s * 100) + saturationStep;
-    } else {
-      saturation = Math.round(hsv.s * 100) + saturationStep2 * i;
-    }
-    if (saturation > 100) {
-      saturation = 100;
-    }
-    if (isLight && i === lightColorCount && saturation > 10) {
-      saturation = 10;
-    }
-    if (saturation < 6) {
-      saturation = 6;
-    }
-    return Math.round(saturation);
-  };
-  var getValue = function getValue(hsv, i, isLight) {
-    if (isLight) {
-      return Math.round(hsv.v * 100) + brightnessStep1 * i;
-    }
-    return Math.round(hsv.v * 100) - brightnessStep2 * i;
-  };
-
-  var isLight = index <= 6;
-  var hsv = tinycolor(color).toHsv();
-  var i = isLight ? lightColorCount + 1 - index : index - lightColorCount - 1;
-  return tinycolor({
-    h: getHue(hsv, i, isLight),
-    s: getSaturation(hsv, i, isLight),
-    v: getValue(hsv, i, isLight)
-  }).toHexString();
-};
-
-// 根据某一种色彩获取浅色背景上文本的颜色
-// 由于自然界中不存在纯黑/灰色，因此使用黑灰色的文本不够美观，此函数使用其他颜色经过调和得到文本色更舒适
-// @color HexString eg: #00f
-// @type String eg: 'body'/'caption'/'disable'/'line'
-var getTextColorOnLightBackground = function getTextColorOnLightBackground(color, type) {
-  var hsl = tinycolor(color).toHsl();
-  var alpha = 1;
-
-  switch (type) {
-    case 'body':
-      alpha = 1;
-      break;
-    case 'caption':
-      alpha = .65;
-      break;
-    case 'disable':
-      alpha = .43;
-      break;
-    case 'line':
-      alpha = .14;
-      break;
-    default:
-      alpha = 1;
-  }
-
-  return tinycolor({
-    h: hsl.h,
-    s: hsl.s,
-    l: .09,
-    a: alpha
-  }).toRgbString();
-};
-
-module.exports = {
-  colorPalette: colorPalette,
-  getTextColorOnLightBackground: getTextColorOnLightBackground
-};
-
-/***/ }),
+/* 99 */,
 /* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -37758,6 +37621,14 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _templateObject = _taggedTemplateLiteral([''], ['']),
+    _templateObject2 = _taggedTemplateLiteral(['\n  width: 100%;\n  display: flex;\n  flexDirection: row;\n  flexWrap: wrap;\n  justifyContent: space-between;\n  paddingTop: 80px;\n'], ['\n  width: 100%;\n  display: flex;\n  flexDirection: row;\n  flexWrap: wrap;\n  justifyContent: space-between;\n  paddingTop: 80px;\n']),
+    _templateObject3 = _taggedTemplateLiteral(['\n  flexBasis: 23%;\n  marginBottom: 64px;\n  borderRadius: 4px;\n'], ['\n  flexBasis: 23%;\n  marginBottom: 64px;\n  borderRadius: 4px;\n']),
+    _templateObject4 = _taggedTemplateLiteral(['\n  marginBottom: 32px;\n  textAlign: center;\n  marginBottom: 24px;\n'], ['\n  marginBottom: 32px;\n  textAlign: center;\n  marginBottom: 24px;\n']),
+    _templateObject5 = _taggedTemplateLiteral(['\n  backgroundColor: ', ';\n  display: flex;\n  flexDirection: row;\n  padding: 16px;\n'], ['\n  backgroundColor: ', ';\n  display: flex;\n  flexDirection: row;\n  padding: 16px;\n']),
+    _templateObject6 = _taggedTemplateLiteral(['\n  color: ', ';\n  flex: 1;\n  fontFamily: Ayuthaya;\n'], ['\n  color: ', ';\n  flex: 1;\n  fontFamily: Ayuthaya;\n']),
+    _templateObject7 = _taggedTemplateLiteral(['\n  color: ', ';\n  flex: 1;\n  fontFamily: Ayuthaya;\n  textAlign: right;\n'], ['\n  color: ', ';\n  flex: 1;\n  fontFamily: Ayuthaya;\n  textAlign: right;\n']);
+
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
@@ -37768,11 +37639,33 @@ var _Header = __webpack_require__(92);
 
 var _Header2 = _interopRequireDefault(_Header);
 
-var _util = __webpack_require__(99);
+var _util = __webpack_require__(251);
 
 var _style = __webpack_require__(54);
 
+var _primitives = __webpack_require__(93);
+
+var _primitives2 = _interopRequireDefault(_primitives);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var BodyText = _style.fonts.title.extend(_templateObject);
+
+
+var PaletteContainer = _primitives2['default'].View(_templateObject2);
+var Palette = _primitives2['default'].View(_templateObject3);
+var Title = _style.fonts.headline2.extend(_templateObject4);
+var PaletteItem = _primitives2['default'].View(_templateObject5, function (props) {
+  return props.bgColor;
+});
+var PaletteItemName = _primitives2['default'].Text(_templateObject6, function (props) {
+  return props.index > 4 ? '#fff' : 'rgba(0, 0, 0, .87)';
+});
+var PaletteItemValue = _primitives2['default'].Text(_templateObject7, function (props) {
+  return props.index > 4 ? 'rgba(255, 255, 255, .7)' : 'rgba(0, 0, 0, .65)';
+});
 
 var ArtboardColor = function ArtboardColor() {
   return _react2['default'].createElement(
@@ -37792,36 +37685,36 @@ var ArtboardColor = function ArtboardColor() {
         '\u8C03\u8272\u677F\u6982\u8FF0'
       ),
       _react2['default'].createElement(
-        _reactSketchapp.Text,
-        { style: _style.styles.bodyTextOnLightBG },
+        BodyText,
+        null,
         '\u8C03\u8272\u677F\u672C\u6765\u662F\u6DF7\u5408\u5404\u79CD\u989C\u8272\u989C\u6599\u4F7F\u7528\u7684\u677F\uFF0C\u5728 Ant Design \u4E2D\uFF0C\u8C03\u8272\u677F\u6307\u7684\u662F\u4E00\u4EFD\u989C\u8272\u8868\uFF08\u5982\u4E0B\u56FE\uFF09\uFF0C\u989C\u8272\u8868\u7531\u4E00\u7CFB\u5217\u5177\u6709\u4E00\u5B9A\u4EE3\u8868\u6027\u7684\u57FA\u672C\u8272\u5F69\u53CA\u5B83\u4EEC\u7684\u6E10\u53D8\u8272\u7EC4\u6210\uFF0C\u6211\u4EEC\u53EF\u4EE5\u5728\u8C03\u8272\u677F\u4E2D\u5BFB\u627E\u9700\u8981\u7684\u989C\u8272\u5E76\u83B7\u53D6\u989C\u8272\u503C\u3002'
       ),
       _react2['default'].createElement(
-        _reactSketchapp.View,
-        { style: _style.styles.paletteContainer },
+        PaletteContainer,
+        null,
         /* Loop for palette */
         VARIABLE.colorValue.map(function (item, index) {
           return _react2['default'].createElement(
-            _reactSketchapp.View,
-            { style: _style.styles.palette, key: index },
+            Palette,
+            { key: index },
             _react2['default'].createElement(
-              _reactSketchapp.Text,
-              { style: _style.styles.paletteTitleTextOnLightBG },
+              Title,
+              null,
               item.name
             ),
             Array.apply(null, Array(10)).map(function (_, i) {
               var bgColor = (0, _util.colorPalette)(item.value, i + 1);
               return _react2['default'].createElement(
-                _reactSketchapp.View,
-                { style: _style.styleFunc.paletteItem(bgColor), key: i },
+                PaletteItem,
+                { bgColor: bgColor, key: i },
                 _react2['default'].createElement(
-                  _reactSketchapp.Text,
-                  { style: _style.styleFunc.paletteItemName(i) },
+                  PaletteItemName,
+                  { index: i },
                   item.name + '-' + (i + 1)
                 ),
                 _react2['default'].createElement(
-                  _reactSketchapp.Text,
-                  { style: _style.styleFunc.paletteItemValue(i) },
+                  PaletteItemValue,
+                  { index: i },
                   bgColor
                 )
               );
@@ -45672,6 +45565,8 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
+var _templateObject = _taggedTemplateLiteral([''], ['']);
+
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
@@ -45682,11 +45577,15 @@ var _Header = __webpack_require__(92);
 
 var _Header2 = _interopRequireDefault(_Header);
 
-var _util = __webpack_require__(99);
+var _util = __webpack_require__(251);
 
 var _style = __webpack_require__(54);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var BodyText = _style.fonts.title.extend(_templateObject);
 
 var ArtboardText = function ArtboardText() {
 	return _react2['default'].createElement(
@@ -45715,8 +45614,8 @@ var ArtboardText = function ArtboardText() {
 					_reactSketchapp.View,
 					{ style: _style.styles.fontBoxContainer },
 					_react2['default'].createElement(
-						_reactSketchapp.Text,
-						{ style: _style.styles.bodyTextOnLightBG },
+						BodyText,
+						null,
 						'\u4E2D\u6587'
 					),
 					_react2['default'].createElement(
@@ -45739,8 +45638,8 @@ var ArtboardText = function ArtboardText() {
 					_reactSketchapp.View,
 					{ style: _style.styles.fontBoxContainer },
 					_react2['default'].createElement(
-						_reactSketchapp.Text,
-						{ style: _style.styles.bodyTextOnLightBG },
+						BodyText,
+						null,
 						'\u82F1\u6587'
 					),
 					_react2['default'].createElement(
@@ -45763,8 +45662,8 @@ var ArtboardText = function ArtboardText() {
 					_reactSketchapp.View,
 					{ style: _style.styles.fontBoxContainer },
 					_react2['default'].createElement(
-						_reactSketchapp.Text,
-						{ style: _style.styles.bodyTextOnLightBG },
+						BodyText,
+						null,
 						'\u6570\u5B57'
 					),
 					_react2['default'].createElement(
@@ -45785,8 +45684,8 @@ var ArtboardText = function ArtboardText() {
 				)
 			),
 			_react2['default'].createElement(
-				_reactSketchapp.Text,
-				{ style: _style.styles.bodyTextOnLightBG },
+				BodyText,
+				null,
 				'font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,"Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",SimSun, sans-serif;'
 			),
 			_react2['default'].createElement(
@@ -45858,7 +45757,7 @@ var _Header = __webpack_require__(92);
 
 var _Header2 = _interopRequireDefault(_Header);
 
-var _util = __webpack_require__(99);
+var _util = __webpack_require__(251);
 
 var _primitives = __webpack_require__(93);
 
@@ -46265,6 +46164,112 @@ var DevelopColor = function DevelopColor() {
   );
 };
 exports['default'] = DevelopColor;
+
+/***/ }),
+/* 251 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var tinycolor = __webpack_require__(248);
+
+// 根据输入的颜色 获取一条渐变色板
+var colorPalette = function colorPalette(color, index) {
+  // letiables
+  var hueStep = 2;
+  var saturationStep = 16;
+  var saturationStep2 = 5;
+  var brightnessStep1 = 5;
+  var brightnessStep2 = 15;
+  var lightColorCount = 5;
+  var darkColorCount = 4;
+
+  var getHue = function getHue(hsv, i, isLight) {
+    var hue = void 0;
+    if (hsv.h >= 60 && hsv.h <= 240) {
+      hue = isLight ? hsv.h - hueStep * i : hsv.h + hueStep * i;
+    } else {
+      hue = isLight ? hsv.h + hueStep * i : hsv.h - hueStep * i;
+    }
+    if (hue < 0) {
+      hue += 360;
+    } else if (hue >= 360) {
+      hue -= 360;
+    }
+    return Math.round(hue);
+  };
+  var getSaturation = function getSaturation(hsv, i, isLight) {
+    var saturation = void 0;
+    if (isLight) {
+      saturation = Math.round(hsv.s * 100) - saturationStep * i;
+    } else if (i == darkColorCount) {
+      saturation = Math.round(hsv.s * 100) + saturationStep;
+    } else {
+      saturation = Math.round(hsv.s * 100) + saturationStep2 * i;
+    }
+    if (saturation > 100) {
+      saturation = 100;
+    }
+    if (isLight && i === lightColorCount && saturation > 10) {
+      saturation = 10;
+    }
+    if (saturation < 6) {
+      saturation = 6;
+    }
+    return Math.round(saturation);
+  };
+  var getValue = function getValue(hsv, i, isLight) {
+    if (isLight) {
+      return Math.round(hsv.v * 100) + brightnessStep1 * i;
+    }
+    return Math.round(hsv.v * 100) - brightnessStep2 * i;
+  };
+
+  var isLight = index <= 6;
+  var hsv = tinycolor(color).toHsv();
+  var i = isLight ? lightColorCount + 1 - index : index - lightColorCount - 1;
+  return tinycolor({
+    h: getHue(hsv, i, isLight),
+    s: getSaturation(hsv, i, isLight),
+    v: getValue(hsv, i, isLight)
+  }).toHexString();
+};
+
+// 根据某一种色彩获取浅色背景上文本的颜色
+// 由于自然界中不存在纯黑/灰色，因此使用黑灰色的文本不够美观，此函数使用其他颜色经过调和得到文本色更舒适
+// @color HexString eg: #00f
+// @type String eg: 'body'/'caption'/'disable'/'line'
+var getTextColorOnLightBackground = function getTextColorOnLightBackground(color, type) {
+  var hsl = tinycolor(color).toHsl();
+  var alpha = 1;
+
+  switch (type) {
+    case 'body':
+      alpha = 1;
+      break;
+    case 'caption':
+      alpha = .65;
+      break;
+    case 'disable':
+      alpha = .43;
+      break;
+    case 'line':
+      alpha = .14;
+      break;
+    default:
+      alpha = 1;
+  }
+
+  return tinycolor({
+    h: hsl.h,
+    s: hsl.s,
+    l: .09,
+    a: alpha
+  }).toRgbString();
+};
+
+module.exports = {
+  colorPalette: colorPalette,
+  getTextColorOnLightBackground: getTextColorOnLightBackground
+};
 
 /***/ })
 /******/ ]);

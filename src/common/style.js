@@ -61,37 +61,6 @@ const styles = {
     marginBottom: 32;
     fontWeight: bold;
   `,
-  bodyTextOnDeepBG: {
-    fontSize: 16,
-    color: 'rgba(255, 255, 255, .7)',
-    lineHeight: 24
-  },
-  bodyTextOnLightBG: {
-    fontSize: 16,
-    color: 'rgba(0, 0, 0, .65)',
-    lineHeight: 24
-  },
-  paletteContainer: {
-    width: '100%',
-    display: 'flex',
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'space-between',
-    paddingTop: '80px'
-  },
-  palette: {
-    flexBasis: '23%',
-    marginBottom: 64,
-    borderRadius: 4
-  },
-  paletteTitleTextOnLightBG: {
-    fontSize: 24,
-    color: 'rgba(0, 0, 0, .87)',
-    lineHeight: 32,
-    marginBottom: 32,
-    textAlign: 'center',
-    marginBottom: 24
-  },
   fontBoxContainerRow: {
     flexDirection: 'row',
     marginBottom: 24
