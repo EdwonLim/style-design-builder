@@ -5,6 +5,7 @@ import VARIABLE from './common/variables';
 import ArtboardPalette from './artboard/Palette';
 import ArtboardText from './artboard/Text';
 import ArtboardColor from './artboard/Color';
+import ArtboardIcon from './artboard/Icon';
 
 const Doc = () => {
 	return (
@@ -12,7 +13,8 @@ const Doc = () => {
 			<Page name="Style">
         <ArtboardPalette />
         <ArtboardColor />
-				<ArtboardText />
+        <ArtboardText />
+        <ArtboardIcon />
 			</Page>
 		</Document>);
 };
