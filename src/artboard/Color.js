@@ -68,16 +68,16 @@ const DevelopColor = () => (
           <SubTitle textType="desc">主色</SubTitle>
           <View>
             <Item bgColor={colorList.primaryColor}>
-              <BodyText bgColor={colorList.primaryColor}>6(主色)</BodyText>
-              <BodyText bgColor={colorList.primaryColor}>{colorList.primaryColor}</BodyText>
+              <BodyText bgColor="#000">6(主色)</BodyText>
+              <BodyText bgColor="#000">{colorList.primaryColor}</BodyText>
             </Item>
             <Item bgColor={colorPalette(colorList.primaryColor, colorList.lightSecondaryColorNumber)}>
               <BodyText bgColor={colorPalette(colorList.primaryColor, colorList.lightSecondaryColorNumber)}>4</BodyText>
               <BodyText bgColor={colorPalette(colorList.primaryColor, colorList.lightSecondaryColorNumber)}>{colorPalette(colorList.primaryColor, colorList.lightPrimaryColorNumber)}</BodyText>
             </Item>
             <Item bgColor={colorPalette(colorList.primaryColor, colorList.deepPrimaryColorNumber)}>
-              <BodyText bgColor={colorPalette(colorList.primaryColor, colorList.deepPrimaryColorNumber)}>8</BodyText>
-              <BodyText bgColor={colorPalette(colorList.primaryColor, colorList.deepPrimaryColorNumber)}>{colorPalette(colorList.primaryColor, colorList.deepPrimaryColorNumber)}</BodyText>
+              <BodyText bgColor="#000">8</BodyText>
+              <BodyText bgColor="#000">{colorPalette(colorList.primaryColor, colorList.deepPrimaryColorNumber)}</BodyText>
             </Item>
           </View>
         </Card>

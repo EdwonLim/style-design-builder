@@ -45957,12 +45957,12 @@ var DevelopColor = function DevelopColor() {
               { bgColor: colorList.primaryColor },
               _react2['default'].createElement(
                 BodyText,
-                { bgColor: colorList.primaryColor },
+                { bgColor: '#000' },
                 '6(\u4E3B\u8272)'
               ),
               _react2['default'].createElement(
                 BodyText,
-                { bgColor: colorList.primaryColor },
+                { bgColor: '#000' },
                 colorList.primaryColor
               )
             ),
@@ -45985,12 +45985,12 @@ var DevelopColor = function DevelopColor() {
               { bgColor: (0, _util.colorPalette)(colorList.primaryColor, colorList.deepPrimaryColorNumber) },
               _react2['default'].createElement(
                 BodyText,
-                { bgColor: (0, _util.colorPalette)(colorList.primaryColor, colorList.deepPrimaryColorNumber) },
+                { bgColor: '#000' },
                 '8'
               ),
               _react2['default'].createElement(
                 BodyText,
-                { bgColor: (0, _util.colorPalette)(colorList.primaryColor, colorList.deepPrimaryColorNumber) },
+                { bgColor: '#000' },
                 (0, _util.colorPalette)(colorList.primaryColor, colorList.deepPrimaryColorNumber)
               )
             )
