@@ -10408,7 +10408,7 @@ var Header = function Header(_ref) {
 		_react2['default'].createElement(
 			Subtitle,
 			{ bgColor: BG_COLOR, textType: 'desc' },
-			'\u79FB\u52A8\u7AEF\u7EC4\u4EF6\u5E93\u6A21\u677F\uFF0C\u79C9\u627F Youth Design \u9752\u6625\u3001\u672A\u6765\u3001\u79D1\u5B66\u7684\u8BBE\u8BA1\u7406\u5FF5\uFF0C\u670D\u52A1\u4E8E QRN\u3001Hy\u3001YIS \u7B49\u79FB\u52A8\u7AEF\u6846\u67B6'
+			'\u8DE8\u5E73\u53F0\u7684\u8BBE\u8BA1\u8BED\u8A00\uFF0CYouth Design \u4EE5\u9752\u6625\u3001\u672A\u6765\u3001\u79D1\u5B66\u4E3A\u8BBE\u8BA1\u7406\u5FF5\uFF0C\u670D\u52A1\u4E8E YMFE \u7684\u4F17\u591A\u79FB\u52A8\u7AEF\u3001PC \u7AEF\u6846\u67B6\u3002'
 		),
 		_react2['default'].createElement(
 			Subtitle,
@@ -37554,10 +37554,10 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports['default'] = VARIABLE = {
   colorList: {
-    primaryColor: '#1E2634',
+    primaryColor: '#00BCD4',
     lightPrimaryColorNumber: 4,
     deepPrimaryColorNumber: 8,
-    secondaryColor: '#ff3b71',
+    secondaryColor: '#FF9800',
     lightSecondaryColorNumber: 4,
     deepSecondaryColorNumber: 8,
     htmlBackGroundColor: 'rgba(0, 0, 0, .06)',
@@ -37570,10 +37570,37 @@ exports['default'] = VARIABLE = {
     disableLightTextColor: 'rgba(0, 0, 0, .38)',
     segmentLightTextColor: 'rgba(0, 0, 0, .12)',
     // 功能色 错误成功链接 警告
-    errorColor: '#ff4f5f',
-    successColor: '#73d13d',
-    linkColor: '#40a9ff',
-    warnColor: '#fac200'
+    func: [{
+      name: '错误',
+      color: '#ff4f5f'
+    }, {
+      name: '成功',
+      color: '#73d13d'
+    }, {
+      name: '链接',
+      color: '#40a9ff'
+    }, {
+      name: '警告',
+      color: '#fac200'
+    }],
+    // 事业部
+    BU: [{
+      name: '住宿',
+      color: '#FF5555',
+      range: '酒店，公寓，客栈，会所...'
+    }, {
+      name: '交通',
+      color: '#03A9F4',
+      range: '机票，汽车票，火车票，船票...'
+    }, {
+      name: '旅游',
+      color: '#7EB63D',
+      range: '旅游度假，景点门票，周边，签证...'
+    }, {
+      name: '金融',
+      color: '#FF9800',
+      range: '金融理财，保险商城，全球购...'
+    }]
   },
   colorValue: [{
     name: 'Red',
@@ -37640,6 +37667,11 @@ exports['default'] = VARIABLE = {
   }, {
     name: 'title',
     desc: '正文标题',
+    fontSize: 18,
+    lineHeight: 18 * 1.5
+  }, {
+    name: 'subheading',
+    desc: '正文副标题',
     fontSize: 16,
     lineHeight: 16 * 1.5
   }, {
@@ -45805,11 +45837,11 @@ Object.defineProperty(exports, "__esModule", {
 
 var _templateObject = _taggedTemplateLiteral(['\n  width: 360px;\n  marginRight: 64px;\n  marginBottom: 64px;\n'], ['\n  width: 360px;\n  marginRight: 64px;\n  marginBottom: 64px;\n']),
     _templateObject2 = _taggedTemplateLiteral(['\n  width: 100%;\n  display: flex;\n  flexDirection: row;\n  justifyContent: space-between;\n  padding: 12px 16px;\n  backgroundColor: ', ';\n'], ['\n  width: 100%;\n  display: flex;\n  flexDirection: row;\n  justifyContent: space-between;\n  padding: 12px 16px;\n  backgroundColor: ', ';\n']),
-    _templateObject3 = _taggedTemplateLiteral(['\n  width: 120px;\n  height: 120px;\n  marginRight: 16px;\n  backgroundColor: ', ';\n'], ['\n  width: 120px;\n  height: 120px;\n  marginRight: 16px;\n  backgroundColor: ', ';\n']),
+    _templateObject3 = _taggedTemplateLiteral(['\n  alignItems: center;\n  justifyContent: center;\n  width: 120px;\n  height: 120px;\n  marginRight: 16px;\n  backgroundColor: ', ';\n'], ['\n  alignItems: center;\n  justifyContent: center;\n  width: 120px;\n  height: 120px;\n  marginRight: 16px;\n  backgroundColor: ', ';\n']),
     _templateObject4 = _taggedTemplateLiteral(['\n  width: 100%;\n  display: flex;\n  flexDirection: row;\n  justifyContent: flex-start;\n  paddingVertical: 8px;\n'], ['\n  width: 100%;\n  display: flex;\n  flexDirection: row;\n  justifyContent: flex-start;\n  paddingVertical: 8px;\n']),
     _templateObject5 = _taggedTemplateLiteral(['\n  paddingTop: 32px;\n  paddingLeft: 32px;\n'], ['\n  paddingTop: 32px;\n  paddingLeft: 32px;\n']),
-    _templateObject6 = _taggedTemplateLiteral(['\n  display: flex;\n  flexDirection: row;\n'], ['\n  display: flex;\n  flexDirection: row;\n']),
-    _templateObject7 = _taggedTemplateLiteral(['\n  position: relative;\n  top: 40%;\n  textAlign: center;\n'], ['\n  position: relative;\n  top: 40%;\n  textAlign: center;\n']),
+    _templateObject6 = _taggedTemplateLiteral(['\n  flexDirection: row;\n'], ['\n  flexDirection: row;\n']),
+    _templateObject7 = _taggedTemplateLiteral(['\n  textAlign: center;\n'], ['\n  textAlign: center;\n']),
     _templateObject8 = _taggedTemplateLiteral(['\n  marginBottom: 8px;\n'], ['\n  marginBottom: 8px;\n']),
     _templateObject9 = _taggedTemplateLiteral([''], ['']);
 
@@ -46179,51 +46211,60 @@ var DevelopColor = function DevelopColor() {
       ),
       _react2['default'].createElement(
         _reactSketchapp.View,
-        { name: 'ability' },
+        { name: 'func', style: { marginTop: 72 } },
         _react2['default'].createElement(
           SubTitle,
           { textType: 'desc' },
-          '\u529F\u80FD\u8272-\u9519\u8BEF/\u6210\u529F/\u94FE\u63A5/\u8B66\u544A'
+          '\u529F\u80FD\u8272 - \u9519\u8BEF/\u6210\u529F/\u94FE\u63A5/\u8B66\u544A'
         ),
         _react2['default'].createElement(
           FuncView,
           null,
-          _react2['default'].createElement(
-            FuncItem,
-            { bgColor: colorList.errorColor },
-            _react2['default'].createElement(
-              FuncText,
-              { bgColor: '#000' },
-              colorList.errorColor
-            )
-          ),
-          _react2['default'].createElement(
-            FuncItem,
-            { bgColor: colorList.successColor },
-            _react2['default'].createElement(
-              FuncText,
-              { bgColor: '#000' },
-              colorList.successColor
-            )
-          ),
-          _react2['default'].createElement(
-            FuncItem,
-            { bgColor: colorList.linkColor },
-            _react2['default'].createElement(
-              FuncText,
-              { bgColor: '#000' },
-              colorList.linkColor
-            )
-          ),
-          _react2['default'].createElement(
-            FuncItem,
-            { bgColor: colorList.warnColor },
-            _react2['default'].createElement(
-              FuncText,
-              { bgColor: '#000' },
-              colorList.warnColor
-            )
-          )
+          colorList.func.map(function (item, index) {
+            return _react2['default'].createElement(
+              FuncItem,
+              { key: index, bgColor: item.color },
+              _react2['default'].createElement(
+                FuncText,
+                { bgColor: '#000' },
+                item.color
+              ),
+              _react2['default'].createElement(
+                FuncText,
+                { bgColor: '#000' },
+                item.name
+              )
+            );
+          })
+        )
+      ),
+      _react2['default'].createElement(
+        _reactSketchapp.View,
+        { name: 'BU', style: { marginTop: 72 } },
+        _react2['default'].createElement(
+          SubTitle,
+          { textType: 'desc' },
+          '\u56DB\u5927\u4E1A\u52A1\u7EBF\u8BC6\u522B\u8272'
+        ),
+        _react2['default'].createElement(
+          FuncView,
+          null,
+          colorList.BU.map(function (item, index) {
+            return _react2['default'].createElement(
+              FuncItem,
+              { key: index, bgColor: item.color },
+              _react2['default'].createElement(
+                FuncText,
+                { bgColor: '#000' },
+                item.color
+              ),
+              _react2['default'].createElement(
+                FuncText,
+                { bgColor: '#000' },
+                item.name
+              )
+            );
+          })
         )
       )
     )
@@ -46268,6 +46309,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'd
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
+var colorList = VARIABLE.colorList;
 var Panel = _primitives2['default'].View(_templateObject);
 var BodyText = _style.fonts.title.extend(_templateObject2);
 
@@ -46286,12 +46328,12 @@ var Icons = function Icons(props) {
       _react2['default'].createElement(
         _style.styles.Title,
         null,
-        '\u56FE\u6807\uFF0C\u5217\u8868'
+        '\u56FE\u6807\u5E93'
       ),
       _react2['default'].createElement(
         BodyText,
         { textType: 'desc' },
-        'YMFE Design\u7684\u901A\u7528\u8272\u5F69\u89C4\u8303\u89C4\u5B9A\u4E86\u8272\u5F69\u98CE\u683C\u4E0E\u4F7F\u7528\u6CE8\u610F\u4E8B\u9879\u3002',
+        'http://iconfont.corp.qunar.com/repositories/15 \uFF08\u5185\u7F51\uFF09',
         JSON.stringify(props.data, null, 2)
       ),
       _react2['default'].createElement(
@@ -46301,7 +46343,7 @@ var Icons = function Icons(props) {
           return _react2['default'].createElement(
             _reactSketchapp.Svg,
             { key: index, style: { marginRight: 12, marginBottom: 12, transform: [{ skewX: '45deg' }] }, width: '24', height: '24', viewBox: '0 0 24 24', xmlns: 'http://www.w3.org/2000/svg' },
-            _react2['default'].createElement(_reactSketchapp.Svg.Path, { d: item.path, fill: '#34475e', 'class': 'transform-group' })
+            _react2['default'].createElement(_reactSketchapp.Svg.Path, { d: item.path, fill: colorList.baseLightTextColor, 'class': 'transform-group' })
           );
         })
       )

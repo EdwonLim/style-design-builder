@@ -19,6 +19,8 @@ const Item = styled.View`
   backgroundColor: ${props => props.bgColor};
 `;
 const FuncItem = styled.View`
+  alignItems: center;
+  justifyContent: center;
   width: 120px;
   height: 120px;
   marginRight: 16px;
@@ -36,12 +38,9 @@ const ListWrap = styled.View`
   paddingLeft: 32px;
 `;
 const FuncView = styled.View`
-  display: flex;
   flexDirection: row;
 `;
 const FuncText = fonts.title.extend`
-  position: relative;
-  top: 40%;
   textAlign: center;
 `;
 const SubTitle = fonts.headline3.extend`
@@ -147,21 +146,26 @@ const DevelopColor = () => (
           </Item>
         </Card>
       </Panel>
-      <View name="ability" >
-        <SubTitle textType="desc">功能色-错误/成功/链接/警告</SubTitle>
+      <View name="func" style={{ marginTop: 72 }}>
+        <SubTitle textType="desc">功能色 - 错误/成功/链接/警告</SubTitle>
         <FuncView>
-          <FuncItem bgColor={colorList.errorColor}>
-            <FuncText bgColor="#000">{colorList.errorColor}</FuncText>
-          </FuncItem>
-          <FuncItem bgColor={colorList.successColor}>
-            <FuncText bgColor="#000">{colorList.successColor}</FuncText>
-          </FuncItem>
-          <FuncItem bgColor={colorList.linkColor}>
-            <FuncText bgColor="#000">{colorList.linkColor}</FuncText>
-          </FuncItem>
-          <FuncItem bgColor={colorList.warnColor}>
-            <FuncText bgColor="#000">{colorList.warnColor}</FuncText>
-          </FuncItem>
+          {colorList.func.map((item, index) => {
+            return <FuncItem key={index} bgColor={item.color}>
+              <FuncText bgColor="#000">{item.color}</FuncText>
+              <FuncText bgColor="#000">{item.name}</FuncText>
+            </FuncItem>
+          })}
+        </FuncView>
+      </View>
+      <View name="BU" style={{ marginTop: 72 }}>
+        <SubTitle textType="desc">四大业务线识别色</SubTitle>
+        <FuncView>
+          {colorList.BU.map((item, index) => {
+            return <FuncItem key={index} bgColor={item.color}>
+              <FuncText bgColor="#000">{item.color}</FuncText>
+              <FuncText bgColor="#000">{item.name}</FuncText>
+            </FuncItem>
+          })}
         </FuncView>
       </View>
     </styles.Body>

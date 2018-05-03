@@ -1,9 +1,9 @@
 export default VARIABLE = {
   colorList: {
-    primaryColor: '#1E2634',
+    primaryColor: '#00BCD4',
     lightPrimaryColorNumber: 4,
     deepPrimaryColorNumber: 8,
-    secondaryColor: '#ff3b71',
+    secondaryColor: '#FF9800',
     lightSecondaryColorNumber: 4,
     deepSecondaryColorNumber: 8,
     htmlBackGroundColor: 'rgba(0, 0, 0, .06)',
@@ -16,10 +16,41 @@ export default VARIABLE = {
     disableLightTextColor: 'rgba(0, 0, 0, .38)',
     segmentLightTextColor: 'rgba(0, 0, 0, .12)',
     // 功能色 错误成功链接 警告
-    errorColor: '#ff4f5f',
-    successColor: '#73d13d',
-    linkColor: '#40a9ff',
-    warnColor: '#fac200'
+    func: [
+      {
+        name: '错误',
+        color: '#ff4f5f'
+      }, {
+        name: '成功',
+        color: '#73d13d'
+      }, {
+        name: '链接',
+        color: '#40a9ff'
+      }, {
+        name: '警告',
+        color: '#fac200'
+      }
+    ],
+    // 事业部
+    BU: [
+      {
+        name: '住宿',
+        color: '#FF5555',
+        range: '酒店，公寓，客栈，会所...'
+      }, {
+        name: '交通',
+        color: '#03A9F4',
+        range: '机票，汽车票，火车票，船票...'
+      }, {
+        name: '旅游',
+        color: '#7EB63D',
+        range: '旅游度假，景点门票，周边，签证...'
+      }, {
+        name: '金融',
+        color: '#FF9800',
+        range: '金融理财，保险商城，全球购...'
+      }
+    ]
   },
   colorValue: [{
     name: 'Red',
@@ -87,6 +118,11 @@ export default VARIABLE = {
     }, {
       name: 'title',
       desc: '正文标题',
+      fontSize: 18,
+      lineHeight: 18 * 1.5
+    }, {
+      name: 'subheading',
+      desc: '正文副标题',
       fontSize: 16,
       lineHeight: 16 * 1.5
     }, {
