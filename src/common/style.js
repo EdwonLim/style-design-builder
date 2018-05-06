@@ -63,6 +63,18 @@ const styles = {
     marginTop: 100;
     marginBottom: 32;
     fontWeight: bold;
+  `,
+  Panel: styled.View`
+    width: 800px;
+    padding: 48px;
+    backgroundColor: #fff;
+  `,
+  PanelTitle: fonts.title.extend`
+    marginTop: 64px;
+    marginBottom: 24px;
+  `,
+  BodyText: fonts.body.extend`
+    opacity: .7;
   `
 };
 

@@ -1,12 +1,22 @@
+import { colorPalette } from './util';
+
 export default VARIABLE = {
   colorList: {
-    primaryColor: '#00BCD4',
-    lightPrimaryColorNumber: 4,
+    primaryColor: '#00bcd4',
+    lightPrimaryColorNumber: 5,
+    lightPrimaryColor: () => { return colorPalette(VARIABLE.colorList.primaryColor, VARIABLE.colorList.lightPrimaryColorNumber) },
     deepPrimaryColorNumber: 8,
-    secondaryColor: '#FF9800',
+    deepPrimaryColor: () => { return colorPalette(VARIABLE.colorList.primaryColor, VARIABLE.colorList.deepPrimaryColorNumber) },
+    secondaryColor: '#ff9800',
     lightSecondaryColorNumber: 4,
+    lightSecondaryColor: () => { return colorPalette(VARIABLE.colorList.secondaryColor, VARIABLE.colorList.lightSecondaryColorNumber) },
     deepSecondaryColorNumber: 8,
-    htmlBackGroundColor: 'rgba(0, 0, 0, .06)',
+    deepSecondaryColor: () => { return colorPalette(VARIABLE.colorList.secondaryColor, VARIABLE.colorList.deepSecondaryColorNumber) },
+    htmlBgolor: 'rgba(0, 0, 0, .06)',
+    lightHoverBgColor: 'rgba(0, 0, 0, .1)',
+    lightActiveBgColor: 'rgba(0, 0, 0, .2)',
+    deepHoverBgolor: 'rgba(255, 255, 255, .1)',
+    deepActiveBgolor: 'rgba(255, 255, 255, .2)',
     baseDeepTextColor: 'rgba(255, 255, 255, 1)',
     descDeepTextColor: 'rgba(255, 255, 255, .7)',
     disableDeepTextColor: 'rgba(255, 255, 255, .5)',
@@ -21,11 +31,11 @@ export default VARIABLE = {
         name: '错误',
         color: '#ff4f5f'
       }, {
-        name: '成功',
-        color: '#73d13d'
-      }, {
         name: '链接',
         color: '#40a9ff'
+      }, {
+        name: '成功',
+        color: '#73d13d'
       }, {
         name: '警告',
         color: '#fac200'
@@ -141,5 +151,6 @@ export default VARIABLE = {
       fontSize: 10,
       lineHeight: 10 * 1.5
     }
-  ]
+  ],
+  borderRadius: 4,
 };

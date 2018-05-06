@@ -21,7 +21,7 @@ const Icons = props => (
     <Header>Youth Design 图标库</Header>
     <styles.Body name='body'>
       <styles.Title>图标库</styles.Title>
-      <BodyText textType="desc">http://iconfont.corp.qunar.com/repositories/15 （内网）{JSON.stringify(props.data, null, 2)}</BodyText>
+      <BodyText textType="desc">http://iconfont.corp.qunar.com/repositories/15 （Qunar 内网）{JSON.stringify(props.data, null, 2)}</BodyText>
       <Panel>
         {iconfont.data.icons.map((item, index) => {
           return <Svg key={index} style={{ marginRight: 12, marginBottom: 12, transform: [{ skewX: '45deg' }] }} width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

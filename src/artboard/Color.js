@@ -71,13 +71,13 @@ const DevelopColor = () => (
               <BodyText bgColor="#000">6(主色)</BodyText>
               <BodyText bgColor="#000">{colorList.primaryColor}</BodyText>
             </Item>
-            <Item bgColor={colorPalette(colorList.primaryColor, colorList.lightSecondaryColorNumber)}>
-              <BodyText bgColor={colorPalette(colorList.primaryColor, colorList.lightSecondaryColorNumber)}>4</BodyText>
-              <BodyText bgColor={colorPalette(colorList.primaryColor, colorList.lightSecondaryColorNumber)}>{colorPalette(colorList.primaryColor, colorList.lightPrimaryColorNumber)}</BodyText>
+            <Item bgColor={colorList.lightPrimaryColor}>
+              <BodyText bgColor="#000">{colorList.lightPrimaryColorNumber.toString()}</BodyText>
+              <BodyText bgColor="#000">{colorList.lightPrimaryColor()}</BodyText>
             </Item>
-            <Item bgColor={colorPalette(colorList.primaryColor, colorList.deepPrimaryColorNumber)}>
+            <Item bgColor={colorList.deepPrimaryColor}>
               <BodyText bgColor="#000">8</BodyText>
-              <BodyText bgColor="#000">{colorPalette(colorList.primaryColor, colorList.deepPrimaryColorNumber)}</BodyText>
+              <BodyText bgColor="#000">{colorList.deepPrimaryColor()}</BodyText>
             </Item>
           </View>
         </Card>
@@ -88,21 +88,21 @@ const DevelopColor = () => (
               <BodyText bgColor="#000">6(强调色)</BodyText>
               <BodyText bgColor="#000">{colorList.secondaryColor}</BodyText>
             </Item>
-            <Item bgColor={colorPalette(colorList.secondaryColor, colorList.lightSecondaryColorNumber)}>
+            <Item bgColor={colorList.lightSecondaryColor}>
               <BodyText bgColor="#000">4</BodyText>
-              <BodyText bgColor="#000">{colorPalette(colorList.secondaryColor, colorList.lightSecondaryColorNumber)}</BodyText>
+              <BodyText bgColor="#000">{colorList.lightSecondaryColor()}</BodyText>
             </Item>
-            <Item bgColor={colorPalette(colorList.secondaryColor, colorList.deepSecondaryColorNumber)}>
+            <Item bgColor={colorList.deepSecondaryColor}>
               <BodyText bgColor="#000">8</BodyText>
-              <BodyText bgColor="#000">{colorPalette(colorList.secondaryColor, colorList.deepSecondaryColorNumber)}</BodyText>
+              <BodyText bgColor="#000">{colorList.deepSecondaryColor()}</BodyText>
             </Item>
           </View>
         </Card>
         <Card name="background">
           <SubTitle textType="desc">背景色</SubTitle>
-          <Item bgColor={colorList.htmlBackGroundColor}>
+          <Item bgColor={colorList.htmlBgolor}>
             <BodyText textType="desc">浅灰色背景色</BodyText>
-            <BodyText textType="desc">{colorList.htmlBackGroundColor}</BodyText>
+            <BodyText textType="desc">{colorList.htmlBgolor}</BodyText>
           </Item>
         </Card>
       </Panel>
