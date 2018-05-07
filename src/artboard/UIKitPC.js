@@ -3,6 +3,7 @@ import { makeSymbol, render, Artboard, Text, View, Page, Document, StyleSheet, T
 import { styles, fonts } from '../common/style';
 import Header from '../component/Header';
 import ButtonBlock from './pc/button';
+import InputBlock from './pc/input';
 import styled from 'styled-components/primitives';
 
 const Card = styled.View`
@@ -31,6 +32,7 @@ const UIKitPC = () => (
     <Body name="body">
       <styles.Title>定义</styles.Title>
       <ButtonBlock />
+      <InputBlock />
     </Body>
   </Artboard>
 );

@@ -3,7 +3,6 @@ import { Text, View, StyleSheet, makeSymbol } from 'react-sketchapp';
 import { styles, fonts } from '../../common/style';
 import styled from 'styled-components/primitives';
 import variables from '../../common/variables';
-import PropTypes from 'prop-types';
 
 const { PanelTitle, Panel } = styles;
 const BodyText = styles.BodyText.extend`
@@ -16,7 +15,7 @@ const RowView = styled.View`
   justifyContent: space-between;
   flexDirection: row;
   alignItems: flex-end;
-  padding: 24px 0;
+  padding: 16px 0;
 `;
 const TitleRowView = styled.View`
   flexDirection: row;
@@ -148,7 +147,7 @@ const Symbol_lg_disabled = makeSymbol(() =>
   , 'button/lg/disabled');
 
 
-const Button = ({ title, children }) => (
+const Button = () => (
   <View>
     <PanelTitle textType="desc">Button</PanelTitle>
     <Panel>
