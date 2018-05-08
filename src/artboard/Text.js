@@ -82,8 +82,8 @@ const ArtboardText = () => (
 				{
 					VARIABLE.font.map((item, index) => {
 						return <View style={{ width: '100%', flexDirection: 'row', marginBottom: 16 }} key={index}>
-              <Text style={{ width: 140, lineHeight: item.lineHeight }}>{item.name}</Text>
-              <Text style={{ width: 180, lineHeight: item.lineHeight }}>{item.desc}</Text>
+              <Text style={{ width: 140, lineHeight: item.lineHeight }}>{item.name}{item.secondName ? ' (' + item.secondName + ')': ''}</Text>
+              <Text style={{ width: 180, lineHeight: item.lineHeight }}>{item.desc}{item.secondDesc ? ' (' + item.secondDesc + ')' : ''}</Text>
               <Text style={StyleSheet.flatten([TextStyles.get(item.name), { width: 300, marginRight: 32 }])}>Regular {new Number(item.fontSize).toString()}px/{new Number(item.lineHeight).toString()}px</Text>
               <Text style={StyleSheet.flatten([TextStyles.get(item.name), { flex: 1 }])}>我是字体 ABCDEFGH 0123456789</Text>
 						</View>

@@ -131,13 +131,17 @@ export default VARIABLE = {
       fontSize: 18,
       lineHeight: 18 * 1.5
     }, {
-      name: 'subheading',
-      desc: '正文副标题',
+      name: 'body',
+      secondName: 'subhead',
+      desc: '正文',
+      secondDesc: 'PC端的副标题',
       fontSize: 16,
       lineHeight: 16 * 1.5
     }, {
-      name: 'body',
-      desc: '正文',
+      name: 'footNote',
+      secondName: 'body',
+      desc: '脚注',
+      secondDesc: 'PC端的正文',
       fontSize: 14,
       lineHeight: 14 * 1.5
     }, {
