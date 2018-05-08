@@ -11829,7 +11829,7 @@ exports['default'] = VARIABLE = {
     fontSize: 16,
     lineHeight: 16 * 1.5
   }, {
-    name: 'footNote',
+    name: 'footnote',
     secondName: 'body',
     desc: '脚注',
     secondDesc: 'PC端的正文',
