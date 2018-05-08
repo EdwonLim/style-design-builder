@@ -16849,8 +16849,8 @@ var Doc = function Doc() {
     null,
     _react2['default'].createElement(
       _reactSketchapp.Page,
-      { name: 'Style' },
-      _react2['default'].createElement(_Text2['default'], null)
+      { name: 'UI Kit of PC' },
+      _react2['default'].createElement(_UIKitPC2['default'], null)
     )
   );
 };
@@ -46586,7 +46586,7 @@ var ButtonText = _style.fonts.body.extend(_templateObject5, function (props) {
 });
 
 // Symbols:
-// 默认按钮的四种状态
+// 主要按钮的四种状态
 var Symbol_Primary_lg_default = (0, _reactSketchapp.makeSymbol)(function () {
   return _react2['default'].createElement(
     Base,
@@ -46594,7 +46594,7 @@ var Symbol_Primary_lg_default = (0, _reactSketchapp.makeSymbol)(function () {
     _react2['default'].createElement(
       ButtonText,
       { name: 'Text' },
-      '\u9ED8\u8BA4\u6309\u94AE'
+      '\u4E3B\u8981\u6309\u94AE'
     )
   );
 }, 'button/primary/lg/default');
@@ -46605,7 +46605,7 @@ var Symbol_Primary_lg_hover = (0, _reactSketchapp.makeSymbol)(function () {
     _react2['default'].createElement(
       ButtonText,
       { name: 'Text' },
-      '\u9ED8\u8BA4\u6309\u94AE'
+      '\u4E3B\u8981\u6309\u94AE'
     )
   );
 }, 'button/primary/lg/hover');
@@ -46616,7 +46616,7 @@ var Symbol_Primary_lg_active = (0, _reactSketchapp.makeSymbol)(function () {
     _react2['default'].createElement(
       ButtonText,
       { name: 'Text' },
-      '\u9ED8\u8BA4\u6309\u94AE'
+      '\u4E3B\u8981\u6309\u94AE'
     )
   );
 }, 'button/primary/lg/active');
@@ -46639,7 +46639,7 @@ var Symbol_Goast_lg_hover = (0, _reactSketchapp.makeSymbol)(function () {
     _react2['default'].createElement(
       ButtonText,
       { type: 'goast', state: 'hover', name: 'Text' },
-      '\u9ED8\u8BA4\u6309\u94AE'
+      '\u5E7D\u7075\u6309\u94AE'
     )
   );
 }, 'button/goast/lg/hover');
@@ -46650,7 +46650,7 @@ var Symbol_Goast_lg_active = (0, _reactSketchapp.makeSymbol)(function () {
     _react2['default'].createElement(
       ButtonText,
       { type: 'goast', state: 'active', name: 'Text' },
-      '\u9ED8\u8BA4\u6309\u94AE'
+      '\u5E7D\u7075\u6309\u94AE'
     )
   );
 }, 'button/goast/lg/active');
@@ -46673,7 +46673,7 @@ var Symbol_Flat_lg_hover = (0, _reactSketchapp.makeSymbol)(function () {
     _react2['default'].createElement(
       ButtonText,
       { type: 'flat', name: 'Text' },
-      '\u9ED8\u8BA4\u6309\u94AE'
+      '\u6241\u5E73\u6309\u94AE'
     )
   );
 }, 'button/flat/lg/hover');
@@ -46684,7 +46684,7 @@ var Symbol_Flat_lg_active = (0, _reactSketchapp.makeSymbol)(function () {
     _react2['default'].createElement(
       ButtonText,
       { type: 'flat', name: 'Text' },
-      '\u9ED8\u8BA4\u6309\u94AE'
+      '\u6241\u5E73\u6309\u94AE'
     )
   );
 }, 'button/flat/lg/active');
@@ -46709,7 +46709,7 @@ var Symbol_lg_disabled = (0, _reactSketchapp.makeSymbol)(function () {
     _react2['default'].createElement(
       ButtonText,
       { name: 'Text' },
-      '\u9ED8\u8BA4\u6309\u94AE'
+      '\u7981\u6B62\u70B9\u51FB'
     )
   );
 }, 'button/lg/disabled');
@@ -46734,8 +46734,8 @@ var Button = function Button() {
       _react2['default'].createElement(
         RowView,
         { style: { width: '222px' } },
-        _react2['default'].createElement(Symbol_Primary_lg_default, { overrides: { 'Text': '默认按钮' } }),
-        _react2['default'].createElement(Symbol_Primary_sm_default, { overrides: { 'Text': '默认按钮' } })
+        _react2['default'].createElement(Symbol_Primary_lg_default, { overrides: { 'Text': '主要按钮' } }),
+        _react2['default'].createElement(Symbol_Primary_sm_default, { overrides: { 'Text': '主要按钮' } })
       ),
       _react2['default'].createElement(
         TitleRowView,
@@ -46764,10 +46764,10 @@ var Button = function Button() {
       _react2['default'].createElement(
         RowView,
         null,
-        _react2['default'].createElement(Symbol_Primary_lg_default, { overrides: { 'Text': '默认按钮' } }),
-        _react2['default'].createElement(Symbol_Primary_lg_hover, { overrides: { 'Text': '默认按钮' } }),
-        _react2['default'].createElement(Symbol_Primary_lg_active, { overrides: { 'Text': '默认按钮' } }),
-        _react2['default'].createElement(Symbol_lg_disabled, { overrides: { 'Text': '默认按钮' } })
+        _react2['default'].createElement(Symbol_Primary_lg_default, { overrides: { 'Text': '主要按钮' } }),
+        _react2['default'].createElement(Symbol_Primary_lg_hover, { overrides: { 'Text': '主要按钮' } }),
+        _react2['default'].createElement(Symbol_Primary_lg_active, { overrides: { 'Text': '主要按钮' } }),
+        _react2['default'].createElement(Symbol_lg_disabled, { overrides: { 'Text': '主要按钮' } })
       ),
       _react2['default'].createElement(
         RowView,

@@ -84,20 +84,22 @@ const ButtonText = fonts.body.extend`
 `;
 
 // Symbols:
-// 默认按钮的四种状态
-const Symbol_Primary_lg_default = makeSymbol(() => 
-  <Base>
-    <ButtonText name="Text">默认按钮</ButtonText>
+// 主要按钮的四种状态
+const Symbol_Primary_lg_default = makeSymbol(() => {
+  return <Base>
+    <ButtonText name="Text">主要按钮</ButtonText>
   </Base>
+}
+  
   , 'button/primary/lg/default');
 const Symbol_Primary_lg_hover = makeSymbol(() =>
   <Base state="hover">
-    <ButtonText name="Text">默认按钮</ButtonText>
+    <ButtonText name="Text">主要按钮</ButtonText>
   </Base>
   , 'button/primary/lg/hover');
 const Symbol_Primary_lg_active = makeSymbol(() =>
   <Base state="active">
-    <ButtonText name="Text">默认按钮</ButtonText>
+    <ButtonText name="Text">主要按钮</ButtonText>
   </Base>
   , 'button/primary/lg/active');
 // 幽灵按钮的三种状态
@@ -108,12 +110,12 @@ const Symbol_Goast_lg_default = makeSymbol(() =>
   , 'button/goast/lg/default');
 const Symbol_Goast_lg_hover = makeSymbol(() =>
   <Base type="goast" state="hover">
-    <ButtonText type="goast" state="hover" name="Text">默认按钮</ButtonText>
+    <ButtonText type="goast" state="hover" name="Text">幽灵按钮</ButtonText>
   </Base>
   , 'button/goast/lg/hover');
 const Symbol_Goast_lg_active = makeSymbol(() =>
   <Base type="goast" state="active">
-    <ButtonText type="goast" state="active" name="Text">默认按钮</ButtonText>
+    <ButtonText type="goast" state="active" name="Text">幽灵按钮</ButtonText>
   </Base>
   , 'button/goast/lg/active');
 // 扁平按钮的四种状态
@@ -124,12 +126,12 @@ const Symbol_Flat_lg_default = makeSymbol(() =>
   , 'button/flat/lg/default');
 const Symbol_Flat_lg_hover = makeSymbol(() =>
   <Base type="flat" state="hover">
-    <ButtonText type="flat" name="Text">默认按钮</ButtonText>
+    <ButtonText type="flat" name="Text">扁平按钮</ButtonText>
   </Base>
   , 'button/flat/lg/hover');
 const Symbol_Flat_lg_active = makeSymbol(() =>
   <Base type="flat" state="active">
-    <ButtonText type="flat" name="Text">默认按钮</ButtonText>
+    <ButtonText type="flat" name="Text">扁平按钮</ButtonText>
   </Base>
   , 'button/flat/lg/active');
 
@@ -142,7 +144,7 @@ const Symbol_Primary_sm_default = makeSymbol(() =>
 // disabled 状态
 const Symbol_lg_disabled = makeSymbol(() =>
   <Base state="disabled">
-    <ButtonText name="Text">默认按钮</ButtonText>
+    <ButtonText name="Text">禁止点击</ButtonText>
   </Base>
   , 'button/lg/disabled');
 
@@ -153,8 +155,8 @@ const Button = () => (
     <Panel>
       <BodyText>按钮尺寸</BodyText>
       <RowView style={{ width: '222px' }}>
-        <Symbol_Primary_lg_default overrides={{ 'Text': '默认按钮' }} />
-        <Symbol_Primary_sm_default overrides={{ 'Text': '默认按钮' }} />
+        <Symbol_Primary_lg_default overrides={{ 'Text': '主要按钮' }} />
+        <Symbol_Primary_sm_default overrides={{ 'Text': '主要按钮' }} />
       </RowView>
       <TitleRowView>
         <BodyText>normal</BodyText>
@@ -163,10 +165,10 @@ const Button = () => (
         <BodyText>disabled</BodyText>
       </TitleRowView>
       <RowView>
-        <Symbol_Primary_lg_default overrides={{ 'Text': '默认按钮' }} />
-        <Symbol_Primary_lg_hover overrides={{ 'Text': '默认按钮' }} />
-        <Symbol_Primary_lg_active overrides={{ 'Text': '默认按钮' }} />
-        <Symbol_lg_disabled overrides={{ 'Text': '默认按钮' }} />
+        <Symbol_Primary_lg_default overrides={{ 'Text': '主要按钮' }} />
+        <Symbol_Primary_lg_hover overrides={{ 'Text': '主要按钮' }} />
+        <Symbol_Primary_lg_active overrides={{ 'Text': '主要按钮' }} />
+        <Symbol_lg_disabled overrides={{ 'Text': '主要按钮' }} />
       </RowView>
       <RowView>
         <Symbol_Goast_lg_default overrides={{ 'Text': '幽灵按钮' }} />
