@@ -12,38 +12,105 @@ const BodyText = styles.BodyText.extend`
   marginBottom: 24px;
 `;
 
+const getBgColor = (type, state) => {
+
+  // 扁平按钮的背景色随状态变化
+  // if (state === 'flat') {
+  //   if (state === 'focus') {
+  //     return colorList.lightHoverBgColor;
+  //   } else if (state === 'active') {
+  //     return colorList.lightActiveBgColor;
+  //   }
+  //   return 'transparent';
+  // }
+  // if (!type || type === 'primary') {
+  //   if (state === 'focus') {
+  //     return colorList.lightPrimaryColor;
+  //   } else if (state === 'active') {
+  //     return colorList.deepPrimaryColor;
+  //   }
+  // }
+  // // disabled 状态比较特殊，在各种类型下均保持一致即可
+  // if (state === 'disabled') {
+  //   return colorList.disableLightTextColor;
+  // }
+  // 默认为主按钮 && 主色
+  return colorList.htmlBgolor;
+};
+const getTextColor = (type, state) => {
+  if (!state || state === 'default') {
+    return colorList.disableLightTextColor;
+  }
+  return colorList.descLightTextColor;
+}
+const getBorderColor = (state) => {
+  if (state === 'focus') return colorList.func[1].color;
+  if (state === 'error') return colorList.func[0].color;
+  return 'transparent';
+}
 const Base = styled.View`
+  width: 484px;
+  marginBottom: 24px;
   paddingVertical: ${props => props.size === 'sm' ? '6px' : '10px'};
   paddingHorizontal: 16px;
-  backgroundColor: red;
-  borderRadius: ${variables.borderRadius};
-  borderWidth: ${props => props.type === 'goast' ? 1 : 0};
-  borderStyle: solid;
-  borderColor: blue;
+  backgroundColor: ${props => getBgColor(props.type, props.state)};
+  borderRadius: ${variables.borderBottomRadius};
+  borderBottomWidth: 2;
+  borderBottomStyle: solid;
+  borderBottomColor: ${props => getBorderColor(props.state)};
+  height: 40px;
 `;
 const InputItem = styled.View`
   flexDirection: row;
 `;
-const InputText = fonts.body.extend`
-  color: #cdf;
+const InputText = fonts.PCBody.extend`
+  color: ${props => getTextColor(props.type, props.state)};
 `;
-const InputLabel = fonts.body.extend`
+const InputLabel = styled.View`
+  width: 130px;
+  height: 40px;
+  marginRight: 16px;
+  justifyContent: center;
+`;
+
+const LabelText = fonts.PCBody.extend`
   color: ${colorList.descLightTextColor};
+  textAlign: right;
 `;
 
 
+// const Symbol_bg_sm_default = makeSymbol(() =>
+//   <Base size="sm">
+//     <InputText name="Text">默认文本</InputText>
+//   </Base>
+//   , 'input/bg/lg/default');
 // Symbols:
 // 默认文本的四种状态
 const Symbol_bg_lg_default = makeSymbol(() =>
-  <Base>
-    <InputText name="Text">默认文本</InputText>
+  <Base state="default">
+    <InputText state="default" name="Text">默认文本</InputText>
   </Base>
   , 'input/bg/lg/default');
-// const Symbol_Primary_lg_hover = makeSymbol(() =>
-//   <Base state="hover">
+const Symbol_bg_lg_focus = makeSymbol(() =>
+  <Base state="focus">
+    <InputText state="focus" name="Text">默认文本</InputText>
+  </Base>
+  , 'input/bg/lg/focus');
+const Symbol_bg_lg_error = makeSymbol(() =>
+  <Base state="error">
+    <InputText state="error" name="Text">默认文本</InputText>
+  </Base>
+  , 'input/bg/lg/error');
+const Symbol_bg_lg_complete = makeSymbol(() =>
+  <Base state="complete">
+    <InputText state="complete" name="Text">默认文本</InputText>
+  </Base>
+  , 'input/bg/lg/complete');
+// const Symbol_Primary_lg_focus = makeSymbol(() =>
+//   <Base state="focus">
 //     <ButtonText name="Text">默认文本</ButtonText>
 //   </Base>
-//   , 'button/primary/lg/hover');
+//   , 'button/primary/lg/focus');
 // const Symbol_Primary_lg_active = makeSymbol(() =>
 //   <Base state="active">
 //     <ButtonText name="Text">默认文本</ButtonText>
@@ -68,10 +135,22 @@ const Input = () => (
   <View>
     <PanelTitle textType="desc">Input</PanelTitle>
     <Panel>
-      <BodyText>带背景的输入框：更强调<Text style={{fontWeight: 'bold'}}>输入</Text></BodyText>
+      <BodyText>带背景的输入框：更强调<Text style={{ fontWeight: 'bold' }}>输入</Text></BodyText>
       <InputItem>
-        <InputLabel>Normal</InputLabel>
-        <Symbol_bg_lg_default overrides={{ 'Text': '默认状态' }} />
+        <InputLabel><LabelText>Normal:</LabelText></InputLabel>
+        <Symbol_bg_lg_default overrides={{ 'Text': '请输入' }} />
+      </InputItem>
+      <InputItem>
+        <InputLabel><LabelText>Normal:</LabelText></InputLabel>
+        <Symbol_bg_lg_focus overrides={{ 'Text': '请输入' }} />
+      </InputItem>
+      <InputItem>
+        <InputLabel><LabelText>Normal:</LabelText></InputLabel>
+        <Symbol_bg_lg_error overrides={{ 'Text': '请输入' }} />
+      </InputItem>
+      <InputItem>
+        <InputLabel><LabelText>Normal:</LabelText></InputLabel>
+        <Symbol_bg_lg_complete overrides={{ 'Text': '请输入' }} />
       </InputItem>
       <BodyText>透明背景的输入框：更强调<Text style={{ fontWeight: 'bold' }}>浏览</Text></BodyText>
     </Panel>

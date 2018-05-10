@@ -79,7 +79,7 @@ const Base = styled.View`
   borderStyle: solid;
   borderColor: ${props => getBorderColor(props.type, props.state)};
 `;
-const ButtonText = fonts.body.extend`
+const ButtonText = fonts.PCBody.extend`
   color: ${props => getTextColor(props.type, props.state)};
 `;
 

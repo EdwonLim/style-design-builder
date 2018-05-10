@@ -73,7 +73,7 @@ const styles = {
     marginTop: 64px;
     marginBottom: 24px;
   `,
-  BodyText: fonts.body.extend`
+  BodyText: fonts.PCBody.extend`
     opacity: .7;
   `
 };

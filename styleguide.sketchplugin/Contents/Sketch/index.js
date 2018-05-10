@@ -7785,7 +7785,7 @@ var styles = {
   Title: fonts.headline2.extend(_templateObject3),
   Panel: _primitives2['default'].View(_templateObject4),
   PanelTitle: fonts.title.extend(_templateObject5),
-  BodyText: fonts.body.extend(_templateObject6)
+  BodyText: fonts.PCBody.extend(_templateObject6)
 };
 
 exports.fonts = fonts;
@@ -11822,17 +11822,23 @@ exports['default'] = VARIABLE = {
     fontSize: 18,
     lineHeight: 18 * 1.5
   }, {
-    name: 'body',
-    secondName: 'subhead',
-    desc: '正文',
-    secondDesc: 'PC端的副标题',
+    name: 'subhead',
+    desc: '副标题',
     fontSize: 16,
     lineHeight: 16 * 1.5
   }, {
+    name: 'mobileBody',
+    desc: '移动端正文',
+    fontSize: 16,
+    lineHeight: 16 * 1.5
+  }, {
+    name: 'PCBody',
+    desc: 'PC端正文',
+    fontSize: 14,
+    lineHeight: 14 * 1.5
+  }, {
     name: 'footnote',
-    secondName: 'body',
     desc: '脚注',
-    secondDesc: 'PC端的正文',
     fontSize: 14,
     lineHeight: 14 * 1.5
   }, {
@@ -16847,6 +16853,14 @@ var Doc = function Doc() {
   return _react2['default'].createElement(
     _reactSketchapp.Document,
     null,
+    _react2['default'].createElement(
+      _reactSketchapp.Page,
+      { name: 'Style' },
+      _react2['default'].createElement(_Palette2['default'], null),
+      _react2['default'].createElement(_Color2['default'], null),
+      _react2['default'].createElement(_Text2['default'], null),
+      _react2['default'].createElement(_Icon2['default'], null)
+    ),
     _react2['default'].createElement(
       _reactSketchapp.Page,
       { name: 'UI Kit of PC' },
@@ -46581,7 +46595,7 @@ var Base = _primitives2['default'].View(_templateObject4, function (props) {
 }, function (props) {
   return getBorderColor(props.type, props.state);
 });
-var ButtonText = _style.fonts.body.extend(_templateObject5, function (props) {
+var ButtonText = _style.fonts.PCBody.extend(_templateObject5, function (props) {
   return getTextColor(props.type, props.state);
 });
 
@@ -46800,10 +46814,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 var _templateObject = _taggedTemplateLiteral(['\n  textAlign: center;\n  color: ', ';\n  marginBottom: 24px;\n'], ['\n  textAlign: center;\n  color: ', ';\n  marginBottom: 24px;\n']),
-    _templateObject2 = _taggedTemplateLiteral(['\n  paddingVertical: ', ';\n  paddingHorizontal: 16px;\n  backgroundColor: red;\n  borderRadius: ', ';\n  borderWidth: ', ';\n  borderStyle: solid;\n  borderColor: blue;\n'], ['\n  paddingVertical: ', ';\n  paddingHorizontal: 16px;\n  backgroundColor: red;\n  borderRadius: ', ';\n  borderWidth: ', ';\n  borderStyle: solid;\n  borderColor: blue;\n']),
+    _templateObject2 = _taggedTemplateLiteral(['\n  width: 484px;\n  marginBottom: 24px;\n  paddingVertical: ', ';\n  paddingHorizontal: 16px;\n  backgroundColor: ', ';\n  borderRadius: ', ';\n  borderBottomWidth: 2;\n  borderBottomStyle: solid;\n  borderBottomColor: ', ';\n  height: 40px;\n'], ['\n  width: 484px;\n  marginBottom: 24px;\n  paddingVertical: ', ';\n  paddingHorizontal: 16px;\n  backgroundColor: ', ';\n  borderRadius: ', ';\n  borderBottomWidth: 2;\n  borderBottomStyle: solid;\n  borderBottomColor: ', ';\n  height: 40px;\n']),
     _templateObject3 = _taggedTemplateLiteral(['\n  flexDirection: row;\n'], ['\n  flexDirection: row;\n']),
-    _templateObject4 = _taggedTemplateLiteral(['\n  color: #cdf;\n'], ['\n  color: #cdf;\n']),
-    _templateObject5 = _taggedTemplateLiteral(['\n  color: ', ';\n'], ['\n  color: ', ';\n']);
+    _templateObject4 = _taggedTemplateLiteral(['\n  color: ', ';\n'], ['\n  color: ', ';\n']),
+    _templateObject5 = _taggedTemplateLiteral(['\n  width: 130px;\n  height: 40px;\n  marginRight: 16px;\n  justifyContent: center;\n'], ['\n  width: 130px;\n  height: 40px;\n  marginRight: 16px;\n  justifyContent: center;\n']),
+    _templateObject6 = _taggedTemplateLiteral(['\n  color: ', ';\n  textAlign: right;\n'], ['\n  color: ', ';\n  textAlign: right;\n']);
 
 var _react = __webpack_require__(0);
 
@@ -46831,33 +46846,113 @@ var PanelTitle = _style.styles.PanelTitle,
 
 var BodyText = _style.styles.BodyText.extend(_templateObject, colorList.descLightTextColor);
 
+var getBgColor = function getBgColor(type, state) {
+
+  // 扁平按钮的背景色随状态变化
+  // if (state === 'flat') {
+  //   if (state === 'focus') {
+  //     return colorList.lightHoverBgColor;
+  //   } else if (state === 'active') {
+  //     return colorList.lightActiveBgColor;
+  //   }
+  //   return 'transparent';
+  // }
+  // if (!type || type === 'primary') {
+  //   if (state === 'focus') {
+  //     return colorList.lightPrimaryColor;
+  //   } else if (state === 'active') {
+  //     return colorList.deepPrimaryColor;
+  //   }
+  // }
+  // // disabled 状态比较特殊，在各种类型下均保持一致即可
+  // if (state === 'disabled') {
+  //   return colorList.disableLightTextColor;
+  // }
+  // 默认为主按钮 && 主色
+  return colorList.htmlBgolor;
+};
+var getTextColor = function getTextColor(type, state) {
+  if (!state || state === 'default') {
+    return colorList.disableLightTextColor;
+  }
+  return colorList.descLightTextColor;
+};
+var getBorderColor = function getBorderColor(state) {
+  if (state === 'focus') return colorList.func[1].color;
+  if (state === 'error') return colorList.func[0].color;
+  return 'transparent';
+};
 var Base = _primitives2['default'].View(_templateObject2, function (props) {
   return props.size === 'sm' ? '6px' : '10px';
-}, _variables2['default'].borderRadius, function (props) {
-  return props.type === 'goast' ? 1 : 0;
+}, function (props) {
+  return getBgColor(props.type, props.state);
+}, _variables2['default'].borderBottomRadius, function (props) {
+  return getBorderColor(props.state);
 });
 var InputItem = _primitives2['default'].View(_templateObject3);
-var InputText = _style.fonts.body.extend(_templateObject4);
-var InputLabel = _style.fonts.body.extend(_templateObject5, colorList.descLightTextColor);
+var InputText = _style.fonts.PCBody.extend(_templateObject4, function (props) {
+  return getTextColor(props.type, props.state);
+});
+var InputLabel = _primitives2['default'].View(_templateObject5);
 
+var LabelText = _style.fonts.PCBody.extend(_templateObject6, colorList.descLightTextColor);
+
+// const Symbol_bg_sm_default = makeSymbol(() =>
+//   <Base size="sm">
+//     <InputText name="Text">默认文本</InputText>
+//   </Base>
+//   , 'input/bg/lg/default');
 // Symbols:
 // 默认文本的四种状态
 var Symbol_bg_lg_default = (0, _reactSketchapp.makeSymbol)(function () {
   return _react2['default'].createElement(
     Base,
-    null,
+    { state: 'default' },
     _react2['default'].createElement(
       InputText,
-      { name: 'Text' },
+      { state: 'default', name: 'Text' },
       '\u9ED8\u8BA4\u6587\u672C'
     )
   );
 }, 'input/bg/lg/default');
-// const Symbol_Primary_lg_hover = makeSymbol(() =>
-//   <Base state="hover">
+var Symbol_bg_lg_focus = (0, _reactSketchapp.makeSymbol)(function () {
+  return _react2['default'].createElement(
+    Base,
+    { state: 'focus' },
+    _react2['default'].createElement(
+      InputText,
+      { state: 'focus', name: 'Text' },
+      '\u9ED8\u8BA4\u6587\u672C'
+    )
+  );
+}, 'input/bg/lg/focus');
+var Symbol_bg_lg_error = (0, _reactSketchapp.makeSymbol)(function () {
+  return _react2['default'].createElement(
+    Base,
+    { state: 'error' },
+    _react2['default'].createElement(
+      InputText,
+      { state: 'error', name: 'Text' },
+      '\u9ED8\u8BA4\u6587\u672C'
+    )
+  );
+}, 'input/bg/lg/error');
+var Symbol_bg_lg_complete = (0, _reactSketchapp.makeSymbol)(function () {
+  return _react2['default'].createElement(
+    Base,
+    { state: 'complete' },
+    _react2['default'].createElement(
+      InputText,
+      { state: 'complete', name: 'Text' },
+      '\u9ED8\u8BA4\u6587\u672C'
+    )
+  );
+}, 'input/bg/lg/complete');
+// const Symbol_Primary_lg_focus = makeSymbol(() =>
+//   <Base state="focus">
 //     <ButtonText name="Text">默认文本</ButtonText>
 //   </Base>
-//   , 'button/primary/lg/hover');
+//   , 'button/primary/lg/focus');
 // const Symbol_Primary_lg_active = makeSymbol(() =>
 //   <Base state="active">
 //     <ButtonText name="Text">默认文本</ButtonText>
@@ -46906,9 +47001,55 @@ var Input = function Input() {
         _react2['default'].createElement(
           InputLabel,
           null,
-          'Normal'
+          _react2['default'].createElement(
+            LabelText,
+            null,
+            'Normal:'
+          )
         ),
-        _react2['default'].createElement(Symbol_bg_lg_default, { overrides: { 'Text': '默认状态' } })
+        _react2['default'].createElement(Symbol_bg_lg_default, { overrides: { 'Text': '请输入' } })
+      ),
+      _react2['default'].createElement(
+        InputItem,
+        null,
+        _react2['default'].createElement(
+          InputLabel,
+          null,
+          _react2['default'].createElement(
+            LabelText,
+            null,
+            'Normal:'
+          )
+        ),
+        _react2['default'].createElement(Symbol_bg_lg_focus, { overrides: { 'Text': '请输入' } })
+      ),
+      _react2['default'].createElement(
+        InputItem,
+        null,
+        _react2['default'].createElement(
+          InputLabel,
+          null,
+          _react2['default'].createElement(
+            LabelText,
+            null,
+            'Normal:'
+          )
+        ),
+        _react2['default'].createElement(Symbol_bg_lg_error, { overrides: { 'Text': '请输入' } })
+      ),
+      _react2['default'].createElement(
+        InputItem,
+        null,
+        _react2['default'].createElement(
+          InputLabel,
+          null,
+          _react2['default'].createElement(
+            LabelText,
+            null,
+            'Normal:'
+          )
+        ),
+        _react2['default'].createElement(Symbol_bg_lg_complete, { overrides: { 'Text': '请输入' } })
       ),
       _react2['default'].createElement(
         BodyText,
