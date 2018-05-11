@@ -16855,8 +16855,8 @@ var Doc = function Doc() {
     null,
     _react2['default'].createElement(
       _reactSketchapp.Page,
-      { name: 'UI Kit of PC' },
-      _react2['default'].createElement(_UIKitPC2['default'], null)
+      { name: 'Style' },
+      _react2['default'].createElement(_Icon2['default'], null)
     )
   );
 };
@@ -46350,15 +46350,17 @@ var _Header = __webpack_require__(33);
 
 var _Header2 = _interopRequireDefault(_Header);
 
-var _util = __webpack_require__(32);
-
 var _primitives = __webpack_require__(13);
 
 var _primitives2 = _interopRequireDefault(_primitives);
 
-var _iconfont = __webpack_require__(252);
+var _iconfont = __webpack_require__(256);
 
 var _iconfont2 = _interopRequireDefault(_iconfont);
+
+var _iconfont3 = __webpack_require__(252);
+
+var _iconfont4 = _interopRequireDefault(_iconfont3);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
@@ -46371,7 +46373,7 @@ var BodyText = _style.fonts.title.extend(_templateObject2);
 var Icons = function Icons(props) {
   return _react2['default'].createElement(
     _reactSketchapp.Artboard,
-    { name: 'Icons', style: { position: 'absolute', width: 1440, left: 4800 } },
+    { name: 'Icons', style: { position: 'absolute', width: 1440, left: 0 } },
     _react2['default'].createElement(
       _Header2['default'],
       null,
@@ -46394,12 +46396,8 @@ var Icons = function Icons(props) {
       _react2['default'].createElement(
         Panel,
         null,
-        _iconfont2['default'].data.icons.map(function (item, index) {
-          return _react2['default'].createElement(
-            _reactSketchapp.Svg,
-            { key: index, style: { marginRight: 12, marginBottom: 12, transform: [{ skewX: '45deg' }] }, width: '24', height: '24', viewBox: '0 0 24 24', xmlns: 'http://www.w3.org/2000/svg' },
-            _react2['default'].createElement(_reactSketchapp.Svg.Path, { d: item.path, fill: colorList.baseLightTextColor, 'class': 'transform-group' })
-          );
+        _iconfont4['default'].data.icons.map(function (item, index) {
+          return _iconfont2['default'][item.name];
         })
       )
     )
@@ -47134,6 +47132,60 @@ var Input = function Input() {
 };
 
 exports['default'] = Input;
+
+/***/ }),
+/* 256 */
+/***/ (function(module, exports, __webpack_require__) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _templateObject = _taggedTemplateLiteral(['\n  width: 120px;\n  height: 100px;\n  mariginRight: 16px;\n  verticalAlign: center;\n  alignItems: center;\n'], ['\n  width: 120px;\n  height: 100px;\n  mariginRight: 16px;\n  verticalAlign: center;\n  alignItems: center;\n']),
+    _templateObject2 = _taggedTemplateLiteral(['\n  textAlign: center;\n'], ['\n  textAlign: center;\n']);
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactSketchapp = __webpack_require__(10);
+
+var _style = __webpack_require__(18);
+
+var _primitives = __webpack_require__(13);
+
+var _primitives2 = _interopRequireDefault(_primitives);
+
+var _iconfont = __webpack_require__(252);
+
+var _iconfont2 = _interopRequireDefault(_iconfont);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var colorList = VARIABLE.colorList;
+var iconfont = {};
+var Container = _primitives2['default'].View(_templateObject);
+var Name = _style.fonts.PCBody.extend(_templateObject2);
+_iconfont2['default'].data.icons.forEach(function (item, index) {
+  iconfont[item.name] = _react2['default'].createElement(
+    Container,
+    { key: index },
+    _react2['default'].createElement(
+      _reactSketchapp.Svg,
+      { width: '24', height: '24', viewBox: '0 0 24 24', xmlns: 'http://www.w3.org/2000/svg' },
+      _react2['default'].createElement(_reactSketchapp.Svg.Path, { d: item.path, fill: colorList.baseLightTextColor, 'class': 'transform-group' })
+    ),
+    _react2['default'].createElement(
+      Name,
+      null,
+      item.name
+    )
+  );
+});
+
+exports['default'] = iconfont;
 
 /***/ })
 /******/ ]);

@@ -11,15 +11,15 @@ import ArtboardPC from './artboard/UIKitPC';
 const Doc = () => {
 	return (
 		<Document>
-			{/* <Page name="Style">
-        <ArtboardPalette />
+			<Page name="Style">
+        {/* <ArtboardPalette />
         <ArtboardColor />
-        <ArtboardText />
+        <ArtboardText /> */}
         <ArtboardIcon />
-      </Page> */}
-      <Page name="UI Kit of PC">
-        <ArtboardPC />
       </Page>
+      {/* <Page name="UI Kit of PC">
+        <ArtboardPC />
+      </Page> */}
 		</Document>);
 };
 
