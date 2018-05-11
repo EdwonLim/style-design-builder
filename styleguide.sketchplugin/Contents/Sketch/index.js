@@ -16855,14 +16855,6 @@ var Doc = function Doc() {
     null,
     _react2['default'].createElement(
       _reactSketchapp.Page,
-      { name: 'Style' },
-      _react2['default'].createElement(_Palette2['default'], null),
-      _react2['default'].createElement(_Color2['default'], null),
-      _react2['default'].createElement(_Text2['default'], null),
-      _react2['default'].createElement(_Icon2['default'], null)
-    ),
-    _react2['default'].createElement(
-      _reactSketchapp.Page,
       { name: 'UI Kit of PC' },
       _react2['default'].createElement(_UIKitPC2['default'], null)
     )
@@ -46848,31 +46840,16 @@ var BodyText = _style.styles.BodyText.extend(_templateObject, colorList.descLigh
 
 var getBgColor = function getBgColor(type, state) {
 
-  // 扁平按钮的背景色随状态变化
-  // if (state === 'flat') {
-  //   if (state === 'focus') {
-  //     return colorList.lightHoverBgColor;
-  //   } else if (state === 'active') {
-  //     return colorList.lightActiveBgColor;
-  //   }
-  //   return 'transparent';
-  // }
-  // if (!type || type === 'primary') {
-  //   if (state === 'focus') {
-  //     return colorList.lightPrimaryColor;
-  //   } else if (state === 'active') {
-  //     return colorList.deepPrimaryColor;
-  //   }
-  // }
-  // // disabled 状态比较特殊，在各种类型下均保持一致即可
-  // if (state === 'disabled') {
-  //   return colorList.disableLightTextColor;
-  // }
+  if (type === 'withoutBg') {
+    if (state === 'placeholder' || state === 'default') {
+      return 'transparent';
+    }
+  }
   // 默认为主按钮 && 主色
   return colorList.htmlBgolor;
 };
 var getTextColor = function getTextColor(type, state) {
-  if (!state || state === 'default') {
+  if (!state || state === 'placeholder') {
     return colorList.disableLightTextColor;
   }
   return colorList.descLightTextColor;
@@ -46886,7 +46863,7 @@ var Base = _primitives2['default'].View(_templateObject2, function (props) {
   return props.size === 'sm' ? '6px' : '10px';
 }, function (props) {
   return getBgColor(props.type, props.state);
-}, _variables2['default'].borderBottomRadius, function (props) {
+}, _variables2['default'].borderRadius, function (props) {
   return getBorderColor(props.state);
 });
 var InputItem = _primitives2['default'].View(_templateObject3);
@@ -46904,6 +46881,17 @@ var LabelText = _style.fonts.PCBody.extend(_templateObject6, colorList.descLight
 //   , 'input/bg/lg/default');
 // Symbols:
 // 默认文本的四种状态
+var Symbol_bg_lg_placeholder = (0, _reactSketchapp.makeSymbol)(function () {
+  return _react2['default'].createElement(
+    Base,
+    { state: 'placeholder' },
+    _react2['default'].createElement(
+      InputText,
+      { state: 'placeholder', name: 'Text' },
+      '\u9ED8\u8BA4\u6587\u672C'
+    )
+  );
+}, 'input/bg/lg/placeholder');
 var Symbol_bg_lg_default = (0, _reactSketchapp.makeSymbol)(function () {
   return _react2['default'].createElement(
     Base,
@@ -46937,27 +46925,51 @@ var Symbol_bg_lg_error = (0, _reactSketchapp.makeSymbol)(function () {
     )
   );
 }, 'input/bg/lg/error');
-var Symbol_bg_lg_complete = (0, _reactSketchapp.makeSymbol)(function () {
+
+var Symbol_withoutBg_lg_placeholder = (0, _reactSketchapp.makeSymbol)(function () {
   return _react2['default'].createElement(
     Base,
-    { state: 'complete' },
+    { type: 'withoutBg', state: 'placeholder' },
     _react2['default'].createElement(
       InputText,
-      { state: 'complete', name: 'Text' },
+      { state: 'placeholder', name: 'Text' },
       '\u9ED8\u8BA4\u6587\u672C'
     )
   );
-}, 'input/bg/lg/complete');
-// const Symbol_Primary_lg_focus = makeSymbol(() =>
-//   <Base state="focus">
-//     <ButtonText name="Text">默认文本</ButtonText>
-//   </Base>
-//   , 'button/primary/lg/focus');
-// const Symbol_Primary_lg_active = makeSymbol(() =>
-//   <Base state="active">
-//     <ButtonText name="Text">默认文本</ButtonText>
-//   </Base>
-//   , 'button/primary/lg/active');
+}, 'input/withoutBg/lg/placeholder');
+var Symbol_withoutBg_lg_default = (0, _reactSketchapp.makeSymbol)(function () {
+  return _react2['default'].createElement(
+    Base,
+    { type: 'withoutBg', state: 'default' },
+    _react2['default'].createElement(
+      InputText,
+      { state: 'default', name: 'Text' },
+      '\u9ED8\u8BA4\u6587\u672C'
+    )
+  );
+}, 'input/withoutBg/lg/default');
+var Symbol_withoutBg_lg_focus = (0, _reactSketchapp.makeSymbol)(function () {
+  return _react2['default'].createElement(
+    Base,
+    { type: 'withoutBg', state: 'focus' },
+    _react2['default'].createElement(
+      InputText,
+      { state: 'focus', name: 'Text' },
+      '\u9ED8\u8BA4\u6587\u672C'
+    )
+  );
+}, 'input/withoutBg/lg/focus');
+var Symbol_withoutBg_lg_error = (0, _reactSketchapp.makeSymbol)(function () {
+  return _react2['default'].createElement(
+    Base,
+    { type: 'withoutBg', state: 'error' },
+    _react2['default'].createElement(
+      InputText,
+      { state: 'error', name: 'Text' },
+      '\u9ED8\u8BA4\u6587\u672C'
+    )
+  );
+}, 'input/withoutBg/lg/error');
 
 // 小型按钮
 // const Symbol_Primary_sm_default = makeSymbol(() =>
@@ -46991,7 +47003,7 @@ var Input = function Input() {
         '\u5E26\u80CC\u666F\u7684\u8F93\u5165\u6846\uFF1A\u66F4\u5F3A\u8C03',
         _react2['default'].createElement(
           _reactSketchapp.Text,
-          { style: { fontWeight: 'bold' } },
+          { style: { fontWeight: 'bold', color: 'rgba(0,0,0,.87)' } },
           '\u8F93\u5165'
         )
       ),
@@ -47004,7 +47016,21 @@ var Input = function Input() {
           _react2['default'].createElement(
             LabelText,
             null,
-            'Normal:'
+            'placeholder:'
+          )
+        ),
+        _react2['default'].createElement(Symbol_bg_lg_placeholder, { overrides: { 'Text': '请输入' } })
+      ),
+      _react2['default'].createElement(
+        InputItem,
+        null,
+        _react2['default'].createElement(
+          InputLabel,
+          null,
+          _react2['default'].createElement(
+            LabelText,
+            null,
+            'default / complete:'
           )
         ),
         _react2['default'].createElement(Symbol_bg_lg_default, { overrides: { 'Text': '请输入' } })
@@ -47018,7 +47044,7 @@ var Input = function Input() {
           _react2['default'].createElement(
             LabelText,
             null,
-            'Normal:'
+            'input / focus:'
           )
         ),
         _react2['default'].createElement(Symbol_bg_lg_focus, { overrides: { 'Text': '请输入' } })
@@ -47032,10 +47058,20 @@ var Input = function Input() {
           _react2['default'].createElement(
             LabelText,
             null,
-            'Normal:'
+            'error:'
           )
         ),
         _react2['default'].createElement(Symbol_bg_lg_error, { overrides: { 'Text': '请输入' } })
+      ),
+      _react2['default'].createElement(
+        BodyText,
+        null,
+        '\u900F\u660E\u80CC\u666F\u7684\u8F93\u5165\u6846\uFF1A\u66F4\u5F3A\u8C03',
+        _react2['default'].createElement(
+          _reactSketchapp.Text,
+          { style: { fontWeight: 'bold', color: 'rgba(0, 0, 0, .87)' } },
+          '\u6D4F\u89C8'
+        )
       ),
       _react2['default'].createElement(
         InputItem,
@@ -47046,20 +47082,52 @@ var Input = function Input() {
           _react2['default'].createElement(
             LabelText,
             null,
-            'Normal:'
+            'placeholder:'
           )
         ),
-        _react2['default'].createElement(Symbol_bg_lg_complete, { overrides: { 'Text': '请输入' } })
+        _react2['default'].createElement(Symbol_withoutBg_lg_placeholder, { overrides: { 'Text': '请输入' } })
       ),
       _react2['default'].createElement(
-        BodyText,
+        InputItem,
         null,
-        '\u900F\u660E\u80CC\u666F\u7684\u8F93\u5165\u6846\uFF1A\u66F4\u5F3A\u8C03',
         _react2['default'].createElement(
-          _reactSketchapp.Text,
-          { style: { fontWeight: 'bold' } },
-          '\u6D4F\u89C8'
-        )
+          InputLabel,
+          null,
+          _react2['default'].createElement(
+            LabelText,
+            null,
+            'default / complete:'
+          )
+        ),
+        _react2['default'].createElement(Symbol_withoutBg_lg_default, { overrides: { 'Text': '请输入' } })
+      ),
+      _react2['default'].createElement(
+        InputItem,
+        null,
+        _react2['default'].createElement(
+          InputLabel,
+          null,
+          _react2['default'].createElement(
+            LabelText,
+            null,
+            'input / focus:'
+          )
+        ),
+        _react2['default'].createElement(Symbol_withoutBg_lg_focus, { overrides: { 'Text': '请输入' } })
+      ),
+      _react2['default'].createElement(
+        InputItem,
+        null,
+        _react2['default'].createElement(
+          InputLabel,
+          null,
+          _react2['default'].createElement(
+            LabelText,
+            null,
+            'error:'
+          )
+        ),
+        _react2['default'].createElement(Symbol_withoutBg_lg_error, { overrides: { 'Text': '请输入' } })
       )
     )
   );
