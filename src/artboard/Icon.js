@@ -15,16 +15,30 @@ const Panel = styled.View`
   transform: scaleY(-1);
 `;
 const BodyText = fonts.title.extend``;
+const Container = styled.View`
+  width: 120px;
+  height: 100px;
+  mariginRight: 16px;
+  verticalAlign: center;
+  alignItems: center;
+`;
+const Name = fonts.PCBody.extend`
+  marginTop: 16px;
+  textAlign: center;
+`;
 
 const Icons = props => (
-  <Artboard name='Icons' style={{ position: 'absolute', width: 1440, left: 0 }} >
+  <Artboard name='Icons' style={{ position: 'absolute', width: 1440, left: 4800 }} >
     <Header>Youth Design 图标库</Header>
     <styles.Body name='body'>
       <styles.Title>图标库</styles.Title>
       <BodyText textType="desc">http://iconfont.corp.qunar.com/repositories/15 （Qunar 内网）{JSON.stringify(props.data, null, 2)}</BodyText>
       <Panel>
         {iconfontSource.data.icons.map((item, index) => {
-          return iconfont[item.name];
+          return <Container key={index}>
+            {iconfont[item.name]}
+            <Name>{item.name}</Name>
+          </Container>
         })}
       </Panel>
     </styles.Body>

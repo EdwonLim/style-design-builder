@@ -4,6 +4,7 @@ import { styles, fonts } from '../common/style';
 import Header from '../common/Header';
 import ButtonBlock from './component/pc/button';
 import InputBlock from './component/pc/input';
+import SelectBlock from './component/pc/select';
 import RadioBlock from './component/cross-platform/radio';
 import SliderBlock from './component/cross-platform/slider';
 import styled from 'styled-components/primitives';
@@ -35,7 +36,7 @@ const UIKitPC = () => (
       <styles.Title>定义</styles.Title>
       {/* <ButtonBlock /> */}
       <InputBlock />
-      <InputBlock />
+      <SelectBlock />
       {/* <RadioBlock></RadioBlock>
       <SliderBlock></SliderBlock> */}
     </Body>
