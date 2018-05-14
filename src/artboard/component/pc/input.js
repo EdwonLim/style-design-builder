@@ -9,6 +9,7 @@ const { PanelTitle, Panel } = styles;
 const BodyText = styles.BodyText.extend`
   textAlign: center;
   color: ${colorList.descLightTextColor};
+  marginTop: 24px;
   marginBottom: 24px;
 `;
 

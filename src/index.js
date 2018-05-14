@@ -21,9 +21,9 @@ const Doc = () => {
       <Page name="UI Kit of PC">
         <ArtboardPC />
       </Page>
-      <Page name="UI Kit of Mobile">
+      {/* <Page name="UI Kit of Mobile">
         <ArtboardMobile />
-      </Page>
+      </Page> */}
 		</Document>);
 };
 
