@@ -3,6 +3,7 @@ import { Text, View, StyleSheet, makeSymbol } from 'react-sketchapp';
 import { styles, fonts } from '../../../common/style';
 import styled from 'styled-components/primitives';
 import variables from '../../../common/variables';
+import iconfont from '../../../common/iconfont.js';
 
 const colorList = VARIABLE.colorList;
 const { PanelTitle, Panel } = styles;
@@ -55,10 +56,12 @@ const BaseInnerCircle = styled.View`
 const RadioText = fonts.PCBody.extend`
   color: ${props => props.disabled ? colorList.disableLightTextColor : colorList.descLightTextColor};
 `;
+
 const UnSelect_lg_default = () => (
   <RowView>
-    <BaseOuterSelectCircle size="lg"></BaseOuterSelectCircle>
-    <RadioText>unselected</RadioText>
+    {/* <BaseOuterSelectCircle size="lg"></BaseOuterSelectCircle> */}
+    {iconfont.add}
+    {/* <RadioText>unselected</RadioText> */}
   </RowView>
 );
 const UnSelect_sm_default = () => (

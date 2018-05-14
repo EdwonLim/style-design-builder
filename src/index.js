@@ -15,24 +15,15 @@ const Doc = () => {
 			{/* <Page name="Style">
         <ArtboardPalette />
         <ArtboardColor />
-<<<<<<< HEAD
-        <ArtboardText /> */}
-        {/* <ArtboardIcon /> */}
-        <ArtboardPC></ArtboardPC>
-      </Page>
-      {/* <Page name="UI Kit of PC">
-        <ArtboardPC />
-=======
         <ArtboardText />
         <ArtboardIcon />
->>>>>>> 33328c600be46117eb24b6e04f3bf7e1570fbc20
       </Page> */}
       <Page name="UI Kit of PC">
         <ArtboardPC />
       </Page>
-      <Page name="UI Kit of Mobile">
+      {/* <Page name="UI Kit of Mobile">
         <ArtboardMobile />
-      </Page>
+      </Page> */}
 		</Document>);
 };
 

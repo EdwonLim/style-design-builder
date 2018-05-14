@@ -39,9 +39,9 @@ const SliderWarp = styled.View`
   position: relative;
   width: 442px;
   height: 12px;
-  marginTop: 14px;
+  marginTop: 16px;
   marginRight: 6px;
-  marginBottom: 10px;
+  marginBottom: 12px;
   marginLeft: 6px;
   paddingTop: 4px;
   paddingBottom: 4px;

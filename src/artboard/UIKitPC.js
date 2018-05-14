@@ -6,6 +6,7 @@ import ButtonBlock from './component/pc/button';
 import InputBlock from './component/pc/input';
 import RadioBlock from './component/cross-platform/radio';
 import SliderBlock from './component/cross-platform/slider';
+import PaginationBlock from './component/pc/pagination.js';
 import styled from 'styled-components/primitives';
 
 const Card = styled.View`
@@ -34,9 +35,10 @@ const UIKitPC = () => (
     <Body name="body">
       <styles.Title>定义</styles.Title>
       {/* <ButtonBlock /> */}
-      <InputBlock />
-      {/* <RadioBlock></RadioBlock> */}
+      {/* <InputBlock /> */}
+      <RadioBlock></RadioBlock>
       <SliderBlock></SliderBlock>
+      <PaginationBlock />
     </Body>
   </Artboard>
 );
