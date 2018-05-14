@@ -7,7 +7,7 @@ import ArtboardText from './artboard/Text';
 import ArtboardColor from './artboard/Color';
 import ArtboardIcon from './artboard/Icon';
 import ArtboardPC from './artboard/UIKitPC';
-// import ArtboardMobile from './artboard/UIKitMobile';
+import ArtboardMobile from './artboard/UIKitMobile';
 
 const Doc = () => {
 	return (
@@ -20,7 +20,9 @@ const Doc = () => {
       </Page> */}
       <Page name="UI Kit of PC">
         <ArtboardPC />
-        {/* <ArtboardMobile /> */}
+      </Page>
+      <Page name="UI Kit of Mobile">
+        <ArtboardMobile />
       </Page>
 		</Document>);
 };
