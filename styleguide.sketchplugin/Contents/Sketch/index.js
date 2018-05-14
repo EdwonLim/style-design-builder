@@ -16863,7 +16863,7 @@ var Doc = function Doc() {
     _react2['default'].createElement(
       _reactSketchapp.Page,
       { name: 'Style' },
-      _react2['default'].createElement(_Icon2['default'], null)
+      _react2['default'].createElement(_UIKitPC2['default'], null)
     )
   );
 };
@@ -41337,6 +41337,7 @@ var identRe = /(^-?[_a-z][_a-z0-9-]*$)/i;
 var numberRe = /^([+-]?(?:\d*\.)?\d+(?:[Ee][+-]?\d+)?)$/;
 // Note lengthRe is sneaky: you can omit units for 0
 var lengthRe = /^(0$|(?:[+-]?(?:\d*\.)?\d+(?:[Ee][+-]?\d+)?)(?=px$))/;
+var unsupportedUnitRe = /^([+-]?(?:\d*\.)?\d+(?:[Ee][+-]?\d+)?(ch|em|ex|rem|vh|vw|vmin|vmax|cm|mm|in|pc|pt))$/;
 var angleRe = /^([+-]?(?:\d*\.)?\d+(?:[Ee][+-]?\d+)?(?:deg|rad))$/;
 var percentRe = /^([+-]?(?:\d*\.)?\d+(?:[Ee][+-]?\d+)?%)$/;
 
@@ -41381,6 +41382,7 @@ var tokens = {
   AUTO: regExpToken(autoRe),
   NUMBER: regExpToken(numberRe, Number),
   LENGTH: regExpToken(lengthRe, Number),
+  UNSUPPORTED_LENGTH_UNIT: regExpToken(unsupportedUnitRe),
   ANGLE: regExpToken(angleRe),
   PERCENT: regExpToken(percentRe),
   IDENT: regExpToken(identRe),
@@ -41390,6 +41392,7 @@ var tokens = {
 };
 
 var LENGTH = tokens.LENGTH,
+    UNSUPPORTED_LENGTH_UNIT = tokens.UNSUPPORTED_LENGTH_UNIT,
     PERCENT = tokens.PERCENT,
     COLOR = tokens.COLOR,
     SPACE = tokens.SPACE,
@@ -41398,7 +41401,7 @@ var LENGTH = tokens.LENGTH,
 
 var directionFactory = function directionFactory(_ref) {
   var _ref$types = _ref.types,
-      types = _ref$types === undefined ? [LENGTH, PERCENT] : _ref$types,
+      types = _ref$types === undefined ? [LENGTH, UNSUPPORTED_LENGTH_UNIT, PERCENT] : _ref$types,
       _ref$directions = _ref.directions,
       directions = _ref$directions === undefined ? ['Top', 'Right', 'Bottom', 'Left'] : _ref$directions,
       _ref$prefix = _ref.prefix,
@@ -41453,7 +41456,9 @@ var anyOrderFactory = function anyOrderFactory(properties) {
       if (numParsed) tokenStream.expect(delim);
 
       var matchedPropertyName = propertyNames.find(function (propertyName) {
-        return values[propertyName] === undefined && tokenStream.matches(properties[propertyName].token);
+        return values[propertyName] === undefined && properties[propertyName].tokens.some(function (token) {
+          return tokenStream.matches(token);
+        });
       });
 
       if (!matchedPropertyName) {
@@ -41503,13 +41508,13 @@ var parseShadow = function parseShadow(tokenStream) {
   while (tokenStream.hasTokens()) {
     if (didParseFirst) tokenStream.expect(SPACE);
 
-    if (offsetX === undefined && tokenStream.matches(LENGTH)) {
+    if (offsetX === undefined && tokenStream.matches(LENGTH, UNSUPPORTED_LENGTH_UNIT)) {
       offsetX = tokenStream.lastValue;
       tokenStream.expect(SPACE);
-      offsetY = tokenStream.expect(LENGTH);
+      offsetY = tokenStream.expect(LENGTH, UNSUPPORTED_LENGTH_UNIT);
 
       tokenStream.saveRewindPoint();
-      if (tokenStream.matches(SPACE) && tokenStream.matches(LENGTH)) {
+      if (tokenStream.matches(SPACE) && tokenStream.matches(LENGTH, UNSUPPORTED_LENGTH_UNIT)) {
         radius = tokenStream.lastValue;
       } else {
         tokenStream.rewind();
@@ -41636,6 +41641,7 @@ var parseFontFamily = function parseFontFamily(tokenStream) {
 
 var SPACE$3 = tokens.SPACE,
     LENGTH$2 = tokens.LENGTH,
+    UNSUPPORTED_LENGTH_UNIT$1 = tokens.UNSUPPORTED_LENGTH_UNIT,
     NUMBER$1 = tokens.NUMBER,
     SLASH = tokens.SLASH;
 
@@ -41674,13 +41680,13 @@ var font = function font(tokenStream) {
     numStyleWeightVariantMatched += 1;
   }
 
-  var fontSize = tokenStream.expect(LENGTH$2);
+  var fontSize = tokenStream.expect(LENGTH$2, UNSUPPORTED_LENGTH_UNIT$1);
 
   if (tokenStream.matches(SLASH)) {
     if (tokenStream.matches(NUMBER$1)) {
       lineHeight = fontSize * tokenStream.lastValue;
     } else {
-      lineHeight = tokenStream.expect(LENGTH$2);
+      lineHeight = tokenStream.expect(LENGTH$2, UNSUPPORTED_LENGTH_UNIT$1);
     }
   }
 
@@ -41874,6 +41880,7 @@ var IDENT$1 = tokens.IDENT,
     WORD = tokens.WORD,
     COLOR$2 = tokens.COLOR,
     LENGTH$4 = tokens.LENGTH,
+    UNSUPPORTED_LENGTH_UNIT$2 = tokens.UNSUPPORTED_LENGTH_UNIT,
     PERCENT$1 = tokens.PERCENT,
     AUTO$1 = tokens.AUTO;
 
@@ -41885,15 +41892,15 @@ var background = function background(tokenStream) {
 };
 var border = anyOrderFactory({
   borderWidth: {
-    token: tokens.LENGTH,
+    tokens: [LENGTH$4, UNSUPPORTED_LENGTH_UNIT$2],
     default: 1
   },
   borderColor: {
-    token: COLOR$2,
+    tokens: [COLOR$2],
     default: 'black'
   },
   borderStyle: {
-    token: regExpToken(/^(solid|dashed|dotted)$/),
+    tokens: [regExpToken(/^(solid|dashed|dotted)$/)],
     default: 'solid'
   }
 });
@@ -41909,17 +41916,17 @@ var borderRadius = directionFactory({
 });
 var borderWidth = directionFactory({ prefix: 'border', suffix: 'Width' });
 var margin = directionFactory({
-  types: [LENGTH$4, PERCENT$1, AUTO$1],
+  types: [LENGTH$4, UNSUPPORTED_LENGTH_UNIT$2, PERCENT$1, AUTO$1],
   prefix: 'margin'
 });
 var padding = directionFactory({ prefix: 'padding' });
 var flexFlow = anyOrderFactory({
   flexWrap: {
-    token: regExpToken(/(nowrap|wrap|wrap-reverse)/),
+    tokens: [regExpToken(/(nowrap|wrap|wrap-reverse)/)],
     default: 'nowrap'
   },
   flexDirection: {
-    token: regExpToken(/(row|row-reverse|column|column-reverse)/),
+    tokens: [regExpToken(/(row|row-reverse|column|column-reverse)/)],
     default: 'row'
   }
 });
@@ -46541,9 +46548,7 @@ var UIKitPC = function UIKitPC() {
         null,
         '\u5B9A\u4E49'
       ),
-      _react2['default'].createElement(_button2['default'], null),
       _react2['default'].createElement(_input2['default'], null),
-      _react2['default'].createElement(_radio2['default'], null),
       _react2['default'].createElement(_slider2['default'], null)
     )
   );
@@ -46922,6 +46927,7 @@ var getBorderColor = function getBorderColor(state) {
   if (state === 'error') return colorList.func[0].color;
   return 'transparent';
 };
+
 var Base = _primitives2['default'].View(_templateObject2, function (props) {
   return props.size === 'sm' ? '6px' : '10px';
 }, function (props) {
@@ -47446,7 +47452,10 @@ Object.defineProperty(exports, "__esModule", {
 var _templateObject = _taggedTemplateLiteral(['\n  position: absolute;\n  width: 100%;\n  height: 4px;\n  backgroundColor: ', ';\n  borderRadius: 2px;\n'], ['\n  position: absolute;\n  width: 100%;\n  height: 4px;\n  backgroundColor: ', ';\n  borderRadius: 2px;\n']),
     _templateObject2 = _taggedTemplateLiteral(['\n  width: ', ';\n  height: 4px;\n  position: absolute;\n  left: ', '\n  backgroundColor: ', ';\n  borderRadius: 4px;\n'], ['\n  width: ', ';\n  height: 4px;\n  position: absolute;\n  left: ', '\n  backgroundColor: ', ';\n  borderRadius: 4px;\n']),
     _templateObject3 = _taggedTemplateLiteral(['\n  width: 14px;\n  height: 14px;\n  position: absolute;\n  left: ', ';\n  marginTop: -5px;\n  marginLeft: -7px;\n  borderRadius: 50%;\n  borderWidth: 2px;\n  borderStyle: solid;\n  borderColor: ', ';\n  backgroundColor: #fff;\n'], ['\n  width: 14px;\n  height: 14px;\n  position: absolute;\n  left: ', ';\n  marginTop: -5px;\n  marginLeft: -7px;\n  borderRadius: 50%;\n  borderWidth: 2px;\n  borderStyle: solid;\n  borderColor: ', ';\n  backgroundColor: #fff;\n']),
-    _templateObject4 = _taggedTemplateLiteral(['\n  position: relative;\n  width: 442px;\n  height: 12px;\n  marginTop: 14px;\n  marginRight: 6px;\n  marginBottom: 10px;\n  marginLeft: 6px;\n  paddingTop: 4px;\n  paddingBottom: 4px;\n'], ['\n  position: relative;\n  width: 442px;\n  height: 12px;\n  marginTop: 14px;\n  marginRight: 6px;\n  marginBottom: 10px;\n  marginLeft: 6px;\n  paddingTop: 4px;\n  paddingBottom: 4px;\n']);
+    _templateObject4 = _taggedTemplateLiteral(['\n  position: relative;\n  width: 442px;\n  height: 12px;\n  marginTop: 14px;\n  marginRight: 6px;\n  marginBottom: 10px;\n  marginLeft: 6px;\n  paddingTop: 4px;\n  paddingBottom: 4px;\n'], ['\n  position: relative;\n  width: 442px;\n  height: 12px;\n  marginTop: 14px;\n  marginRight: 6px;\n  marginBottom: 10px;\n  marginLeft: 6px;\n  paddingTop: 4px;\n  paddingBottom: 4px;\n']),
+    _templateObject5 = _taggedTemplateLiteral(['\n  flexDirection: row;\n'], ['\n  flexDirection: row;\n']),
+    _templateObject6 = _taggedTemplateLiteral(['\n  color: ', ';\n  textAlign: right;\n'], ['\n  color: ', ';\n  textAlign: right;\n']),
+    _templateObject7 = _taggedTemplateLiteral(['\n  width: 130px;\n  height: 40px;\n  marginRight: 16px;\n  justifyContent: center;\n'], ['\n  width: 130px;\n  height: 40px;\n  marginRight: 16px;\n  justifyContent: center;\n']);
 
 var _react = __webpack_require__(0);
 
@@ -47489,6 +47498,12 @@ var SliderHandler = _primitives2['default'].View(_templateObject3, function (pro
   return props.state === 'hover' ? colorList.deepPrimaryColor : colorList.lightPrimaryColor;
 });
 var SliderWarp = _primitives2['default'].View(_templateObject4);
+
+// Label
+var RowView = _primitives2['default'].View(_templateObject5);
+var LabelText = _style.fonts.PCBody.extend(_templateObject6, colorList.descLightTextColor);
+var Label = _primitives2['default'].View(_templateObject7);
+
 var BaseSlider = function BaseSlider() {
   return _react2['default'].createElement(
     SliderWarp,
@@ -47554,10 +47569,62 @@ var Slider = function Slider() {
     _react2['default'].createElement(
       Panel,
       null,
-      _react2['default'].createElement(Symbol_Slider_Default, null),
-      _react2['default'].createElement(Symbol_Slider_Default_Hover, null),
-      _react2['default'].createElement(Symbol_Slider_Range, null),
-      _react2['default'].createElement(Symbol_Slider_Range_Hover, null)
+      _react2['default'].createElement(
+        RowView,
+        null,
+        _react2['default'].createElement(
+          Label,
+          null,
+          _react2['default'].createElement(
+            LabelText,
+            null,
+            'Default:'
+          )
+        ),
+        _react2['default'].createElement(Symbol_Slider_Default, null)
+      ),
+      _react2['default'].createElement(
+        RowView,
+        null,
+        _react2['default'].createElement(
+          Label,
+          null,
+          _react2['default'].createElement(
+            LabelText,
+            null,
+            'Default & Hover:'
+          )
+        ),
+        _react2['default'].createElement(Symbol_Slider_Default_Hover, null)
+      ),
+      _react2['default'].createElement(
+        RowView,
+        null,
+        _react2['default'].createElement(
+          Label,
+          null,
+          _react2['default'].createElement(
+            LabelText,
+            null,
+            'Range:'
+          )
+        ),
+        _react2['default'].createElement(Symbol_Slider_Range, null)
+      ),
+      _react2['default'].createElement(
+        RowView,
+        null,
+        _react2['default'].createElement(
+          Label,
+          null,
+          _react2['default'].createElement(
+            LabelText,
+            null,
+            'Range & Hover:'
+          )
+        ),
+        _react2['default'].createElement(Symbol_Slider_Range_Hover, null)
+      )
     )
   );
 };

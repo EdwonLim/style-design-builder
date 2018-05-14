@@ -46,6 +46,22 @@ const SliderWarp = styled.View`
   paddingTop: 4px;
   paddingBottom: 4px;
 `;
+
+// Label
+const RowView = styled.View`
+  flexDirection: row;
+`;
+const LabelText = fonts.PCBody.extend`
+  color: ${colorList.descLightTextColor};
+  textAlign: right;
+`;
+const Label = styled.View`
+  width: 130px;
+  height: 40px;
+  marginRight: 16px;
+  justifyContent: center;
+`;
+
 const BaseSlider = () => (
   <SliderWarp>
     <Rail></Rail>
@@ -95,10 +111,22 @@ const Slider = () => (
   <View>
     <PanelTitle textType="desc">Slider</PanelTitle>
     <Panel>
-      <Symbol_Slider_Default></Symbol_Slider_Default>
-      <Symbol_Slider_Default_Hover></Symbol_Slider_Default_Hover>
-      <Symbol_Slider_Range></Symbol_Slider_Range>
-      <Symbol_Slider_Range_Hover></Symbol_Slider_Range_Hover>
+      <RowView>
+        <Label><LabelText>Default:</LabelText></Label>
+        <Symbol_Slider_Default></Symbol_Slider_Default>
+      </RowView>
+      <RowView>
+        <Label><LabelText>Default & Hover:</LabelText></Label>
+        <Symbol_Slider_Default_Hover></Symbol_Slider_Default_Hover>
+      </RowView>
+      <RowView>
+        <Label><LabelText>Range:</LabelText></Label>
+        <Symbol_Slider_Range></Symbol_Slider_Range>
+      </RowView>
+      <RowView>
+        <Label><LabelText>Range & Hover:</LabelText></Label>
+        <Symbol_Slider_Range_Hover></Symbol_Slider_Range_Hover>
+      </RowView>
     </Panel>
   </View>
 );

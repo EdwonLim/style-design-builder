@@ -15,7 +15,8 @@ const Doc = () => {
         {/* <ArtboardPalette />
         <ArtboardColor />
         <ArtboardText /> */}
-        <ArtboardIcon />
+        {/* <ArtboardIcon /> */}
+        <ArtboardPC></ArtboardPC>
       </Page>
       {/* <Page name="UI Kit of PC">
         <ArtboardPC />

@@ -33,6 +33,7 @@ const getBorderColor = (state) => {
   if (state === 'error') return colorList.func[0].color;
   return 'transparent';
 }
+
 const Base = styled.View`
   width: 484px;
   marginBottom: 24px;
