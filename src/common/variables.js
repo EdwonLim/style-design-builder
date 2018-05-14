@@ -25,6 +25,7 @@ export default VARIABLE = {
     descLightTextColor: 'rgba(0, 0, 0, .54)',
     disableLightTextColor: 'rgba(0, 0, 0, .38)',
     segmentLightTextColor: 'rgba(0, 0, 0, .12)',
+    normalSelectBorderColor: '#e5e5ea',
     // 功能色 错误成功链接 警告
     func: [
       {

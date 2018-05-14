@@ -4,6 +4,8 @@ import { styles, fonts } from '../common/style';
 import Header from '../component/Header';
 import ButtonBlock from './pc/button';
 import InputBlock from './pc/input';
+import RadioBlock from './pc/radio';
+import SliderBlock from './pc/slider';
 import styled from 'styled-components/primitives';
 
 const Card = styled.View`
@@ -33,6 +35,8 @@ const UIKitPC = () => (
       <styles.Title>定义</styles.Title>
       <ButtonBlock />
       <InputBlock />
+      <RadioBlock></RadioBlock>
+      <SliderBlock></SliderBlock>
     </Body>
   </Artboard>
 );
