@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, Artboard, Text, View, Page, Document, StyleSheet, TextStyles } from 'react-sketchapp';
-import Header from '../component/Header';
+import Header from '../common/Header';
 import { colorPalette } from '../common/util';
 import { styles, fonts } from '../common/style';
 const BodyText = fonts.title.extend``;

@@ -1,11 +1,11 @@
 import React from 'react';
 import { makeSymbol, render, Artboard, Text, View, Page, Document, StyleSheet, TextStyles } from 'react-sketchapp';
 import { styles, fonts } from '../common/style';
-import Header from '../component/Header';
-import ButtonBlock from './pc/button';
-import InputBlock from './pc/input';
-import RadioBlock from './pc/radio';
-import SliderBlock from './pc/slider';
+import Header from '../common/Header';
+import ButtonBlock from './component/pc/button';
+import InputBlock from './component/pc/input';
+import RadioBlock from './component/cross-platform/radio';
+import SliderBlock from './component/cross-platform/slider';
 import styled from 'styled-components/primitives';
 
 const Card = styled.View`

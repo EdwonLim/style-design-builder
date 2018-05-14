@@ -7,19 +7,21 @@ import ArtboardText from './artboard/Text';
 import ArtboardColor from './artboard/Color';
 import ArtboardIcon from './artboard/Icon';
 import ArtboardPC from './artboard/UIKitPC';
+// import ArtboardMobile from './artboard/UIKitMobile';
 
 const Doc = () => {
 	return (
 		<Document>
-			<Page name="Style">
-        {/* <ArtboardPalette />
+			{/* <Page name="Style">
+        <ArtboardPalette />
         <ArtboardColor />
-        <ArtboardText /> */}
+        <ArtboardText />
         <ArtboardIcon />
-      </Page>
-      {/* <Page name="UI Kit of PC">
-        <ArtboardPC />
       </Page> */}
+      <Page name="UI Kit of PC">
+        <ArtboardPC />
+        {/* <ArtboardMobile /> */}
+      </Page>
 		</Document>);
 };
 
