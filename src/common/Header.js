@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, View, StyleSheet } from 'react-sketchapp';
-import { styles, fonts } from '../common/style';
+import { styles, fonts } from './style';
 import styled from 'styled-components/primitives';
 
 	// color: ${props => textColor(props.hex)};

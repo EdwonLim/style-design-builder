@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeSymbol, render, Artboard, Text, View, Page, Document, StyleSheet, TextStyles } from 'react-sketchapp';
 import { styles, fonts } from '../common/style';
-import Header from '../component/Header';
+import Header from '../common/Header';
 import { colorPalette } from '../common/util';
 import styled from 'styled-components/primitives';
 
