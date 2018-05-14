@@ -12,14 +12,14 @@ const Doc = () => {
 	return (
 		<Document>
 			<Page name="Style">
-        <ArtboardPalette />
+        {/* <ArtboardPalette />
         <ArtboardColor />
-        <ArtboardText />
+        <ArtboardText /> */}
         <ArtboardIcon />
       </Page>
-      <Page name="UI Kit of PC">
+      {/* <Page name="UI Kit of PC">
         <ArtboardPC />
-      </Page>
+      </Page> */}
 		</Document>);
 };
 
