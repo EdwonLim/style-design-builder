@@ -19,12 +19,6 @@ const Container = styled.View`
 const BodyText = fonts.subhead.extend`
   lineHeight: 44px;
 `;
-const Cursor = styled.View`
-  height: 22px;
-  width: 2px;
-  backgroundColor: ${colorList.primaryColor};
-  marginLeft: 4px;
-`;
 const Right = styled.View`
   position: absolute;
   right: 16px;
@@ -33,20 +27,19 @@ const Right = styled.View`
   justifyContent: center;
 `;
 
-const Symbol_mobile_input = makeSymbol(() =>
+const Symbol_mobile_label = makeSymbol(() =>
   <Container>
-    <BodyText>标题</BodyText>
-    <Cursor />
-    <Right>{iconfont.close_round_fill('md', colorList.primaryColor)}</Right>
+    <BodyText>标签标题</BodyText>
+    <Right>{iconfont.right('md', colorList.descLightTextColor)}</Right>
   </Container>
-  , 'mobile/input');
+  , 'mobile/label');
 
-const Input = () => (
+const Label = () => (
   <View>
-    <PanelTitle textType="desc">Input</PanelTitle>
-    <Symbol_mobile_input />
+    <PanelTitle textType="desc">Label</PanelTitle>
+    <Symbol_mobile_label />
   </View>
 )
 
-export default Input;
+export default Label;
 

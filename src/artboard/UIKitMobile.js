@@ -5,6 +5,8 @@ import Header from '../common/Header';
 import ButtonBlock from './component/mobile/button';
 import HeaderBlock from './component/mobile/header';
 import InputBlock from './component/mobile/input';
+import LabelBlock from './component/mobile/label';
+import TextareaBlock from './component/mobile/textarea';
 import RadioBlock from './component/cross-platform/radio';
 import SliderBlock from './component/cross-platform/slider';
 import SwiperBlock from './component/cross-platform/swiper';
@@ -46,6 +48,8 @@ const UIKitMobile = () => (
       <Col>
         <styles.Title>Form</styles.Title>
         <InputBlock />
+        <LabelBlock />
+        <TextareaBlock />
       </Col>
       {/* <InputBlock />
       <RadioBlock ></RadioBlock>
