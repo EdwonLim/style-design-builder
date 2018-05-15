@@ -39,9 +39,9 @@ const UIKitPC = () => (
       {/* <ButtonBlock />
       <InputBlock />
       <RadioBlock /> */}
-      {/* <SliderBlock /> */}
-      {/* <PaginationBlock /> */}
-      <ModalBlock />
+      <SliderBlock />
+      <PaginationBlock />
+      <SelectBlock />
     </Body>
   </Artboard>
 );

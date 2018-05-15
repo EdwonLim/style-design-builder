@@ -21,6 +21,9 @@ const getBgColor = (type, state) => {
       return 'transparent';
     }
   }
+  if (state === 'focus') {
+    return colorList.lightActiveBgColor;
+  }
   // 默认为主按钮 && 主色
   return colorList.htmlBgolor;
 };
@@ -39,12 +42,14 @@ const Base = styled.View`
   borderRadius: ${variables.borderRadius};
   height: 40px;
   flexDirection: row;
+  alignItems: center;
 `;
 const SelectItem = styled.View`
   flexDirection: row;
 `;
 const SelectText = fonts.PCBody.extend`
   color: ${props => getTextColor(props.type, props.state)};
+  marginRight: 8px;
 `;
 const SelectLabel = styled.View`
   width: 130px;
@@ -69,45 +74,40 @@ const LabelText = fonts.PCBody.extend`
 const Symbol_bg_lg_placeholder = makeSymbol(() =>
   <Base state="placeholder">
     <SelectText state="placeholder" name="Text">默认文本</SelectText>
-    {iconfont.add('sm', getTextColor())}
+    {iconfont.up_triangle_fill('sm', getTextColor())}
   </Base>
   , 'select/bg/lg/placeholder');
 const Symbol_bg_lg_default = makeSymbol(() =>
   <Base state="default">
-    <SelectText state="default" name="Text">默认文本</SelectText>
+    <SelectText state="default" name="Text">已选中项</SelectText>
+    {iconfont.up_triangle_fill('sm', getTextColor('', 'default'))}
   </Base>
   , 'select/bg/lg/default');
 const Symbol_bg_lg_focus = makeSymbol(() =>
   <Base state="focus">
     <SelectText state="focus" name="Text">默认文本</SelectText>
+    {iconfont.up_triangle_fill('sm', getTextColor('', 'focus'))}
   </Base>
   , 'select/bg/lg/focus');
-const Symbol_bg_lg_error = makeSymbol(() =>
-  <Base state="error">
-    <SelectText state="error" name="Text">默认文本</SelectText>
-  </Base>
-  , 'select/bg/lg/error');
 
 const Symbol_withoutBg_lg_placeholder = makeSymbol(() =>
   <Base type="withoutBg" state="placeholder">
     <SelectText state="placeholder" name="Text">默认文本</SelectText>
+    {iconfont.up_triangle_fill('sm', getTextColor('withoutBg'))}
   </Base>
   , 'select/withoutBg/lg/placeholder');
 const Symbol_withoutBg_lg_default = makeSymbol(() =>
   <Base type="withoutBg" state="default">
-    <SelectText state="default" name="Text">默认文本</SelectText>
+    <SelectText state="default" name="Text">已选中项</SelectText>
+    {iconfont.up_triangle_fill('sm', getTextColor('withoutBg', 'default'))}
   </Base>
   , 'select/withoutBg/lg/default');
 const Symbol_withoutBg_lg_focus = makeSymbol(() =>
   <Base type="withoutBg" state="focus">
     <SelectText state="focus" name="Text">默认文本</SelectText>
+    {iconfont.up_triangle_fill('sm', getTextColor('withoutBg', 'focus'))}
   </Base>
   , 'select/withoutBg/lg/focus');
-const Symbol_withoutBg_lg_error = makeSymbol(() =>
-  <Base type="withoutBg" state="error">
-    <SelectText state="error" name="Text">默认文本</SelectText>
-  </Base>
-  , 'select/withoutBg/lg/error');
 
 // 小型按钮
 // const Symbol_Primary_sm_default = makeSymbol(() =>
@@ -129,7 +129,6 @@ const Select = () => (
     <Panel>
 
       <BodyText>带背景的选择器：更强调<Text style={{ fontWeight: 'bold', color: 'rgba(0,0,0,.87)' }}>选择行为</Text></BodyText>
-
       <SelectItem>
         <SelectLabel><LabelText>无默认选项:</LabelText></SelectLabel>
         <Symbol_bg_lg_placeholder overrides={{ 'Text': '请选择' }} />
@@ -142,12 +141,8 @@ const Select = () => (
         <SelectLabel><LabelText>selected:</LabelText></SelectLabel>
         <Symbol_bg_lg_focus overrides={{ 'Text': '请选择' }} />
       </SelectItem>
-      <SelectItem>
-        <SelectLabel><LabelText>error:</LabelText></SelectLabel>
-        <Symbol_bg_lg_error overrides={{ 'Text': '请选择' }} />
-      </SelectItem>
-      <BodyText>透明背景的选择器：更强调<Text style={{ fontWeight: 'bold', color: 'rgba(0, 0, 0, .87)' }}>浏览</Text></BodyText>
 
+      <BodyText>透明背景的选择器：更强调<Text style={{ fontWeight: 'bold', color: 'rgba(0, 0, 0, .87)' }}>浏览</Text></BodyText>
       <SelectItem>
         <SelectLabel><LabelText>无默认选项:</LabelText></SelectLabel>
         <Symbol_withoutBg_lg_placeholder overrides={{ 'Text': '请选择' }} />
@@ -159,10 +154,6 @@ const Select = () => (
       <SelectItem>
         <SelectLabel><LabelText>selected:</LabelText></SelectLabel>
         <Symbol_withoutBg_lg_focus overrides={{ 'Text': '请选择' }} />
-      </SelectItem>
-      <SelectItem>
-        <SelectLabel><LabelText>error:</LabelText></SelectLabel>
-        <Symbol_withoutBg_lg_error overrides={{ 'Text': '请选择' }} />
       </SelectItem>
 
     </Panel>

@@ -2,7 +2,7 @@ import React from 'react';
 import { makeSymbol, render, Artboard, Text, View, Page, Document, StyleSheet, TextStyles } from 'react-sketchapp';
 import { styles, fonts } from '../common/style';
 import Header from '../common/Header';
-import ButtonBlock from './component/pc/button';
+import ButtonBlock from './component/mobile/button';
 import InputBlock from './component/pc/input';
 import RadioBlock from './component/cross-platform/radio';
 import SliderBlock from './component/cross-platform/slider';
@@ -34,9 +34,9 @@ const UIKitMobile = () => (
     <Body name="body">
       <styles.Title>定义</styles.Title>
       <ButtonBlock />
-      <InputBlock />
+      {/* <InputBlock />
       <RadioBlock ></RadioBlock>
-      <SliderBlock></SliderBlock>
+      <SliderBlock></SliderBlock> */}
     </Body>
   </Artboard>
 );
