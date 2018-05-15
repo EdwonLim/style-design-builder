@@ -35,7 +35,7 @@ const UIKitMobile = () => (
       <styles.Title>定义</styles.Title>
       <ButtonBlock />
       <InputBlock />
-      <RadioBlock></RadioBlock>
+      <RadioBlock ></RadioBlock>
       <SliderBlock></SliderBlock>
     </Body>
   </Artboard>

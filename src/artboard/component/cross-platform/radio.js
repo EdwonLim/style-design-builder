@@ -3,6 +3,7 @@ import { Text, View, StyleSheet, makeSymbol } from 'react-sketchapp';
 import { styles, fonts } from '../../../common/style';
 import styled from 'styled-components/primitives';
 import variables from '../../../common/variables';
+import iconfont from '../../../common/iconfont.js';
 
 const colorList = VARIABLE.colorList;
 const { PanelTitle, Panel } = styles;
@@ -55,27 +56,28 @@ const BaseInnerCircle = styled.View`
 const RadioText = fonts.PCBody.extend`
   color: ${props => props.disabled ? colorList.disableLightTextColor : colorList.descLightTextColor};
 `;
+
 const UnSelect_lg_default = () => (
   <RowView>
-    <BaseOuterSelectCircle size="lg"></BaseOuterSelectCircle>
+    <BaseOuterSelectCircle size="lg" />
     <RadioText>unselected</RadioText>
   </RowView>
 );
 const UnSelect_sm_default = () => (
   <RowView>
-    <BaseOuterSelectCircle size="sm"></BaseOuterSelectCircle>
+    <BaseOuterSelectCircle size="sm" />
     <RadioText>unselected</RadioText>
   </RowView>
 );
 const UnSelect_lg_disabled = () => (
   <RowView>
-    <BaseOuterSelectCircle disabled></BaseOuterSelectCircle>
+    <BaseOuterSelectCircle disabled />
     <RadioText disabled>unselected & disabled</RadioText>
   </RowView>
 );
 const UnSelect_sm_disabled = () => (
   <RowView>
-    <BaseOuterSelectCircle size="sm"></BaseOuterSelectCircle>
+    <BaseOuterSelectCircle size="sm" />
     <RadioText>unselected & disabled</RadioText>
   </RowView>
 );
@@ -83,7 +85,7 @@ const UnSelect_sm_disabled = () => (
 const Selected_lg_default = () => (
   <RowView>
     <BaseOuterSelectCircle selected>
-      <BaseInnerCircle selected></BaseInnerCircle>
+      <BaseInnerCircle selected />
     </BaseOuterSelectCircle>
     <RadioText selected>selected</RadioText>
   </RowView>
@@ -91,7 +93,7 @@ const Selected_lg_default = () => (
 const Selected_sm_default = () => (
   <RowView>
     <BaseOuterSelectCircle selected size="sm">
-      <BaseInnerCircle selected size="sm"></BaseInnerCircle>
+      <BaseInnerCircle selected size="sm" />
     </BaseOuterSelectCircle>
     <RadioText selected>selected</RadioText>
   </RowView>
@@ -100,7 +102,7 @@ const Selected_sm_default = () => (
 const Selected_lg_disabled = () => (
   <RowView>
     <BaseOuterSelectCircle selected disabled>
-      <BaseInnerCircle selected disabled></BaseInnerCircle>
+      <BaseInnerCircle selected disabled />
     </BaseOuterSelectCircle>
     <RadioText selected disabled>selected & disabled</RadioText>
   </RowView>
@@ -108,49 +110,49 @@ const Selected_lg_disabled = () => (
 const Selected_sm_disabled = () => (
   <RowView>
     <BaseOuterSelectCircle selected disabled size="sm">
-      <BaseInnerCircle selected disabled size="sm"></BaseInnerCircle>
+      <BaseInnerCircle selected disabled size="sm" />
     </BaseOuterSelectCircle>
     <RadioText selected disabled>selected & disabled</RadioText>
   </RowView>
 );
 // 未选中radio symobol
 const Symbol_UnSelect_lg_default = makeSymbol(() => {
-  return <UnSelect_lg_default></UnSelect_lg_default>
+  return <UnSelect_lg_default />
 }, 'unselect/lg/default');
 
 const Symbol_UnSelected_sm_default = makeSymbol(() => {
-  return <UnSelect_sm_default></UnSelect_sm_default>
+  return <UnSelect_sm_default />
 }, 'unselect/lg/default');
 
 const Symbol_UnSelect_lg_disabled = makeSymbol(() => {
-  return <UnSelect_lg_disabled></UnSelect_lg_disabled>   
+  return <UnSelect_lg_disabled />  
 }, 'unselect/lg/disabled');
 const Symbol_UnSelect_sm_disabled = makeSymbol(() => {
-  return <UnSelect_sm_disabled></UnSelect_sm_disabled>
+  return <UnSelect_sm_disabled />
 }, 'unselect/sm/disabled');
 // 选中radio symbol
 const Symbol_Selected_lg_default = makeSymbol(() => {
-  return <Selected_lg_default></Selected_lg_default>
+  return <Selected_lg_default />
 }, 'selected/lg/default');
 const Symbol_Selected_sm_default = makeSymbol(() => {
-  return <Selected_sm_default></Selected_sm_default>
+  return <Selected_sm_default />
 }, 'selected/sm/default');
 
 const Symbol_Selected_lg_disabled = makeSymbol( () => {
-  return <Selected_lg_disabled></Selected_lg_disabled>
+  return <Selected_lg_disabled />
 }, 'selected/lg/disabled');
 const Symbol_Selected_sm_disabled = makeSymbol( () => {
-  return <Selected_sm_disabled></Selected_sm_disabled>
+  return <Selected_sm_disabled />
 }, 'selected/sm/disabled');
 
 const Radio = () => (
   <View>
     <PanelTitle textType="desc">Radio</PanelTitle>
     <Panel>
-      <Symbol_UnSelect_lg_default></Symbol_UnSelect_lg_default>
-      <Symbol_UnSelect_lg_disabled></Symbol_UnSelect_lg_disabled>
-      <Symbol_Selected_lg_default></Symbol_Selected_lg_default>
-      <Symbol_Selected_lg_disabled></Symbol_Selected_lg_disabled>
+      <Symbol_UnSelect_lg_default />
+      <Symbol_UnSelect_lg_disabled />
+      <Symbol_Selected_lg_default />
+      <Symbol_Selected_lg_disabled />
     </Panel>
   </View>
 );
