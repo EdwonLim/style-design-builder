@@ -40,6 +40,7 @@ const UIKitPC = () => (
       <RadioBlock /> */}
       <SliderBlock />
       <PaginationBlock />
+      <SelectBlock />
     </Body>
   </Artboard>
 );

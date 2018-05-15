@@ -39,12 +39,14 @@ const Base = styled.View`
   borderRadius: ${variables.borderRadius};
   height: 40px;
   flexDirection: row;
+  alignItems: center;
 `;
 const SelectItem = styled.View`
   flexDirection: row;
 `;
 const SelectText = fonts.PCBody.extend`
   color: ${props => getTextColor(props.type, props.state)};
+  marginRight: 8px;
 `;
 const SelectLabel = styled.View`
   width: 130px;
@@ -69,43 +71,50 @@ const LabelText = fonts.PCBody.extend`
 const Symbol_bg_lg_placeholder = makeSymbol(() =>
   <Base state="placeholder">
     <SelectText state="placeholder" name="Text">默认文本</SelectText>
-    {iconfont.add('sm', getTextColor())}
+    {iconfont.up_triangle_fill('sm', getTextColor())}
   </Base>
   , 'select/bg/lg/placeholder');
 const Symbol_bg_lg_default = makeSymbol(() =>
   <Base state="default">
-    <SelectText state="default" name="Text">默认文本</SelectText>
+    <SelectText state="default" name="Text">已选中项</SelectText>
+    {iconfont.up_triangle_fill('sm', getTextColor('', 'default'))}
   </Base>
   , 'select/bg/lg/default');
 const Symbol_bg_lg_focus = makeSymbol(() =>
   <Base state="focus">
     <SelectText state="focus" name="Text">默认文本</SelectText>
+    {iconfont.up_triangle_fill('sm', getTextColor('', 'focus'))}
   </Base>
   , 'select/bg/lg/focus');
 const Symbol_bg_lg_error = makeSymbol(() =>
   <Base state="error">
     <SelectText state="error" name="Text">默认文本</SelectText>
+    {iconfont.up_triangle_fill('sm', getTextColor('', 'error'))}
   </Base>
   , 'select/bg/lg/error');
 
 const Symbol_withoutBg_lg_placeholder = makeSymbol(() =>
   <Base type="withoutBg" state="placeholder">
     <SelectText state="placeholder" name="Text">默认文本</SelectText>
+    {iconfont.up_triangle_fill('sm', getTextColor('withoutBg'))}
   </Base>
   , 'select/withoutBg/lg/placeholder');
 const Symbol_withoutBg_lg_default = makeSymbol(() =>
   <Base type="withoutBg" state="default">
-    <SelectText state="default" name="Text">默认文本</SelectText>
+    <SelectText state="default" name="Text">已选中项</SelectText>
+    {iconfont.up_triangle_fill('sm', getTextColor('withoutBg', 'default'))}
   </Base>
   , 'select/withoutBg/lg/default');
 const Symbol_withoutBg_lg_focus = makeSymbol(() =>
   <Base type="withoutBg" state="focus">
     <SelectText state="focus" name="Text">默认文本</SelectText>
+    {iconfont.up_triangle_fill('sm', getTextColor('withoutBg', 'focus'))}
   </Base>
   , 'select/withoutBg/lg/focus');
 const Symbol_withoutBg_lg_error = makeSymbol(() =>
   <Base type="withoutBg" state="error">
     <SelectText state="error" name="Text">默认文本</SelectText>
+    {iconfont.up_triangle_fill('sm', getTextColor('withoutBg', 'error'))}
   </Base>
   , 'select/withoutBg/lg/error');
 
