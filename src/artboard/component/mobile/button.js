@@ -45,7 +45,7 @@ const getBgColor = (type, state) => {
 const getTextColor = (type, state) => {
   // 幽灵按钮 字体颜色为主色
   if (type === 'goast') {
-    if (!state || state === 'normal') {
+    if (!state || state === 'ripple' ) {
       return colorList.primaryColor;
     }
   }
@@ -58,11 +58,11 @@ const getTextColor = (type, state) => {
 };
 const getBorderColor = (type, state) => {
   if (type === 'goast') {
-    if (!state || state === 'normal') {
+    if (!state || state === 'ripple') {
       return colorList.primaryColor;
     }
   }
-  if (!state || state === 'normal') return colorList.lightHoverBgColor;
+  if (!state) return colorList.lightHoverBgColor;
   return getTextColor(type, state);
 }
 const Base = styled.View`
@@ -78,7 +78,7 @@ const Base = styled.View`
 const Ripple = styled.View`
   width: 120px;
   height: 120px;
-  backgroundColor: ${colorList.deepActiveBgolor};
+  backgroundColor: ${props => props.type === 'dark' ? props.color || colorList.lightHoverBgColor : colorList.deepActiveBgolor };
   position: absolute;
   left: 111px;
   top: -38px;
@@ -119,9 +119,9 @@ const Symbol_Goast_lg_active = makeSymbol(() =>
   </Base>
   , 'mobile/button/goast/lg/active');
 const Symbol_Goast_lg_active_ripple = makeSymbol(() =>
-  <Base type="goast" state="active">
-    <Ripple />
-    <ButtonText type="goast" state="active" name="Text">幽灵按钮: ripple</ButtonText>
+  <Base type="goast" state="ripple">
+    <Ripple type="dark" color="rgba(46, 197,216, .2)" />
+    <ButtonText type="goast" state="ripple" name="Text">幽灵按钮: ripple</ButtonText>
   </Base>
   , 'mobile/button/goast/lg/active/ripple');
 // 扁平按钮的四种状态
@@ -136,8 +136,8 @@ const Symbol_Flat_lg_active = makeSymbol(() =>
   </Base>
   , 'mobile/button/flat/lg/active');
 const Symbol_Flat_lg_active_ripple = makeSymbol(() =>
-  <Base type="flat" state="active">
-    <Ripple />
+  <Base type="flat" state="ripple">
+    <Ripple type="dark" />
     <ButtonText type="flat" name="Text">扁平按钮: ripple</ButtonText>
   </Base>
   , 'mobile/button/flat/lg/active/ripple');
