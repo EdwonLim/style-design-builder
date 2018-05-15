@@ -1,28 +1,24 @@
 import React from 'react';
 import { View, Text, Svg } from 'react-sketchapp';
-import { styles, fonts } from '../common/style';
 import styled from 'styled-components/primitives';
 import iconfontSource from './iconfont.json';
 
 const colorList = VARIABLE.colorList;
 const iconfont = {};
-const Container = styled.View`
-  width: 120px;
-  height: 100px;
-  mariginRight: 16px;
-  verticalAlign: center;
-  alignItems: center;
-`;
-const Name = fonts.PCBody.extend`
-  textAlign: center;
-`;
+
+const sizes = {
+  sm: 8,
+  md: 16,
+  lg: 24
+};
 
 iconfontSource.data.icons.forEach((item, index) => {
-  iconfont[item.name] = (
-    <Svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" >
-      <Svg.Path d={item.path} fill={colorList.baseLightTextColor} class="transform-group" />
+  iconfont[item.name] = (size, color) => {
+    const length = sizes[size] || 16;
+    return <Svg width={length} height={length} viewBox={`0 0 ${length} ${length}`} xmlns="http://www.w3.org/2000/svg" >
+      <Svg.Path d={item.path} fill={color || colorList.baseLightTextColor} class="transform-group" />
     </Svg>
-  )
+  }
 })
 
 export default iconfont;

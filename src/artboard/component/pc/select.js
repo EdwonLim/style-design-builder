@@ -3,6 +3,7 @@ import { Text, View, StyleSheet, makeSymbol } from 'react-sketchapp';
 import { styles, fonts } from '../../../common/style';
 import styled from 'styled-components/primitives';
 import variables from '../../../common/variables';
+import iconfont from '../../../common/iconfont.js';
 
 const colorList = VARIABLE.colorList;
 const { PanelTitle, Panel } = styles;
@@ -29,31 +30,23 @@ const getTextColor = (type, state) => {
   }
   return colorList.descLightTextColor;
 }
-const getBorderColor = (state) => {
-  if (state === 'focus') return colorList.func[1].color;
-  if (state === 'error') return colorList.func[0].color;
-  return 'transparent';
-}
 
 const Base = styled.View`
-  width: 484px;
   marginBottom: 24px;
   paddingVertical: ${props => props.size === 'sm' ? '6px' : '10px'};
   paddingHorizontal: 16px;
   backgroundColor: ${props => getBgColor(props.type, props.state)};
   borderRadius: ${variables.borderRadius};
-  borderBottomWidth: 2;
-  borderBottomStyle: solid;
-  borderBottomColor: ${props => getBorderColor(props.state)};
   height: 40px;
-`;
-const InputItem = styled.View`
   flexDirection: row;
 `;
-const InputText = fonts.PCBody.extend`
+const SelectItem = styled.View`
+  flexDirection: row;
+`;
+const SelectText = fonts.PCBody.extend`
   color: ${props => getTextColor(props.type, props.state)};
 `;
-const InputLabel = styled.View`
+const SelectLabel = styled.View`
   width: 130px;
   height: 40px;
   marginRight: 16px;
@@ -68,52 +61,53 @@ const LabelText = fonts.PCBody.extend`
 
 // const Symbol_bg_sm_default = makeSymbol(() =>
 //   <Base size="sm">
-//     <InputText name="Text">默认文本</InputText>
+//     <SelectText name="Text">默认文本</SelectText>
 //   </Base>
-//   , 'input/bg/lg/default');
+//   , 'select/bg/lg/default');
 // Symbols:
 // 默认文本的四种状态
 const Symbol_bg_lg_placeholder = makeSymbol(() =>
   <Base state="placeholder">
-    <InputText state="placeholder" name="Text">默认文本</InputText>
+    <SelectText state="placeholder" name="Text">默认文本</SelectText>
+    {iconfont.add('sm', getTextColor())}
   </Base>
-  , 'input/bg/lg/placeholder');
+  , 'select/bg/lg/placeholder');
 const Symbol_bg_lg_default = makeSymbol(() =>
   <Base state="default">
-    <InputText state="default" name="Text">默认文本</InputText>
+    <SelectText state="default" name="Text">默认文本</SelectText>
   </Base>
-  , 'input/bg/lg/default');
+  , 'select/bg/lg/default');
 const Symbol_bg_lg_focus = makeSymbol(() =>
   <Base state="focus">
-    <InputText state="focus" name="Text">默认文本</InputText>
+    <SelectText state="focus" name="Text">默认文本</SelectText>
   </Base>
-  , 'input/bg/lg/focus');
+  , 'select/bg/lg/focus');
 const Symbol_bg_lg_error = makeSymbol(() =>
   <Base state="error">
-    <InputText state="error" name="Text">默认文本</InputText>
+    <SelectText state="error" name="Text">默认文本</SelectText>
   </Base>
-  , 'input/bg/lg/error');
+  , 'select/bg/lg/error');
 
 const Symbol_withoutBg_lg_placeholder = makeSymbol(() =>
   <Base type="withoutBg" state="placeholder">
-    <InputText state="placeholder" name="Text">默认文本</InputText>
+    <SelectText state="placeholder" name="Text">默认文本</SelectText>
   </Base>
-  , 'input/withoutBg/lg/placeholder');
+  , 'select/withoutBg/lg/placeholder');
 const Symbol_withoutBg_lg_default = makeSymbol(() =>
   <Base type="withoutBg" state="default">
-    <InputText state="default" name="Text">默认文本</InputText>
+    <SelectText state="default" name="Text">默认文本</SelectText>
   </Base>
-  , 'input/withoutBg/lg/default');
+  , 'select/withoutBg/lg/default');
 const Symbol_withoutBg_lg_focus = makeSymbol(() =>
   <Base type="withoutBg" state="focus">
-    <InputText state="focus" name="Text">默认文本</InputText>
+    <SelectText state="focus" name="Text">默认文本</SelectText>
   </Base>
-  , 'input/withoutBg/lg/focus');
+  , 'select/withoutBg/lg/focus');
 const Symbol_withoutBg_lg_error = makeSymbol(() =>
   <Base type="withoutBg" state="error">
-    <InputText state="error" name="Text">默认文本</InputText>
+    <SelectText state="error" name="Text">默认文本</SelectText>
   </Base>
-  , 'input/withoutBg/lg/error');
+  , 'select/withoutBg/lg/error');
 
 // 小型按钮
 // const Symbol_Primary_sm_default = makeSymbol(() =>
@@ -136,40 +130,40 @@ const Select = () => (
 
       <BodyText>带背景的选择器：更强调<Text style={{ fontWeight: 'bold', color: 'rgba(0,0,0,.87)' }}>选择行为</Text></BodyText>
 
-      <InputItem>
-        <InputLabel><LabelText>无默认选项:</LabelText></InputLabel>
+      <SelectItem>
+        <SelectLabel><LabelText>无默认选项:</LabelText></SelectLabel>
         <Symbol_bg_lg_placeholder overrides={{ 'Text': '请选择' }} />
-      </InputItem>
-      <InputItem>
-        <InputLabel><LabelText>有默认选项:</LabelText></InputLabel>
+      </SelectItem>
+      <SelectItem>
+        <SelectLabel><LabelText>有默认选项:</LabelText></SelectLabel>
         <Symbol_bg_lg_default overrides={{ 'Text': '请选择' }} />
-      </InputItem>
-      <InputItem>
-        <InputLabel><LabelText>selected:</LabelText></InputLabel>
+      </SelectItem>
+      <SelectItem>
+        <SelectLabel><LabelText>selected:</LabelText></SelectLabel>
         <Symbol_bg_lg_focus overrides={{ 'Text': '请选择' }} />
-      </InputItem>
-      <InputItem>
-        <InputLabel><LabelText>error:</LabelText></InputLabel>
+      </SelectItem>
+      <SelectItem>
+        <SelectLabel><LabelText>error:</LabelText></SelectLabel>
         <Symbol_bg_lg_error overrides={{ 'Text': '请选择' }} />
-      </InputItem>
+      </SelectItem>
       <BodyText>透明背景的选择器：更强调<Text style={{ fontWeight: 'bold', color: 'rgba(0, 0, 0, .87)' }}>浏览</Text></BodyText>
 
-      <InputItem>
-        <InputLabel><LabelText>无默认选项:</LabelText></InputLabel>
+      <SelectItem>
+        <SelectLabel><LabelText>无默认选项:</LabelText></SelectLabel>
         <Symbol_withoutBg_lg_placeholder overrides={{ 'Text': '请选择' }} />
-      </InputItem>
-      <InputItem>
-        <InputLabel><LabelText>有默认选项:</LabelText></InputLabel>
+      </SelectItem>
+      <SelectItem>
+        <SelectLabel><LabelText>有默认选项:</LabelText></SelectLabel>
         <Symbol_withoutBg_lg_default overrides={{ 'Text': '请选择' }} />
-      </InputItem>
-      <InputItem>
-        <InputLabel><LabelText>selected:</LabelText></InputLabel>
+      </SelectItem>
+      <SelectItem>
+        <SelectLabel><LabelText>selected:</LabelText></SelectLabel>
         <Symbol_withoutBg_lg_focus overrides={{ 'Text': '请选择' }} />
-      </InputItem>
-      <InputItem>
-        <InputLabel><LabelText>error:</LabelText></InputLabel>
+      </SelectItem>
+      <SelectItem>
+        <SelectLabel><LabelText>error:</LabelText></SelectLabel>
         <Symbol_withoutBg_lg_error overrides={{ 'Text': '请选择' }} />
-      </InputItem>
+      </SelectItem>
 
     </Panel>
   </View>
