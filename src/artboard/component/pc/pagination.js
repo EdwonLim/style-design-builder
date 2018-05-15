@@ -89,13 +89,13 @@ const Pagination_lg = () => (
     </IndexItem>
     <IndexItemMoreWarp><MoreItem /></IndexItemMoreWarp>
     <IndexItem>
-      <IndexItemTextWarp><IndexItemText>6</IndexItemText></IndexItemTextWarp>
+      <IndexItemTextWarp><IndexItemText>5</IndexItemText></IndexItemTextWarp>
     </IndexItem>
     <IndexItem state="active">
       <IndexItemTextWarp><IndexItemText state="active">6</IndexItemText></IndexItemTextWarp>
     </IndexItem>
     <IndexItem>
-      <IndexItemTextWarp><IndexItemText state="active">7</IndexItemText></IndexItemTextWarp>
+      <IndexItemTextWarp><IndexItemText>7</IndexItemText></IndexItemTextWarp>
     </IndexItem>
     <IndexItemMoreWarp><MoreItem /></IndexItemMoreWarp>
     <IndexItem>

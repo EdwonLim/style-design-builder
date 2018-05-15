@@ -35,9 +35,9 @@ const UIKitPC = () => (
     <Header>Youth Design UI Kit (PC)</Header>
     <Body name="body">
       <styles.Title>定义</styles.Title>
-      <ButtonBlock />
+      {/* <ButtonBlock />
       <InputBlock />
-      <RadioBlock />
+      <RadioBlock /> */}
       <SliderBlock />
       <PaginationBlock />
     </Body>
