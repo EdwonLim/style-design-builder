@@ -17,10 +17,10 @@ const Doc = () => {
         <ArtboardColor />
         <ArtboardText />
         <ArtboardIcon />
-      </Page>
+      </Page> */}
       <Page name="UI Kit of PC">
         <ArtboardPC />
-      </Page> */}
+      </Page>
       <Page name="UI Kit of Mobile">
         <ArtboardMobile />
       </Page>
