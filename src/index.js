@@ -12,7 +12,7 @@ import ArtboardMobile from './artboard/UIKitMobile';
 const Doc = () => {
 	return (
 		<Document>
-			<Page name="Style">
+			{/* <Page name="Style">
         <ArtboardPalette />
         <ArtboardColor />
         <ArtboardText />
@@ -20,7 +20,7 @@ const Doc = () => {
       </Page>
       <Page name="UI Kit of PC">
         <ArtboardPC />
-      </Page>
+      </Page> */}
       <Page name="UI Kit of Mobile">
         <ArtboardMobile />
       </Page>
