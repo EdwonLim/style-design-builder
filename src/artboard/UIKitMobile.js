@@ -3,6 +3,7 @@ import { makeSymbol, render, Artboard, Text, View, Page, Document, StyleSheet, T
 import { styles, fonts } from '../common/style';
 import Header from '../common/Header';
 import ButtonBlock from './component/mobile/button';
+import HeaderBlock from './component/mobile/header';
 import InputBlock from './component/pc/input';
 import RadioBlock from './component/cross-platform/radio';
 import SliderBlock from './component/cross-platform/slider';
@@ -39,6 +40,7 @@ const UIKitMobile = () => (
       </Col> */}
       <Col>
         <styles.Title>Layout</styles.Title>
+        <HeaderBlock platform="mobile" />
         <SwiperBlock platform="mobile" />
       </Col>
       <Col>

@@ -18,9 +18,9 @@ const Doc = () => {
         <ArtboardText />
         <ArtboardIcon />
       </Page> */}
-      <Page name="UI Kit of PC">
+      {/* <Page name="UI Kit of PC">
         <ArtboardPC />
-      </Page>
+      </Page> */}
       <Page name="UI Kit of Mobile">
         <ArtboardMobile />
       </Page>
