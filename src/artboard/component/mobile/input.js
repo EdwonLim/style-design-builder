@@ -48,47 +48,37 @@ const Oparation = styled.View`
   justifyContent: space-between;
 `;
 
-const Symbol_header_text = makeSymbol(() =>
-  <Container>
-    <StatusBar />
-    <TitleText type="middle">标题</TitleText>
-    <Oparation>
-      <OparationText>返回</OparationText>
-      <OparationText>确定</OparationText>
-    </Oparation>
-  </Container>
-  , 'header/text');
-const Symbol_header_icon = makeSymbol(() =>
-  <Container>
-    <StatusBar />
-    <TitleText type="middle">标题</TitleText>
-    <Oparation>
-      <Left>{iconfont.left('md', colorList.primaryColor)}</Left>
-      <Right>{iconfont.heart('md', colorList.primaryColor)}</Right>
-    </Oparation>
-  </Container>
-  , 'header/text');
-const Symbol_header_icontext = makeSymbol(() =>
-  <Container>
-    <StatusBar />
-    <TitleText type="middle">标题</TitleText>
-    <Oparation>
-      <Left>{iconfont.left('md', colorList.primaryColor)} <OparationText>返回</OparationText></Left>
-      <Right>{iconfont.heart('md', colorList.primaryColor)} <OparationText>喜欢</OparationText></Right>
-    </Oparation>
-  </Container>
-  , 'header/text');
-
-const Header = () => (
+const Input = () => (
   <View>
-    <PanelTitle textType="desc">Header</PanelTitle>
+    <PanelTitle textType="desc">Input</PanelTitle>
     <Panel platform="mobile">
-      <Symbol_header_text />
-      <Symbol_header_icon />
-      <Symbol_header_icontext />
+      <Container>
+        <StatusBar />
+        <TitleText type="middle">标题</TitleText>
+        <Oparation>
+          <OparationText>返回</OparationText>
+          <OparationText>确定</OparationText>
+        </Oparation>
+      </Container>
+      <Container>
+        <StatusBar />
+        <TitleText type="middle">标题</TitleText>
+        <Oparation>
+          <Left>{iconfont.left('md', colorList.primaryColor)}</Left>
+          <Right>{iconfont.heart('md', colorList.primaryColor)}</Right>
+        </Oparation>
+      </Container>
+      <Container>
+        <StatusBar />
+        <TitleText type="middle">标题</TitleText>
+        <Oparation>
+          <Left>{iconfont.left('md', colorList.primaryColor)} <OparationText>返回</OparationText></Left>
+          <Right>{iconfont.heart('md', colorList.primaryColor)} <OparationText>喜欢</OparationText></Right>
+        </Oparation>
+      </Container>
     </Panel>
   </View>
 )
 
-export default Header;
+export default Input;
 
