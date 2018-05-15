@@ -90,7 +90,6 @@ const Symbol_Primary_lg_default = makeSymbol(() => {
     <ButtonText name="Text">主要按钮</ButtonText>
   </Base>
 }
-  
   , 'button/primary/lg/default');
 const Symbol_Primary_lg_hover = makeSymbol(() =>
   <Base state="hover">
@@ -187,4 +186,3 @@ const Button = () => (
 )
 
 export default Button;
-

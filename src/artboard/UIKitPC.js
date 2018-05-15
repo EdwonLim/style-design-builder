@@ -8,6 +8,7 @@ import SelectBlock from './component/pc/select';
 import RadioBlock from './component/cross-platform/radio';
 import SliderBlock from './component/cross-platform/slider';
 import PaginationBlock from './component/pc/pagination.js';
+import ModalBlock from './component/pc/modal.js';
 import styled from 'styled-components/primitives';
 
 const Card = styled.View`
@@ -38,8 +39,9 @@ const UIKitPC = () => (
       {/* <ButtonBlock />
       <InputBlock />
       <RadioBlock /> */}
-      <SliderBlock />
-      <PaginationBlock />
+      {/* <SliderBlock /> */}
+      {/* <PaginationBlock /> */}
+      <ModalBlock />
     </Body>
   </Artboard>
 );
