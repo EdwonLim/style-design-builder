@@ -64,47 +64,47 @@ const Label = styled.View`
 
 const BaseSlider = () => (
   <SliderWarp>
-    <Rail></Rail>
-    <Track value="50%"></Track>
-    <SliderHandler value="50%"></SliderHandler>
+    <Rail />
+    <Track value="50%" />
+    <SliderHandler value="50%" />
   </SliderWarp>
 );
 const BaseSliderHover = () => (
   <SliderWarp>
-    <Rail state="hover"></Rail>
-    <Track value="50%" state="hover"></Track>
-    <SliderHandler value="50%" state="hover"></SliderHandler>
+    <Rail state="hover" />
+    <Track value="50%" state="hover" />
+    <SliderHandler value="50%" state="hover" />
   </SliderWarp>
 );
 
 const RangeSlider = () => (
   <SliderWarp>
     <Rail></Rail>
-    <Track value="22%" start="20%"></Track>
-    <SliderHandler value="20%"></SliderHandler>
-    <SliderHandler value="42%"></SliderHandler>
+    <Track value="22%" start="20%" />
+    <SliderHandler value="20%" />
+    <SliderHandler value="42%" />
   </SliderWarp>
 );
 const RangeSliderHover = () => (
   <SliderWarp>
-    <Rail state="hover"></Rail>
-    <Track value="22%" start="20%" state="hover"></Track>
-    <SliderHandler value="20%" state="hover"></SliderHandler>
-    <SliderHandler value="42%" state="hover"></SliderHandler>
+    <Rail state="hover" />
+    <Track value="22%" start="20%" state="hover" />
+    <SliderHandler value="20%" state="hover" />
+    <SliderHandler value="42%" state="hover" />
   </SliderWarp>
 );
 
 const Symbol_Slider_Default = makeSymbol(() => {
-  return <BaseSlider></BaseSlider>
+  return <BaseSlider />
 }, 'slider/default/normal');
 const Symbol_Slider_Default_Hover = makeSymbol(() => {
-  return <BaseSliderHover></BaseSliderHover>
+  return <BaseSliderHover />
 }, 'slider/default/hover');
 const Symbol_Slider_Range = makeSymbol(() => {
-  return <RangeSlider></RangeSlider>
+  return <RangeSlider />
 }, 'slider/range/normal');
 const Symbol_Slider_Range_Hover = makeSymbol(() => {
-  return <RangeSliderHover></RangeSliderHover>
+  return <RangeSliderHover />
 }, 'slider/range/hover');
 
 const Slider = () => (
@@ -113,19 +113,19 @@ const Slider = () => (
     <Panel>
       <RowView>
         <Label><LabelText>Default:</LabelText></Label>
-        <Symbol_Slider_Default></Symbol_Slider_Default>
+        <Symbol_Slider_Default />
       </RowView>
       <RowView>
         <Label><LabelText>Default & Hover:</LabelText></Label>
-        <Symbol_Slider_Default_Hover></Symbol_Slider_Default_Hover>
+        <Symbol_Slider_Default_Hover />
       </RowView>
       <RowView>
         <Label><LabelText>Range:</LabelText></Label>
-        <Symbol_Slider_Range></Symbol_Slider_Range>
+        <Symbol_Slider_Range />
       </RowView>
       <RowView>
         <Label><LabelText>Range & Hover:</LabelText></Label>
-        <Symbol_Slider_Range_Hover></Symbol_Slider_Range_Hover>
+        <Symbol_Slider_Range_Hover />
       </RowView>
     </Panel>
   </View>

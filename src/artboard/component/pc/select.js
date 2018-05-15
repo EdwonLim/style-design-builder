@@ -129,50 +129,50 @@ const Symbol_withoutBg_lg_error = makeSymbol(() =>
 //   , 'button/lg/disabled');
 
 
-const Input = () => (
+const Select = () => (
   <View>
-    <PanelTitle textType="desc">Input</PanelTitle>
+    <PanelTitle textType="desc">Select</PanelTitle>
     <Panel>
-      
-      <BodyText>带背景的输入框：更强调<Text style={{ fontWeight: 'bold', color: 'rgba(0,0,0,.87)' }}>输入</Text></BodyText>
-      
+
+      <BodyText>带背景的选择器：更强调<Text style={{ fontWeight: 'bold', color: 'rgba(0,0,0,.87)' }}>选择行为</Text></BodyText>
+
       <InputItem>
-        <InputLabel><LabelText>placeholder:</LabelText></InputLabel>
-        <Symbol_bg_lg_placeholder overrides={{ 'Text': '请输入' }} />
+        <InputLabel><LabelText>无默认选项:</LabelText></InputLabel>
+        <Symbol_bg_lg_placeholder overrides={{ 'Text': '请选择' }} />
       </InputItem>
       <InputItem>
-        <InputLabel><LabelText>default / complete:</LabelText></InputLabel>
-        <Symbol_bg_lg_default overrides={{ 'Text': '请输入' }} />
+        <InputLabel><LabelText>有默认选项:</LabelText></InputLabel>
+        <Symbol_bg_lg_default overrides={{ 'Text': '请选择' }} />
       </InputItem>
       <InputItem>
-        <InputLabel><LabelText>input / focus:</LabelText></InputLabel>
-        <Symbol_bg_lg_focus overrides={{ 'Text': '请输入' }} />
-      </InputItem>
-      <InputItem>
-        <InputLabel><LabelText>error:</LabelText></InputLabel>
-        <Symbol_bg_lg_error overrides={{ 'Text': '请输入' }} />
-      </InputItem>
-      <BodyText>透明背景的输入框：更强调<Text style={{ fontWeight: 'bold', color: 'rgba(0, 0, 0, .87)' }}>浏览</Text></BodyText>
-      
-      <InputItem>
-        <InputLabel><LabelText>placeholder:</LabelText></InputLabel>
-        <Symbol_withoutBg_lg_placeholder overrides={{ 'Text': '请输入' }} />
-      </InputItem>
-      <InputItem>
-        <InputLabel><LabelText>default / complete:</LabelText></InputLabel>
-        <Symbol_withoutBg_lg_default overrides={{ 'Text': '请输入' }} />
-      </InputItem>
-      <InputItem>
-        <InputLabel><LabelText>input / focus:</LabelText></InputLabel>
-        <Symbol_withoutBg_lg_focus overrides={{ 'Text': '请输入' }} />
+        <InputLabel><LabelText>selected:</LabelText></InputLabel>
+        <Symbol_bg_lg_focus overrides={{ 'Text': '请选择' }} />
       </InputItem>
       <InputItem>
         <InputLabel><LabelText>error:</LabelText></InputLabel>
-        <Symbol_withoutBg_lg_error overrides={{ 'Text': '请输入' }} />
+        <Symbol_bg_lg_error overrides={{ 'Text': '请选择' }} />
+      </InputItem>
+      <BodyText>透明背景的选择器：更强调<Text style={{ fontWeight: 'bold', color: 'rgba(0, 0, 0, .87)' }}>浏览</Text></BodyText>
+
+      <InputItem>
+        <InputLabel><LabelText>无默认选项:</LabelText></InputLabel>
+        <Symbol_withoutBg_lg_placeholder overrides={{ 'Text': '请选择' }} />
+      </InputItem>
+      <InputItem>
+        <InputLabel><LabelText>有默认选项:</LabelText></InputLabel>
+        <Symbol_withoutBg_lg_default overrides={{ 'Text': '请选择' }} />
+      </InputItem>
+      <InputItem>
+        <InputLabel><LabelText>selected:</LabelText></InputLabel>
+        <Symbol_withoutBg_lg_focus overrides={{ 'Text': '请选择' }} />
+      </InputItem>
+      <InputItem>
+        <InputLabel><LabelText>error:</LabelText></InputLabel>
+        <Symbol_withoutBg_lg_error overrides={{ 'Text': '请选择' }} />
       </InputItem>
 
     </Panel>
   </View>
 )
 
-export default Input;
+export default Select;

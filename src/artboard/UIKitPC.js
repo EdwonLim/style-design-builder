@@ -4,6 +4,7 @@ import { styles, fonts } from '../common/style';
 import Header from '../common/Header';
 import ButtonBlock from './component/pc/button';
 import InputBlock from './component/pc/input';
+import SelectBlock from './component/pc/select';
 import RadioBlock from './component/cross-platform/radio';
 import SliderBlock from './component/cross-platform/slider';
 import PaginationBlock from './component/pc/pagination.js';
@@ -34,10 +35,10 @@ const UIKitPC = () => (
     <Header>Youth Design UI Kit (PC)</Header>
     <Body name="body">
       <styles.Title>定义</styles.Title>
-      {/* <ButtonBlock /> */}
-      {/* <InputBlock /> */}
-      <RadioBlock></RadioBlock>
-      <SliderBlock></SliderBlock>
+      <ButtonBlock />
+      <InputBlock />
+      <RadioBlock />
+      <SliderBlock />
       <PaginationBlock />
     </Body>
   </Artboard>
