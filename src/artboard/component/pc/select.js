@@ -21,6 +21,9 @@ const getBgColor = (type, state) => {
       return 'transparent';
     }
   }
+  if (state === 'focus') {
+    return colorList.lightActiveBgColor;
+  }
   // 默认为主按钮 && 主色
   return colorList.htmlBgolor;
 };
@@ -86,12 +89,6 @@ const Symbol_bg_lg_focus = makeSymbol(() =>
     {iconfont.up_triangle_fill('sm', getTextColor('', 'focus'))}
   </Base>
   , 'select/bg/lg/focus');
-const Symbol_bg_lg_error = makeSymbol(() =>
-  <Base state="error">
-    <SelectText state="error" name="Text">默认文本</SelectText>
-    {iconfont.up_triangle_fill('sm', getTextColor('', 'error'))}
-  </Base>
-  , 'select/bg/lg/error');
 
 const Symbol_withoutBg_lg_placeholder = makeSymbol(() =>
   <Base type="withoutBg" state="placeholder">
@@ -111,12 +108,6 @@ const Symbol_withoutBg_lg_focus = makeSymbol(() =>
     {iconfont.up_triangle_fill('sm', getTextColor('withoutBg', 'focus'))}
   </Base>
   , 'select/withoutBg/lg/focus');
-const Symbol_withoutBg_lg_error = makeSymbol(() =>
-  <Base type="withoutBg" state="error">
-    <SelectText state="error" name="Text">默认文本</SelectText>
-    {iconfont.up_triangle_fill('sm', getTextColor('withoutBg', 'error'))}
-  </Base>
-  , 'select/withoutBg/lg/error');
 
 // 小型按钮
 // const Symbol_Primary_sm_default = makeSymbol(() =>
@@ -138,7 +129,6 @@ const Select = () => (
     <Panel>
 
       <BodyText>带背景的选择器：更强调<Text style={{ fontWeight: 'bold', color: 'rgba(0,0,0,.87)' }}>选择行为</Text></BodyText>
-
       <SelectItem>
         <SelectLabel><LabelText>无默认选项:</LabelText></SelectLabel>
         <Symbol_bg_lg_placeholder overrides={{ 'Text': '请选择' }} />
@@ -151,12 +141,8 @@ const Select = () => (
         <SelectLabel><LabelText>selected:</LabelText></SelectLabel>
         <Symbol_bg_lg_focus overrides={{ 'Text': '请选择' }} />
       </SelectItem>
-      <SelectItem>
-        <SelectLabel><LabelText>error:</LabelText></SelectLabel>
-        <Symbol_bg_lg_error overrides={{ 'Text': '请选择' }} />
-      </SelectItem>
-      <BodyText>透明背景的选择器：更强调<Text style={{ fontWeight: 'bold', color: 'rgba(0, 0, 0, .87)' }}>浏览</Text></BodyText>
 
+      <BodyText>透明背景的选择器：更强调<Text style={{ fontWeight: 'bold', color: 'rgba(0, 0, 0, .87)' }}>浏览</Text></BodyText>
       <SelectItem>
         <SelectLabel><LabelText>无默认选项:</LabelText></SelectLabel>
         <Symbol_withoutBg_lg_placeholder overrides={{ 'Text': '请选择' }} />
@@ -168,10 +154,6 @@ const Select = () => (
       <SelectItem>
         <SelectLabel><LabelText>selected:</LabelText></SelectLabel>
         <Symbol_withoutBg_lg_focus overrides={{ 'Text': '请选择' }} />
-      </SelectItem>
-      <SelectItem>
-        <SelectLabel><LabelText>error:</LabelText></SelectLabel>
-        <Symbol_withoutBg_lg_error overrides={{ 'Text': '请选择' }} />
       </SelectItem>
 
     </Panel>
