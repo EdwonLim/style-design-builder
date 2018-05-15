@@ -36,7 +36,7 @@ const Icons = props => (
       <Panel>
         {iconfontSource.data.icons.map((item, index) => {
           return <Container key={index}>
-            {iconfont[item.name]}
+            {iconfont[item.name]()}
             <Name>{item.name}</Name>
           </Container>
         })}
