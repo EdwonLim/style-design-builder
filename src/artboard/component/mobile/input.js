@@ -5,78 +5,49 @@ import styled from 'styled-components/primitives';
 import variables from '../../../common/variables';
 import iconfont from '../../../common/iconfont.js';
 
-const { PanelTitle, Panel } = styles;
+const { PanelTitle } = styles;
 const colorList = VARIABLE.colorList;
 
-const TitleText = fonts.subhead.extend`
-  lineHeight: 44px;
-  width: 375px;
-  textAlign: center;
-  position: absolute;
-  bottom: 0;
-`;
-const OparationText = fonts.subhead.extend`
-  lineHeight: 44px;
-  color: ${colorList.primaryColor};
-`;
-const Left = styled.View`
-  height: 44px;
-  alignItems: center;
-  justifyContent: center;
-  flexDirection: row;
-`;
-const Right = styled.View`
-  height: 44px;
-  alignItems: center;
-  justifyContent: center;
-  flexDirection: row;
-`;
 const Container = styled.View`
   width: 375px;
-  height: 64px;
-  backgroundColor: #eee;
-  marginBottom: 24px;
-`;
-const StatusBar = styled.View`
-  width: 375px;
-  height: 20px;
-`;
-const Oparation = styled.View`
-  width: 375px;
-  paddingHorizontal: 16px;
+  height: 44px;
+  backgroundColor: #fff;
   flexDirection: row;
-  justifyContent: space-between;
+  paddingHorizontal: 16px;
+  alignItems: center;
 `;
+const BodyText = fonts.subhead.extend`
+  lineHeight: 44px;
+`;
+const Cursor = styled.View`
+  height: 22px;
+  width: 2px;
+  backgroundColor: ${colorList.primaryColor};
+  marginLeft: 4px;
+`;
+const Right = styled.View`
+  position: absolute;
+  right: 16px;
+  height: 44px;
+  alignItems: center;
+  justifyContent: center;
+`;
+const Empty = styled.View`
+  height: 24px;
+`;
+
+const Symbol_mobile_input = makeSymbol(() =>
+  <Container>
+    <BodyText>标题</BodyText>
+    <Cursor />
+    <Right>{iconfont.close_round_fill('md', colorList.primaryColor)}</Right>
+  </Container>
+  , 'mobile/input');
 
 const Input = () => (
   <View>
     <PanelTitle textType="desc">Input</PanelTitle>
-    <Panel platform="mobile">
-      <Container>
-        <StatusBar />
-        <TitleText type="middle">标题</TitleText>
-        <Oparation>
-          <OparationText>返回</OparationText>
-          <OparationText>确定</OparationText>
-        </Oparation>
-      </Container>
-      <Container>
-        <StatusBar />
-        <TitleText type="middle">标题</TitleText>
-        <Oparation>
-          <Left>{iconfont.left('md', colorList.primaryColor)}</Left>
-          <Right>{iconfont.heart('md', colorList.primaryColor)}</Right>
-        </Oparation>
-      </Container>
-      <Container>
-        <StatusBar />
-        <TitleText type="middle">标题</TitleText>
-        <Oparation>
-          <Left>{iconfont.left('md', colorList.primaryColor)} <OparationText>返回</OparationText></Left>
-          <Right>{iconfont.heart('md', colorList.primaryColor)} <OparationText>喜欢</OparationText></Right>
-        </Oparation>
-      </Container>
-    </Panel>
+    <Symbol_mobile_input />
   </View>
 )
 

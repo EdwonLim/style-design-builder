@@ -4,7 +4,7 @@ import { styles, fonts } from '../common/style';
 import Header from '../common/Header';
 import ButtonBlock from './component/mobile/button';
 import HeaderBlock from './component/mobile/header';
-import InputBlock from './component/pc/input';
+import InputBlock from './component/mobile/input';
 import RadioBlock from './component/cross-platform/radio';
 import SliderBlock from './component/cross-platform/slider';
 import SwiperBlock from './component/cross-platform/swiper';
@@ -40,11 +40,12 @@ const UIKitMobile = () => (
       </Col> */}
       <Col>
         <styles.Title>Layout</styles.Title>
-        <HeaderBlock platform="mobile" />
+        <HeaderBlock />
         <SwiperBlock platform="mobile" />
       </Col>
       <Col>
         <styles.Title>Form</styles.Title>
+        <InputBlock />
       </Col>
       {/* <InputBlock />
       <RadioBlock ></RadioBlock>

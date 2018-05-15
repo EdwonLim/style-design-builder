@@ -35,7 +35,6 @@ const Container = styled.View`
   width: 375px;
   height: 64px;
   backgroundColor: #eee;
-  marginBottom: 24px;
 `;
 const StatusBar = styled.View`
   width: 375px;
@@ -46,6 +45,9 @@ const Oparation = styled.View`
   paddingHorizontal: 16px;
   flexDirection: row;
   justifyContent: space-between;
+`;
+const Empty = styled.View`
+  height: 24px;
 `;
 
 const Symbol_header_text = makeSymbol(() =>
@@ -67,7 +69,7 @@ const Symbol_header_icon = makeSymbol(() =>
       <Right>{iconfont.heart('md', colorList.primaryColor)}</Right>
     </Oparation>
   </Container>
-  , 'header/text');
+  , 'header/icon');
 const Symbol_header_icontext = makeSymbol(() =>
   <Container>
     <StatusBar />
@@ -77,14 +79,16 @@ const Symbol_header_icontext = makeSymbol(() =>
       <Right>{iconfont.heart('md', colorList.primaryColor)} <OparationText>喜欢</OparationText></Right>
     </Oparation>
   </Container>
-  , 'header/text');
+  , 'header/icontext');
 
 const Header = () => (
   <View>
     <PanelTitle textType="desc">Header</PanelTitle>
     <Panel platform="mobile">
       <Symbol_header_text />
+      <Empty />
       <Symbol_header_icon />
+      <Empty />
       <Symbol_header_icontext />
     </Panel>
   </View>
