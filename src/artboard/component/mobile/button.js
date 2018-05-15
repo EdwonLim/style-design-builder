@@ -159,7 +159,7 @@ const Symbol_lg_disabled = makeSymbol(() =>
 const Button = () => (
   <View>
     <PanelTitle textType="desc">Button</PanelTitle>
-    <Panel>
+    <Panel platform="mobile">
       <BodyText>按钮尺寸</BodyText>
       <RowView style={{ height: '96px' }}>
         <Symbol_Primary_lg_default overrides={{ 'Text': '大型按钮' }} />
