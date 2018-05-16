@@ -75,6 +75,10 @@ const styles = {
   `,
   BodyText: fonts.PCBody.extend`
     opacity: .7;
+  `,
+  PanelNoPadding: styled.View`
+    width: 800px;
+    backgroundColor: #fff;
   `
 };
 

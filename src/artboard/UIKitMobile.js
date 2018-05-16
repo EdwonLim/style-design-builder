@@ -10,6 +10,7 @@ import TextareaBlock from './component/mobile/textarea';
 import RadioBlock from './component/cross-platform/radio';
 import SliderBlock from './component/cross-platform/slider';
 import SwiperBlock from './component/cross-platform/swiper';
+import CheckboxBlock from './component/cross-platform/checkbox';
 import styled from 'styled-components/primitives';
 
 const Col = styled.View`
@@ -54,6 +55,7 @@ const UIKitMobile = () => (
       {/* <InputBlock />
       <RadioBlock ></RadioBlock>
       <SliderBlock></SliderBlock> */}
+      {CheckboxBlock('mobile')}
     </Body>
   </Artboard>
 );

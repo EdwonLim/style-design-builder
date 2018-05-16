@@ -23,11 +23,6 @@ const RowView = styled.View`
   flexDirection: row;
   padding: 16px 0;
 `;
-const RowViewWarp = styled.View`
-  width: 222px;
-  justifyContent: space-between;
-  flexDirection: row;
-`;
 const BaseOuterSelectCircle = styled.View`
   position: relative;
   width: ${props => props.size === 'sm' ? smallSize : normalSize};
