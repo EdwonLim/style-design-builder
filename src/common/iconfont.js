@@ -12,7 +12,7 @@ const sizes = {
   lg: 24
 };
 
-iconfontSource.data.icons.forEach((item, index) => {
+iconfontSource.forEach((item, index) => {
   iconfont[item.name] = (size, color) => {
     const length = sizes[size] || 16;
     return <Svg width={length} height={length} viewBox={`0 0 ${length} ${length}`} xmlns="http://www.w3.org/2000/svg" >

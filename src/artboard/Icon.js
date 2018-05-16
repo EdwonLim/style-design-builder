@@ -34,9 +34,9 @@ const Icons = props => (
       <styles.Title>图标库</styles.Title>
       <BodyText textType="desc">http://iconfont.corp.qunar.com/repositories/15 （Qunar 内网）{JSON.stringify(props.data, null, 2)}</BodyText>
       <Panel>
-        {iconfontSource.data.icons.map((item, index) => {
+        {iconfontSource.map((item, index) => {
           return <Container key={index}>
-            {iconfont[item.name]()}
+            {iconfont[item.name]('lg')}
             <Name>{item.name}</Name>
           </Container>
         })}
