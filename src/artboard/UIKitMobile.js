@@ -37,10 +37,10 @@ const UIKitMobile = () => (
   <Artboard name="UIKitMobile" style={{ width: 2880, backgroundColor: '#F0F3F5' }} >
     <Header>Youth Design UI Kit (Mobile)</Header>
     <Body name="body">
-      {/* <Col>
+      <Col>
         <styles.Title>Base</styles.Title>
         <ButtonBlock />
-      </Col> */}
+      </Col>
       <Col>
         <styles.Title>Layout</styles.Title>
         <HeaderBlock />
@@ -49,13 +49,12 @@ const UIKitMobile = () => (
       <Col>
         <styles.Title>Form</styles.Title>
         <InputBlock />
+        <RadioBlock platform="mobile" />
+        <SliderBlock platform="mobile" />
+        <CheckboxBlock platform="mobile" />
         <LabelBlock />
         <TextareaBlock />
       </Col>
-      <InputBlock />
-      <RadioBlock platform="mobile" />
-      <SliderBlock platform="mobile" />
-      <CheckboxBlock platform="mobile" />
     </Body>
   </Artboard>
 );

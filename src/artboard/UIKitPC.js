@@ -40,28 +40,26 @@ const Body = styles.Body.extend`
 const UIKitPC = () => (
   <Artboard name="UIKitPC" style={{ width: 4000, backgroundColor: '#F0F3F5' }} >
     <Header>Youth Design UI Kit (PC)</Header>
-    {/* <Body name="body">
+    <Body name="body">
       <Col>
         <styles.Title>Base</styles.Title>
+        <ButtonBlock />
       </Col>
       <Col>
         <styles.Title>Form</styles.Title>
         <InputBlock />
-        {CheckboxBlock('pc')}
+        <RadioBlock />
+        <SliderBlock />
+        <CheckboxBlock platform="pc" />
+        <PaginationBlock />
+        <SelectBlock />
       </Col>
       <Col>
         <styles.Title>Mask</styles.Title>
         <ModalBlock />
-      </Col> */}
-      {/* <ButtonBlock />
-      <InputBlock />
-      <RadioBlock /> */}
-      {/* <SliderBlock /> */}
-      {/* <PaginationBlock /> */}
-      {/* <SelectBlock /> */}
-      {/* <CheckboxBlock /> */}
-    {/* </Body>
-    <Hr /> */}
+      </Col>
+    </Body>
+    <Hr />
     <Body name="body">
       <Col size="lg">
         <styles.Title>Layout</styles.Title>

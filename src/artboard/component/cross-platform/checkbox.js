@@ -27,7 +27,7 @@ const RadioText = fonts.PCBody.extend`
   flexDirection: column;
   justifyContent: center;
 `;
-const MobileRadioText = fonts.mobileBody.extend`
+const MobileRadioText = fonts.title.extend`
   color: ${props => props.disabled ? colorList.disableLightTextColor : colorList.descLightTextColor};
 `;
 const IconView = styled.View`
@@ -35,6 +35,10 @@ const IconView = styled.View`
   flexDirection: column;
   justifyContent: center;
 `;
+const Empty = styled.View`
+  height: 16px;
+`;
+
 // pc 端
 const Unselect_lg_Default = () => (
     <RowView>
@@ -119,8 +123,11 @@ const Checkbox = (props) => {
             <PanelTitle>Checkbox</PanelTitle>
             <Panel>
                 <Symbol_Mobile_Unselect_Default />
+                <Empty />
                 <Symbol_Mobile_Select_Default />
+                <Empty />
                 <Symbol_Mobile_Unselect_Disabled />
+                <Empty />
                 <Symbol_Mobile_Select_Disabled />
             </Panel>
         </View>
