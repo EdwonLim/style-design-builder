@@ -7,6 +7,7 @@ import InputBlock from './component/pc/input';
 import SelectBlock from './component/pc/select';
 import RadioBlock from './component/cross-platform/radio';
 import SliderBlock from './component/cross-platform/slider';
+import SwiperBlock from './component/cross-platform/swiper';
 import PaginationBlock from './component/pc/pagination.js';
 import ModalBlock from './component/pc/modal.js';
 import CheckboxBlock from './component/cross-platform/checkbox.js';

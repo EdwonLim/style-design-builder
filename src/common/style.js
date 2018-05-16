@@ -54,7 +54,6 @@ TextStyles.create({
 
 const styles = {
   Body: styled.View`
-		width: 100%;
 		backgroundColor: #fff;
     padding: 100px;
     paddingTop: 0;
@@ -63,9 +62,10 @@ const styles = {
     marginTop: 100;
     marginBottom: 32;
     fontWeight: bold;
+    width: 200;
   `,
   Panel: styled.View`
-    width: 800px;
+    width: ${props => props.platform === 'mobile' ? (375 + 96) + 'px' : '800px'};;
     padding: 48px;
     backgroundColor: #fff;
   `,
