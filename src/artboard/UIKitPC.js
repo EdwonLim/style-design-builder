@@ -8,9 +8,11 @@ import SelectBlock from './component/pc/select';
 import RadioBlock from './component/cross-platform/radio';
 import SliderBlock from './component/cross-platform/slider';
 import SwiperBlock from './component/cross-platform/swiper';
-import PaginationBlock from './component/pc/pagination.js';
-import ModalBlock from './component/pc/modal.js';
-import CheckboxBlock from './component/cross-platform/checkbox.js';
+import PaginationBlock from './component/pc/pagination';
+import ModalBlock from './component/pc/modal';
+import CheckboxBlock from './component/cross-platform/checkbox';
+import TooltipBlock from './component/cross-platform/tooltip';
+import ToastBlock from './component/cross-platform/toast';
 import styled from 'styled-components/primitives';
 
 const Card = styled.View`
@@ -44,9 +46,10 @@ const UIKitPC = () => (
       {/* <SliderBlock /> */}
       {/* <PaginationBlock /> */}
       {/* <SelectBlock /> */}
-      {/* <CheckboxBlock /> */}
-      {CheckboxBlock('pc')}
-      <ModalBlock />
+      {/* <CheckboxBlock platform="pc" /> */}
+      {/* <ModalBlock /> */}
+      <TooltipBlock  platform="pc" />
+      <ToastBlock platform="pc" />
     </Body>
   </Artboard>
 );
