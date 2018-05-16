@@ -52,9 +52,9 @@ const UIKitMobile = () => (
         <LabelBlock />
         <TextareaBlock />
       </Col>
-      {/* <InputBlock />
-      <RadioBlock ></RadioBlock>
-      <SliderBlock></SliderBlock> */}
+      <InputBlock />
+      <RadioBlock platform="mobile" />
+      <SliderBlock platform="mobile" />
       <CheckboxBlock platform="mobile" />
     </Body>
   </Artboard>
