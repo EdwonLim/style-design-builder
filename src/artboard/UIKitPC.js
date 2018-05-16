@@ -9,6 +9,7 @@ import RadioBlock from './component/cross-platform/radio';
 import SliderBlock from './component/cross-platform/slider';
 import PaginationBlock from './component/pc/pagination.js';
 import ModalBlock from './component/pc/modal.js';
+import CheckboxBlock from './component/cross-platform/checkbox.js';
 import styled from 'styled-components/primitives';
 
 const Card = styled.View`
@@ -39,9 +40,12 @@ const UIKitPC = () => (
       {/* <ButtonBlock />
       <InputBlock />
       <RadioBlock /> */}
-      <SliderBlock />
-      <PaginationBlock />
-      <SelectBlock />
+      {/* <SliderBlock /> */}
+      {/* <PaginationBlock /> */}
+      {/* <SelectBlock /> */}
+      {/* <CheckboxBlock /> */}
+      {CheckboxBlock('pc')}
+      <ModalBlock />
     </Body>
   </Artboard>
 );

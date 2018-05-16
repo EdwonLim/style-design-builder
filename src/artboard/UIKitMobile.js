@@ -6,6 +6,7 @@ import ButtonBlock from './component/mobile/button';
 import InputBlock from './component/pc/input';
 import RadioBlock from './component/cross-platform/radio';
 import SliderBlock from './component/cross-platform/slider';
+import CheckboxBlock from './component/cross-platform/checkbox';
 import styled from 'styled-components/primitives';
 
 const Card = styled.View`
@@ -37,6 +38,7 @@ const UIKitMobile = () => (
       {/* <InputBlock />
       <RadioBlock ></RadioBlock>
       <SliderBlock></SliderBlock> */}
+      {CheckboxBlock('mobile')}
     </Body>
   </Artboard>
 );
