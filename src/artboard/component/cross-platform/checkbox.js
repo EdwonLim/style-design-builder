@@ -44,7 +44,7 @@ const Unselect_lg_Default = () => (
 );
 const Unselect_lg_Disabled = () => (
     <RowView>
-        <IconView>{getIconFont('square-fill', 'md', 'disabled')}</IconView>
+        <IconView>{getIconFont('square_fill', 'md', 'disabled')}</IconView>
         <RadioText disabled>unselect & disabled</RadioText>
     </RowView>
 );
@@ -83,7 +83,7 @@ const Mobile_Unselect_Default = () => (
 );
 const Mobile_Unselect_Disabled = () => (
     <RowView>
-        <IconView>{getIconFont('square-fill', 'lg', 'disabled', 'mobile')}</IconView>
+        <IconView>{getIconFont('square_fill', 'lg', 'disabled', 'mobile')}</IconView>
         <MobileRadioText disabled>unselect & disabled</MobileRadioText>
     </RowView>
 );
@@ -113,8 +113,8 @@ const Symbol_Mobile_Select_Disabled = makeSymbol(() => (
     <Mobile_Select_Disabled />
 ), 'checkbox/mobile/select/Disabled');
 
-const Checkbox = (platform='') => {
-    if (platform === 'mobile') {
+const Checkbox = (props) => {
+    if (props.platform === 'mobile') {
         return  <View>
             <PanelTitle>Checkbox</PanelTitle>
             <Panel>

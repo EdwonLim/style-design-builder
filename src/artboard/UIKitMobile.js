@@ -38,6 +38,7 @@ const UIKitMobile = () => (
       {/* <InputBlock />
       <RadioBlock ></RadioBlock>
       <SliderBlock></SliderBlock> */}
+      <CheckboxBlock platform="mobile" />
       {CheckboxBlock('mobile')}
     </Body>
   </Artboard>
