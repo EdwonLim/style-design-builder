@@ -20,7 +20,6 @@ const RowCenterView = styled.View`
   display: flex;
   flexDirection: row;
   justifyContent: center;
-  marginBottom: 16px;
 `;
 const RowRightView = styled.View`
   display: flex;
@@ -43,6 +42,11 @@ const Headline2 = fonts.headline2.extend`
 const Subhead = fonts.subhead.extend`
   color: ${colorList.descLightTextColor}
 `;
+const CloseBtnWarp = styled.View`
+  width: 24px;
+  height: 24px;
+  padding: 4px;
+`;
 const TextWarp = styled.View`
   width: 586px;
   marginBottom: 16px;
@@ -55,6 +59,7 @@ const ContentView = styled.View`
   backgroundColor: 'rgba(255, 255, 255, 1)';
   zIndex: 1000;
   padding: 16px;
+  borderRadius:  ${variables.borderRadius};
 `;
 const ContentViewWarp = styled.View`
   width: 100%;
@@ -89,7 +94,7 @@ const Modal = () => (
         <ModalMask />
         <ContentViewWarp>
          <ContentView>
-          <RowRightView>{getIconFont('close', 'lg')}</RowRightView>
+          <RowRightView><CloseBtnWarp>{getIconFont('close', 'md', colorList.descLightTextColor)}</CloseBtnWarp></RowRightView>
           <RowCenterView>
             <TextWarp><Headline2>{title1}</Headline2></TextWarp>
           </RowCenterView>
@@ -97,7 +102,7 @@ const Modal = () => (
             <TextWarp><Subhead>{title2}</Subhead></TextWarp>
           </RowCenterView>
           <RowCenterView>
-            <ConfirmBtn><ButtonText>确   定</ButtonText></ConfirmBtn>
+            <ConfirmBtn><ButtonText>确 定</ButtonText></ConfirmBtn>
           </RowCenterView>
          </ContentView>
         </ContentViewWarp>
