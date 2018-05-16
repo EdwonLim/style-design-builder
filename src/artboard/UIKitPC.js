@@ -9,14 +9,15 @@ import RadioBlock from './component/cross-platform/radio';
 import SliderBlock from './component/cross-platform/slider';
 import SwiperBlock from './component/cross-platform/swiper';
 import PaginationBlock from './component/pc/pagination.js';
+import GlobalModal from './component/pc/globalModal.js';
 import ModalBlock from './component/pc/modal.js';
 import CheckboxBlock from './component/cross-platform/checkbox.js';
 import styled from 'styled-components/primitives';
+import variables from '../common/variables';
 
-const Card = styled.View`
-  width: 360px;
-  marginRight: 64px;
-  marginBottom: 64px;
+const Col = styled.View`
+  width: ${props => props.size === 'lg' ? '1440px': '800px'};
+  marginRight: 160px;
 `;
 const Item = styled.View`
   width: 100%;
@@ -26,18 +27,32 @@ const Item = styled.View`
   padding: 12px 16px;
   backgroundColor: ${props => props.bgColor};
 `;
+const Hr = styled.View`
+  width: 100%;
+  height: 1px;
+  backgroundColor: ${variables.lightHoverBgColor};
+`;
 const Body = styles.Body.extend`
   backgroundColor: #F0F3F5;
+  flexDirection: row;
 `;
-const BodyText = fonts.title.extend``;
-
-const colorList = VARIABLE.colorList;
 
 const UIKitPC = () => (
-  <Artboard name="UIKitPC" style={{ width: 2880, backgroundColor: '#F0F3F5' }} >
+  <Artboard name="UIKitPC" style={{ width: 4000, backgroundColor: '#F0F3F5' }} >
     <Header>Youth Design UI Kit (PC)</Header>
-    <Body name="body">
-      <styles.Title>定义</styles.Title>
+    {/* <Body name="body">
+      <Col>
+        <styles.Title>Base</styles.Title>
+      </Col>
+      <Col>
+        <styles.Title>Form</styles.Title>
+        <InputBlock />
+        {CheckboxBlock('pc')}
+      </Col>
+      <Col>
+        <styles.Title>Mask</styles.Title>
+        <ModalBlock />
+      </Col> */}
       {/* <ButtonBlock />
       <InputBlock />
       <RadioBlock /> */}
@@ -45,8 +60,13 @@ const UIKitPC = () => (
       {/* <PaginationBlock /> */}
       {/* <SelectBlock /> */}
       {/* <CheckboxBlock /> */}
-      {CheckboxBlock('pc')}
-      <ModalBlock />
+    {/* </Body>
+    <Hr /> */}
+    <Body name="body">
+      <Col size="lg">
+        <styles.Title>Layout</styles.Title>
+        <GlobalModal />
+      </Col>
     </Body>
   </Artboard>
 );
