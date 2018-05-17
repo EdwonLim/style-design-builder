@@ -164,15 +164,15 @@ const Tooltip = (props) => {
 	return <View>
 		<PanelTitle>Tooltip</PanelTitle>
 		<Panel>
-		<RowView>
-			<DescTextView><ButtonTextPc>Normal:</ButtonTextPc></DescTextView>
-			<Symbol_Mobile_Default />
-		</RowView>
-		<EmptyView />
-		<RowView>
-			<DescTextView><ButtonTextPc>Hover:</ButtonTextPc></DescTextView>
-			<Symbol_Mobile_Hover />
-		</RowView>
+			<RowView>
+				<DescTextView><ButtonTextPc>Normal:</ButtonTextPc></DescTextView>
+				<Symbol_Mobile_Default />
+			</RowView>
+			<EmptyView />
+			<RowView>
+				<DescTextView><ButtonTextPc>Hover:</ButtonTextPc></DescTextView>
+				<Symbol_Mobile_Hover />
+			</RowView>
 		</Panel>
 	</View>
 };
