@@ -11,7 +11,10 @@ import RadioBlock from './component/cross-platform/radio';
 import SliderBlock from './component/cross-platform/slider';
 import SwiperBlock from './component/cross-platform/swiper';
 import CheckboxBlock from './component/cross-platform/checkbox';
+import TooltipBlock from './component/cross-platform/tooltip';
+import ToastBlock from './component/cross-platform/toast';
 import styled from 'styled-components/primitives';
+import Toast from './component/cross-platform/toast';
 
 const Col = styled.View`
   width: 439px;
@@ -40,8 +43,14 @@ const UIKitMobile = () => (
       <Col>
         <styles.Title>Base</styles.Title>
         <ButtonBlock />
+<<<<<<< HEAD
       </Col>
       <Col>
+=======
+        <TooltipBlock platform="mobile" />
+      </Col> */}
+      {/* <Col>
+>>>>>>> b08677136fa89ba27a2e0723fc2ee756ef2fa883
         <styles.Title>Layout</styles.Title>
         <HeaderBlock />
         <SwiperBlock platform="mobile" />
@@ -54,6 +63,14 @@ const UIKitMobile = () => (
         <CheckboxBlock platform="mobile" />
         <LabelBlock />
         <TextareaBlock />
+        <RadioBlock platform="mobile" />
+        <SliderBlock platform="mobile" />
+        <CheckboxBlock platform="mobile" /> 
+      </Col>*/}
+      <Col>
+        <styles.Title>Mask</styles.Title>
+        <Toast platform='mobile' />
+        {/* <TextareaBlock /> */}
       </Col>
     </Body>
   </Artboard>
