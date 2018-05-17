@@ -38,6 +38,9 @@ const IconView = styled.View`
 const Empty = styled.View`
   height: 16px;
 `;
+const SmallEmpty = styled.View`
+  height: 8px;
+`;
 
 // pc 端
 const Unselect_lg_Default = () => (
@@ -136,8 +139,11 @@ const Checkbox = (props) => {
             <PanelTitle>Checkbox</PanelTitle>
             <Panel>
                 <Symbol_Unselect_lg_Default />
+                <SmallEmpty />
                 <Symbol_Select_lg_Default />
+                <SmallEmpty />
                 <Symbol_Unselect_lg_Disabled />
+                <SmallEmpty />
                 <Symbol_Select_lg_Disabled />
             </Panel>
         </View>

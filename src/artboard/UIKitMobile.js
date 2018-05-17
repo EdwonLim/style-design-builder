@@ -37,7 +37,7 @@ const BodyText = fonts.title.extend``;
 const colorList = VARIABLE.colorList;
 
 const UIKitMobile = () => (
-  <Artboard name="UIKitMobile" style={{ width: 2880, backgroundColor: '#F0F3F5' }} >
+  <Artboard name="UIKitMobile" style={{ width: 2240, backgroundColor: '#F0F3F5' }} >
     <Header>Youth Design UI Kit (Mobile)</Header>
     <Body name="body">
       <Col>
@@ -58,9 +58,12 @@ const UIKitMobile = () => (
       <Col>
         <styles.Title>Form</styles.Title>
         <InputBlock />
+        <LabelBlock />
+        <TextareaBlock />
         <RadioBlock platform="mobile" />
         <SliderBlock platform="mobile" />
         <CheckboxBlock platform="mobile" />
+<<<<<<< Updated upstream
         <LabelBlock />
         <TextareaBlock />
         <RadioBlock platform="mobile" />
@@ -71,6 +74,8 @@ const UIKitMobile = () => (
         <styles.Title>Mask</styles.Title>
         <Toast platform='mobile' />
         {/* <TextareaBlock /> */}
+=======
+>>>>>>> Stashed changes
       </Col>
     </Body>
   </Artboard>

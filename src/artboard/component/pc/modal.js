@@ -33,7 +33,7 @@ const ModalMask = styled.View`
   postion: absolute;
   top: 0;
   left: 0;
-  backgroundColor: ${colorList.lightActiveBgColor};
+  backgroundColor: rgba(67, 76, 94, .96);
   zIndex: 1000;
 `;
 const Headline2 = fonts.headline2.extend`

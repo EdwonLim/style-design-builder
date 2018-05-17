@@ -35,24 +35,21 @@ const Item = styled.View`
   padding: 12px 16px;
   backgroundColor: ${props => props.bgColor};
 `;
-const Hr = styled.View`
-  width: 100%;
-  height: 1px;
-  backgroundColor: ${variables.lightHoverBgColor};
-`;
 const Body = styles.Body.extend`
   backgroundColor: #F0F3F5;
   flexDirection: row;
 `;
 
 const UIKitPC = () => (
-  <Artboard name="UIKitPC" style={{ width: 4000, backgroundColor: '#F0F3F5' }} >
+  <Artboard name="UIKitPC" style={{ width: 4800, backgroundColor: '#F0F3F5' }} >
     <Header>Youth Design UI Kit (PC)</Header>
     <Body name="body">
 <<<<<<< HEAD
       <Col>
         <styles.Title>Base</styles.Title>
         <ButtonBlock />
+        <SelectBlock />
+        <PaginationBlock />
       </Col>
       <Col>
         <styles.Title>Form</styles.Title>
@@ -60,16 +57,11 @@ const UIKitPC = () => (
         <RadioBlock />
         <SliderBlock />
         <CheckboxBlock platform="pc" />
-        <PaginationBlock />
-        <SelectBlock />
       </Col>
       <Col>
         <styles.Title>Mask</styles.Title>
         <ModalBlock />
       </Col>
-    </Body>
-    <Hr />
-    <Body name="body">
       <Col size="lg">
         <styles.Title>Layout</styles.Title>
         <GlobalModal />
