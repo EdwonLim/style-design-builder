@@ -39,15 +39,15 @@ const UIKitPC = () => (
     <Body name="body">
       <styles.Title>定义</styles.Title>
       {/* <ButtonBlock />
-      <InputBlock />
-      <RadioBlock /> */}
+      <InputBlock /> */}
+      <RadioBlock platform="pc" />
       {/* <SliderBlock /> */}
       {/* <PaginationBlock /> */}
       {/* <SelectBlock /> */}
       {/* <CheckboxBlock platform="pc" /> */}
       {/* <ModalBlock /> */}
-      <TooltipBlock  platform="pc" />
-      <ToastBlock platform="pc" />
+      {/* <TooltipBlock  platform="pc" />
+      <ToastBlock platform="pc" /> */}
     </Body>
   </Artboard>
 );
