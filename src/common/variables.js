@@ -2,7 +2,7 @@ import { colorPalette } from './util';
 
 export default VARIABLE = {
   colorList: {
-    primaryColor: '#cdf',
+    primaryColor: '#00bcd4',
     lightPrimaryColorNumber: 5,
     lightPrimaryColor: () => { return colorPalette(VARIABLE.colorList.primaryColor, VARIABLE.colorList.lightPrimaryColorNumber) },
     deepPrimaryColorNumber: 8,

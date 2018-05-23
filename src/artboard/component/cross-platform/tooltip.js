@@ -163,7 +163,7 @@ const Tooltip = (props) => {
 	} 
 	return <View>
 		<PanelTitle>Tooltip</PanelTitle>
-		<Panel>
+    <Panel platform="mobile">
 		<RowView>
 			<DescTextView><ButtonTextPc>Normal:</ButtonTextPc></DescTextView>
 			<Symbol_Mobile_Default />

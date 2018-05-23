@@ -8,18 +8,11 @@ import SelectBlock from './component/pc/select';
 import RadioBlock from './component/cross-platform/radio';
 import SliderBlock from './component/cross-platform/slider';
 import SwiperBlock from './component/cross-platform/swiper';
-<<<<<<< HEAD
-import PaginationBlock from './component/pc/pagination.js';
-import GlobalModal from './component/pc/globalModal.js';
-import ModalBlock from './component/pc/modal.js';
-import CheckboxBlock from './component/cross-platform/checkbox.js';
-=======
 import PaginationBlock from './component/pc/pagination';
 import ModalBlock from './component/pc/modal';
 import CheckboxBlock from './component/cross-platform/checkbox';
 import TooltipBlock from './component/cross-platform/tooltip';
 import ToastBlock from './component/cross-platform/toast';
->>>>>>> b08677136fa89ba27a2e0723fc2ee756ef2fa883
 import styled from 'styled-components/primitives';
 import variables from '../common/variables';
 
@@ -44,29 +37,6 @@ const UIKitPC = () => (
   <Artboard name="UIKitPC" style={{ width: 4800, backgroundColor: '#F0F3F5' }} >
     <Header>Youth Design UI Kit (PC)</Header>
     <Body name="body">
-<<<<<<< HEAD
-      <Col>
-        <styles.Title>Base</styles.Title>
-        <ButtonBlock />
-        <SelectBlock />
-        <PaginationBlock />
-      </Col>
-      <Col>
-        <styles.Title>Form</styles.Title>
-        <InputBlock />
-        <RadioBlock />
-        <SliderBlock />
-        <CheckboxBlock platform="pc" />
-      </Col>
-      <Col>
-        <styles.Title>Mask</styles.Title>
-        <ModalBlock />
-      </Col>
-      <Col size="lg">
-        <styles.Title>Layout</styles.Title>
-        <GlobalModal />
-      </Col>
-=======
       <styles.Title>定义</styles.Title>
       {/* <ButtonBlock />
       <InputBlock />
@@ -78,7 +48,6 @@ const UIKitPC = () => (
       {/* <ModalBlock /> */}
       <TooltipBlock  platform="pc" />
       <ToastBlock platform="pc" />
->>>>>>> b08677136fa89ba27a2e0723fc2ee756ef2fa883
     </Body>
   </Artboard>
 );

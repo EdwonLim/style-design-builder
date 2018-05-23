@@ -43,14 +43,9 @@ const UIKitMobile = () => (
       <Col>
         <styles.Title>Base</styles.Title>
         <ButtonBlock />
-<<<<<<< HEAD
+        <TooltipBlock platform="mobile" />
       </Col>
       <Col>
-=======
-        <TooltipBlock platform="mobile" />
-      </Col> */}
-      {/* <Col>
->>>>>>> b08677136fa89ba27a2e0723fc2ee756ef2fa883
         <styles.Title>Layout</styles.Title>
         <HeaderBlock />
         <SwiperBlock platform="mobile" />
@@ -63,19 +58,6 @@ const UIKitMobile = () => (
         <RadioBlock platform="mobile" />
         <SliderBlock platform="mobile" />
         <CheckboxBlock platform="mobile" />
-<<<<<<< Updated upstream
-        <LabelBlock />
-        <TextareaBlock />
-        <RadioBlock platform="mobile" />
-        <SliderBlock platform="mobile" />
-        <CheckboxBlock platform="mobile" /> 
-      </Col>*/}
-      <Col>
-        <styles.Title>Mask</styles.Title>
-        <Toast platform='mobile' />
-        {/* <TextareaBlock /> */}
-=======
->>>>>>> Stashed changes
       </Col>
     </Body>
   </Artboard>

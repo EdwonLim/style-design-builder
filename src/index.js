@@ -20,11 +20,7 @@ const Doc = () => {
       </Page> */}
       {/* <Page name="UI Kit of PC">
         <ArtboardPC />
-<<<<<<< HEAD
-      </Page>
-=======
       </Page> */}
->>>>>>> b08677136fa89ba27a2e0723fc2ee756ef2fa883
       <Page name="UI Kit of Mobile">
         <ArtboardMobile />
       </Page>
