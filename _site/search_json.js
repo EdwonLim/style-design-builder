@@ -23,6 +23,12 @@ window.ydoc_plugin_search_json = {
       "content": "text",
       "url": "/documents/text.html",
       "children": []
+    },
+    {
+      "title": "layout",
+      "content": "布局",
+      "url": "/documents/layout.html",
+      "children": []
     }
   ]
 }

@@ -7,6 +7,7 @@
 * [设计原则](principle.md)
 * [色彩](color.md)
 * [文本](text.md)
+* [布局](layout.md)
 
 ### 组件
 
