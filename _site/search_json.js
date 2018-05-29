@@ -1,45 +1,28 @@
 window.ydoc_plugin_search_json = {
   "documents": [
     {
-      "title": "ydoc",
-      "content": "This is home page of documents book.",
+      "title": "index",
+      "content": "Youth Design 介绍",
       "url": "/documents/index.html",
       "children": []
     },
     {
-      "title": "Installation",
-      "content": "...",
-      "url": "/documents/installation.html",
+      "title": "principle",
+      "content": "principle",
+      "url": "/documents/principle.html",
       "children": []
     },
     {
-      "title": "Introduction",
-      "content": "Introduction",
-      "url": "/documents/intro.html",
-      "children": [
-        {
-          "title": "title",
-          "url": "/documents/intro.html#title",
-          "content": "titlecontent"
-        }
-      ]
+      "title": "color",
+      "content": "color",
+      "url": "/documents/color.html",
+      "children": []
     },
     {
-      "title": "env",
-      "content": "env",
-      "url": "/documents/env.html",
-      "children": [
-        {
-          "title": "title",
-          "url": "/documents/env.html#title",
-          "content": "titlecontent"
-        },
-        {
-          "title": "sub-title",
-          "url": "/documents/env.html#title-sub-title",
-          "content": "sub-titlecontent"
-        }
-      ]
+      "title": "text",
+      "content": "text",
+      "url": "/documents/text.html",
+      "children": []
     }
   ]
 }
