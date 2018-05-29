@@ -11,5 +11,5 @@
 
 ### 组件
 
-* [移动端组件](installation.md)
-* [PC 端组件](installation.md)
+* [移动端组件](component_pc.md)
+* [PC 端组件](component_mobile.md)
