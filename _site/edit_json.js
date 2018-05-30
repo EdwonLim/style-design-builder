@@ -6,5 +6,6 @@ window.ydoc_plugin_edit_json = {
   "/design/text.html": "/design/text.md",
   "/design/layout.html": "/design/layout.md",
   "/design/component_pc.html": "/design/component_pc.md",
+  "/design/mobile/button.html": "/design/mobile/button.md",
   "/design/component_mobile.html": "/design/component_mobile.md"
 }

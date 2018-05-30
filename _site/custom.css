@@ -1,0 +1,33 @@
+.markdown-body .tag {
+  display: inline-block;
+  padding: 2px 8px;
+  font-size: 10px;
+  color: #fff;
+  border-radius: 4px;
+}
+.markdown-body .tag.ripple {
+  background-color: #1890ff;
+}
+.markdown-body .tag.shake {
+  background-color: #fa541c;
+}
+.markdown-body .tag.sound {
+  background-color: #9ad20f;
+}
+
+.imgblock:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.imgblock {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.imgblock .sm {
+  flex: 0 0 360px;
+}
+.imgblock .img {
+  border: 1px solid #ddd;
+}
