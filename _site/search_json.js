@@ -24,8 +24,8 @@ window.ydoc_plugin_search_json = {
       "children": []
     },
     {
-      "title": "colortongyong",
-      "content": "colortest",
+      "title": "YMFE Design不同凡响的色轮",
+      "content": "这是一个图形设计铺天盖地的缤纷时代。YMFE Design使用鲜明、大胆的配色方案，以符合其勇敢、激进、活泼的设计理念。而配色的基础是色轮。色轮图:",
       "url": "/design/color.html",
       "children": []
     },
