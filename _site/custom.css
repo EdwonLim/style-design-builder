@@ -26,3 +26,7 @@
 .imgblock .img {
   border: 1px solid #ddd;
 }
+.imgblock .mult-text {
+  text-align: justify;
+  /* text-align-last: justify; */
+}
