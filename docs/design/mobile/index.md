@@ -7,8 +7,8 @@
 
 移动端的一部分组件有一些与设备的交互设计，在文档页面顶部将以下列标签的形式来进行标识：
 
-<span class="tag ripple">Ripple</span>：Material Design 的墨水扩散效果（视觉）
+<span class="tag ripple">Ripple</span>：Material Design 的墨水扩散效果
 
-<span class="tag shake">振动</span>：设备振动（触觉）
+<span class="tag shake">振动</span>：设备振动
 
-<span class="tag sound">声音</span>：设备扬声器（听觉）
+<span class="tag sound">声音</span>：设备扬声器

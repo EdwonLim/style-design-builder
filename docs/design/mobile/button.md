@@ -9,7 +9,7 @@
 
 <div class="imgblock">
   <div class="sm">
-    <p>按钮有两种尺寸：“大型按钮”、“小型按钮”</p>
+    <p>按钮分为 iter两种尺寸：“大型按钮”、“小型按钮”</p>
   </div>
   <div class="sm">
     <img class="img" src="https://ws1.sinaimg.cn/large/006oPFLAly1frsquwz0tqj30jy07m3yo.jpg" alt="按钮尺寸"/>

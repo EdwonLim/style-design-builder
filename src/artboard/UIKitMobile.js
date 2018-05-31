@@ -51,19 +51,19 @@ const UIKitMobile = () => (
         <SwiperBlock platform="mobile" />
       </Col> */}
       <Col>
-        {/* <styles.Title>Form</styles.Title>
+        <styles.Title>Form</styles.Title>
         <InputBlock />
         <LabelBlock />
-        <TextareaBlock /> */}
+        <TextareaBlock />
         <RadioBlock platform="mobile" />
-        {/* <SliderBlock platform="mobile" />
-        <CheckboxBlock platform="mobile" />  */}
+        <SliderBlock platform="mobile" />
+        <CheckboxBlock platform="mobile" /> 
       </Col>
-      {/* <Col>
+      <Col>
         <styles.Title>Mask</styles.Title>
         <Toast platform='mobile' />
         <TextareaBlock />
-      </Col> */}
+      </Col>
     </Body>
   </Artboard>
 );

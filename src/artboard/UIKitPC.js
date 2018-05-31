@@ -10,6 +10,7 @@ import SliderBlock from './component/cross-platform/slider';
 import SwiperBlock from './component/cross-platform/swiper';
 import PaginationBlock from './component/pc/pagination';
 import ModalBlock from './component/pc/modal';
+import GlobalModalBlock from './component/pc/globalModal';
 import CheckboxBlock from './component/cross-platform/checkbox';
 import TooltipBlock from './component/cross-platform/tooltip';
 import ToastBlock from './component/cross-platform/toast';
@@ -37,17 +38,26 @@ const UIKitPC = () => (
   <Artboard name="UIKitPC" style={{ width: 4800, backgroundColor: '#F0F3F5' }} >
     <Header>Youth Design UI Kit (PC)</Header>
     <Body name="body">
-      <styles.Title>定义</styles.Title>
-      {/* <ButtonBlock />
-      <InputBlock /> */}
-      <RadioBlock platform="pc" />
-      {/* <SliderBlock /> */}
-      {/* <PaginationBlock /> */}
-      {/* <SelectBlock /> */}
-      {/* <CheckboxBlock platform="pc" /> */}
-      {/* <ModalBlock /> */}
-      {/* <TooltipBlock  platform="pc" />
-      <ToastBlock platform="pc" /> */}
+      <Col>
+        <styles.Title>Base</styles.Title>
+        <ButtonBlock />
+        <InputBlock />
+        <RadioBlock platform="pc" />
+      </Col>
+      <Col>
+        <styles.Title>Layout</styles.Title>
+        <SliderBlock />
+        <PaginationBlock />
+        <SelectBlock />
+      </Col>
+      <Col>
+        <styles.Title>Form</styles.Title>
+        <CheckboxBlock platform="pc" />
+        <ModalBlock />
+        <TooltipBlock platform="pc" />
+        <ToastBlock platform="pc" />
+      </Col>
+      <GlobalModalBlock />
     </Body>
   </Artboard>
 );
