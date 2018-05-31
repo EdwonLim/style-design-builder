@@ -13,16 +13,35 @@
 3. 强调色可选，在没有强调色的时候，可以使用不同深度的主色作为辅助。
 # 文本颜色
 ## 一、css中文本颜色的使用
-![](https://ws1.sinaimg.cn/large/b0b365f5ly1frsghscmjyj20k408cjrv.jpg)  
+<div class="imgblock">
+    <div class="sm">
+        <p class="mult-text">使用灰色文本会降低与背景颜色的相对亮度，从而导致可读性降低，因此css中应使用`rgba`代替`HEX`值。(WCAG 2.0)
+        深色背景中的浅色文字与浅色背景中是深色文字比，需要更高的对比度才能达到相同的辨识度。</p>
+    </div>
+    <div class="sm">
+        <img class="img" src="https://ws1.sinaimg.cn/large/b0b365f5ly1frsghscmjyj20k408cjrv.jpg" alt="文本使用"/>
+    </div>
+</div>
 
-使用灰色文本会降低与背景颜色的相对亮度，从而导致可读性降低，因此css中应使用`rgba`代替`HEX`值。(WCAG 2.0)
-深色背景中的浅色文字与浅色背景中是深色文字比，需要更高的对比度才能达到相同的辨识度。见上图。
 ## 二、深色背景上的文本
-![](https://ws1.sinaimg.cn/large/b0b365f5ly1frsgiqe7m1j20jy05kdg4.jpg)  
 
-深色背景中使用 100%、70%、50%透明度的纯白色文本。见上图。
+<div class="imgblock">
+    <div class="sm">
+        <p class="mult-text">深色背景中使用 100%、70%、50%透明度的纯白色文本。</p>
+    </div>
+    <div class="sm">
+        <img class="img" src="https://ws1.sinaimg.cn/large/b0b365f5ly1frsgiqe7m1j20jy05kdg4.jpg" alt="文本使用"/>
+    </div>
+</div>
+
 ## 三、浅色背景上的文本
-![](https://ws1.sinaimg.cn/large/b0b365f5ly1frsgjdk1r1j20jw08gdg6.jpg)  
+<div class="imgblock">
+    <div class="sm">
+        <p class="mult-text">浅色背景中使用87%、54%、38%透明度的深色文本。</p>
+    </div>
+    <div class="sm">
+        <img class="img" src="https://ws1.sinaimg.cn/large/b0b365f5ly1frsgjdk1r1j20jw08gdg6.jpg" alt="文本使用" />
+    </div>
+</div>
 
-浅色背景中使用87%、54%、38%透明度的深色文本。见上图。
 
