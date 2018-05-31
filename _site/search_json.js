@@ -125,7 +125,22 @@ window.ydoc_plugin_search_json = {
         {
           "title": "按钮尺寸",
           "url": "/design/mobile/Button.html#按钮尺寸",
-          "content": "按钮尺寸  \n    按钮分为 iter两种尺寸：“大型按钮”、“小型按钮”\n  \n  \n    \n  \n"
+          "content": "按钮尺寸  \n    按钮分为两种尺寸：“大型按钮”、“小型按钮”\n    “大型按钮”一般横贯整个设备宽度，而“小型按钮”则经常出现在行内。\n  \n  \n    \n  \n"
+        },
+        {
+          "title": "大型按钮",
+          "url": "/design/mobile/Button.html#大型按钮",
+          "content": "大型按钮  \n    每个按钮分为四种状态：\n    “正常状态”: 按钮的初始状态\n    “active状态”: 按钮被按下\n    “ripple状态”: Ripple 效果\n    “禁止点击状态”: 用户无法点击，不同类型按钮的禁止点击状态样式是一致的\n  \n  \n    \n  \n"
+        },
+        {
+          "title": "幽灵按钮",
+          "url": "/design/mobile/Button.html#幽灵按钮",
+          "content": "幽灵按钮  \n    幽灵按钮正常状态是透明的\n    “active状态”: 按钮被按下的时候发生背景色、文本颜色的变化\n    “ripple状态”: Ripple 效果不会改变按钮的透明背景，Ripple 的颜色是按钮颜色的 20%\n  \n  \n    \n  \n"
+        },
+        {
+          "title": "扁平按钮",
+          "url": "/design/mobile/Button.html#扁平按钮",
+          "content": "扁平按钮  \n    扁平按钮正常状态是透明背景、无边框的\n    “active状态”: 按钮被按下的时候发生背景色的变化\n    “ripple状态”: Ripple 效果不会改变按钮的透明背景，Ripple 的颜色是纯黑色的 20%\n  \n  \n    \n  \n"
         }
       ]
     },
