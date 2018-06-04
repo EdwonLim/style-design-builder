@@ -16,6 +16,6 @@
 关于其它背景色下如何选择文字色，可以使用[Google Color Tool](https://material.io/collections/color/) 测试颜色的可访问性。  
 
 # 文字字号
-![](https://ws1.sinaimg.cn/large/b0b365f5ly1frz7r056g0j21kw1s2tmz.jpg)  
+![](https://ws1.sinaimg.cn/large/b0b365f5ly1frza9642a0j217u0bygo4.jpg)  
   
   这是在PC端的字号。在移动端 **内容** 和 **标题**字号对应大1px。
