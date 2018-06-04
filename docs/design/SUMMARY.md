@@ -14,6 +14,8 @@
 
 ### 组件
 
+* [通用组件](common/icon.md)
+  * [图标库](common/icon.md)
 * [移动端组件](mobile/index.md)
   * [Button](mobile/Button.md)
   * [Checkbox](mobile/Checkbox.md)
