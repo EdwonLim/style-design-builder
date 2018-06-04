@@ -23,7 +23,11 @@
 .imgblock .sm {
   flex: 0 0 360px;
 }
+.imgblock .lg {
+  flex: 0 0 100%;
+}
 .imgblock .img {
+  width: 100%;
   border: 1px solid #ddd;
   cursor: pointer;
 }
