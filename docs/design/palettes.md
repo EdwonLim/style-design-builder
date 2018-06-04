@@ -1,7 +1,9 @@
 # 调色板
 调色板用于各种颜色的和谐搭配，展出你的项目特色。为了使颜色和谐搭配，请配合色板选择颜色。
 色板图如下:
-# Red
+![](https://ws1.sinaimg.cn/large/b0b365f5ly1fryafkfzy7j21q62gy4qp.jpg)
+
+<!-- # Red
 ![](https://ws1.sinaimg.cn/large/b0b365f5ly1frsh33wctij20e60okdgu.jpg)  
 
 # Volcano
@@ -35,7 +37,7 @@
 ![](https://ws1.sinaimg.cn/large/b0b365f5ly1frshkipu7qj20e00omacb.jpg)  
 
 # Pink
-![](https://ws1.sinaimg.cn/large/b0b365f5ly1frshl74uimj20ee0oe0uv.jpg)  
+![](https://ws1.sinaimg.cn/large/b0b365f5ly1frshl74uimj20ee0oe0uv.jpg)   -->
 
 
 
