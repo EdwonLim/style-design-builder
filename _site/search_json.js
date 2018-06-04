@@ -183,9 +183,21 @@ window.ydoc_plugin_search_json = {
           "content": "样式  \n    Checkbox 多选框有四种状态，如右图所示：\n    未选中、选中\n    未选中(禁止点击)、选中(禁止点击)\n    其中禁止点击状态的文本颜色更浅，与可点击状态的文本颜色进行区分。\n  \n  \n    \n  \n"
         },
         {
-          "title": "Ripple 效果说明",
-          "url": "/design/mobile/Checkbox.html#ripple-效果说明",
-          "content": "Ripple 效果说明Checkbox 多选框组件，在选中的时候触发设备振动，但取消选中时不触发设备振动。"
+          "title": "振动效果说明",
+          "url": "/design/mobile/Checkbox.html#振动效果说明",
+          "content": "振动效果说明Checkbox 多选框组件，在选中的时候触发设备振动，但取消选中时不触发设备振动。"
+        }
+      ]
+    },
+    {
+      "title": "Toast",
+      "content": "Toast 提示文本。",
+      "url": "/design/mobile/Toast.html",
+      "children": [
+        {
+          "title": "样式",
+          "url": "/design/mobile/Toast.html#样式",
+          "content": "样式  \n    Toast 短暂显示在屏幕中心位置。\n    Toast 的内容要尽可能地简短，如果想提示更多内容，请使用模态框。\n  \n  \n    \n  \n"
         }
       ]
     },
@@ -236,9 +248,21 @@ window.ydoc_plugin_search_json = {
           "content": "样式  \n    Radio 单选框有四种状态，如右图所示：\n    未选中、选中\n    未选中(禁止点击)、选中(禁止点击)\n    其中禁止点击状态的文本颜色更浅，与可点击状态的文本颜色进行区分。\n  \n  \n    \n  \n"
         },
         {
-          "title": "Ripple 效果说明",
-          "url": "/design/mobile/Radio.html#ripple-效果说明",
-          "content": "Ripple 效果说明Checkbox 多选框组件，在选中的时候触发设备振动，但取消选中时不触发设备振动。"
+          "title": "振动效果说明",
+          "url": "/design/mobile/Radio.html#振动效果说明",
+          "content": "振动效果说明Checkbox 多选框组件，在选中的时候触发设备振动，但取消选中时不触发设备振动。"
+        }
+      ]
+    },
+    {
+      "title": "Header",
+      "content": "Header 页头。页头是移动端最常见的组件之一，支持配置左右两侧、标题文本(icon)。",
+      "url": "/design/mobile/Header.html",
+      "children": [
+        {
+          "title": "Header 类型",
+          "url": "/design/mobile/Header.html#header-类型",
+          "content": "Header 类型  \n    Header 两侧的文本(icon)默认使用主色。\n    Header 顶部有状态栏，状态栏高度为 20px，而 Header 高度为 44px。\n  \n  \n    \n  \n"
         }
       ]
     },
@@ -251,6 +275,23 @@ window.ydoc_plugin_search_json = {
           "title": "样式",
           "url": "/design/mobile/Input.html#样式",
           "content": "样式  \n    Input 的光标与删除文本按钮都使用主色。\n  \n  \n    \n  \n"
+        }
+      ]
+    },
+    {
+      "title": "Label",
+      "content": "RippleLabel 可组合的列表项目。",
+      "url": "/design/mobile/Label.html",
+      "children": [
+        {
+          "title": "样式",
+          "url": "/design/mobile/Label.html#样式",
+          "content": "样式  \n    Label 一般左侧展示文本信息，操作按钮放置在右侧\n  \n  \n    \n  \n"
+        },
+        {
+          "title": "Ripple 效果说明",
+          "url": "/design/mobile/Label.html#ripple-效果说明",
+          "content": "Ripple 效果说明Label 在使用 Ripple 效果的时候要注意，点击操作的 Ripple 不要与 Label 的 Ripple 效果重复。"
         }
       ]
     },
