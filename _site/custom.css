@@ -30,3 +30,6 @@
   text-align: justify;
   /* text-align-last: justify; */
 }
+.imgblock .big-image {
+  width: 50%;
+}
