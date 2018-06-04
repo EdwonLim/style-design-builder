@@ -68,7 +68,7 @@ window.ydoc_plugin_search_json = {
     },
     {
       "title": "定义示例",
-      "content": "YMFE Design 的通用色彩规范规定了色彩与使用注意事项各项目在UI设计阶段确定各自的色彩规范，项目色彩规范继承自通用色彩规范，主要包含以下内容:一个项目的色彩规范可以如下所示:    \n        主色\n        \n    \n    \n        强调色\n         \n    \n    \n        文本色 ---- 深色背景上的文本\n        \n    \n    \n        文本色 ---- 浅色背景上的文本\n         \n    \n    \n        功能色 ----- 警告/成功/链接\n        \n    \n",
+      "content": "YMFE Design 的通用色彩规范规定了色彩与使用注意事项各项目在UI设计阶段确定各自的色彩规范，项目色彩规范继承自通用色彩规范，主要包含以下内容:开发者平台-项目色彩规范    \n        主色\n        \n    \n    \n        强调色\n         \n    \n    \n        背景色\n        \n    \n\n    \n        文本色 ---- 深色背景上的文本\n        \n    \n    \n        文本色 ---- 浅色背景上的文本\n         \n    \n\n\n    \n        功能色 ----- 错误/成功/链接/警告\n        \n    \n\n\n    \n        四大业务线识别色\n        \n    \n\n",
       "url": "/design/projectColor.html",
       "children": [
         {
@@ -100,16 +100,10 @@ window.ydoc_plugin_search_json = {
       "children": []
     },
     {
-      "title": "目标文字颜色文字字号",
-      "content": "创造一个面向未来的跨平台设计语言，统一团队项目的前端UI设计。探寻前言的交互形式，力求为用户提供卓越的使用体验。这是在PC端的字号。在移动端 内容 和 标题字号对应大1px。",
+      "title": "字体文字排版",
+      "content": "  \n    \n  \nfont-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto,\"Helvetica Neue\", Helvetica, \"PingFang SC\", \"Hiragino Sans GB\", \"Microsoft YaHei\",SimSun, sans-serif;",
       "url": "/design/text.html",
-      "children": [
-        {
-          "title": "背景中的文本",
-          "url": "/design/text.html#背景中的文本",
-          "content": "背景中的文本文本应该在其背景中清晰可见，建议:深灰色文本用于浅色背景\n浅灰色文本用于深色背景\n如果你的应用同时含有亮色和暗色主题，文本颜色应该要和每个主题都有足够的对比度。\n通过改变文字不透明度，而不是直接改变文字颜色，来强调不同部分文字的重要性。这样当背景色、文字色确定，我们可以通过改变文字颜色不透明度很容易得到辅助性文本的颜色。考虑到无障碍设计的需求，帮助那些弱视和色盲的用户也能轻松识别和阅读屏幕上的文字，我们参考了WACG2.0 的标准，文本和背景色之间至少保持最小4:5:1的对比度（AA级），正文内容都保持了7:1以上的AAA级对比度。关于其它背景色下如何选择文字色，可以使用Google Color Tool 测试颜色的可访问性。"
-        }
-      ]
+      "children": []
     },
     {
       "title": "布局原则栅格系统",

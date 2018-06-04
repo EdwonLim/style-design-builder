@@ -11,32 +11,43 @@ YMFE Design 的通用色彩规范规定了色彩与使用注意事项
 暗色背景中的主文本色、辅助文本色。  
 亮色背景中的主文本色、辅助文本色。
 # 示例
-一个项目的色彩规范可以如下所示:
+开发者平台-项目色彩规范
 <div class="imgblock">
-    <div>
+    <div class="sm">
         <h2>主色</h2>
-        <img src="https://ws1.sinaimg.cn/large/b0b365f5ly1frshv7vzosj209z06bjrc.jpg" alt="文本使用" />
+        <img src="https://ws1.sinaimg.cn/large/b0b365f5ly1frzall9mfkj20jy08iq39.jpg" alt="文本使用" />
     </div>
-    <div>
+    <div class="sm">
         <h2>强调色</h2>
-         <img src="https://ws1.sinaimg.cn/large/b0b365f5ly1frshvnylekj20a306cdfs.jpg" alt="文本使用" />
+         <img src="https://ws1.sinaimg.cn/large/b0b365f5ly1frzam2g7tbj20jy08ijrq.jpg" alt="文本使用" />
+    </div>
+    <div class="sm">
+        <h2>背景色</h2>
+        <img src="https://ws1.sinaimg.cn/large/b0b365f5ly1frzamhee12j20k402uaa2.jpg" alt="文本使用" />
     </div>
 </div>
+<div>
 
 <div class="imgblock">
-    <div class="big-image">
+    <div class="sm">
         <h2>文本色 ---- 深色背景上的文本</h2>
-        <img src="https://ws1.sinaimg.cn/large/b0b365f5ly1frz83ylxcij20k00e8my6.jpg" alt="文本使用" />
+        <img src="https://ws1.sinaimg.cn/large/b0b365f5ly1frzan7sv4fj20f208i3z1.jpg" alt="文本使用" />
     </div>
-    <div>
+    <div class="sm">
         <h2>文本色 ---- 浅色背景上的文本</h2>
-         <img src="https://ws1.sinaimg.cn/large/b0b365f5ly1frshwz1aszj20a1043mx6.jpg" alt="文本使用" />
+         <img src="https://ws1.sinaimg.cn/large/b0b365f5ly1frzcz4dlrij20ki0bggmb.jpg" alt="文本使用" />
     </div>
 </div>
 
 <div class="imgblock">
-    <div>
-        <h2>功能色 ----- 警告/成功/链接</h2>
-        <img src="https://ws1.sinaimg.cn/large/b0b365f5ly1frshxy5bh3j20av03cq2t.jpg" alt="文本使用" />
+    <div class="sm">
+        <h2>功能色 ----- 错误/成功/链接/警告</h2>
+        <img src="https://ws1.sinaimg.cn/large/b0b365f5ly1frzckptkopj20tg06qt97.jpg" alt="文本使用" />
+    </div>
+</div>
+<div class="imgblock">
+    <div class="sm">
+        <h2>四大业务线识别色</h2>
+        <img src="https://ws1.sinaimg.cn/large/b0b365f5ly1frzcm3feygj20te06qq3i.jpg" alt="文本使用" />
     </div>
 </div>
