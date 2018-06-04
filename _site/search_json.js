@@ -134,6 +134,12 @@ window.ydoc_plugin_search_json = {
       ]
     },
     {
+      "title": "图标库",
+      "content": "地址：http://iconfont.corp.qunar.com/repositories/15 （Qunar 内网）",
+      "url": "/design/common/icon.html",
+      "children": []
+    },
+    {
       "title": "概述",
       "content": "移动端组件与 PC 端组件有着不同的设计，主要区别在于我们的移动端框架服务于业务线，设计风格偏向于 iOS 的设计规范，对于边距、字号等于 PC 端差距较大。由于 Android 设备尺寸/分辨率随便化较严重，而 iOS 设备尺寸较为固定且便于计算，因此基于 iphone 2x 的尺寸进行设计稿的制作可以提高制作与开发效率。同时偏向 iOS 的设计规范，可以追求更接近于原生应用的体验。移动端的一部分组件有一些与设备的交互设计，在文档页面顶部将以下列标签的形式来进行标识：Ripple：Material Design 的墨水扩散效果振动：设备振动声音：设备扬声器",
       "url": "/design/mobile/index.html",
@@ -163,6 +169,66 @@ window.ydoc_plugin_search_json = {
           "title": "扁平按钮",
           "url": "/design/mobile/Button.html#扁平按钮",
           "content": "扁平按钮  \n    扁平按钮正常状态是透明背景、无边框的\n    “active状态”: 按钮被按下的时候发生背景色的变化\n    “ripple状态”: Ripple 效果不会改变按钮的透明背景，Ripple 的颜色是纯黑色的 20%\n  \n  \n    \n  \n"
+        }
+      ]
+    },
+    {
+      "title": "Checkbox 多选框",
+      "content": "Ripple振动选择一组选项的 多个 选项。",
+      "url": "/design/mobile/Checkbox.html",
+      "children": [
+        {
+          "title": "样式",
+          "url": "/design/mobile/Checkbox.html#样式",
+          "content": "样式  \n    Checkbox 多选框有四种状态，如右图所示：\n    未选中、选中\n    未选中(禁止点击)、选中(禁止点击)\n    其中禁止点击状态的文本颜色更浅，与可点击状态的文本颜色进行区分。\n  \n  \n    \n  \n"
+        }
+      ]
+    },
+    {
+      "title": "Swiper",
+      "content": "Swiper 轮播图，轮流展示多张图片(或区域)。",
+      "url": "/design/mobile/Swiper.html",
+      "children": [
+        {
+          "title": "样式",
+          "url": "/design/mobile/Swiper.html#样式",
+          "content": "样式  \n    Swiper 只有一种尺寸\n    轮播组件是一组矩形，当前项以主色作为颜色区分，区别于其他项目。\n  \n  \n    \n  \n"
+        }
+      ]
+    },
+    {
+      "title": "Tooltip",
+      "content": "Tooltip 常用于展示额外的提示信息。在移动端一般通过“长按文本”触发，一般用于复制粘贴等功能。",
+      "url": "/design/mobile/Tooltip.html",
+      "children": [
+        {
+          "title": "样式",
+          "url": "/design/mobile/Tooltip.html#样式",
+          "content": "样式  \n    Tooltip 只有一种尺寸\n    背景色为半透明度为 80% 的纯黑。\n  \n  \n    \n  \n"
+        }
+      ]
+    },
+    {
+      "title": "Radio 单选框",
+      "content": "Ripple振动选择一组选项的 单个 选项。",
+      "url": "/design/mobile/Radio.html",
+      "children": [
+        {
+          "title": "样式",
+          "url": "/design/mobile/Radio.html#样式",
+          "content": "样式  \n    Radio 单选框有四种状态，如右图所示：\n    未选中、选中\n    未选中(禁止点击)、选中(禁止点击)\n    其中禁止点击状态的文本颜色更浅，与可点击状态的文本颜色进行区分。\n  \n  \n    \n  \n"
+        }
+      ]
+    },
+    {
+      "title": "Textarea",
+      "content": "Textarea 多行文本输入框。",
+      "url": "/design/mobile/Textarea.html",
+      "children": [
+        {
+          "title": "分类",
+          "url": "/design/mobile/Textarea.html#分类",
+          "content": "分类  \n    Textarea 有不同的输入状态，如右图所示：\n    未输入的时候显示 Placeholder，计数器是灰色，斜杠前面的数字为当前输入的字数。\n    输入的时候，当前输入的字数显示为深色。\n    输入的字数超过了预期的字数，当前输入的字数显示为红色(警告色)，但输入框中文本颜色不变，且可以超出字数继续输入，但不允许提交表单。\n  \n  \n    \n  \n"
         }
       ]
     },

@@ -42,7 +42,7 @@ const TooltipBtn = styled.View`
 	borderColor: ${props => getBorderColor(props.state)};
 `;
 
-const ButtonText = fonts.mobileBody.extend`
+const ButtonText = fonts.PCBody.extend`
   color: ${props => getTextColor(props.type, props.state)};
 `;
 const ButtonTextPc = fonts.PCBody.extend`
@@ -50,10 +50,10 @@ const ButtonTextPc = fonts.PCBody.extend`
 `;
 
 const PromptBtn = styled.View`
-	backgroundColor: ${colorList.baseLightTextColor};
+	backgroundColor: rgba(0, 0, 0, .8);
 	borderRadius: ${variables.borderRadius};
-	paddingVertical: ${props => props.size === 'sm' ? '4px' : '6px'};
-	paddingHorizontal: 8px;
+	paddingVertical: 6px;
+	paddingHorizontal: 16px;
 `;
 
 const PromptView = styled.View`

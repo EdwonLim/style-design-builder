@@ -37,7 +37,7 @@ const BodyText = fonts.title.extend``;
 const colorList = VARIABLE.colorList;
 
 const UIKitMobile = () => (
-  <Artboard name="UIKitMobile" style={{ width: 2240, backgroundColor: '#F0F3F5' }} >
+  <Artboard name="UIKitMobile" style={{ width: 2440, backgroundColor: '#F0F3F5' }} >
     <Header>Youth Design UI Kit (Mobile)</Header>
     <Body name="body">
       <Col>
