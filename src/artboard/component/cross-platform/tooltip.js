@@ -42,7 +42,7 @@ const TooltipBtn = styled.View`
 	borderColor: ${props => getBorderColor(props.state)};
 `;
 
-const ButtonText = fonts.mobileBody.extend`
+const ButtonText = fonts.PCBody.extend`
   color: ${props => getTextColor(props.type, props.state)};
 `;
 const ButtonTextPc = fonts.PCBody.extend`

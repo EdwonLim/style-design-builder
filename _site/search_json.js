@@ -172,6 +172,18 @@ window.ydoc_plugin_search_json = {
       ]
     },
     {
+      "title": "Tooltip",
+      "content": "Tooltip 常用于展示额外的提示信息。在移动端一般通过“长按文本”触发，一般用于复制粘贴等功能。",
+      "url": "/design/mobile/Tooltip.html",
+      "children": [
+        {
+          "title": "样式",
+          "url": "/design/mobile/Tooltip.html#样式",
+          "content": "样式  \n    Tooltip 只有一种尺寸\n    背景色为半透明度为 80% 的纯黑。\n  \n  \n    \n  \n"
+        }
+      ]
+    },
+    {
       "title": "概述",
       "content": "移动端组件与 PC 端组件有着不同的设计，Youth Design PC 端的设计规范参考了 Material Design 的设计，并针对后台系统加以改良，以更符合我们的产品风格。Youth Design PC 端的组件封装了 Ant Design 的组件库，目前已应用于 YDoc、开发者平台等多个 WEB 项目。",
       "url": "/design/pc/index.html",
