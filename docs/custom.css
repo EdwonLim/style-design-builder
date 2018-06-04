@@ -25,6 +25,7 @@
 }
 .imgblock .img {
   border: 1px solid #ddd;
+  cursor: pointer;
 }
 .imgblock .mult-text {
   text-align: justify;

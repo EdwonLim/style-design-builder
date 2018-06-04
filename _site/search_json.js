@@ -181,6 +181,11 @@ window.ydoc_plugin_search_json = {
           "title": "样式",
           "url": "/design/mobile/Checkbox.html#样式",
           "content": "样式  \n    Checkbox 多选框有四种状态，如右图所示：\n    未选中、选中\n    未选中(禁止点击)、选中(禁止点击)\n    其中禁止点击状态的文本颜色更浅，与可点击状态的文本颜色进行区分。\n  \n  \n    \n  \n"
+        },
+        {
+          "title": "Ripple 效果说明",
+          "url": "/design/mobile/Checkbox.html#ripple-效果说明",
+          "content": "Ripple 效果说明Checkbox 多选框组件，在选中的时候触发设备振动，但取消选中时不触发设备振动。"
         }
       ]
     },
@@ -217,6 +222,11 @@ window.ydoc_plugin_search_json = {
           "title": "样式",
           "url": "/design/mobile/Radio.html#样式",
           "content": "样式  \n    Radio 单选框有四种状态，如右图所示：\n    未选中、选中\n    未选中(禁止点击)、选中(禁止点击)\n    其中禁止点击状态的文本颜色更浅，与可点击状态的文本颜色进行区分。\n  \n  \n    \n  \n"
+        },
+        {
+          "title": "Ripple 效果说明",
+          "url": "/design/mobile/Radio.html#ripple-效果说明",
+          "content": "Ripple 效果说明Checkbox 多选框组件，在选中的时候触发设备振动，但取消选中时不触发设备振动。"
         }
       ]
     },
