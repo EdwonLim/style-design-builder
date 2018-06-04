@@ -147,7 +147,7 @@ window.ydoc_plugin_search_json = {
     },
     {
       "title": "Button",
-      "content": "Ripple振动按钮是移动端最重要的组件，常用于单击操作。分为“主按钮”、“幽灵按钮”、“扁平按钮”，每种按钮都有不同状态，点击时可以触发 Ripple 效果，并伴随设备振动。",
+      "content": "Ripple按钮是移动端最重要的组件，常用于单击操作。分为“主按钮”、“幽灵按钮”、“扁平按钮”，每种按钮都有不同状态，点击时可以触发 Ripple 效果，并伴随设备振动。",
       "url": "/design/mobile/Button.html",
       "children": [
         {
@@ -190,6 +190,18 @@ window.ydoc_plugin_search_json = {
       ]
     },
     {
+      "title": "Slider",
+      "content": "Slider 滑动条。",
+      "url": "/design/mobile/Slider.html",
+      "children": [
+        {
+          "title": "样式",
+          "url": "/design/mobile/Slider.html#样式",
+          "content": "样式  \n    Slider 的光标与删除文本按钮都使用主色。\n  \n  \n    \n  \n"
+        }
+      ]
+    },
+    {
       "title": "Swiper",
       "content": "Swiper 轮播图，轮流展示多张图片(或区域)。",
       "url": "/design/mobile/Swiper.html",
@@ -227,6 +239,18 @@ window.ydoc_plugin_search_json = {
           "title": "Ripple 效果说明",
           "url": "/design/mobile/Radio.html#ripple-效果说明",
           "content": "Ripple 效果说明Checkbox 多选框组件，在选中的时候触发设备振动，但取消选中时不触发设备振动。"
+        }
+      ]
+    },
+    {
+      "title": "Input",
+      "content": "Input 单行文本输入框。",
+      "url": "/design/mobile/Input.html",
+      "children": [
+        {
+          "title": "样式",
+          "url": "/design/mobile/Input.html#样式",
+          "content": "样式  \n    Input 的光标与删除文本按钮都使用主色。\n  \n  \n    \n  \n"
         }
       ]
     },

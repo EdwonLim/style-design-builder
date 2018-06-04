@@ -17,13 +17,13 @@ const ToastTextPc = fonts.PCBody.extend`
 const ToastView = styled.View`
 	paddingVertical: 6px;
 	paddingHorizontal: 16px;
-	backgroundColor: ${colorList.baseLightTextColor};
-	borderRadius: ${2*variables.borderRadius};
+	backgroundColor: rgba(0, 0, 0, .8);
+	borderRadius: ${variables.borderRadius};
 `;
 // 移动端
 const Toast_Default = () => (
 	<ToastView>
-		<ToastText>toast</ToastText>
+		<ToastText>Toast</ToastText>
 	</ToastView>
 );
 const Symbol_Toast = makeSymbol(() => (

@@ -12,7 +12,7 @@ Textarea 多行文本输入框。
     <p>输入的字数超过了预期的字数，当前输入的字数显示为红色(警告色)，但输入框中文本颜色不变，且可以超出字数继续输入，但不允许提交表单。</p>
   </div>
   <div class="sm">
-    <img class="img" src="https://ws1.sinaimg.cn/large/006oPFLAly1frz4nznfoyj30m60pkwfc.jpg" alt="Placeholder"/>
+    <img class="img" src="https://ws1.sinaimg.cn/large/006oPFLAly1frz4nznfoyj30m60pkwfc.jpg" alt="Textarea"/>
   </div>
 </div>
 

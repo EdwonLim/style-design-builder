@@ -13,7 +13,6 @@ import ModalBlock from './component/pc/modal';
 import GlobalModalBlock from './component/pc/globalModal';
 import CheckboxBlock from './component/cross-platform/checkbox';
 import TooltipBlock from './component/cross-platform/tooltip';
-import ToastBlock from './component/cross-platform/toast';
 import styled from 'styled-components/primitives';
 import variables from '../common/variables';
 
@@ -55,7 +54,6 @@ const UIKitPC = () => (
         <CheckboxBlock platform="pc" />
         <ModalBlock />
         <TooltipBlock platform="pc" />
-        <ToastBlock platform="pc" />
       </Col>
       <GlobalModalBlock />
     </Body>

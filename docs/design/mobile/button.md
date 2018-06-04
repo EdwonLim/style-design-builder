@@ -1,7 +1,6 @@
 # Button
 
 <span class="tag ripple">Ripple</span>
-<span class="tag shake">振动</span>
 
 按钮是移动端最重要的组件，常用于单击操作。分为“主按钮”、“幽灵按钮”、“扁平按钮”，每种按钮都有不同状态，点击时可以触发 `Ripple` 效果，并伴随设备振动。
 
