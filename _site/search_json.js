@@ -194,6 +194,18 @@ window.ydoc_plugin_search_json = {
       ]
     },
     {
+      "title": "Swiper",
+      "content": "Swiper 轮播图，轮流展示多张图片(或区域)。",
+      "url": "/design/mobile/Swiper.html",
+      "children": [
+        {
+          "title": "样式",
+          "url": "/design/mobile/Swiper.html#样式",
+          "content": "样式  \n    Swiper 只有一种尺寸\n    轮播组件是一组矩形，当前项以主色作为颜色区分，区别于其他项目。\n  \n  \n    \n  \n"
+        }
+      ]
+    },
+    {
       "title": "Tooltip",
       "content": "Tooltip 常用于展示额外的提示信息。在移动端一般通过“长按文本”触发，一般用于复制粘贴等功能。",
       "url": "/design/mobile/Tooltip.html",
@@ -202,6 +214,18 @@ window.ydoc_plugin_search_json = {
           "title": "样式",
           "url": "/design/mobile/Tooltip.html#样式",
           "content": "样式  \n    Tooltip 只有一种尺寸\n    背景色为半透明度为 80% 的纯黑。\n  \n  \n    \n  \n"
+        }
+      ]
+    },
+    {
+      "title": "Textarea",
+      "content": "Textarea 多行文本输入框。",
+      "url": "/design/mobile/Textarea.html",
+      "children": [
+        {
+          "title": "分类",
+          "url": "/design/mobile/Textarea.html#分类",
+          "content": "分类  \n    Textarea 有不同的输入状态，如右图所示：\n    未输入的时候显示 Placeholder，计数器是灰色，斜杠前面的数字为当前输入的字数。\n    输入的时候，当前输入的字数显示为深色。\n    输入的字数超过了预期的字数，当前输入的字数显示为红色(警告色)，但输入框中文本颜色不变，且可以超出字数继续输入，但不允许提交表单。\n  \n  \n    \n  \n"
         }
       ]
     },

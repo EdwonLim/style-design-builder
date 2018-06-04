@@ -12,6 +12,6 @@ Tooltip 常用于展示额外的提示信息。
     <p>背景色为半透明度为 80% 的纯黑。</p>
   </div>
   <div class="sm">
-    <img class="img" src="https://ws1.sinaimg.cn/large/006oPFLAly1frz04i4vynj30k006m0st.jpg" alt="按钮尺寸"/>
+    <img class="img" src="https://ws1.sinaimg.cn/large/006oPFLAly1frz04i4vynj30k006m0st.jpg" alt="Tooltip"/>
   </div>
 </div>
