@@ -35,6 +35,11 @@
   text-align: justify;
   /* text-align-last: justify; */
 }
-.imgblock .big-image {
-  width: 50%;
+.project-imgblock {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.project-imgblock:first-child {
+  margin-right: 32px;
 }

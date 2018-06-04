@@ -68,7 +68,7 @@ window.ydoc_plugin_search_json = {
     },
     {
       "title": "定义示例",
-      "content": "YMFE Design 的通用色彩规范规定了色彩与使用注意事项各项目在UI设计阶段确定各自的色彩规范，项目色彩规范继承自通用色彩规范，主要包含以下内容:一个项目的色彩规范可以如下所示:    \n        主色\n        \n    \n    \n        强调色\n         \n    \n    \n        文本色 ---- 深色背景上的文本\n        \n    \n    \n        文本色 ---- 浅色背景上的文本\n         \n    \n    \n        功能色 ----- 警告/成功/链接\n        \n    \n",
+      "content": "YMFE Design 的通用色彩规范规定了色彩与使用注意事项各项目在UI设计阶段确定各自的色彩规范，项目色彩规范继承自通用色彩规范，主要包含以下内容:开发者平台-项目色彩规范    \n        主色\n        \n    \n    \n        强调色\n         \n    \n    \n        背景色\n        \n    \n\n    \n        文本色 ---- 深色背景上的文本\n        \n    \n    \n        文本色 ---- 浅色背景上的文本\n         \n    \n\n\n    \n        功能色 ----- 错误/成功/链接/警告\n        \n    \n\n\n    \n        四大业务线识别色\n        \n    \n\n",
       "url": "/design/projectColor.html",
       "children": [
         {
@@ -100,16 +100,10 @@ window.ydoc_plugin_search_json = {
       "children": []
     },
     {
-      "title": "目标文字颜色文字字号",
-      "content": "创造一个面向未来的跨平台设计语言，统一团队项目的前端UI设计。探寻前言的交互形式，力求为用户提供卓越的使用体验。这是在PC端的字号。在移动端 内容 和 标题字号对应大1px。",
+      "title": "字体文字排版",
+      "content": "  \n    \n  \nfont-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto,\"Helvetica Neue\", Helvetica, \"PingFang SC\", \"Hiragino Sans GB\", \"Microsoft YaHei\",SimSun, sans-serif;",
       "url": "/design/text.html",
-      "children": [
-        {
-          "title": "背景中的文本",
-          "url": "/design/text.html#背景中的文本",
-          "content": "背景中的文本文本应该在其背景中清晰可见，建议:深灰色文本用于浅色背景\n浅灰色文本用于深色背景\n如果你的应用同时含有亮色和暗色主题，文本颜色应该要和每个主题都有足够的对比度。\n通过改变文字不透明度，而不是直接改变文字颜色，来强调不同部分文字的重要性。这样当背景色、文字色确定，我们可以通过改变文字颜色不透明度很容易得到辅助性文本的颜色。考虑到无障碍设计的需求，帮助那些弱视和色盲的用户也能轻松识别和阅读屏幕上的文字，我们参考了WACG2.0 的标准，文本和背景色之间至少保持最小4:5:1的对比度（AA级），正文内容都保持了7:1以上的AAA级对比度。关于其它背景色下如何选择文字色，可以使用Google Color Tool 测试颜色的可访问性。"
-        }
-      ]
+      "children": []
     },
     {
       "title": "布局原则栅格系统",
@@ -141,7 +135,7 @@ window.ydoc_plugin_search_json = {
     },
     {
       "title": "概述",
-      "content": "移动端组件与 PC 端组件有着不同的设计，主要区别在于我们的移动端框架服务于业务线，设计风格偏向于 iOS 的设计规范，对于边距、字号等于 PC 端差距较大。由于 Android 设备尺寸/分辨率随便化较严重，而 iOS 设备尺寸较为固定且便于计算，因此基于 iphone 2x 的尺寸进行设计稿的制作可以提高制作与开发效率。同时偏向 iOS 的设计规范，可以追求更接近于原生应用的体验。移动端的一部分组件有一些与设备的交互设计，在文档页面顶部将以下列标签的形式来进行标识：Ripple：Material Design 的墨水扩散效果振动：设备振动声音：设备扬声器",
+      "content": "移动端组件与 PC 端组件有着不同的设计，主要区别在于我们的移动端框架服务于业务线，设计风格偏向于 iOS 的设计规范，对于边距、字号等于 PC 端差距较大。由于 Android 设备尺寸/分辨率随便化较严重，而 iOS 设备尺寸较为固定且便于计算，因此基于 iphone 2x 的尺寸进行设计稿的制作可以提高制作与开发效率。同时偏向 iOS 的设计规范，可以追求更接近于原生应用的体验。移动端的一部分组件有一些独特的交互设计，在文档页面顶部将以下列标签的形式来进行标识：Ripple：Material Design 的墨水扩散效果振动：设备振动声音：设备扬声器",
       "url": "/design/mobile/index.html",
       "children": []
     },
@@ -183,9 +177,9 @@ window.ydoc_plugin_search_json = {
           "content": "样式  \n    Checkbox 多选框有四种状态，如右图所示：\n    未选中、选中\n    未选中(禁止点击)、选中(禁止点击)\n    其中禁止点击状态的文本颜色更浅，与可点击状态的文本颜色进行区分。\n  \n  \n    \n  \n"
         },
         {
-          "title": "振动效果说明",
-          "url": "/design/mobile/Checkbox.html#振动效果说明",
-          "content": "振动效果说明Checkbox 多选框组件，在选中的时候触发设备振动，但取消选中时不触发设备振动。"
+          "title": "震动反馈效果说明",
+          "url": "/design/mobile/Checkbox.html#震动反馈效果说明",
+          "content": "震动反馈效果说明Checkbox 多选框组件，在选中的时候触发设备振动，但取消选中时不触发设备振动。"
         }
       ]
     },
@@ -209,7 +203,7 @@ window.ydoc_plugin_search_json = {
         {
           "title": "样式",
           "url": "/design/mobile/Slider.html#样式",
-          "content": "样式  \n    Slider 的光标与删除文本按钮都使用主色。\n  \n  \n    \n  \n"
+          "content": "样式  \n    Slider 的光标与滑块按钮都使用主色。\n    Slider 在滑动状态时颜色加深。\n  \n  \n    \n  \n"
         }
       ]
     },
@@ -248,9 +242,9 @@ window.ydoc_plugin_search_json = {
           "content": "样式  \n    Radio 单选框有四种状态，如右图所示：\n    未选中、选中\n    未选中(禁止点击)、选中(禁止点击)\n    其中禁止点击状态的文本颜色更浅，与可点击状态的文本颜色进行区分。\n  \n  \n    \n  \n"
         },
         {
-          "title": "振动效果说明",
-          "url": "/design/mobile/Radio.html#振动效果说明",
-          "content": "振动效果说明Checkbox 多选框组件，在选中的时候触发设备振动，但取消选中时不触发设备振动。"
+          "title": "震动反馈效果说明",
+          "url": "/design/mobile/Radio.html#震动反馈效果说明",
+          "content": "震动反馈效果说明Checkbox 多选框组件，在选中的时候触发设备振动，但取消选中时不触发设备振动。"
         }
       ]
     },
@@ -309,7 +303,7 @@ window.ydoc_plugin_search_json = {
     },
     {
       "title": "概述",
-      "content": "移动端组件与 PC 端组件有着不同的设计，Youth Design PC 端的设计规范参考了 Material Design 的设计，并针对后台系统加以改良，以更符合我们的产品风格。Youth Design PC 端的组件封装了 Ant Design 的组件库，目前已应用于 YDoc、开发者平台等多个 WEB 项目。",
+      "content": "PC 端组件与移动端端组件有着不同的设计，Youth Design PC 端的设计规范参考了 Material Design 的设计，并针对后台系统加以改良，以更符合我们的产品风格。Youth Design PC 端的组件有着不同的实现，封装了 Ant Design 的组件库，目前已应用于 YDoc、开发者平台等多个 WEB 项目。PC 端的一部分组件有一些独特的交互设计，在文档页面顶部将以下列标签的形式来进行标识：Ripple：Material Design 的墨水扩散效果",
       "url": "/design/pc/index.html",
       "children": []
     },
@@ -321,22 +315,150 @@ window.ydoc_plugin_search_json = {
         {
           "title": "按钮尺寸",
           "url": "/design/pc/Button.html#按钮尺寸",
-          "content": "按钮尺寸  \n    按钮分为两种尺寸：“大型按钮”、“小型按钮”\n    “大型按钮”一般横贯整个设备宽度，而“小型按钮”则经常出现在行内。\n  \n  \n    \n  \n"
+          "content": "按钮尺寸  \n    按钮分为两种尺寸：“大型按钮”、“小型按钮”\n    “大型按钮”是默认尺寸，高度为 40px，“小型按钮”高度为 32px。\n    只提供两种尺寸大小，避免用户纠结在尺寸问题。布局宽松时使用大尺寸按钮，布局紧凑时使用小尺寸按钮即可。\n  \n  \n    \n  \n"
         },
         {
           "title": "大型按钮",
           "url": "/design/pc/Button.html#大型按钮",
-          "content": "大型按钮  \n    每个按钮分为四种状态：\n    “正常状态”: 按钮的初始状态\n    “active状态”: 按钮被按下\n    “ripple状态”: Ripple 效果\n    “禁止点击状态”: 用户无法点击，不同类型按钮的禁止点击状态样式是一致的\n  \n  \n    \n  \n"
+          "content": "大型按钮  \n    每个按钮分为四种状态：\n    “正常状态”: 按钮的初始状态\n    “hover 状态”: 鼠标悬停于按钮上方的时候发生背景色的变化\n    “active 状态”: 按钮被按下的时候发生背景色的变化\n    “禁止点击状态”: 用户无法点击，不同类型按钮的禁止点击状态样式是一致的。\n  \n  \n    \n  \n"
         },
         {
           "title": "幽灵按钮",
           "url": "/design/pc/Button.html#幽灵按钮",
-          "content": "幽灵按钮  \n    幽灵按钮正常状态是透明的\n    “active状态”: 按钮被按下的时候发生背景色、文本颜色的变化\n    “ripple状态”: Ripple 效果不会改变按钮的透明背景，Ripple 的颜色是按钮颜色的 20%\n  \n  \n    \n  \n"
+          "content": "幽灵按钮  \n    幽灵按钮正常状态是透明的\n    “hover 状态”: 鼠标悬停于按钮上方的时候发生背景色的变化\n    “active状态”: 按钮被按下的时候发生背景色的变化\n  \n  \n    \n  \n"
         },
         {
           "title": "扁平按钮",
           "url": "/design/pc/Button.html#扁平按钮",
-          "content": "扁平按钮  \n    扁平按钮正常状态是透明背景、无边框的\n    “active状态”: 按钮被按下的时候发生背景色的变化\n    “ripple状态”: Ripple 效果不会改变按钮的透明背景，Ripple 的颜色是纯黑色的 20%\n  \n  \n    \n  \n"
+          "content": "扁平按钮  \n    扁平按钮正常状态是透明背景、无边框的\n    “hover 状态”: 鼠标悬停于按钮上方的时候发生背景色的变化\n    “active状态”: 按钮被按下的时候发生背景色的变化\n  \n  \n    \n  \n"
+        }
+      ]
+    },
+    {
+      "title": "Input",
+      "content": "Input 单行文本输入框。",
+      "url": "/design/pc/Input.html",
+      "children": [
+        {
+          "title": "组件尺寸",
+          "url": "/design/pc/Input.html#组件尺寸",
+          "content": "组件尺寸分为两种尺寸：“大尺寸”、“小尺寸”。大尺寸的组件高度为 40px，小尺寸的组件高度为 32px，组件的其他大小不变。"
+        },
+        {
+          "title": "组件类型及状态",
+          "url": "/design/pc/Input.html#组件类型及状态",
+          "content": "组件类型及状态组件分为两种类型：“带背景的输入框” 和 “透明背景的输入框”。带背景的输入框：  \n    更强调 “输入” 的概念\n    默认显示 Placeholder，输入文本之后，文本颜色加深，获取焦点时背景颜色加深。\n  \n  \n    \n  \n透明背景的输入框：  \n    更强调 “浏览” 的概念\n    默认显示 Placeholder，输入文本之后，文本颜色加深，获取焦点时背景颜色加深。\n  \n  \n    \n  \n"
+        }
+      ]
+    },
+    {
+      "title": "Select 下拉选框",
+      "content": "Select 下拉选框仅用于 PC 端。",
+      "url": "/design/pc/Select.html",
+      "children": [
+        {
+          "title": "组件尺寸",
+          "url": "/design/pc/Select.html#组件尺寸",
+          "content": "组件尺寸分为两种尺寸：“大尺寸”、“小尺寸”。大尺寸的组件高度为 40px，小尺寸的组件高度为 32px，组件的其他大小不变。"
+        },
+        {
+          "title": "组件类型及状态",
+          "url": "/design/pc/Select.html#组件类型及状态",
+          "content": "组件类型及状态组件分为两种类型：“带背景的下拉选框” 和 “透明背景的下拉选框”。"
+        },
+        {
+          "title": "组件样式",
+          "url": "/design/pc/Select.html#组件样式",
+          "content": "组件样式带背景的下拉选框：  \n    更强调 “选择” 的行为\n    Pagination 分页组件当前页及 hover 状态均使用主色：\n  \n  \n    \n  \n透明背景的下拉选框：  \n    更强调 “浏览” 的行为\n    Pagination 分页组件当前页及 hover 状态均使用主色：\n  \n  \n    \n  \n"
+        }
+      ]
+    },
+    {
+      "title": "Checkbox 多选框",
+      "content": "Ripple选择一组选项的 多个 选项。与移动端不同的是，PC 端的 Checkbox 组件图标要小一些，并且字号小一些(与 PC 端正文字号相同)。这是因为 Checkbox 在移动端是主要操作，要更明显，因此使用标题字号；而在 PC 端 Checkbox 组件一般是处于正文的一部分。",
+      "url": "/design/pc/Checkbox.html",
+      "children": [
+        {
+          "title": "样式",
+          "url": "/design/pc/Checkbox.html#样式",
+          "content": "样式  \n    Checkbox 多选框有四种状态，如右图所示：\n    未选中、选中\n    未选中(禁止点击)、选中(禁止点击)\n    其中禁止点击状态的文本颜色更浅，与可点击状态的文本颜色进行区分。\n  \n  \n    \n  \n"
+        }
+      ]
+    },
+    {
+      "title": "Slider",
+      "content": "Slider 滑动条。",
+      "url": "/design/pc/Slider.html",
+      "children": [
+        {
+          "title": "样式",
+          "url": "/design/pc/Slider.html#样式",
+          "content": "样式  \n    Slider 的光标与滑块按钮都使用主色。\n    Slider 在滑动状态时颜色加深。\n  \n  \n    \n  \n"
+        }
+      ]
+    },
+    {
+      "title": "Tooltip",
+      "content": "Tooltip 常用于展示额外的提示信息。在 PC 端一般通过 hover 触发，一般用于展示额外的信息，这个信息应使用简短的语言概括想表达的内容。",
+      "url": "/design/pc/Tooltip.html",
+      "children": [
+        {
+          "title": "样式",
+          "url": "/design/pc/Tooltip.html#样式",
+          "content": "样式  \n    Tooltip 只有一种尺寸\n    背景色为半透明度为 80% 的纯黑。\n  \n  \n    \n  \n"
+        }
+      ]
+    },
+    {
+      "title": "Radio 单选框",
+      "content": "Ripple选择一组选项的 单个 选项。与移动端不同的是，PC 端的 Radio 组件图标要小一些，并且字号小一些(与 PC 端正文字号相同)。这是因为 Radio 在移动端是主要操作，要更明显，因此使用标题字号；而在 PC 端 Radio 组件一般是处于正文的一部分。",
+      "url": "/design/pc/Radio.html",
+      "children": [
+        {
+          "title": "样式",
+          "url": "/design/pc/Radio.html#样式",
+          "content": "样式  \n    Radio 单选框有四种状态，如右图所示：\n    未选中、选中\n    未选中(禁止点击)、选中(禁止点击)\n    其中禁止点击状态的文本颜色更浅，与可点击状态的文本颜色进行区分。\n  \n  \n    \n  \n"
+        }
+      ]
+    },
+    {
+      "title": "Pagination 分页",
+      "content": "分页按钮（仅用于 PC 端）。",
+      "url": "/design/pc/Pagination.html",
+      "children": [
+        {
+          "title": "组件尺寸",
+          "url": "/design/pc/Pagination.html#组件尺寸",
+          "content": "组件尺寸分为两种尺寸：“大尺寸”、“小尺寸”。大尺寸的组件高度为 40px，小尺寸的组件高度为 32px，组件的其他大小不变。"
+        },
+        {
+          "title": "组件样式",
+          "url": "/design/pc/Pagination.html#组件样式",
+          "content": "组件样式  \n    Pagination 分页组件当前页及 hover 状态均使用主色：\n  \n  \n    \n  \n"
+        }
+      ]
+    },
+    {
+      "title": "Modal 模态框",
+      "content": "模态对话框，用于全局提示，入侵性较强，会阻断用户的使用流程，因此非必要情况无需使用。模态框的操作按钮使用大型按钮或幽灵按钮。",
+      "url": "/design/pc/Modal.html",
+      "children": [
+        {
+          "title": "组件样式",
+          "url": "/design/pc/Modal.html#组件样式",
+          "content": "组件样式  \n    模态框用于语气强烈的警告、提示、二次确认等场景：\n  \n  \n    \n  \n"
+        }
+      ]
+    },
+    {
+      "title": "GlobalModal 全局弹层",
+      "content": "全局弹层，用于复杂一些的表单操作，一般是针对当前页面的附属表单。全局弹层覆盖在页面上方，可以具有多页的层级关系，点击左上角的按钮退出当前页，点击右上角的按钮关闭整个弹层。该组件入侵性较强，会阻断用户的使用流程，因此非必要情况无需使用。",
+      "url": "/design/pc/GlobalModal.html",
+      "children": [
+        {
+          "title": "组件样式",
+          "url": "/design/pc/GlobalModal.html#组件样式",
+          "content": "组件样式  \n    全局弹层用于针对当前页面的附属表单\n    页面正上方有当前弹层页面的大标题，大标题要足够醒目，以告诉用户当前所在的位置。\n  \n  \n    \n  \n"
         }
       ]
     }
