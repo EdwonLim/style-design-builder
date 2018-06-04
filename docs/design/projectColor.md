@@ -15,7 +15,7 @@ YMFE Design 的通用色彩规范规定了色彩与使用注意事项
 <div class="imgblock">
     <div>
         <h2>主色</h2>
-        <img class="img" src="https://ws1.sinaimg.cn/large/b0b365f5ly1frshv7vzosj209z06bjrc.jpg" alt="文本使用" />
+        <img src="https://ws1.sinaimg.cn/large/b0b365f5ly1frshv7vzosj209z06bjrc.jpg" alt="文本使用" />
     </div>
     <div>
         <h2>强调色</h2>
@@ -24,9 +24,9 @@ YMFE Design 的通用色彩规范规定了色彩与使用注意事项
 </div>
 
 <div class="imgblock">
-    <div>
+    <div class="big-image">
         <h2>文本色 ---- 深色背景上的文本</h2>
-        <img class="img" src="https://ws1.sinaimg.cn/large/b0b365f5ly1frshwfxwr2j20a1075t92.jpg" alt="文本使用" />
+        <img src="https://ws1.sinaimg.cn/large/b0b365f5ly1frz83ylxcij20k00e8my6.jpg" alt="文本使用" />
     </div>
     <div>
         <h2>文本色 ---- 浅色背景上的文本</h2>
@@ -37,6 +37,6 @@ YMFE Design 的通用色彩规范规定了色彩与使用注意事项
 <div class="imgblock">
     <div>
         <h2>功能色 ----- 警告/成功/链接</h2>
-        <img class="img" src="https://ws1.sinaimg.cn/large/b0b365f5ly1frshxy5bh3j20av03cq2t.jpg" alt="文本使用" />
+        <img src="https://ws1.sinaimg.cn/large/b0b365f5ly1frshxy5bh3j20av03cq2t.jpg" alt="文本使用" />
     </div>
 </div>
