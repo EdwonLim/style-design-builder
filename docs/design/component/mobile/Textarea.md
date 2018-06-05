@@ -1,6 +1,6 @@
-# Textarea
+# Textarea 多行文本输入框
 
-Textarea 多行文本输入框。
+Textarea 用于输入多行文本。
 
 ## 分类
 

@@ -1,4 +1,4 @@
-# Swiper
+# Swiper 轮播图
 
 Swiper 轮播图，轮流展示多张图片(或区域)。
 

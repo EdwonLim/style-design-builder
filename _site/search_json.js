@@ -188,13 +188,13 @@ window.ydoc_plugin_search_json = {
       "children": []
     },
     {
-      "title": "概述",
+      "title": "移动端组件",
       "content": "移动端组件与 PC 端组件有着不同的设计，主要区别在于我们的移动端框架服务于业务线，设计风格偏向于 iOS 的设计规范，对于边距、字号等于 PC 端差距较大。由于 Android 设备尺寸/分辨率随便化较严重，而 iOS 设备尺寸较为固定且便于计算，因此基于 iphone 2x 的尺寸进行设计稿的制作可以提高制作与开发效率。同时偏向 iOS 的设计规范，可以追求更接近于原生应用的体验。移动端的一部分组件有一些独特的交互设计，在文档页面顶部将以下列标签的形式来进行标识：Ripple：Material Design 的墨水扩散效果振动：设备振动声音：设备扬声器",
       "url": "/design/component/mobile/index.html",
       "children": []
     },
     {
-      "title": "Button",
+      "title": "Button 按钮",
       "content": "Ripple按钮是移动端最重要的组件，常用于单击操作。分为“主按钮”、“幽灵按钮”、“扁平按钮”，每种按钮都有不同状态，点击时可以触发 Ripple 效果，并伴随设备振动。",
       "url": "/design/component/mobile/Button.html",
       "children": [
@@ -238,8 +238,8 @@ window.ydoc_plugin_search_json = {
       ]
     },
     {
-      "title": "Toast",
-      "content": "Toast 提示文本。",
+      "title": "Toast 轻提示",
+      "content": "Toast 在屏幕中心展示一段提示文本。",
       "url": "/design/component/mobile/Toast.html",
       "children": [
         {
@@ -250,8 +250,8 @@ window.ydoc_plugin_search_json = {
       ]
     },
     {
-      "title": "Slider",
-      "content": "Slider 滑动条。",
+      "title": "Slider 滑动条",
+      "content": "Slider 滑动条，滑动选择某个值。",
       "url": "/design/component/mobile/Slider.html",
       "children": [
         {
@@ -262,7 +262,7 @@ window.ydoc_plugin_search_json = {
       ]
     },
     {
-      "title": "Swiper",
+      "title": "Swiper 轮播图",
       "content": "Swiper 轮播图，轮流展示多张图片(或区域)。",
       "url": "/design/component/mobile/Swiper.html",
       "children": [
@@ -274,7 +274,7 @@ window.ydoc_plugin_search_json = {
       ]
     },
     {
-      "title": "Tooltip",
+      "title": "Tooltip 文字提示",
       "content": "Tooltip 常用于展示额外的提示信息。在移动端一般通过“长按文本”触发，一般用于复制粘贴等功能。",
       "url": "/design/component/mobile/Tooltip.html",
       "children": [
@@ -303,8 +303,8 @@ window.ydoc_plugin_search_json = {
       ]
     },
     {
-      "title": "Header",
-      "content": "Header 页头。页头是移动端最常见的组件之一，支持配置左右两侧、标题文本(icon)。",
+      "title": "Header 页头",
+      "content": "Header 页头是移动端最常见的组件之一，支持配置左右两侧、标题文本(icon)。",
       "url": "/design/component/mobile/Header.html",
       "children": [
         {
@@ -315,8 +315,8 @@ window.ydoc_plugin_search_json = {
       ]
     },
     {
-      "title": "Input",
-      "content": "Input 单行文本输入框。",
+      "title": "Input 单行文本输入框",
+      "content": "Input 用于输入单行文本。",
       "url": "/design/component/mobile/Input.html",
       "children": [
         {
@@ -327,7 +327,7 @@ window.ydoc_plugin_search_json = {
       ]
     },
     {
-      "title": "Label",
+      "title": "Label 列表项",
       "content": "RippleLabel 可组合的列表项目。",
       "url": "/design/component/mobile/Label.html",
       "children": [
@@ -344,8 +344,8 @@ window.ydoc_plugin_search_json = {
       ]
     },
     {
-      "title": "Textarea",
-      "content": "Textarea 多行文本输入框。",
+      "title": "Textarea 多行文本输入框",
+      "content": "Textarea 用于输入多行文本。",
       "url": "/design/component/mobile/Textarea.html",
       "children": [
         {
@@ -356,7 +356,7 @@ window.ydoc_plugin_search_json = {
       ]
     },
     {
-      "title": "概述",
+      "title": "PC 端组件",
       "content": "PC 端组件与移动端端组件有着不同的设计，Youth Design PC 端的设计规范参考了 Material Design 的设计，并针对后台系统加以改良，以更符合我们的产品风格。Youth Design PC 端的组件有着不同的实现，封装了 Ant Design 的组件库，目前已应用于 YDoc、开发者平台等多个 WEB 项目。PC 端的一部分组件有一些独特的交互设计，在文档页面顶部将以下列标签的形式来进行标识：Ripple：Material Design 的墨水扩散效果",
       "url": "/design/component/pc/index.html",
       "children": []
@@ -389,8 +389,8 @@ window.ydoc_plugin_search_json = {
       ]
     },
     {
-      "title": "Input",
-      "content": "Input 单行文本输入框。",
+      "title": "Input 单行文本输入框",
+      "content": "Input 用于输入单行文本。",
       "url": "/design/component/pc/Input.html",
       "children": [
         {
@@ -460,8 +460,8 @@ window.ydoc_plugin_search_json = {
       ]
     },
     {
-      "title": "Slider",
-      "content": "Slider 滑动条。",
+      "title": "Slider 滑动条",
+      "content": "Slider 滑动条，滑动选择某个值。",
       "url": "/design/component/pc/Slider.html",
       "children": [
         {
@@ -472,7 +472,7 @@ window.ydoc_plugin_search_json = {
       ]
     },
     {
-      "title": "Tooltip",
+      "title": "Tooltip 文字提示",
       "content": "Tooltip 常用于展示额外的提示信息。在 PC 端一般通过 hover 触发，一般用于展示额外的信息，这个信息应使用简短的语言概括想表达的内容。",
       "url": "/design/component/pc/Tooltip.html",
       "children": [

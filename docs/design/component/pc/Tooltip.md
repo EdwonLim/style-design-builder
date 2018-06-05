@@ -1,4 +1,4 @@
-# Tooltip
+# Tooltip 文字提示
 
 Tooltip 常用于展示额外的提示信息。
 

@@ -1,6 +1,6 @@
-# Slider
+# Slider 滑动条
 
-Slider 滑动条。
+Slider 滑动条，滑动选择某个值。
 
 ## 样式
 

@@ -1,6 +1,6 @@
-# Toast
+# Toast 轻提示
 
-Toast 提示文本。
+Toast 在屏幕中心展示一段提示文本。
 
 ## 样式
 
