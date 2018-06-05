@@ -2,7 +2,7 @@
 
 Input 单行文本输入框。
 
-### 样式
+## 样式
 
 <div class="imgblock">
   <div class="sm">

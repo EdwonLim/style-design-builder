@@ -2,7 +2,7 @@
 
 Slider 滑动条。
 
-### 样式
+## 样式
 
 <div class="imgblock">
   <div class="sm">

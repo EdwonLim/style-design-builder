@@ -3,7 +3,7 @@
 Header 页头。
 页头是移动端最常见的组件之一，支持配置左右两侧、标题文本(icon)。
 
-### Header 类型
+## Header 类型
 
 <div class="imgblock">
   <div class="sm">

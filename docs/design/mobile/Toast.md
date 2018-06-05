@@ -2,7 +2,7 @@
 
 Toast 提示文本。
 
-### 样式
+## 样式
 
 <div class="imgblock">
   <div class="sm">

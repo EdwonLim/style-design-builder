@@ -4,7 +4,7 @@ Tooltip 常用于展示额外的提示信息。
 
 在移动端一般通过“长按文本”触发，一般用于复制粘贴等功能。
 
-### 样式
+## 样式
 
 <div class="imgblock">
   <div class="sm">

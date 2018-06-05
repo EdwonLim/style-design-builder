@@ -29,6 +29,8 @@
 .imgblock .img {
   width: 100%;
   border: 1px solid #ddd;
+}
+.imgblock img {
   cursor: pointer;
 }
 .imgblock .mult-text {

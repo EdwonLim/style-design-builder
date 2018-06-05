@@ -4,7 +4,7 @@
 
 模态框的操作按钮使用大型按钮或幽灵按钮。
 
-### 组件样式
+## 组件样式
 
 <div class="imgblock">
   <div class="lg">

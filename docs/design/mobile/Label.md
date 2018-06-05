@@ -4,7 +4,7 @@
 
 Label 可组合的列表项目。
 
-### 样式
+## 样式
 
 <div class="imgblock">
   <div class="sm">
@@ -15,6 +15,6 @@ Label 可组合的列表项目。
   </div>
 </div>
 
-### Ripple 效果说明
+## Ripple 效果说明
 
 Label 在使用 Ripple 效果的时候要注意，点击操作的 Ripple 不要与 Label 的 Ripple 效果重复。

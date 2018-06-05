@@ -14,13 +14,20 @@
 考虑到无障碍设计的需求，帮助那些弱视和色盲的用户也能轻松识别和阅读屏幕上的文字，我们参考了WACG2.0 的标准，文本和背景色之间至少保持最小4:5:1的对比度（AA级），正文内容都保持了7:1以上的AAA级对比度。  
   
 关于其它背景色下如何选择文字色，可以使用[Google Color Tool](https://material.io/collections/color/) 测试颜色的可访问性。   -->
-# 字体
+# 文本
+
+### 字体
 <div class="imgblock">
   <div class="sm">
     <img src="https://ws1.sinaimg.cn/large/b0b365f5ly1frzcrc5c1zj20rc0a20tb.jpg">
   </div>
 </div>
-  
+<br />
 font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,"Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",SimSun, sans-serif;
-# 文字排版
-![](https://ws1.sinaimg.cn/large/b0b365f5ly1frzcvc8xxdj21vy15owp5.jpg)  
+
+### 文字排版
+![](https://ws1.sinaimg.cn/large/b0b365f5ly1frzcvc8xxdj21vy15owp5.jpg)
+
+PC 端、移动端共用这一套排版规则。
+
+需要注意的是：移动端正文字号为 16px，而 PC 端正文字号为 14px。

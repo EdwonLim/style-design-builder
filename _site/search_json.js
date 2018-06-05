@@ -100,30 +100,51 @@ window.ydoc_plugin_search_json = {
       "children": []
     },
     {
-      "title": "字体文字排版",
-      "content": "  \n    \n  \nfont-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto,\"Helvetica Neue\", Helvetica, \"PingFang SC\", \"Hiragino Sans GB\", \"Microsoft YaHei\",SimSun, sans-serif;",
+      "title": "文本",
+      "content": "",
       "url": "/design/text.html",
-      "children": []
+      "children": [
+        {
+          "title": "字体",
+          "url": "/design/text.html#字体",
+          "content": "字体  \n    \n  \nfont-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto,\"Helvetica Neue\", Helvetica, \"PingFang SC\", \"Hiragino Sans GB\", \"Microsoft YaHei\",SimSun, sans-serif;\n"
+        },
+        {
+          "title": "文字排版",
+          "url": "/design/text.html#文字排版",
+          "content": "文字排版PC 端、移动端共用这一套排版规则。需要注意的是：移动端正文字号为 16px，而 PC 端正文字号为 14px。"
+        }
+      ]
     },
     {
-      "title": "布局原则栅格系统",
-      "content": "    \n        随着移动/PC设备屏幕尺寸的增加，我们对响应式的阈值做出一些调整，增大“大屏幕手机”和“超大屏幕PC”这两个区间。\n        \n        在进行编码的时候应注意移动优先/PC优先，设置阈值为半开放区间，禁止使用封闭区间。\n    \n    \n        \n    \n",
+      "title": "布局",
+      "content": "",
       "url": "/design/layout.html",
       "children": [
         {
+          "title": "布局方案",
+          "url": "/design/layout.html#布局方案",
+          "content": "布局方案"
+        },
+        {
           "title": "PC端布局方案：",
-          "url": "/design/layout.html#pc端布局方案：",
-          "content": "PC端布局方案：使用rem 做长度单位\n布局\n页面布局配合使用流式布局和响应式布局，页面的 侧栏菜单/抽屉式导航/ 等组件占据固定宽度，而剩余的自动撑满剩余宽度。\n自适应宽度部分应包含宽度为 100% 的响应式布局容器。\n"
+          "url": "/design/layout.html#布局方案-pc端布局方案：",
+          "content": "PC端布局方案：使用rem 做长度单位\n页面布局配合使用流式布局和响应式布局，页面的 侧栏菜单/抽屉式导航/ 等组件占据固定宽度，而剩余的自动撑满剩余宽度。\n自适应宽度部分应包含宽度为 100% 的响应式布局容器。\n"
         },
         {
           "title": "移动端布局:",
-          "url": "/design/layout.html#移动端布局",
-          "content": "移动端布局:使用rem做长度单位。\n布局样式模仿原生样式，减小H5 页面与原生的体验差异。\n"
+          "url": "/design/layout.html#布局方案-移动端布局",
+          "content": "移动端布局:使用rem做长度单位。\n布局样式模仿 iOS 原生 UI 样式，减小 H5 页面与原生系统的体验差异。\n"
         },
         {
-          "title": "响应式设计： 移动优先/PC优先",
-          "url": "/design/layout.html#响应式设计：-移动优先pc优先",
-          "content": "响应式设计： 移动优先/PC优先在人力资源充足的时候，可以在移动端/PC端开发两套网页，而不是用响应式进行屏幕适配。\n移动优先/PC优先，取决于产品的使用场景，根据使用时长确定产品设计的优先级，若用户更多地使用移动端，则应“移动优先”: 设计&编码时优先设计超小屏幕（移动端，PC端宽度小于600px）这一范围的样式；宽度超过600px时，进行响应式web设计。\n"
+          "title": "响应式设计：",
+          "url": "/design/layout.html#布局方案-响应式设计：",
+          "content": "响应式设计：在人力资源充足的时候，可以在移动端/PC端开发两套网页，而不是用响应式进行屏幕适配。\n移动优先/PC优先，取决于产品的使用场景，根据使用时长确定产品设计的优先级：\n\n若用户更多地使用移动端，则应采用“移动优先”原则: 设计&编码时优先设计超小屏幕（移动端，PC 端宽度小于 600px）这一范围的样式；宽度超过 600px 时，进行响应式 WEB 设计。\n若开发中后台系统应用，几乎不会在手机上使用，则应采用“PC 优先”原则：设计&编码时优先设计超大屏幕PC（PC 端宽度大于 1920px）这一范围的样式；宽度小于 1920px 时，进行响应式 WEB 设计，确保在平板、手机能小屏幕设备上能够正常访问页面布局。\n\n\n"
+        },
+        {
+          "title": "栅格系统",
+          "url": "/design/layout.html#栅格系统",
+          "content": "栅格系统    \n        随着移动/PC设备屏幕尺寸的增加，我们对响应式的阈值做出一些调整，增大“大屏幕手机”和“超大屏幕PC”这两个区间。\n        \n        在进行编码的时候应注意移动优先/PC优先，设置阈值为半开放区间，封闭区间的局限性太强，因此禁止使用封闭区间。\n    \n    \n        \n    \n"
         }
       ]
     },
@@ -156,12 +177,12 @@ window.ydoc_plugin_search_json = {
         },
         {
           "title": "幽灵按钮",
-          "url": "/design/mobile/Button.html#幽灵按钮",
+          "url": "/design/mobile/Button.html#大型按钮-幽灵按钮",
           "content": "幽灵按钮  \n    幽灵按钮正常状态是透明的\n    “active状态”: 按钮被按下的时候发生背景色、文本颜色的变化\n    “ripple状态”: Ripple 效果不会改变按钮的透明背景，Ripple 的颜色是按钮颜色的 20%\n  \n  \n    \n  \n"
         },
         {
           "title": "扁平按钮",
-          "url": "/design/mobile/Button.html#扁平按钮",
+          "url": "/design/mobile/Button.html#大型按钮-扁平按钮",
           "content": "扁平按钮  \n    扁平按钮正常状态是透明背景、无边框的\n    “active状态”: 按钮被按下的时候发生背景色的变化\n    “ripple状态”: Ripple 效果不会改变按钮的透明背景，Ripple 的颜色是纯黑色的 20%\n  \n  \n    \n  \n"
         }
       ]
@@ -347,7 +368,17 @@ window.ydoc_plugin_search_json = {
         {
           "title": "组件类型及状态",
           "url": "/design/pc/Input.html#组件类型及状态",
-          "content": "组件类型及状态组件分为两种类型：“带背景的输入框” 和 “透明背景的输入框”。带背景的输入框：  \n    更强调 “输入” 的概念\n    默认显示 Placeholder，输入文本之后，文本颜色加深，获取焦点时背景颜色加深。\n  \n  \n    \n  \n透明背景的输入框：  \n    更强调 “浏览” 的概念\n    默认显示 Placeholder，输入文本之后，文本颜色加深，获取焦点时背景颜色加深。\n  \n  \n    \n  \n"
+          "content": "组件类型及状态组件分为两种类型：“带背景的输入框” 和 “透明背景的输入框”。"
+        },
+        {
+          "title": "带背景的输入框：",
+          "url": "/design/pc/Input.html#组件类型及状态-带背景的输入框：",
+          "content": "带背景的输入框：  \n    更强调 “输入” 的概念\n    默认显示 Placeholder，输入文本之后，文本颜色加深，获取焦点时背景颜色加深。\n  \n  \n    \n  \n"
+        },
+        {
+          "title": "透明背景的输入框：",
+          "url": "/design/pc/Input.html#组件类型及状态-透明背景的输入框：",
+          "content": "透明背景的输入框：  \n    更强调 “浏览” 的概念\n    默认显示 Placeholder，输入文本之后，文本颜色加深，获取焦点时背景颜色加深。\n  \n  \n    \n  \n"
         }
       ]
     },
@@ -369,7 +400,17 @@ window.ydoc_plugin_search_json = {
         {
           "title": "组件样式",
           "url": "/design/pc/Select.html#组件样式",
-          "content": "组件样式带背景的下拉选框：  \n    更强调 “选择” 的行为\n    Pagination 分页组件当前页及 hover 状态均使用主色：\n  \n  \n    \n  \n透明背景的下拉选框：  \n    更强调 “浏览” 的行为\n    Pagination 分页组件当前页及 hover 状态均使用主色：\n  \n  \n    \n  \n"
+          "content": "组件样式"
+        },
+        {
+          "title": "带背景的下拉选框：",
+          "url": "/design/pc/Select.html#组件样式-带背景的下拉选框：",
+          "content": "带背景的下拉选框：  \n    更强调 “选择” 的行为\n    Pagination 分页组件当前页及 hover 状态均使用主色：\n  \n  \n    \n  \n"
+        },
+        {
+          "title": "透明背景的下拉选框：",
+          "url": "/design/pc/Select.html#组件样式-透明背景的下拉选框：",
+          "content": "透明背景的下拉选框：  \n    更强调 “浏览” 的行为\n    Pagination 分页组件当前页及 hover 状态均使用主色：\n  \n  \n    \n  \n"
         }
       ]
     },

@@ -4,7 +4,7 @@
 
 按钮是 PC 端最重要的组件，常用于单击操作。分为“主按钮”、“幽灵按钮”、“扁平按钮”，每种按钮都有不同状态，点击时可以触发 `Ripple` 效果。
 
-### 按钮尺寸
+## 按钮尺寸
 
 <div class="imgblock">
   <div class="sm">
@@ -17,7 +17,7 @@
   </div>
 </div>
 
-### 大型按钮
+## 大型按钮
 
 <div class="imgblock">
   <div class="lg">
@@ -32,7 +32,7 @@
   </div>
 </div>
 
-### 幽灵按钮
+## 幽灵按钮
 
 <div class="imgblock">
   <div class="sm">
@@ -45,7 +45,7 @@
   </div>
 </div>
 
-### 扁平按钮
+## 扁平按钮
 
 <div class="imgblock">
   <div class="sm">

@@ -2,7 +2,7 @@
 
 Textarea 多行文本输入框。
 
-### 分类
+## 分类
 
 <div class="imgblock">
   <div class="sm">
