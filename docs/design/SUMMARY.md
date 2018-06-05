@@ -5,6 +5,8 @@
 ### 设计语言
 
 * [设计原则](principle.md)
+  * [亲密性](proximity.md)
+  * [对齐](align.md)
 * [色彩](color.md)
   * [项目色彩规范](projectColor.md)
   * [调色板](palettes.md)

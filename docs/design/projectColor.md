@@ -49,9 +49,10 @@ YIS-项目色彩规范
         <img src="https://ws1.sinaimg.cn/large/b0b365f5ly1frzckptkopj20tg06qt97.jpg" alt="文本使用" />
     </div>
 </div>
-<div class="imgblock">
+
+<!-- <div class="imgblock">
     <div class="sm">
         <h4>四大业务线识别色</h4>
         <img src="https://ws1.sinaimg.cn/large/b0b365f5ly1frzcm3feygj20te06qq3i.jpg" alt="文本使用" />
     </div>
-</div>
+</div> -->
