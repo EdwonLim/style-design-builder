@@ -31,3 +31,21 @@ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,"Helvetica Ne
 PC 端、移动端共用这一套排版规则。
 
 需要注意的是：移动端正文字号为 16px，而 PC 端正文字号为 14px。
+
+### 无障碍设计
+
+通过改变文本不透明度，而不是直接改变文本颜色，来强调不同部分文字的重要性。
+
+考虑到无障碍设计的需求，帮助弱视和色盲用户轻松识别和阅读屏幕上的文字，我们的文本与背景色之间保证了最小 4.5:1 的对比度（AA 级）
+
+<br />
+<div class="imgblock">
+  <div class="sm">
+    <p>黑底白字</p>
+    <img src="https://ws1.sinaimg.cn/large/b0b365f5ly1frzan7sv4fj20f208i3z1.jpg">
+  </div>
+  <div class="sm">
+    <p>白底黑字</p>
+    <img src="https://ws1.sinaimg.cn/large/b0b365f5ly1frzcz4dlrij20ki0bggmb.jpg">
+  </div>
+</div>
