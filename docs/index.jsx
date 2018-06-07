@@ -4,7 +4,7 @@ banner:
   desc: 'Youth Design 以青春、未来、科学为设计理念，服务于 YMFE 的众多移动端、PC 端框架'
   btns: 
     - { name: '开 始', href: './design/index.html', primary: true }
-  caption: '当前版本: v1.0.0'
+  caption: '当前版本: v0.0.1'
 features: 
   - { name: '青春', desc: '以勇敢，激进，活泼，创新为设计风格，从配色、文本、排版等方面体现这些风格' }
   - { name: '未来', desc: '不断探索拥有良好体验的交互形式，敢于尝试新形式，吸收前沿的设计理念' }
