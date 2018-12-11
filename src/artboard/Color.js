@@ -4,6 +4,7 @@ import { styles, fonts } from '../common/style';
 import Header from '../common/Header';
 import { colorPalette } from '../common/util';
 import styled from 'styled-components/primitives';
+import VARIABLE from '../common/variables';
 
 const Card = styled.View`
   width: 360px;
@@ -48,13 +49,14 @@ const SubTitle = fonts.headline3.extend`
 `;
 const BodyText = fonts.title.extend``;
 const colorList = VARIABLE.colorList;
+const guideName = VARIABLE.guideName;
 
 const DevelopColor = () => (
   <Artboard name='developColor' style={{ position: 'absolute', width: 1440, left: 1600 }} >
-    <Header>项目色彩规范</Header>
+    <Header>{guideName} - 项目色彩规范</Header>
     <styles.Body name='body'>
       <styles.Title>定义</styles.Title>
-      <BodyText textType="desc">YMFE Design的通用色彩规范规定了色彩风格与使用注意事项。</BodyText>
+      <BodyText textType="desc">通用色彩规范规定了色彩风格与使用注意事项。</BodyText>
       <BodyText textType="desc">各项目在UI设计阶段应确定各自的色彩规范，项目色彩继承自通用色彩规范，主要包含以下内容:</BodyText>
       <ListWrap>
         <BodyText textType="desc">1. 主色: 应用于绝大部分元素，例如header、icon、边框、按钮、背景等，确定主色之后尽可能多的元素都是用这个颜色值，体现设计的外观一致性。</BodyText>
@@ -62,7 +64,7 @@ const DevelopColor = () => (
         <BodyText textType="desc">3. 功能色: 有些元素的颜色不适合用主色和强调色来表示，在色彩规范中也应有所规定，例如错误警告一般使用红色，通常状态一般用绿色。</BodyText>
         <BodyText textType="desc">4. 文本色: 暗色背景中主文本色、辅助文本色。 亮色背景的主文本色、辅助文本色。</BodyText>
       </ListWrap>
-      <styles.Title>开发者平台-项目色彩规范</styles.Title>
+      <styles.Title>项目色彩规范</styles.Title>
       <Panel>
         <Card name="primary">
           <SubTitle textType="desc">主色</SubTitle>
@@ -100,9 +102,9 @@ const DevelopColor = () => (
         </Card>
         <Card name="background">
           <SubTitle textType="desc">背景色</SubTitle>
-          <Item bgColor={colorList.htmlBgolor}>
+          <Item bgColor={colorList.htmlBgColor}>
             <BodyText textType="desc">浅灰色背景色</BodyText>
-            <BodyText textType="desc">{colorList.htmlBgolor}</BodyText>
+            <BodyText textType="desc">{colorList.htmlBgColor}</BodyText>
           </Item>
         </Card>
       </Panel>
@@ -150,17 +152,6 @@ const DevelopColor = () => (
         <SubTitle textType="desc">功能色 - 错误/成功/链接/警告</SubTitle>
         <FuncView>
           {colorList.func.map((item, index) => {
-            return <FuncItem key={index} bgColor={item.color}>
-              <FuncText bgColor="#000">{item.color}</FuncText>
-              <FuncText bgColor="#000">{item.name}</FuncText>
-            </FuncItem>
-          })}
-        </FuncView>
-      </View>
-      <View name="BU" style={{ marginTop: 72 }}>
-        <SubTitle textType="desc">四大业务线识别色</SubTitle>
-        <FuncView>
-          {colorList.BU.map((item, index) => {
             return <FuncItem key={index} bgColor={item.color}>
               <FuncText bgColor="#000">{item.color}</FuncText>
               <FuncText bgColor="#000">{item.name}</FuncText>

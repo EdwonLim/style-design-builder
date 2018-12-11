@@ -15,6 +15,7 @@ import TooltipBlock from './component/cross-platform/tooltip';
 import ToastBlock from './component/cross-platform/toast';
 import styled from 'styled-components/primitives';
 import Toast from './component/cross-platform/toast';
+import VARIABLE from '../common/variables';
 
 const Col = styled.View`
   width: 439px;
@@ -35,10 +36,11 @@ const Body = styles.Body.extend`
 const BodyText = fonts.title.extend``;
 
 const colorList = VARIABLE.colorList;
+const guideName = VARIABLE.guideName;
 
 const UIKitMobile = () => (
   <Artboard name="UIKitMobile" style={{ width: 2440, backgroundColor: '#F0F3F5' }} >
-    <Header>Youth Design UI Kit (Mobile)</Header>
+    <Header>{guideName} UI Kit (Mobile)</Header>
     <Body name="body">
       <Col>
         <styles.Title>Base</styles.Title>

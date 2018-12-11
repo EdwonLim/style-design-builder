@@ -5,6 +5,7 @@ import { colorPalette } from '../common/util';
 import { styles, fonts } from '../common/style';
 const BodyText = fonts.title.extend``;
 import styled from 'styled-components/primitives';
+import VARIABLE from '../common/variables';
 
 const PaletteContainer = styled.View`
   width: 100%;
@@ -41,13 +42,14 @@ const PaletteItemValue = styled.Text`
   fontFamily: Ayuthaya;
   textAlign: right;
 `;
+const guideName = VARIABLE.guideName;
 
 const ArtboardColor = () => (
   <Artboard name="Color" style={{ width: 1440 }}>
-    <Header>Youth Design - 调色板</Header>
+    <Header>{guideName} - 调色板</Header>
     <styles.Body name="body">
       <styles.Title>调色板概述</styles.Title>
-      <BodyText>调色板本来是混合各种颜色颜料使用的板，在 Youth Design 中，调色板指的是一份颜色表（如下图），颜色表由一系列具有一定代表性的基本色彩及它们的渐变色组成，我们可以在调色板中寻找需要的颜色并获取颜色值。</BodyText>
+      <BodyText>调色板本来是混合各种颜色颜料使用的板，调色板指的是一份颜色表（如下图），颜色表由一系列具有一定代表性的基本色彩及它们的渐变色组成，我们可以在调色板中寻找需要的颜色并获取颜色值。</BodyText>
       <PaletteContainer>
         { /* Loop for palette */
           VARIABLE.colorValue.map((item, index) => {

@@ -25,7 +25,7 @@ const getBgColor = (type, state) => {
     return colorList.lightActiveBgColor;
   }
   // 默认为主按钮 && 主色
-  return colorList.htmlBgolor;
+  return colorList.htmlBgColor;
 };
 const getTextColor = (type, state) => {
   if (!state || state === 'placeholder') {

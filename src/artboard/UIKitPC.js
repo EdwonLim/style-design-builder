@@ -14,7 +14,7 @@ import GlobalModalBlock from './component/pc/globalModal';
 import CheckboxBlock from './component/cross-platform/checkbox';
 import TooltipBlock from './component/cross-platform/tooltip';
 import styled from 'styled-components/primitives';
-import variables from '../common/variables';
+import VARIABLE from '../common/variables';
 
 const Col = styled.View`
   width: ${props => props.size === 'lg' ? '1440px': '800px'};
@@ -32,10 +32,11 @@ const Body = styles.Body.extend`
   backgroundColor: #F0F3F5;
   flexDirection: row;
 `;
+const guideName = VARIABLE.guideName;
 
 const UIKitPC = () => (
   <Artboard name="UIKitPC" style={{ width: 4800, backgroundColor: '#F0F3F5' }} >
-    <Header>Youth Design UI Kit (PC)</Header>
+    <Header>{guideName} UI Kit (PC)</Header>
     <Body name="body">
       <Col>
         <styles.Title>Base</styles.Title>

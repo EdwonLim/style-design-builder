@@ -11,7 +11,7 @@ const Rail = styled.View`
   position: absolute;
   width: 100%;
   height: 4px;
-  backgroundColor: ${props => props.state === 'hover' ? colorList.lightHoverBgColor : colorList.htmlBgolor};
+  backgroundColor: ${props => props.state === 'hover' ? colorList.lightHoverBgColor : colorList.htmlBgColor};
   borderRadius: 2px;
 `;
 const Track = styled.View`

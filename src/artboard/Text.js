@@ -4,6 +4,7 @@ import Header from '../common/Header';
 import { colorPalette } from '../common/util';
 import { styles, fonts } from '../common/style';
 import styled from 'styled-components/primitives';
+import VARIABLE from '../common/variables';
 
 const BodyText = fonts.title.extend``;
 const Row = styled.View`
@@ -43,11 +44,13 @@ const FontLine = styled.View`
   backgroundColor: #ddd;
   marginBottom: 8px;
 `;
+const guideName = VARIABLE.guideName;
+
 
 
 const ArtboardText = () => (
   <Artboard name="Text" style={{ position: 'absolute', width: 1440, left: 3200 }}>
-		<Header>Youth Design - 文字</Header>
+		<Header>{guideName} - 文字</Header>
 		<styles.Body name="body">
 			<styles.Title>字体</styles.Title>
       <Row>

@@ -5,8 +5,10 @@ import Header from '../common/Header';
 import styled from 'styled-components/primitives';
 import iconfont from '../common/iconfont.js';
 import iconfontSource from '../common/iconfont.json';
+import VARIABLE from '../common/variables';
 
 const colorList = VARIABLE.colorList;
+const guideName = VARIABLE.guideName;
 const Panel = styled.View`
   width: 1240px;
   padding: 40px 0;
@@ -29,10 +31,10 @@ const Name = fonts.PCBody.extend`
 
 const Icons = props => (
   <Artboard name='Icons' style={{ position: 'absolute', width: 1440, left: 4800 }} >
-    <Header>Youth Design 图标库</Header>
+    <Header>{guideName} - 图标库</Header>
     <styles.Body name='body'>
       <styles.Title>图标库</styles.Title>
-      <BodyText textType="desc">http://iconfont.corp.qunar.com/repositories/15 （Qunar 内网）{JSON.stringify(props.data, null, 2)}</BodyText>
+      <BodyText textType="desc">{JSON.stringify(props.data, null, 2)}</BodyText>
       <Panel>
         {iconfontSource.map((item, index) => {
           return <Container key={index}>
