@@ -12,7 +12,7 @@
 ## Usage
 
 ```
-git clone git@gitlab.corp.qunar.com:mfe/youth-design.git
+git clone git@github.com:dwb1994/style-design-builder.git
 cd youth-design
 npm install
 # [important] 新建一个空白的 sketch 文件
