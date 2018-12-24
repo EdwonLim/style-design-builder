@@ -1,4 +1,4 @@
-export default CONFIG = {
+exports.CONFIG = {
     guideName: 'XXXX',
     version: '0.1.0',
     description: 'XXXX XXXX',
@@ -25,16 +25,20 @@ export default CONFIG = {
         normalSelectBorderColor: '#e5e5ea',
         // 功能色 错误成功链接 警告
         func: [{
-            name: '错误',
+            name: 'danger',
+            desc: '错误',
             color: '#ff4f5f'
         }, {
-            name: '链接',
+            name: 'info',
+            desc: '链接',
             color: '#40a9ff'
         }, {
-            name: '成功',
+            name: 'success',
+            desc: '成功',
             color: '#73d13d'
         }, {
-            name: '警告',
+            name: 'warning',
+            desc: '警告',
             color: '#fac200'
         }]
     },
