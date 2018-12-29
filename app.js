@@ -24,8 +24,15 @@ res += `$sgb-secondary: ${config.colorList.secondaryColor};\n`;
 res += '\n';
 
 // 文本
+let remFontsize = '';
 config.font.forEach(item => {
-  res += `$sgb-${item.name.toLocaleLowerCase()}: ${item.fontSize/100}rem;\n`
+  if (item.name === 'PCBody') {
+    remFontsize = item.fontSize;
+    res += `html { font-size: ${remFontsize}px };\n`
+  }
+})
+config.font.forEach(item => {
+  res += `$sgb-${item.name.toLocaleLowerCase()}: ${(item.fontSize / remFontsize).toFixed(7)}rem;\n`
 })
 
 fs.writeFile('bootstrap/_sgb-variables.scss', res, (err) => {
