@@ -33,7 +33,9 @@
     "react-primitives": "^0.5.0",
     "react-sketchapp": "1.1.0",
     "react-test-renderer": "^15.4.2",
-    "styled-components": "^3.2.6",
+    "styled-components": "^3.2.6"
+  },
+  "devDependencies": {
     "tinycolor2": "^1.4.1"
   }
 }

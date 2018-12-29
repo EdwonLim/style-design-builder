@@ -1,7 +1,18 @@
 const fs = require('fs');
+const tinycolor = require("tinycolor2");
 const config = require('./src/common/config').CONFIG;
 
 let res = '';
+const mixColor = (front, back) => {
+  var rgbFront = tinycolor(front).toRgb();
+  var rgbBack = tinycolor(back).toRgb();
+  var alphaFront = rgbFront.a;
+  var mixR = alphaFront * rgbFront.r + (1 - alphaFront) * rgbBack.r;
+  var mixG = alphaFront * rgbFront.g + (1 - alphaFront) * rgbBack.g;
+  var mixB = alphaFront * rgbFront.b + (1 - alphaFront) * rgbBack.b;
+  var res = tinycolor({ r: mixR, g: mixG, b: mixB }).toHexString();
+  return res;
+};
 
 // 色轮
 config.colorValue.forEach(item => {
@@ -35,13 +46,13 @@ config.font.forEach(item => {
   res += `$sgb-${item.name.toLocaleLowerCase()}: ${(item.fontSize / remFontsize).toFixed(7)}rem;\n`
 })
 
-// 文本色板
+// 文本色板 浅色前景色与白色混合，得出非半透明颜色，用于 bootstrap 计算文本黑白色的使用
 res += '\n';
-res += `$sgb-htmlBgColor: ${config.colorList.htmlBgColor};\n`; // 6%
-res += `$sgb-lightHoverBgColor: ${config.colorList.lightHoverBgColor};\n`; // 10%
-res += `$sgb-segmentLightTextColor: ${config.colorList.segmentLightTextColor};\n`; // 12%
-res += `$sgb-lightActiveBgColor: ${config.colorList.lightActiveBgColor};\n`; // 20%
-res += `$sgb-disableLightTextColor: ${config.colorList.disableLightTextColor};\n`; // 38%
+res += `$sgb-htmlBgColor: ${mixColor(config.colorList.htmlBgColor, '#fff')};\n`; // 6%
+res += `$sgb-lightHoverBgColor: ${mixColor(config.colorList.lightHoverBgColor, '#fff')};\n`; // 10%
+res += `$sgb-segmentLightTextColor: ${mixColor(config.colorList.segmentLightTextColor, '#fff')};\n`; // 12%
+res += `$sgb-lightActiveBgColor: ${mixColor(config.colorList.lightActiveBgColor, '#fff')};\n`; // 20%
+res += `$sgb-disableLightTextColor: ${mixColor(config.colorList.disableLightTextColor, '#fff')};\n`; // 38%
 res += `$sgb-descLightTextColor: ${config.colorList.descLightTextColor};\n`; // 54%
 res += `$sgb-baseLightTextColor: ${config.colorList.baseLightTextColor};\n`; // 87%
 
