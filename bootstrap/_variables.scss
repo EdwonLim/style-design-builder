@@ -8,15 +8,15 @@
 // Color system
 
 $white:    #fff !default;
-$gray-100: #f8f9fa !default;
-$gray-200: #e9ecef !default;
-$gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
-$gray-600: #6c757d !default;
-$gray-700: #495057 !default;
-$gray-800: #343a40 !default;
-$gray-900: #212529 !default;
+$gray-100: $sgb-htmlBgColor !default;
+$gray-200: $sgb-lightHoverBgColor !default;
+$gray-300: $sgb-segmentLightTextColor !default;
+$gray-400: $sgb-lightActiveBgColor !default;
+$gray-500: $sgb-disableLightTextColor !default;
+$gray-600: $sgb-descLightTextColor !default;
+$gray-700: $sgb-descLightTextColor !default;
+$gray-800: $sgb-baseLightTextColor !default;
+$gray-900: $sgb-baseLightTextColor !default;
 $black:    #000 !default;
 
 $grays: () !default;
@@ -290,6 +290,8 @@ $font-family-base:            $font-family-sans-serif !default;
 $font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
 $font-size-lg:                $sgb-subhead;
 $font-size-sm:                $sgb-caption1;
+// $font-size-lg:                ($font-size-base * 1.25) !default;
+// $font-size-sm:                ($font-size-base * .875) !default;
 
 $font-weight-lighter:         lighter !default;
 $font-weight-light:           300 !default;
